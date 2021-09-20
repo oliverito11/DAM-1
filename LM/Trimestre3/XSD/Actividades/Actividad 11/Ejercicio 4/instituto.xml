@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="instituto.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<!-- Definición del código XML -->
+<instituto>
+    <!-- Clase C1 -->
+    <clase codigoClase="C1" nombreClase="DAM1">
+        
+        <!-- Alumno con varios teléfonos -->
+        <alumno codigoAlumno="D1" codigoClase="C1">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>6584841247</telefonoAlumno>
+            <telefonoAlumno>1234567819</telefonoAlumno>
+            <localidadAlumno>Zamora</localidadAlumno>
+            <provinciaAlumno>Zamora</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno sin e-mail-->
+        <alumno codigoAlumno="D2" codigoClase="C1">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <telefonoAlumno>1234567892</telefonoAlumno>
+            <localidadAlumno>LeOn</localidadAlumno>
+            <provinciaAlumno>LeOn</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno con varios teléfonos y correo -->
+        <alumno codigoAlumno="D3" codigoClase="C1">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>emaildos@gmail.com</emailAlumno>
+            <telefonoAlumno>9876524321</telefonoAlumno>
+            <telefonoAlumno>4567893123</telefonoAlumno>
+            <localidadAlumno>Salamanca</localidadAlumno>
+            <provinciaAlumno>Salamanca</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno con más teléfonos-->
+        <alumno codigoAlumno="D4" codigoClase="C1">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>1472583649</telefonoAlumno>
+            <telefonoAlumno>7894561352</telefonoAlumno>
+            <telefonoAlumno>9456132837</telefonoAlumno>
+            <localidadAlumno>Soria</localidadAlumno>
+            <provinciaAlumno>Soria</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno sin correo pero con varios teléfonos -->
+        <alumno codigoAlumno="D5" codigoClase="C1">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <telefonoAlumno>1234567890</telefonoAlumno>
+            <telefonoAlumno>9944665957</telefonoAlumno>
+            <localidadAlumno>Palencia</localidadAlumno>
+            <provinciaAlumno>Palencia</provinciaAlumno>
+        </alumno>
+    </clase>
+
+
+    <!-- Clase C2 -->
+    <clase codigoClase="C2" nombreClase="DAM2">
+        
+        <!-- Alumno con varios teléfonos -->
+        <alumno codigoAlumno="DD1" codigoClase="C2">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>1122334424</telefonoAlumno>
+            <telefonoAlumno>1234567819</telefonoAlumno>
+            <localidadAlumno>Zamora</localidadAlumno>
+            <provinciaAlumno>Zamora</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno sin e-mail-->
+        <alumno codigoAlumno="DD2" codigoClase="C2">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <telefonoAlumno>1234567839</telefonoAlumno>
+            <localidadAlumno>LeOn</localidadAlumno>
+            <provinciaAlumno>LeOn</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno con varios teléfonos y correo -->
+        <alumno codigoAlumno="DD3" codigoClase="C2">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>9876543201</telefonoAlumno>
+            <telefonoAlumno>4567891263</telefonoAlumno>
+            <localidadAlumno>Salamanca</localidadAlumno>
+            <provinciaAlumno>Salamanca</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno con más teléfonos-->
+        <alumno codigoAlumno="DD4" codigoClase="C2">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>1472583639</telefonoAlumno>
+            <telefonoAlumno>7894561322</telefonoAlumno>
+            <telefonoAlumno>9456132187</telefonoAlumno>
+            <localidadAlumno>Soria</localidadAlumno>
+            <provinciaAlumno>Soria</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno sin correo pero con varios teléfonos -->
+        <alumno codigoAlumno="DD5" codigoClase="C2">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <telefonoAlumno>1234567849</telefonoAlumno>
+            <telefonoAlumno>9944665537</telefonoAlumno>
+            <localidadAlumno>Palencia</localidadAlumno>
+            <provinciaAlumno>Palencia</provinciaAlumno>
+        </alumno>
+    </clase>
+    
+
+    <!-- Clase C3 -->
+    <clase codigoClase="C3" nombreClase="ASIR1">
+        
+        <!-- Alumno con varios teléfonos -->
+        <alumno codigoAlumno="A1" codigoClase="C3">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>1122343444</telefonoAlumno>
+            <telefonoAlumno>1234565789</telefonoAlumno>
+            <localidadAlumno>Zamora</localidadAlumno>
+            <provinciaAlumno>Zamora</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno sin e-mail-->
+        <alumno codigoAlumno="A2" codigoClase="C3">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <telefonoAlumno>1234356789</telefonoAlumno>
+            <localidadAlumno>LeOn</localidadAlumno>
+            <provinciaAlumno>LeOn</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno con varios teléfonos y correo -->
+        <alumno codigoAlumno="A3" codigoClase="C3">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>9876543231</telefonoAlumno>
+            <telefonoAlumno>4567891243</telefonoAlumno>
+            <localidadAlumno>Salamanca</localidadAlumno>
+            <provinciaAlumno>Salamanca</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno con más teléfonos-->
+        <alumno codigoAlumno="A4" codigoClase="C3">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>1472583649</telefonoAlumno>
+            <telefonoAlumno>7894561332</telefonoAlumno>
+            <telefonoAlumno>9456132827</telefonoAlumno>
+            <localidadAlumno>Soria</localidadAlumno>
+            <provinciaAlumno>Soria</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno sin correo pero con varios teléfonos -->
+        <alumno codigoAlumno="A5" codigoClase="C3">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <telefonoAlumno>1234567895</telefonoAlumno>
+            <telefonoAlumno>9944665547</telefonoAlumno>
+            <localidadAlumno>Palencia</localidadAlumno>
+            <provinciaAlumno>Palencia</provinciaAlumno>
+        </alumno>
+    </clase>
+
+
+    <!-- Clase C4 -->
+    <clase codigoClase="C4" nombreClase="ASIR2">
+        
+        <!-- Alumno con varios teléfonos -->
+        <alumno codigoAlumno="AA1" codigoClase="C4">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>1122334444</telefonoAlumno>
+            <telefonoAlumno>1234567389</telefonoAlumno>
+            <localidadAlumno>Zamora</localidadAlumno>
+            <provinciaAlumno>Zamora</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno sin e-mail-->
+        <alumno codigoAlumno="AA2" codigoClase="C4">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <telefonoAlumno>1234567849</telefonoAlumno>
+            <localidadAlumno>LeOn</localidadAlumno>
+            <provinciaAlumno>LeOn</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno con varios teléfonos y correo -->
+        <alumno codigoAlumno="AA3" codigoClase="C4">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>9876543217</telefonoAlumno>
+            <telefonoAlumno>4567891238</telefonoAlumno>
+            <localidadAlumno>Salamanca</localidadAlumno>
+            <provinciaAlumno>Salamanca</provinciaAlumno>
+        </alumno>
+        
+        <!-- Alumno con más teléfonos-->
+        <alumno codigoAlumno="AA4" codigoClase="C4">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <emailAlumno>email@gmail.com</emailAlumno>
+            <telefonoAlumno>1472583697</telefonoAlumno>
+            <telefonoAlumno>7894561326</telefonoAlumno>
+            <telefonoAlumno>9456132875</telefonoAlumno>
+            <localidadAlumno>Soria</localidadAlumno>
+            <provinciaAlumno>Soria</provinciaAlumno>
+        </alumno>
+
+        <!-- Alumno sin correo pero con varios teléfonos -->
+        <alumno codigoAlumno="AA5" codigoClase="C4">
+            <nombreAlumno>Persona</nombreAlumno>
+            <apellidosAlumno>Apellido Apellido</apellidosAlumno>
+            <telefonoAlumno>1234567893</telefonoAlumno>
+            <telefonoAlumno>9944665574</telefonoAlumno>
+            <localidadAlumno>Palencia</localidadAlumno>
+            <provinciaAlumno>Palencia</provinciaAlumno>
+        </alumno>
+    </clase> 
+</instituto>

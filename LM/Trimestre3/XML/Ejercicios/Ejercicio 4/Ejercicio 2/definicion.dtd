@@ -1,0 +1,17 @@
+<!-- La biblioteca presta distintos recursos -->
+<!ELEMENT biblioteca (recursos)+>
+
+<!-- Estos recursos contendrán su código, tipo, título, autor y año de publicación -->
+<!-- Puede haber más de un autor y puede o no aparecer su año de publicación -->
+<!ELEMENT recursos (titulo, autor+, anyoPublicacion?)>
+
+<!-- Los tipos solo pueden ser los especificados a continuación -->
+<!ATTLIST recursos tipo (libro | cd | dvd | revista) #REQUIRED>
+
+<!-- Los recursos tienen un identificador único para cada uno -->
+<!ATTLIST recursos cod_recurso ID #REQUIRED>
+
+<!-- Los demás elementos contendrán información -->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT anyoPublicacion (#PCDATA)>

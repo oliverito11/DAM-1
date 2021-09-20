@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/formato-fuente-parrafo.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:29:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Formato de fuente y párrafo</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[9] </span><br>Formato de fuente y párrafo</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+<div id="_idContainer012" class="Marco-de-texto-b-sico">
+			<h2 class="titulo2"><span class="numero2">[9.1] </span><a id="_idTextAnchor000"></a><a id="_idTextAnchor001"></a>formato de fuente en CSS</h2>
+			<h3 class="titulo3"><span class="numero3">[9.1.1]</span><a id="_idTextAnchor002"></a>propiedades de las fuentes</h3>
+			<p class="Normal2"><img src="css-formato-fuente-html-2016-web-resources/image/tipografia.png" alt="" /></p>
+			<p class="Normal2">Indudablemente la tipografía (llamada también<strong class="Negritta"> formato de fuente</strong> o, simplemente, <strong class="Negritta">fuente</strong>) es uno de los aspectos más importantes de la estética de un documento escrito. Manejar adecuadamente el estilo de la letra puede hacer que nuestra página sea mucho más atractiva. De hecho hay diseñadores que consideran que esta es la primera decisión a tomar por la tremenda influencia que tiene sobre el resto de elementos. Lo ideal es dedicar mucho tiempo a esta decisión.</p>
+			<p class="Normal">CSS dispone de numerosas propiedades para modificar los tipos de letra. Muchas de sus propiedades se pueden observar en la </p>
+			<p class="Normal">En la imagen anterior se observan las líneas básicas que permiten encajar las letras. Los elementos a tener en cuenta son:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">Línea base</strong>. Es la línea principal donde se colocan las letras. Es la línea que permite colocar adecuadamente en la horizontal al texto.</li>
+				<li class="punto"><strong class="Negritta">Altura de la letra x</strong>. Mide el tamaño de la letra equis minúscula, que sirve de referencia para todas las letras minúsculas (aunque algunas como la <em class="cursiva">g </em>y la<em class="cursiva"> a </em>del primer ejemplo la puedan rebasar).</li>
+				<li class="punto"><strong class="Negritta">Ascendente</strong>. Línea superior que indica el máximo que puede ocupar las letras (en la imagen es el límite superior de la letra <em class="cursiva">f</em>).</li>
+				<li class="punto"><strong class="Negritta">Descendente</strong>. Línea inferior, posición máxima inferior que puede ocupar el texto (la letra g en el ejemplo es la que marca esa posición</li>
+				<li class="punto"><strong class="Negritta">Altura mayúsculas</strong>. Línea superior máxima de las letras mayúsculas (se suele tomar la de la letra <em class="cursiva">M</em> mayúscula).</li>
+				<li class="punto"><strong class="Negritta">Interlineado</strong>. Distancia entre dos líneas, se toma utilizando las líneas base.</li>
+				<li class="punto"><strong class="Negritta">Interletrado</strong>. Distancia horizontal entre letra y letra. Ampliarla significaría distancias más cada letra de una palabra.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">Kerning</strong>. Es la distancia entre letra y letra pero aplicando distancias distintas en función de las letras. Así en la imagen anterior se observa que la distancia entre la <em class="cursiva">M</em> y la letra <em class="cursiva">o</em>, no es la misma que entre la <em class="cursiva">o</em> y la <em class="cursiva">x</em> (la <em class="cursiva">x</em> se mete un poco más dentro de la <em class="cursiva">o</em>), ya que de esa forma el texto es más estético.</li>
+				<li class="punto"><strong class="Negritta">Cuerpo</strong>. La mayor parte de las tipografías actuales tiene tamaños (en horizontal) distintos de las letras. Es decir no ocupa lo mismo la letra <em class="cursiva">M</em> que la letra <em class="cursiva">N</em><strong class="Negritta"> </strong>(la <em class="cursiva">N</em> es más corta). Los llamados tipos de letra monoespaciados (como la letra <em class="cursiva">Courier</em>), hacen que cada carácter ocupe lo mismo (al estilo de las máquinas de escribir antiguas) en ellas la <em class="cursiva">M</em> ocupa lo mismo que la <em class="cursiva">N</em>.</li>
+				<li class="punto"><strong class="Negritta">Letras vectoriales</strong> y <strong class="Negritta">letras en mapa de bits</strong>. Hoy en día todas las tipografías son de tipo vectorial, esto significa que no se guarda una imagen de cada letra, sino que de cada letra se guarda la fórmula para dibujarla. Esto permite que al ampliar las letras nunca perdamos resolución (al contrario de lo que ocurría en los ordenadores antiguos).<p class="sinpunto">Las primeras letras vectoriales fueron las pertenecientes al lenguaje <strong class="Negritta">PostScript</strong> de <strong class="Negritta">Adobe</strong> incluidos en los ordenadores <strong class="Negritta">Apple MacIntosch</strong>. <strong class="Negritta">Microsoft</strong> creo tipos de letra <strong class="Negritta">TrueType</strong> para Windows y ambas compañías actualmente desarrollan los tipos <strong class="Negritta">OpenType</strong> que se espera se convierta en un estándar abierto.</p><p class="sinpunto">En la actualidad se da por hecho que todas las fuentes son vectoriales.</p></li>
+				<li class="punto"><strong class="Negritta">Familia</strong>. Hay dos grandes familias de letras las letras de tipo Serif y las Sans-Serif. Las primeras se distinguen por colocar <em class="cursiva">patas </em>en algunas letras. Es el caso de la letra <strong class="Negritta">Times</strong>, que escribiría así: MÉTODO (obsérvense las patas de la <em class="cursiva">M</em> y la <em class="cursiva">T</em>), mientras que en forma sans serif, por ejemplo como la letra Arial, se escribiría así: MÉTODO. <p class="sinpunto">Además de estas dos famosas familias, CSS permite distinguir otras tres familias. En total son:</p></li>
+				<li class="punto"><strong class="Negritta">Serif</strong>. Ya explicada, por ejemplo: <strong class="Negritta">Times</strong><strong class="Negritta">, </strong><strong class="Negritta">Garamond</strong><strong class="Negritta">, </strong><strong class="Negritta">Georgia</strong>, <strong class="Negritta">Bodoni</strong><span class="atributo">, </span><strong class="Negritta">Bitstream Cyberbit,</strong><strong class="Negritta"> Baskerville, </strong><strong class="Negritta">Bookman Old Style</strong>..</li>
+				<li class="punto"><strong class="Negritta">Sans-serif</strong>. Ya explicada, por ejemplo: <strong class="Negritta">Arial</strong><strong class="Negritta">, </strong><strong class="Negritta">Verdana</strong><strong class="Negritta">, </strong><strong class="Negritta">Helvetica</strong><strong class="Negritta">, </strong><strong class="Negritta">Trebuchet</strong>, <strong class="Negritta">Gill Sans</strong>, <strong class="Negritta">Futura</strong><strong class="Negritta">, </strong><strong class="Negritta">Tahoma</strong><strong class="Negritta">, </strong><strong class="Negritta">Geneva, </strong> etc </li>
+				<li class="punto"><strong class="Negritta">Cursive</strong>. Son letras normalmente inclinadas y muy ornamentadas que simulan la escritura manual. Por ejemplo: <strong class="Negritta">Zapf-Chancery</strong>, <strong class="Negritta">Comic Sans</strong>, <strong class="Negritta">Script MT,</strong><strong class="Negritta"> Catflish Script,</strong><strong class="Negritta"> </strong><strong class="Negritta">Adobe Poetica,</strong><strong class="Negritta"> </strong><strong class="Negritta">Monotype Corsiva</strong><strong class="Negritta">, </strong><strong class="Negritta">Brush Script, </strong>etc.</li>
+				<li class="punto"><strong class="Negritta">Fantasy</strong>. Letras muy ornamentadas que no están pensadas para el texto normal de un documento, pero sí se podría utilizar para sus títulos (pero sólo para los que deseemos recargar). Por ejemplo: <strong class="Negritta">Western</strong>, <strong class="Negritta">Impact</strong>, <strong class="Negritta">Copperplate</strong>, <strong class="Negritta">Artistik</strong>, <strong class="Negritta">Britannic Bold</strong><strong class="Negritta">, Algerian, </strong><strong class="Negritta">Herculanum,</strong><strong class="Negritta"> </strong>etc.</li>
+				<li class="punto"><strong class="Negritta">Monospaced</strong>. Letras monoespaciadas, cada letra ocupa lo mismo. Simulan escritura con máquina de escribir antigua. Ejemplos: <strong class="Negritta">Courier</strong>, <strong class="Negritta">Lucida Console</strong>, <strong class="Negritta">Consolas</strong>, <strong class="Negritta">Monaco</strong>, <strong class="Negritta">Liberation Mono, </strong><strong class="Negritta">Source Code Pro</strong><strong class="Negritta">, </strong><strong class="Negritta">Andale Mono</strong><strong class="Negritta">, </strong>etc.<h3 class="titulo3"><span class="numero3">[9.1.2]</span><a id="_idTextAnchor003"></a>propiedades CSS para modificar la fuente</h3></li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">19</span><a id="_idTextAnchor004"></a>font-size</h4>
+			<p class="Normal2">Modifica el tamaño de la fuente. Se puede especificar de tres maneras:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">Usando palabras especiales</strong>. Hacen referencia a tamaños predefinidos. <p class="sinpunto">Son:</p><table id="table001" class="tabla-manual _idGenTablePara-1"><colgroup><col /><col /></colgroup><tbody><tr class="tabla-manual"><td class="tabla-manual cabecera-tabla primera-celda-tabla"><p class="cabeceraTabla">valor</p></td><td class="tabla-manual cabecera-tabla celda-normal"><p class="cabeceraTabla">significado</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><strong class="Negritta">xx-small</strong></p></td><td class="tabla-manual celda-normal"><p class="Normal">Fuente muy pequeña</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><strong class="Negritta" lang="en-US">x-small</strong></p></td><td class="tabla-manual celda-normal"><p class="Normal">Fuente pequeña</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><strong class="Negritta" lang="en-US">small</strong></p></td><td class="tabla-manual celda-normal"><p class="Normal">Fuente un poco pequeña</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><strong class="Negritta" lang="en-US">medium</strong></p></td><td class="tabla-manual celda-normal"><p class="Normal">Fuente normal.</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><strong class="Negritta" lang="en-US">large</strong></p></td><td class="tabla-manual celda-normal"><p class="Normal">Fuente un poco grande</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><strong class="Negritta" lang="en-US">x-large</strong></p></td><td class="tabla-manual celda-normal"><p class="Normal">Fuente grande</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><strong class="Negritta" lang="en-US">xx-large</strong></p></td><td class="tabla-manual celda-normal"><p class="Normal">Fuente muy grande</p></td></tr></tbody></table></li>
+				<li class="punto"><strong class="Negritta">Aumentando o disminuyendo el tamaño</strong>. En este caso se aumenta o disminuye el tamaño de la letra sobre el tamaño que le correspondería a la letra, por herencia. Valores:<table id="table002" class="Ningún-estilo-de-tabla _idGenTablePara-1"><colgroup><col /><col /></colgroup><tbody><tr class="Ningún-estilo-de-tabla"><td class="Ningún-estilo-de-tabla cabecera-tabla"><p class="cabeceraTabla">valor</p></td><td class="Ningún-estilo-de-tabla cabecera-tabla"><p class="cabeceraTabla">significado</p></td></tr><tr class="Ningún-estilo-de-tabla"><td class="Ningún-estilo-de-tabla primera-celda-tabla"><p class="Normal"><strong class="Negritta" lang="en-US">smaller</strong></p></td><td class="Ningún-estilo-de-tabla"><p class="Normal">Más pequeña</p></td></tr><tr class="Ningún-estilo-de-tabla"><td class="Ningún-estilo-de-tabla primera-celda-tabla"><p class="Normal"><strong class="Negritta" lang="en-US">larger</strong></p></td><td class="Ningún-estilo-de-tabla"><p class="Normal">Más grande</p></td></tr></tbody></table></li>
+				<li class="punto"><strong class="Negritta">Tamaño heredado. </strong>Lo consigue la palabra <strong class="Negritta" lang="en-US">inherit</strong>. Deja la letra con el tamaño que hereda de su contenedor o elemento padre.</li>
+				<li class="punto"><strong class="Negritta">Tamaño inicial. </strong>Lo consigue la palabra <strong class="Negritta" lang="en-US">initial</strong>. Coloca la letra a su tamaño por defecto (<strong class="Negritta">Internet Explorer </strong>no reconoce este valor).</li>
+				<li class="punto"><strong class="Negritta">Modo exacto</strong>. En este caso se indica el tamaño de la letra con su valor numérico. Inmediatamente tras este número se indica la medida en la que se debe medir el número (sea de forma absoluta o relativa). Ejemplos: <em class="cursiva">12px</em>, <em class="cursiva">2mm</em>, <em class="cursiva">12pt, 1.2em, 120%,…</em> <p class="sinpunto">Ejemplo (sube la letra un 40% sobre el tamaño que le correspondería normalmente al elemento h1):</p><table id="table003" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">h1 {</strong></pre><pre class="codigo"><strong class="resaltado">  </strong><span class="atributo">font-size</span><strong class="resaltado">:</strong><span class="texto">1.4em</span>;</pre><pre class="codigo"><strong class="resaltado">}</strong></pre></td></tr></tbody></table></li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">20</span><a id="_idTextAnchor005"></a>font-family</h4>
+			<p class="Normal">Indica el tipo de letra. El problema es que no todas las fuentes están disponibles en todos los sistemas. Por ello, se suelen indicar varias opciones separadas por comas. Si la primera no está disponible, se usa la siguiente. </p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table004" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">p{</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   </strong><span class="atributo">font-family:</span><span class="texto">”AvantGarde Bk”, Arial, Helvetica,    </span></pre>
+							<pre class="codigo"><span class="texto">                                              sans-serif</span>;</pre>
+							<pre class="codigo"><strong class="resaltado">}</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En este código se intenta asignar la fuente <strong class="Negritta">AvantGarde Bk</strong> a todos los párrafos. Si el sistema del usuario no posee este tipo de letra, se prueba con <strong class="Negritta">Arial</strong>. Si tampoco está disponible, se prueba con <strong class="Negritta">Helvetica</strong>. Si tampoco, se prueba con una letra <strong class="Negritta">sans-serif </strong>genérica. </p>
+			<p class="Normal2">Se usan comillas dobles para los nombres de fuentes compuestas por varias palabras. </p>
+			<p class="Normal2">La norma obliga a dar como última opción de la lista de valores de <br /><strong class="Negritta">font-family </strong>una de estas familias genéricas:</p>
+			<table id="table005" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla primera-celda-tabla">
+							<p class="cabeceraTabla">familia</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla celda-normal">
+							<p class="cabeceraTabla">uso</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">serif</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Letra genérica utilizada en tipos de letras con <em class="cursiva">patitas. </em>Como por ejemplo Times New Roman.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">sans-serif</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Para letras genéricas sin patas como Arial O Helvética.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">fantasy</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Para letras más informales como Impact. </p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">monospaced</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Letras donde cada carácter ocupa lo mismo. En Windows suele ser Arial.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">cursive</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Para letras que simulan escritura manual como Brush Script</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="titulo4"><span class="numeroOculto">21</span><a id="_idTextAnchor006"></a>font-weight</h4>
+			<p class="Normal">Peso de la fuente (grosor). Valores posibles: </p>
+			<ul>
+				<li class="punto"><strong class="Negritta">normal</strong>. Espesor normal.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">bold</strong>. Negrita</li>
+				<li class="punto"><em class="cursiva">Número</em>. Se trata de indicar un número, que puede ser: <strong class="Negritta">100</strong>, <strong class="Negritta">200</strong>, <strong class="Negritta">300</strong>, <strong class="Negritta">400</strong>,  <strong class="Negritta">500</strong>,  <strong class="Negritta">600</strong>,  <strong class="Negritta">700</strong>,  <strong class="Negritta">800</strong>, <strong class="Negritta">900</strong> ó <strong class="Negritta">1000</strong>. Para que funcionen esos valores, debemos tener tipos de letra que incluyan esos grosores. </li>
+				<li class="punto"><strong class="Negritta">bolder</strong>. Más gruesa. Aumenta el grosor actual de la letra (al siguiente disponible).</li>
+				<li class="punto"><strong class="Negritta">lighter</strong>. Más delgada. Disminuye el grosor actual de la letra (al siguiente disponible).</li>
+			</ul>
+			<p class="Normal">También son válidos los valores <strong class="Negritta">initial </strong>e <strong class="Negritta">inherit</strong>.</p>
+			<h4 class="titulo4"><span class="numeroOculto">22</span><a id="_idTextAnchor007"></a>font-style</h4>
+			<p class="Normal">Estilo de letra. Puede ser: <strong class="Negritta" lang="en-US">normal</strong>, <strong class="Negritta" lang="en-US">italic</strong> (cursiva) u <strong class="Negritta" lang="en-US">oblique</strong> (normalmente se representa igual que la anterior). Como siempre, también son válidos los valores <strong class="Negritta">initial </strong>e <strong class="Negritta">inherit</strong>.</p>
+			<h4 class="titulo4"><span class="numeroOculto">23</span><a id="_idTextAnchor008"></a>font-variant</h4>
+			<p class="Normal">Versales (<span lang="en-US">small-caps</span>). Valores: <strong class="Negritta">normal</strong> y <strong class="Negritta">small-caps</strong> (además de <strong class="Negritta">initial </strong>e <strong class="Negritta">inherit</strong>)</p>
+			<h4 class="titulo4"><span class="numeroOculto">24</span><a id="_idTextAnchor009"></a>line-height</h4>
+			<p class="Normal2">Permite calibrar el interlineado (la distancia entre cada línea). Se puede especificar de estas formas:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">Un número</strong>. En ese caso dicta la distancia multiplicando este número por la distancia normal. Es decir si indicamos <em class="cursiva">2</em>, el interlineado será doble, si indicamos <em class="cursiva">1.5</em> será un 50% mayor de lo normal.</li>
+				<li class="punto"><strong class="Negritta">Un número seguido de una unidad de medida</strong>. Si indicamos <em class="cursiva">16px</em>, entonces estamos indicando la distancia exacta entre cada línea (que será de 16 píxeles).</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">25</span>font-stretch</h4>
+			<p class="Normal2">Establece la anchura de la letra. Posibles valores:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">ultra-condensed.</strong></li>
+				<li class="punto"><strong class="Negritta">extra-condensed.</strong></li>
+				<li class="punto"><strong class="Negritta">condensed.</strong></li>
+				<li class="punto"><strong class="Negritta">semi-condensed.</strong></li>
+				<li class="punto"><strong class="Negritta">normal.</strong></li>
+				<li class="punto"><strong class="Negritta">semi-expanded.</strong></li>
+				<li class="punto"><strong class="Negritta">expanded.</strong></li>
+				<li class="punto"><strong class="Negritta">ultra-expanded.</strong></li>
+			</ul>
+			<p class="Normal">Solo funciona en Firefox e Internet Explorer, ambos desde la versión 9.</p>
+			<h4 class="titulo4"><span class="numeroOculto">26</span><a id="_idTextAnchor010"></a>font</h4>
+			<p class="Normal">Permite desde una sola propiedad cambiar en un solo golpe todas las anteriores. Su sintaxis es:</p>
+			<table id="table006" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">font</strong><strong class="Negritta">:</strong> font-style font-variant font-weight font-size/line-height font-family;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal"><strong class="Negritta">El orden tiene que ser estrictamente ese</strong>, pero algunas propiedades se pueden dejar sin utilizar. </p>
+			<p class="Normal">Ejemplos:</p>
+			<table id="table007" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><span class="comentario">/*Letra cursiva y negrita de tipo Comic con opciones a Arial y Helvetica*/</span></pre>
+							<pre class="codigo">font: <span class="texto">italic bold 16pt “Comic Sans MS”, Arial, </span></pre>
+							<pre class="codigo"><span class="texto">&#9;Helvetica, sans-serif;</span></pre>
+							<pre class="codigo"><span class="comentario">/* Letra cursiva con versalitas de tamaño 18 puntos y 24 de puntos de distancia entre cada línea */</span></pre>
+							<pre class="codigo">font: <span class="texto">italic small-caps 18pt/24pt;</span></pre>
+							<pre class="codigo"><span class="comentario">/* Letra cursiva */</span></pre>
+							<pre class="codigo">font: <span class="texto">italic</span>;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Esta propiedad también nos permite utilizar las fuentes de los elementos del sistema operativo en el que estemos, concretamente:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">caption</strong>. Letra utilizada para los títulos.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">icon</strong>. Letra de los iconos</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">menu</strong>. Letra de los menús</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">message</strong><strong class="Negritta">-box</strong>. Letra de los cuadros de diálogo</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">small-caption</strong>. Letra de los controles pequeños.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">status</strong><strong class="Negritta">-bar</strong>. Letra de las barras de estado.</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">27</span><a id="_idTextAnchor011"></a>color</h4>
+			<p class="Normal2">Color de la fuente. Utilizando cualquiera de los códigos de color explicados en el apartado dedicado a las unidades y medidas (Véase <a href="#">[8.5] indicación de colores en CSS en la página 151</a>).</p>
+			<h3 class="titulo3"><span class="numero3">[9.1.3]</span><a id="_idTextAnchor012"></a>importar tipos de letra</h3>
+			<h4 class="titulo4"><span class="numeroOculto">28</span><a id="_idTextAnchor013"></a>@font-face</h4>
+			<p class="Normal2">Uno de los problemas más importantes sobre la tipografía es querer utilizar un tipo de letra sobre la que no hay seguridad que exista en el dispositivo de la persona que está viendo la página HTML.</p>
+			<p class="Normal">CSS3 ha introducido el uso de esta directiva en el código CSS para precargar el tipo de letra necesario. Para ello deberemos utilizar el archivo que contiene el tipo de letra en sí. El formato posible para los archivos con el tipo de letra es:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">ttf</strong>. Letras de tipo <strong class="Negritta">TrueType</strong>, las clásicas de Windows. Utilizadas por Mozilla y Chrome/Safari (y otros).</li>
+				<li class="punto"><strong class="Negritta">otf</strong>. Letras de tipo <strong class="Negritta">Open Type</strong>, son las que se usan en los sistemas Windows actuales. Está basada en el formato anterior. Utilizadas por Mozilla y Chrome/Safari (y otros).</li>
+				<li class="punto"><strong class="Negritta">eot</strong>. Propiedad de Microsoft (y por lo tanto compatible con los navegadores de esta empresa)</li>
+				<li class="punto"><strong class="Negritta">woff</strong>.  <strong class="Negritta" lang="en-US">Web Open Font Format</strong>, Formato abierto para la web impulsado por Mozilla y compatible en casi todas las versiones de los últimos navegadores. Se creó para evitar los problemas de propiedad de los formatos anteriores.</li>
+				<li class="punto"><strong class="Negritta">svg</strong>. Formato estándar vectorial de gráficos, que permite también diseñar tipos de letras. Lo reconocen algunos navegadores (especialmente para el móvil).</li>
+			</ul>
+			<p class="Normal2">Con tantos formatos e incompatibilidades podemos tener el problema de que la fuente elegida al final no se vea correctamente. Por ello servicios como el disponible en la página <strong class="Negritta">Font Squirrel</strong> (<a href="#"><span class="hyperlink">http://www.fontsquirrel.com/tools/webfont-generator</span></a>) permite subir la letra en formato <strong class="Negritta" lang="en-US">Open Type</strong> (suponiendo que la fuente no posea derechos reservados o bien les hayamos pagado) y nos descarga todos los archivos en los demás formatos e incluso el código que hay que escribir en nuestra hoja de estilos CSS para cargar la fuente correctamente en cualquier navegador compatible con CSS3.</p>
+			<p class="Normal">Para cargar la fuente se usa la instrucción <strong class="Negritta">@font-face</strong> a la que se le incroporan varias propiedades entre las que están al menos font-family (para d</p>
+			<p class="Normal">Por ejemplo supongamos que queremos utilizar el tipo de letra <em class="cursiva">Cantarell</em> y disponemos (teniendo en cuenta que los tipos de letra pueden tener derechos exclusivos de uso, por lo que habrá que asegurarse de que uso es libre o bien pagar los derechos para su uso) de archivo <em class="cursiva">Artistik.ttf</em> que contiene el tipo de letra en sí. El código para que todos los párrafos la usen (con la seguridad de que sí saldría) es:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">font-family</strong>. Para dar nombre de familia a la letra que estamos importando. Ese nombre es el que luego utilizarán los selectores para elegir la letra que hemos cargado (en el ejemplo es lo que usa <strong class="Negritta">p</strong> para dar formato con esa letra a los párrafos).</li>
+				<li class="punto"><strong class="Negritta">src</strong>. En la que se indica una o más URL (separadas por comas) que apuntan a archivos de letras que se cargarán en la página para que se vea correctamente la letra. El hecho de dar varias rutas con archivos de tipos de letra es para proporcionar opciones, para en caso de no funcionar el primer archivo cargar el segundo y así sucesivamente.</li>
+			</ul>
+			<p class="Normal2">Opcionalmente podemos utilizar las propiedades:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">font-weight</strong>. </li>
+				<li class="punto"><strong class="Negritta" lang="en-US">font-style</strong><strong class="Negritta">. </strong></li>
+				<li class="punto"><strong class="Negritta" lang="en-US">font-stretch</strong>. </li>
+			</ul>
+			<p class="Normal2">Todas ellas vistas anteriormente y que ahora sirven para indicar de qué tipo es la fuente que se está cargando; si es negrita, cursiva, etc. </p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table008" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">@font-face </strong>{</pre>
+							<pre class="codigo">    <strong class="resaltado">font-family</strong>: <span class="atributo">cantarellbold</span>;</pre>
+							<pre class="codigo">&#9;<span class="comentario">/* primera opción, tipo de letra EOT, no admite </span></pre>
+							<pre class="codigo"><span class="comentario">&#9;&#9;usar opciones  */</span></pre>
+							<pre class="codigo">    <strong class="resaltado">src</strong>: url(<span class="texto">‘font/cantarell-bold-webfont.eot’</span>);</pre>
+							<pre class="codigo">&#9;<span class="comentario">/* opciones en orden de prioridad deseada para </span></pre>
+							<pre class="codigo"><span class="comentario">&#9;&#9;importar los tipos de letra */</span></pre>
+							<pre class="codigo">    <strong class="resaltado">src</strong>: </pre>
+							<pre class="codigo">     local(<span class="texto">“Cantarell Bold”</span>),</pre>
+							<pre class="codigo"><strong class="resaltado">     </strong>url(<span class="texto">‘font/cantarell-bold-webfont.eot?#iefix’</span>) </pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&#9;&#9;</strong>format(<span class="texto">‘embedded-opentype’</span>),</pre>
+							<pre class="codigo">     url(<span class="texto">‘font/cantarell-bold-webfont.woff’</span>) </pre>
+							<pre class="codigo">&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;format(<span class="texto">‘woff’</span>),</pre>
+							<pre class="codigo">     url(<span class="texto">‘font/cantarell-bold-webfont.ttf’</span>) </pre>
+							<pre class="codigo">&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;format(<span class="texto">‘truetype’</span>),</pre>
+							<pre class="codigo">     url(<span class="texto">‘font/cantarell-bold-webfont.svg#cantarellbold’</span>) </pre>
+							<pre class="codigo">&#9;&#9;&#9;&#9;&#9;format(<span class="texto">‘svg’</span>);</pre>
+							<pre class="codigo">    <strong class="resaltado">font-weight:</strong> <span class="atributo">bold</span>;</pre>
+							<pre class="codigo">    <strong class="resaltado">font-style: </strong><span class="atributo">normal</span>;</pre>
+							<pre class="codigo">}</pre>
+							<pre class="codigo">p{</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">font-family</strong>:<span class="atributo">cantarellbold</span>;</pre>
+							<pre class="codigo">&#9;... </pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En el ejemplo anterior en la propiedad<a id="_idTextAnchor014"></a> <strong class="Negritta">src</strong> se indican varias rutas mediante la función <strong class="Negritta">url</strong> y en cada una de ellas, se indica el formato del archivo mediante la función <strong class="Negritta" lang="en-US">format</strong>. Antes de usar las rutas, se buscará la fuente <em class="cursiva">Cantarell Bold</em> en el ordenador local gracias a la función <strong class="Negritta">local </strong>y así si el usuario ya la tiene en el sistema no hará falta cargarla desde el archivo externo.</p>
+			<p class="Normal">Aunque esta técnica es muy interesante porque nos permite utilizar fuentes personales y no depender de que lo el usuario o usuaria tiene instalado en su ordenador, hay que cargar el archivo de fuentes y eso puede llevar cierto tiempo, durante el cual no se ve texto alguno o se ve con un formato diferente, lo cual puede ser problemático. No hay que abusar de esta técnica cargando demasiadas fuentes porque si no la carga de la página web sería muy lenta.</p>
+			<h4 class="titulo4"><span class="numeroOculto">29</span><a id="_idTextAnchor015"></a>servicios online de importación de tipos de letra</h4>
+			<p class="Normal2">El problema de los tipos de letra poco a poco se va solucionando gracias al elemento <strong class="Negritta">@font-face</strong>, el problema es que su manejo no es nada sencillo.</p>
+			<p class="Normal">Por ello han aparecido servicios de tipos de letra online, que nos permiten utilizar tipos de letra de librerías (algunas gratuitas y otras de pago) disponibles en Internet. Para ello se suele requerir añadir en las páginas un enlace a un archivo CSS o JavaScript, que en realidad se encarga por nosotros de importar adecuadamente el tipo de letra.</p>
+			<p class="Normal">Importar muchos tipos de letra puede retrasar muchísimo la carga de la página web por lo que se debe utilizar con cautela. Las instrucciones para importar estos tipos de letra les proporcionan los propios servicios online. Los más conocidos son:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">Google Fonts</strong>. Disponible en <a href="#"><span class="hyperlink">https://www.google.com/fonts</span></a> y perteneciente a Google, es claramente el más utilizado por incorporar un buen número de tipos de letra gratuitas.</li>
+				<li class="punto"><strong class="Negritta">Adobe Typekit</strong>. El más utilizado a nivel profesional. Hay posibilidad de suscripción gratuita a un número limitado de fuentes, para utilizar muchas más hay que pagar una cuota (o disponer de licencia <strong class="Negritta">Creative Cloud </strong>de <strong class="Negritta">Adobe</strong>). Disponible en <a href="#"><span class="hyperlink">https://typekit.com/</span></a> </li>
+				<li class="punto"><strong class="Negritta">Adobe Edge Fonts</strong>. Servicio gratuito de Adobe (realmente servido desde <strong class="Negritta">Typekit</strong>) que permite utilizar en las páginas web en torno a 500 tipos de letra. <a href="#"><span class="hyperlink">https://edgewebfonts.adobe.com/fonts</span></a></li>
+				<li class="punto"><strong class="Negritta">fontdeck</strong>. Se trata de la web <a href="#"><span class="hyperlink">http://fontdeck.com/</span></a> que dispone un catálogo de tipos de letra de calidad. Se cobra por el uso de las letras, si usamos pocas se paga poco si usamos muchas, se paga más. Sólo se cobra además si hay páginas web que creemos que sigan utilizando esas fuentes.</li>
+				<li class="punto"><strong class="Negritta">webtype</strong>. En <a href="#"><span class="hyperlink">http://www.webtype.com/</span></a>, servicio parecido al anterior.</li>
+				<li class="punto"><strong class="Negritta">fonts.com</strong>. Posee el catálogo más amplio de tipos de letra. Tiene un plan gratuito con acceso a 200 fuentes (el de pago accede a más de 20.000)  limitado a dos proyectos y 20.000 páginas vistas en ellos al mes.<h3 class="titulo3"><span class="numero3">[9.1.4]</span><a id="_idTextAnchor016"></a>propiedades avanzadas de fuente</h3></li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">30</span>font-kerning</h4>
+			<p class="Normal2">Modifica el kerning del tipo de letra actual. Posibilidades:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">auto</strong>. kerning automático (opción por defecto). El navegador decide si usa o no la información sobre el kerning.</li>
+				<li class="punto"><strong class="Negritta">normal</strong>. Se aplica la información sobre el kerning disponible en el tipo de letra.</li>
+				<li class="punto"><strong class="Negritta">none</strong>. Se deshabilita el kerning, la distancia entre cada letra es la misma siempre. </li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">31</span>font-feature-settings</h4>
+			<p class="Normal2"><img src="css-formato-fuente-html-2016-web-resources/image/1.png" alt="" /></p>
+			<p class="Normal2">Permite asignar propiedades especiales a la letra, cuando esta es de tipo <strong class="Negritta">OpenType</strong>. Por ejemplo:</p>
+			<table id="table009" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">.matematicas</strong>{</pre>
+							<pre class="sintaxis">   <span class="atributo">font-feature-settings: </span><span class="atributo">“frac”;</span></pre>
+							<pre class="sintaxis">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">El código anterior hace que el texto de la clase <em class="cursiva">matematicas</em>, active el modo de fracciones automáticas. Las propiedades son muy avanzadas y permiten especificar características muy espectaculares. En la URL (sugerida en la ayuda de Mozilla sobre esta propiedad): <br /><a href="#"><span class="hyperlink">https://www.fontfont.com/staticcontent/downloads/FF_OT_User_Guide.pdf</span></a> hay una extensa guía con ejemplos de uso de las propiedades de las fuentes OpenType (no todas las fuentes tienen esas propiedades).</p>
+			<p class="Normal">Esta propiedad solo funciona en los últimos navegadores (<strong class="Negritta">Internet Explorer</strong> a partir de la versión 10). Algunas propiedades posibles son (solo funcionan si la letra en uso lo permite):</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">“calt”</strong>. Permite utilizar los glifos alternativos que posee el tipo de letra.</li>
+				<li class="punto"><strong class="Negritta">“salt”</strong>. Permite acceder a las variantes estilísticas de cada carácter de la letra actual.</li>
+				<li class="punto"><strong class="Negritta">“clig”</strong>. Reemplaza la secuencia de caracteres por un glifo conjunto que liga todos los caracteres.</li>
+				<li class="punto"><strong class="Negritta">“dlig”</strong>. Parecida a la anterior pero el glifo no tiene por qué aglutinar todo el texto.</li>
+				<li class="punto"><strong class="Negritta">“hist”</strong>. Reemplaza los caracteres normales de la letra por sus versiones de tipo antiguo.</li>
+				<li class="punto"><strong class="Negritta">“smcp”</strong>. Las minúsculas se muestran como mayúsculas pequeñas (al estilo de las versalitas).</li>
+				<li class="punto"><strong class="Negritta">“c2sc”</strong>. Las mayúsculas se muestran como mayúsculas pequeñas (al estilo de las versalitas).</li>
+				<li class="punto"><strong class="Negritta">“c2pc”</strong>. Las mayúsculas se muestran como mayúsculas de tipo muy pequeño (<em class="cursiva">petite capital</em>).</li>
+				<li class="punto"><strong class="Negritta">“pcap”</strong>. Las minúsculas se muestran como mayúsculas de tipo muy pequeño (<em class="cursiva">petite capital</em>).</li>
+				<li class="punto"><strong class="Negritta">“cpsp”</strong>. Modifica el espacio entre letras mayúsculas para mejorar su estética cuando el texto se compone solo de mayúsculas.</li>
+				<li class="punto"><strong class="Negritta">“titl”</strong>. Reemplaza las mayúsculas por las mayúsculas especiales para títulos.</li>
+				<li class="punto"><strong class="Negritta">“swsh”</strong>. Usa los glifos de tipo <em class="cursiva">swash </em>(curvos, Swash).</li>
+				<li class="punto"><strong class="Negritta">“cswh”</strong>. Como la anterior pero se usan glifos swash no en todo el texto, sino según el contexto del mismo.</li>
+				<li class="punto"><strong class="Negritta">“frac”</strong>. Reemplaza las fracciones por un glifo de fracción (ejemplo 2/3 por 2/3).</li>
+				<li class="punto"><strong class="Negritta">“afrac”</strong>. Reemplaza las fracciones por fracciones de tipo alternativo (ejemplo 2/3 se convierte en <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAlCAYAAABPsblCAAAACXBIWXMAABcRAAAXEQHKJvM/AAACnElEQVRIS62WPUhyURjHRdecEoNEHcRBoSEk+1h0ER00RHBoERukIHEIIjeDaBAEQWhS0E0UxGho0NXNrbESbAmCKLSy7Ov/vs+Ba9fuuXnlfX9w8J7znPPjnMd7zrkqTODt7Q1fX1+juvhZjIrb+pd2uw2v14v5+XmYTCZsbm7i9vaWxXgyriifz0OlUsHn86FUKiGTyWBmZgY6nQ53d3e8IXyR2+3G4eHhWNv9/T00Gg12dnZ4Q/ii9/f30bN4GbS8hYUF3hD5HPGgnLlcLm5MsajVarG8lctlblxWJF5So9FgkkgkItedLxJLdnd3mSSRSHDjAhKR0In+ZpvNBrVajdPTU0n8J9wZPTw8YHZ2lonoWUBOQnBFwWAQRqORF5JFIrq5uWE5KRaLrP7y8oLX19dRob3HQyI6Pz9norm5OVitVlgsllExGAxYW1vD8/PzZNFgMECz2US9XketVhsr1WoVZ2dn+Pj4+F30WzInofjNngQTDYdDdDqdqcrV1RW63S4+Pz+/RZeXl1hdXYXD4cDy8rKisri4CI/Hg16v9y0i69PTEx4fH9mvkiL0FfL6f3M0LYo2LbG3t8fWv76+zkogEMDGxgbC4TA7v3lwRel0GtFoFNvb29ja2kIymUQoFGJv/M+zXEDx0uisjsVisnFFIqfTyf5yAcU5EkOzsNvto/pUB5vAwcEBy8vx8fFY+9Qz2t/fx8rKCjtO6KalG1iOiUsj6NhIpVJsdpVKhdtHkUiA3qd/ummFnGSzWej1+rErXUAiomX0+31JR8Lv92NpaYkbk4joatZqtSgUCmPttDUoRycnJz+HMCQiuilor9Eg+siiTxyz2czqcvuMkD2zr6+vkcvlEI/HcXR0hIuLC24/AUXJVsIfbfFZAjKU6cUAAAAASUVORK5CYII=" alt="" style="width:.7em;height:1em;"/>).</li>
+				<li class="punto"><strong class="Negritta">“ordn”</strong>. Los ordinales se muestran de forma gráfica. 1st se convierte en 1st.</li>
+				<li class="punto"><strong class="Negritta">“onum”</strong>. Número en estilo antiguo. Ejemplo: 1789.</li>
+				<li class="punto"><strong class="Negritta">“pnum”</strong>. Los números usan anchos proporcionales.</li>
+				<li class="punto"><strong class="Negritta">“tnum”</strong>. Los números usan anchuras uniformes.</li>
+				<li class="punto"><strong class="Negritta">“zero”</strong>. El cero se muestra de forma rasgada.</li>
+				<li class="punto"><strong class="Negritta">“mgrk”</strong>. Los símbolos griegos usan su forma matemática.</li>
+				<li class="punto"><strong class="Negritta">“size”</strong>. El tamaño se ajusta a su visualización óptima.</li>
+				<li class="punto"><strong class="Negritta">“ss01”</strong> a <strong class="Negritta">“ss20”</strong>. Elije el conjunto de glifos indicado (van de 1 a 20). Cada tipo de letra puede tener hasta 20 variaciones de cada carácter.</li>
+			</ul>
+			<p class="Normal">Además se pueden indicar varias propiedades a la vez separándolas por comas.</p>
+			<h4 class="titulo4"><span class="numeroOculto">32</span>font-override-language</h4>
+			<p class="Normal">Normalmente el elemento <strong class="Negritta">html </strong>contiene la información sobre el lenguaje de la página. Con esa información, los navegadores deciden qué ligaduras (como el hecho de que el texto <strong class="Negritta">fi </strong>aparezca pegado) se aplican. Esta propiedad permite cambiar el lenguaje (de cara a decidir qué ligaduras aplicar) en un elemento concreto.</p>
+			<h4 class="titulo4"><span class="numeroOculto">33</span>font-synthesis</h4>
+			<p class="Normal2">Propiedad que permite indicar si el navegador debe aplicar negritas y cursivas para el tipo de letra del elemento al que se aplica esta propiedad. Valores posibles:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">none</strong>. No se aplica ni negrita ni cursiva</li>
+				<li class="punto"><strong class="Negritta">weight</strong>. Se aplica la negrita.</li>
+				<li class="punto"><strong class="Negritta">style</strong>. Se aplica la cursiva.</li>
+			</ul>
+			<p class="Normal">Puede tomar los valores <strong class="Negritta">weight </strong>y <strong class="Negritta">style </strong>a la vez.</p>
+			<p class="Normal">Sólo funciona en Firefox (y desde la versión 35) y requiere el sufijo <strong class="Negritta">-moz-</strong>.</p>
+			<h4 class="titulo4"><span class="numeroOculto">34</span>font-variant-ligadures</h4>
+			<p class="Normal2">Permite indicar ligaduras especiales para el texto. Funciona solo en navegadores modernos (pero en todos los actuales, aunque en los webkit requiere el prefijo <strong class="Negritta">-webkit-</strong>):</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">common-ligadures</strong>. Usa ligaduras comunes. ffi, ffi y similares.</li>
+				<li class="punto"><strong class="Negritta">no-common-ligadures</strong>. Desactiva la anterior.</li>
+				<li class="punto"><strong class="Negritta">discretionary-ligadures</strong>. Usa ligaduras discrecionales.</li>
+				<li class="punto"><strong class="Negritta">no-discretionary-ligadures</strong>. Desactiva la anterior.</li>
+				<li class="punto"><strong class="Negritta">historical-ligadures</strong>. </li>
+				<li class="punto"><strong class="Negritta">no-historical-ligadures</strong>. </li>
+				<li class="punto"><strong class="Negritta">conextual</strong>. </li>
+				<li class="punto"><strong class="Negritta">no-contextual.</strong></li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">35</span>font-variant-alternates</h4>
+			<p class="Normal2">Permite establecer propiedades para el establecimiento de glifos en la letra actual (si dicha letra lo permite).</p>
+			<p class="Normal">Es una compleja propiedad (aunque muy valorada por los diseñadores gráficos) disponible solo en Firefox desde la versión 34.</p>
+			<h4 class="titulo4"><span class="numeroOculto">36</span>@font-variant-values</h4>
+			<p class="Normal2">Permite establecer nombres a utilizar por <strong class="Negritta">font-variant-alternates. </strong>Es una propiedad que permite establecer nombres para los números utilizados por dicha propiedad.</p>
+			<h4 class="titulo4"><span class="numeroOculto">37</span>font-variant-caps</h4>
+			<p class="Normal2">Asigna valor para la forma de mostrar las mayúsculas. Nuevamente solo funciona en Firefox 34 y posteriores.</p>
+			<p class="Normal">Valores:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">normal</strong>. Se desactivan los glifos especiales para mostrar mayúsculas.</li>
+				<li class="punto"><strong class="Negritta">small-caps</strong>. Las mayúsculas se muestran normales, y las minúsculas como mayúsculas pequeñas (tipo versales). Se corresponde a la propiedad OpenType (<strong class="Negritta">smcp</strong>).</li>
+				<li class="punto"><strong class="Negritta">all-small-caps</strong>. Todas las minúsculas se muestran como mayúsculas pequeñas.</li>
+				<li class="punto"><strong class="Negritta">petite-caps</strong>. Se corresponde a la propiedad OpenType (<strong class="Negritta">pcap</strong>).</li>
+				<li class="punto"><strong class="Negritta">unicase</strong>. Todas mayúsculas.</li>
+				<li class="punto"><strong class="Negritta">titling-caps</strong>. Correspondiente al valor <strong class="Negritta">titl </strong>de OpenType. Fuerza el uso de mayúsculas especiales para títulos.</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">38</span>font-variant-numeric</h4>
+			<p class="Normal2">Establece el uso de glifos alternativos para los números (Firefox 34 y posteriores). Posibilidades:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">ordinal</strong>. Se muestran los ordinales en su forma estética.</li>
+				<li class="punto"><strong class="Negritta">slashed-zero</strong>. El cero se muestra rasgado.</li>
+				<li class="punto"><strong class="Negritta">lining-nums</strong>. Se alinean los números con su línea base.</li>
+				<li class="punto"><strong class="Negritta">oldstyle-nums</strong>. Se muestran los números en formato antiguo (no se alinean en la línea base).</li>
+				<li class="punto"><strong class="Negritta">proportional-nums</strong>. Los números no usan la misma anchura.</li>
+				<li class="punto"><strong class="Negritta">tabular-nums</strong>. Los números tendrán la misma anchura.</li>
+				<li class="punto"><strong class="Negritta">diagonal-fractions</strong>. Las fracciones se muestran en su forma diagonal.</li>
+				<li class="punto"><strong class="Negritta">stacked-fractions</strong>. Las fracciones se muestran estilo numerador/denominador.</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">39</span><a id="_idTextAnchor017"></a>font-variant-position</h4>
+			<p class="Normal2">Establece la posición del texto (Firefox 34 o superior):</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">normal</strong>.</li>
+				<li class="punto"><strong class="Negritta">super</strong>. Estilo superíndice.</li>
+				<li class="punto"><strong class="Negritta">sub</strong>. Estilos subíndice.</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">40</span>font-variant</h4>
+			<p class="Normal2">Aunque ya se ha visto la propiedad, en las versiones futuras de los navegadores  permitirá además con esta propiedad establecer, a la vez, todas las que comienzan con el nombre font-variant.</p>
+			<h2 class="titulo2"><span class="numero2">[9.2] </span><a id="_idTextAnchor018"></a>formato del texto en CSS</h2>
+			<p class="Normal2">Son propiedades que afectan al texto, fundamentalmente cambian el formato de los párrafos y aspectos del texto que no se refieren a su tipografía.</p>
+			<h3 class="titulo3"><span class="numero3">[9.2.1]</span><span lang="en-US"><a id="_idTextAnchor019"></a>word-spacing</span></h3>
+			<p class="Normal2">Indica la distancia entre las palabras del texto. Usa las mismas medidas que la propiedad <strong class="Negritta" lang="en-US">font-size</strong>. Ejemplo de texto con <span class="carCodigo">word-spacing:20px;</span></p>
+			<p class="Normal"><img src="css-formato-fuente-html-2016-web-resources/image/3.png" alt="" /></p>
+			<h3 class="titulo3"><span class="numero3">[9.2.2]</span><span lang="en-US"><a id="_idTextAnchor020"></a>letter-spacing</span></h3>
+			<p class="Normal2">Indica la distancia entre las letras del texto. Es similar a la anterior, pero ahora referida a la distancia horizontal entre caracteres. Ejemplo con <span class="carCodigo">letter-spacing:20px;</span></p>
+			<p class="Normal"><img src="css-formato-fuente-html-2016-web-resources/image/4.png" alt="" /></p>
+			<h3 class="titulo3"><span class="numero3">[9.2.3]</span><a id="_idTextAnchor021"></a>text-decoration</h3>
+			<p class="Normal2">Se indican posibles efectos en el texto. Valores:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">underline</strong><span lang="en-US">.</span><span lang="en-US"> </span>Subrayado (línea por debajo del texto)</li>
+				<li class="punto"><strong class="Negritta">overline</strong>. Línea por encima del texto.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">line-through</strong>. Tachado, línea que atraviesa el texto.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">blink</strong>. Parpadeo. No funciona en casi ningún navegador (sí en Firefox).</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">41</span>text-decoration-line</h4>
+			<h4 class="titulo4"><span class="numeroOculto">42</span>Solo funciona en <strong class="Negritta">Mozilla Firefox </strong>(con el prefijo <strong class="Negritta">-moz-</strong>). Por ahora es igual a <strong class="Negritta">text-decoration</strong>. En años sucesivos se espera que text-decoration permite indicar todas las propiedades de este apartado. </h4>
+			<h4 class="titulo4"><span class="numeroOculto">43</span>text-decoration-color</h4>
+			<p class="Normal2">Permite especificar el color del subrayado cuando se utilizan líneas mediante <strong class="Negritta">text-decoration</strong>. Solo funciona, por ahora, en <strong class="Negritta">Mozilla Firefox </strong>(y requiere utilizar el prefijo <strong class="Negritta">-moz-</strong>).</p>
+			<h4 class="titulo4"><span class="numeroOculto">44</span>text-decoration-style</h4>
+			<p class="Normal2">Permite especificar el estilo del subrayado. Solo funciona, por ahora, en <strong class="Negritta">Mozilla Firefox </strong>(y requiere utilizar el prefijo <strong class="Negritta">-moz-</strong>). Valores: <strong class="Negritta">solid </strong>(sólida), <strong class="Negritta">double </strong>(línea doble), <strong class="Negritta">dotted </strong>(línea punteada), <strong class="Negritta">dashed </strong>(línea rayada) y <strong class="Negritta">wavy </strong>(línea ondulada).</p>
+			<h3 class="titulo3"><span class="numero3">[9.2.4]</span><a id="_idTextAnchor022"></a>vertical-<span lang="en-US">align</span></h3>
+			<p class="Normal2">Posición vertical del texto (o imagen) respecto a su contenedor. Es muy versátil porque permite tanto alinear en vertical un texto respecto, por ejemplo, a la celda de la tabla en la que se encuentre; como indicar superíndices y subíndices. Posibilidades:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">baseline</strong>. En la línea base inferior del texto</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">sub. </strong>Subíndice</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">super. </strong>Superíndice</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">top. </strong>Arriba respecto al elemento más alto de la línea</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">text-top. </strong>En la línea superior del texto</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">middle. </strong>Medio respecto a la altura del texto o contenedor en el que estemos</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">bottom. </strong>Abajo respecto al elemento más alto de la línea</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">text-bottom. </strong>En la línea inferior del texto</li>
+				<li class="punto">Porcentaje. Porcentaje respecto al texto (por ejemplo 120%)</li>
+			</ul>
+			<p class="Normal2">Lo malo es que sólo funciona en texto dentro de celdas de tablas. Si deseamos alinear el texto dentro de una etiqueta div por ejemplo, habría que utilizar la propiedad <strong class="Negritta" lang="en-US">display</strong> con el valor <strong class="Negritta" lang="en-US">table-cell</strong>.</p>
+			<p class="normalespacio">Ejemplo:</p>
+			<table id="table010" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype html&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span>&gt;</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span>&gt;</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">&lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="table011" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;div{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">height</strong>:<span class="atributo">200px</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">width</strong>:<span class="atributo"> 300px</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">background-color</strong>: <span class="atributo">yellow</span>;</pre>
+							<table id="table012" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">vertical-align: </strong><span class="atributo">bottom</span><strong class="resaltado">;</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;display</strong>:<span class="atributo">table-cell</span>;</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;p&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, rerum, explicabo ratione qui provident consequatur ab quasi recusandae vitae sit voluptatibus laboriosam in eum ipsum ipsam perspiciatis suscipit quis asperiores magni quibusdam <strong class="resaltado">.&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Resultado:</p>
+			<p class="Normal2"><img src="css-formato-fuente-html-2016-web-resources/image/5.png" alt="" /></p>
+			<p class="Normal2">Otra posibilidad es alinear respecto a un elemento que está puesto en la misma línea:</p>
+			<table id="table013" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype html&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span>&gt;</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span>&gt;</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">&lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;img{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">vertical-align</strong>: <span class="atributo">middle</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p&gt;&lt;img</strong> <span class="atributo">src</span>=<span class="texto">”turing/turing16.jpg”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, rerum, explicabo ratione qui provident consequatur ab quasi recusandae vitae sit voluptatibus laboriosam in eum ipsum ipsam perspiciatis suscipit quis asperiores magni quibusdam<strong class="resaltado">.&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Se obtiene este resultado:</p>
+			<p class="Normal"><img src="css-formato-fuente-html-2016-web-resources/image/6.png" alt="" /></p>
+			<h3 class="titulo3"><span class="numero3">[9.2.5]</span><a id="_idTextAnchor023"></a>text-align</h3>
+			<p class="Normal">Alineación horizontal del texto. Puede ser: <strong class="Negritta" lang="en-US">left </strong><span class="carNormal2" lang="en-US">(izquierda)</span>, <strong class="Negritta" lang="en-US">right</strong><strong class="Negritta" lang="en-US"> </strong>(derecha), <strong class="Negritta" lang="en-US">center</strong> (centrada) o <strong class="Negritta" lang="en-US">justify </strong>(<span class="carNormal2">justificada a derecha e izquierda)</span><strong class="Negritta" lang="en-US">.</strong></p>
+			<table id="table014" class="Ningún-estilo-de-tabla">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="Ningún-estilo-de-tabla">
+						<td class="Ningún-estilo-de-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Alineación izquierda: </p>
+							<p class="cabeceraTabla">text-align:left;</p>
+						</td>
+						<td class="Ningún-estilo-de-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Alineación derecha: </p>
+							<p class="cabeceraTabla">text-align:right;</p>
+						</td>
+					</tr>
+					<tr class="Ningún-estilo-de-tabla">
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quo nam dignissimos eum ex perferendis dolorem dolor fuga quasi. Praesentium provident obcaecati porro soluta mollitia quae sapiente explicabo necessitatibus beatae id tempora ab eligendi omnis quibusdam eius exercitationem doloremque minima</p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quo nam dignissimos eum ex perferendis dolorem dolor fuga quasi. Praesentium provident obcaecati porro soluta mollitia quae sapiente explicabo necessitatibus beatae id tempora ab eligendi omnis quibusdam eius exercitationem doloremque minima</p>
+						</td>
+					</tr>
+					<tr class="Ningún-estilo-de-tabla">
+						<td class="Ningún-estilo-de-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Alineación centrada: <br />text-align:center;</p>
+						</td>
+						<td class="Ningún-estilo-de-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Alineación justificada: <br />text-align:justify;</p>
+						</td>
+					</tr>
+					<tr class="Ningún-estilo-de-tabla">
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quo nam dignissimos eum ex perferendis dolorem dolor fuga quasi. Praesentium provident obcaecati porro soluta mollitia quae sapiente explicabo necessitatibus beatae id tempora ab eligendi omnis quibusdam eius exercitationem doloremque minima</p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quo nam dignissimos eum ex perferendis dolorem dolor fuga quasi. Praesentium provident obcaecati porro soluta mollitia quae sapiente explicabo necessitatibus beatae id tempora ab eligendi omnis quibusdam eius exercitationem doloremque minima</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[9.2.6]</span><a id="_idTextAnchor024"></a>text-indent</h3>
+			<p class="Normal">Sangría de la primera línea del párrafo. Distancia extra que se deja a la primera línea respecto al resto de líneas. Por ejemplo si indicamos, <span class="carCodigo">text-indent:50px;</span><span class="carNormal2"> </span>el resultado sería (para un párrafo al que se aplique ese código):</p>
+			<p class="Normal"><img src="css-formato-fuente-html-2016-web-resources/image/7.png" alt="" /></p>
+			<h3 class="titulo3"><span class="numero3">[9.2.7]</span><span lang="en-US"><a id="_idTextAnchor025"></a>text-transform</span></h3>
+			<p class="Normal2">Permite modificar el texto para que se muestre en mayúsculas o minúsculas.</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">capitalize</strong>. La primera letra en Mayúsculas</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">uppercase</strong><span lang="en-US">. </span>Mayúsculas</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">lowercase</strong><span lang="en-US">. </span>Minúsculas</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">none</strong>. No hace ninguna transformación<h3 class="titulo3"><span class="numero3">[9.2.8]</span><span lang="en-US"><a id="_idTextAnchor026"></a>direction</span></h3></li>
+			</ul>
+			<p class="Normal2">Procede de CSS2, especifica la dirección en la que se escribe el texto. Posibilidades:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">ltr</strong>. <em class="cursiva">Left to right</em>, de izquierda a derecha</li>
+				<li class="punto"><strong class="Negritta">rtl</strong>. <em class="cursiva">Right to left</em>, de derecha a izquierda (utilizada en lenguas como el árabe)<h3 class="titulo3"><span class="numero3">[9.2.9]</span><span lang="en-US"><a id="_idTextAnchor027"></a>text-overflow</span></h3></li>
+			</ul>
+			<p class="Normal2">Parte de CSS3. Indica que hacer con el texto cuando está dentro de un contenedor (como una capa) y no tiene el tamaño suficiente para mostrar todo el texto. Posibilidades:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">clip</strong>. El texto sale recortado. Sólo se ve el texto que cabe en la capa, el resto no se muestra</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">ellipsis</strong>. Como la anterior, pero se ponen puntos suspensivos al final del texto recortado.<h3 class="titulo3"><span class="numero3">[9.2.10]</span><a id="_idTextAnchor028"></a>text-shadow</h3></li>
+			</ul>
+			<p class="normalespacio">Se trata de una propiedad CSS3. Permite colocar una sombra al texto para darle efecto de volumen. Tiene esta sintaxis:</p>
+			<table id="table015" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">text-shadow:</strong> color distanciaX distanciaY desenfoque;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul>
+				<li class="punto"><strong class="Negritta">color</strong>. Es el color de la sombra</li>
+				<li class="punto"><strong class="Negritta">distanciaX</strong>. Es el desplazamiento horizontal que tendrá la sombra (puede ser positivo o negativo)</li>
+				<li class="punto"><strong class="Negritta">distanciaY</strong>. Es el desplazamiento vertical que tendrá la sombra (puede ser positivo o negativo)</li>
+				<li class="punto"><strong class="Negritta">desenfoque</strong>. Es opcional e indica cuánto se va a desenfocar la sombra. Se indica una cantidad que cuanto mayor sea, más desenfocará el fondo.</li>
+			</ul>
+			<p class="normalespacio">Ejemplo:</p>
+			<table id="table016" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;h1{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">color</strong>:<span class="atributo">red</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">text-shadow</strong>:<span class="atributo">5px 5px 10px black</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo">&#9;<strong class="resaltado">&lt;h1&gt;</strong>Título<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal2"><img src="css-formato-fuente-html-2016-web-resources/image/8.png" alt="" /></p>
+			<p class="Normal">Se pueden incluso indicar varios sombreados a la vez al texto:</p>
+			<pre class="codigo">h1{</pre>
+			<pre class="codigo">&#9;<strong class="resaltado">color</strong>:<span class="atributo">gray</span>;</pre>
+			<pre class="codigo">&#9;<strong class="resaltado">text-shadow</strong>:<span class="atributo">2px 2px 4px yellow, 4px 4px 4px red,</span></pre>
+			<pre class="codigo"><span class="atributo">&#9;6px 6px 4px green</span>;</pre>
+			<pre class="codigo">}</pre>
+			<p class="Normal2">Ese código muestra el siguiente resultado:</p>
+			<p class="Normal2"><img src="css-formato-fuente-html-2016-web-resources/image/9.png" alt="" /></p>
+			<h3 class="titulo3"><span class="numero3">[9.2.11]</span><a id="_idTextAnchor029"></a>word-wrap</h3>
+			<p class="normalespacio">Se trata de una nueva propiedad de CSS3 que permite partir el texto cuando tenemos palabras muy largas. Ejemplo:</p>
+			<table id="table017" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;div{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">width</strong>:<span class="atributo">200px</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">height</strong>:<span class="atributo">600px</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">background-color</strong>:<span class="atributo">red</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;h1&gt;</strong>Título<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, obcaecati, eligendi velit incidunt natus inventore sint quidem dolores cumque praesentium! Sapiente veritatis totam </pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Obtiene este resultado:</p>
+			<p class="Normal"><img src="css-formato-fuente-html-2016-web-resources/image/10.png" alt="" /></p>
+			<p class="normalespacio">Modificando el CSS:</p>
+			<table id="table018" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;div{</pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">width</strong>:<span class="atributo">200px</span>;</pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">height</strong>:<span class="atributo">600px</span>;</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">background-color</strong>:<span class="atributo">red</span>;<strong class="resaltado">&#9;&#9;&#9;&#9;</strong>&#9;}</pre>
+							<table id="table019" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="remarcado"><strong class="resaltado">word-wrap</strong><strong class="resaltado">:</strong><span class="atributo">break-wor</span><span class="atributo">d</span><span class="atributo">;</span></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo"><strong class="resaltado">&lt;/style&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Obtenemos:</p>
+			<p class="Normal"><img src="css-formato-fuente-html-2016-web-resources/image/11.png" alt="" /></p>
+			<p class="Normal2">Es decir <strong class="Negritta">word-wrap</strong> con valor <strong class="Negritta">break-word</strong>, parte el texto en aquellas palabras que, de otro modo, se salen fuera del margen.</p>
+			<h3 class="titulo3"><span class="numero3">[9.2.12]</span><a id="_idTextAnchor030"></a>avanzadas</h3>
+			<h4 class="titulo4"><span class="numeroOculto">45</span><a id="_idTextAnchor031"></a>text-rendering</h4>
+			<p class="Normal2">Decide la forma de mostrar las fuentes que utilizará el navegador. Es una propiedad poco soportada hasta ahora por los navegadores. Posibles valores:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">auto</strong>. El navegador decide de forma independiente la forma de mostrar el texto en pantalla.</li>
+				<li class="punto"><strong class="Negritta">optimizeSpeed</strong>. Muestra el texto de forma veloz en detrimento de la legibilidad del mismo.</li>
+				<li class="punto"><strong class="Negritta">optimizeLegibility. </strong>Prioriza la legibilidad del texto.</li>
+				<li class="punto"><strong class="Negritta">geometricPrecission. </strong>Actualmente significa lo mismo que la anterior, más adelante (en nuevas versiones de CSS) se le da significado propio.</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">46</span>hyphens</h4>
+			<p class="Normal2">Indica si el texto se puede dividir al final de la línea. Posibilidades;</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">None</strong>. Ninguna palabra se parte con guiones al final de la línea.</li>
+				<li class="punto"><strong class="Negritta">Manual</strong>. Se parte la palabra si se indica con la entidad <strong class="Negritta">&amp;shy;</strong> o <strong class="Negritta">&amp;hyphen;</strong>. La diferencia es que el segundo guión siempre se ve.</li>
+				<li class="punto"><strong class="Negritta">Auto</strong>. El navegador decide si rompe o no cada palabra.</li>
+			</ul>
+			<p class="Normal">Es una propiedad en borrador pero que es adoptada ya en parte (no para todos los idiomas) en los navegadores (eso sí indicando los prefijos de cada motor de navegador).</p>
+			<h4 class="titulo4"><span class="numeroOculto">47</span><a id="_idTextAnchor032"></a>tab-size</h4>
+			<p class="Normal2">Personaliza el tamaño del tabulador (normalmente vale 8 caracteres). Se utiliza para el uso con el elemento pre. Está en proceso de borrador CSS3 y es soportada por Chrome y por Opera y Firefox (estos dos si se indica el prefijo).</p>
+			<h4 class="titulo4"><span class="numeroOculto">48</span>text-align-last</h4>
+			<p class="Normal2">Indica cuál es la alineación de la última línea de un párrafo. Posibles valores:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">auto</strong>. Toma la alineación que tenga el resto de línea del párrafo (la que establece la propiedad <strong class="Negritta">text-align</strong>).</li>
+				<li class="punto"><strong class="Negritta">left</strong>. Izquierda.</li>
+				<li class="punto"><strong class="Negritta">right</strong>. Derecha.</li>
+				<li class="punto"><strong class="Negritta">center</strong>. Centro.</li>
+				<li class="punto"><strong class="Negritta">justify</strong>. Se estira a izquierda y derecha para que se ajuste a ambos lados. Para ello añade espacio entre cada palabra.</li>
+			</ul>
+			<p class="Normal">Solo los navegadores modernos la permiten utilizar.</p>
+		</div>
+	</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/formato-fuente-parrafo.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:29:40 GMT -->
+</html>
+
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+</html>
+

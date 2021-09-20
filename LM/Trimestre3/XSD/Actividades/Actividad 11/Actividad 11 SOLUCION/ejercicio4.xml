@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instituto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio4.xsd">
+
+    <clase codigoClase="smr1" nombreClase="SMR1">
+        <alumno codigoAlumno="A123" codigoClase="smr1">
+
+            <nombreAlumno>Juan</nombreAlumno>
+            <apellidosAlumno>Rodrigo Rodrigo</apellidosAlumno>
+            <emailAlumno>juan@gmail.com</emailAlumno>
+            <telefonoAlumno>123456789</telefonoAlumno>
+            <localidadAlumno>Puebla de Sanabria</localidadAlumno>
+            <provinciaAlumno>Zamora</provinciaAlumno>
+        </alumno>
+        <alumno codigoAlumno="A789" codigoClase="smr1">
+
+            <nombreAlumno>Lucia</nombreAlumno>
+            <apellidosAlumno>Rodrigo Rodrigo</apellidosAlumno>
+            <emailAlumno>lucia@jcyl.es</emailAlumno>
+            <telefonoAlumno>912345678</telefonoAlumno>
+            <localidadAlumno>Toro</localidadAlumno>
+            <provinciaAlumno>Zamora</provinciaAlumno>
+        </alumno>
+    </clase>
+    <clase codigoClase="bach1" nombreClase="Bach1">
+        <alumno codigoAlumno="A777" codigoClase="bach1">
+
+            <nombreAlumno>Laura</nombreAlumno>
+            <apellidosAlumno>Luna Sol</apellidosAlumno>
+            <emailAlumno>laura@zamora.es</emailAlumno>
+            <telefonoAlumno>123454677</telefonoAlumno>
+            <localidadAlumno>Zamora</localidadAlumno>
+            <provinciaAlumno>Zamora</provinciaAlumno>
+        </alumno>
+        <alumno codigoAlumno="A977" codigoClase="bach1">
+
+            <nombreAlumno>Nuria</nombreAlumno>
+            <apellidosAlumno>Perez</apellidosAlumno>
+            <emailAlumno>nuria@gmail.com</emailAlumno>
+            <telefonoAlumno>912345678</telefonoAlumno>
+            <localidadAlumno>Porto</localidadAlumno>
+            <provinciaAlumno>Zamora</provinciaAlumno>
+        </alumno>
+    </clase>
+</instituto>

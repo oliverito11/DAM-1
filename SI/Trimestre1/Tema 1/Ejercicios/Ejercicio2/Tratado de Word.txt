@@ -1,0 +1,462 @@
+Tratado sobre la herramienta Word
+* El autor de este tratado no conoce la aplicación al 100%, ni mucho menos.
+* Esta aplicación es muy extensa, nos centraremos en lo más básico, lo más habitual y en lo más práctico. Posteriormente iremos profundizando en algunos aspectos.
+* Buscar en la ayuda y/o Internet, no nos embrutece, muy al contrario, aprenderemos cosas nuevas. Para hacer uso de la ayuda que provee la aplicación basta con pulsar la tecla F1.
+Introducción:
+Word es la aplicación para el tratamiento de textos integrada en el paquete “Microsoft Office”
+Está orientada a páginas. No confundir con editores de texto que están orientados a líneas.
+Todo lo que escribimos está (o pertenece) a un párrafo. Incluso aunque escribamos en una celda de una tabla, o en el encabezado.
+Admite imágenes, sonido, vídeo, hipertexto, vínculos a páginas web, etc.
+El aspecto una vez impreso puede variar en función de la impresora utilizada.
+Existen varias versiones de Word, todo lo que veremos funciona de forma similar en cualquier versión igual o posterior a la de 1997.
+Con la aplicación viene información de ayuda, el paquete no incluye instrucciones escritas. Pero existen libros especializados, otros “oficializados” por Microsoft, e información en la web.
+Documento o archivo de Word
+Tenemos dos formas de comenzar con la aplicación:
+1. Crear un documento nuevo.
+2. Modificar un documento existente.
+Documento: Archivo generado por la aplicación Word que contiene el texto y características de dicho texto, como formatos de página, de párrafo, de fuente, etc. Además puede incluir imágenes y otros archivos multimedia, o sólo una referencia a éstos. 
+* Las imágenes y otros archivos multimedia pueden estar incrustados o vinculados al documento de Word. 
+* Los archivos “incrustados” están dentro del documento aumentando el tamaño de éste y estando siempre disponibles al abrir el documento.
+* Los archivos “vinculados” a un documento son entidades aparte, el documento sólo conoce la localización de dichos archivos para mostrarlos. Si el archivo vinculado desaparece o cambia de sitio, Word no podrá mostrar su contenido. A menudo cuando copiamos el documento para llevarlo a otro ordenador perdemos los vínculos con los contenidos multimedia.
+Los archivos (documentos) generados por Word suelen tener un nombre que finaliza con la extensión .doc. o .docx, llevan asociado un icono gráfico característico de la aplicación.
+Cuando hacemos “doble clic” sobre dicho archivo para abrirlo, Windows asocia que este documento debe abrirse con Word.
+Crear un documento nuevo
+Hay dos maneras para hacerlo:
+1. Iniciando la aplicación Word desde el menú Inicio de Windows.
+2. Desde la propia aplicación con el comando de menú “archivo- nuevo” y eligiendo la plantilla que queramos. De momento usaremos la plantilla “documento en blanco”.
+Modificar un documento existente
+Dos opciones para hacerlo:
+1. Abrir el documento haciendo doble clic sobre el icono del archivo que representa al documento en cuestión.
+2. Desde la propia aplicación con el menú “archivo-abrir”, y eligiendo la carpeta y el archivo correspondiente desde la ventana de diálogo que se nos muestra.
+Guardar un documento
+Si no guardamos el documento, todo lo escrito desaparecerá. 
+Para guardar un documento es suficiente con indicar:
+* La carpeta donde se almacenará.
+* El nombre de dicho documento (nombre de archivo).
+Hay que tener en cuenta que en la misma carpeta no puede haber dos documentos con el mismo nombre.
+Existen dos comandos para guardar documentos, ambos en el menú “Archivo”:
+1. Comando “Guardar”: Si el documento no ha sido guardado, nos pide carpeta y nombre de archivo. Si el documento ya tiene nombre de archivo, este comando guarda las últimas modificaciones efectuadas encima del documento, sobrescribiendo lo que hubiese anteriormente en ese archivo.
+2. Comando “Guardar como…”, (recomendado): Siempre permite especificar una nueva localización (carpeta) y un nuevo nombre para el archivo.
+En el caso de documentos que vayamos a tardar varios días en terminar, es muy importante guardar versiones periódicamente.
+Guardando versiones:
+La importancia de tener versiones anteriores o “muy anteriores”, se debe a que es posible que un día hayamos hecho modificaciones inintencionadamente (como eliminar algunos párrafos o imágenes), y no nos demos cuenta hasta pasados varios días o al finalizar el trabajo. Si tenemos guardadas versiones atrasadas, sería fácil recobrar de una versión antigua aquello que modificamos (recuperar aquellos párrafos o imágenes), e incorporarlos al documento final.
+Para guardar versiones de un mismo documento es posible hacerlo por dos métodos:
+1. Con la utilidad que provee Word llamada “Versiones…” en el menú “Archivo”. Desde aquí debemos activar la casilla de verificación “Guardar automáticamente una versión al cerrar”, y opcionalmente guardar nuevas versiones a discreción.
+2. Utilizando el comando “Guardar como…” para cambiar el nombre de archivo del documento, añadiendo números de serie o fechas al nombre del archivo.
+En el primer caso las versiones van incluidas en el mismo archivo y es posible hacer comparaciones entre unas versiones y otras si fuese necesario.
+En el segundo caso somos nosotros los que tenemos que estar pendientes de ir creando las nuevas versiones, y las comparaciones habrá que hacerlas observando los distintos documentos.
+Para documentos que vayan a llevarnos varios días de trabajo es recomendable seguir los dos métodos simultáneamente.
+Algunos conceptos útiles:
+Cursor de texto: Barra vertical intermitente que muestra la posición actual donde se van a escribir y/o borrar caracteres.
+Puntero del ratón: Doble corchete que parece “una i latina mayúscula” que aparece cuando se mueve el ratón. 
+Carácter o símbolo de fin de párrafo: Simbolizado como ¶. Aunque normalmente no sea visible, es el carácter que finaliza todos y cada uno de los párrafos del texto. Se inserta al pulsar la tecla “Intro” o la tecla de “retorno de carro”.
+* El símbolo ¶, al igual que los espacios, tabulaciones y demás, no es visible a menos que utilicemos el comando “Mostrar u ocultar”. Este comando está disponible en la “barra de herramientas estándar” por medio de un botón con el símbolo ¶.
+Párrafo: Una o varias líneas que finalizan con el carácter “fin de párrafo”. Cada párrafo es una entidad independiente dentro del texto.
+Párrafo vacío o párrafo en blanco: Consiste en un párrafo que no contiene más caracteres que el de “fin de párrafo”.
+* Un párrafo vacío es una bomba de relojería que nos puede explotar cuando el documento crezca y sobre todo cuando añadamos texto delante de dicho párrafo.
+* Aunque con frecuencia los usuarios de Word inserten un párrafo vacío para que haya mayor separación entre dos párrafos (lo consiguen pulsando “Intro”), es ésta una mala práctica. La forma correcta de separar párrafos consiste en aplicar el espaciado que queramos dentro del “formato de párrafo”.
+Párrafo padre y párrafo hijo: El texto irá creciendo a medida que escribimos párrafos. La manera de insertar un nuevo párrafo es pulsar la tecla “Intro”. Por norma general (si no hemos especificado lo contrario en los estilos), al crear un nuevo párrafo con “Intro”, el nuevo párrafo (llamado hijo) heredará los mismos formatos de párrafo y de fuente que el párrafo padre (desde el que hemos pulsado “Intro”).
+Texto seleccionado, también llamado bloque de texto: Se trata de tener un bloque rectangular de texto marcado para realizar acciones posteriores con dicho bloque. Notaremos que parte del texto está seleccionado porque aparecerá en “vídeo inverso” (fondo negro y letra blanca generalmente).
+* Se consigue seleccionar texto manteniendo pulsada la tecla “shift” (se aconseja que la de la izquierda) y sin soltar esta tecla desplazar el cursor con las “teclas de movimiento de cursor” hasta la posición deseada.
+* La forma más habitual (aunque no la mejor) de seleccionar texto es arrastrando con el botón izquierdo del ratón sobre el texto escrito.
+* Sin embrago, para poder tener más de un bloque seleccionado es necesario hacerlo con el ratón mientras se mantiene pulsada la tecla “Control”.
+Configuración de página
+Sirve para definir:
+* Tamaño del papel (A4, Legal, etc.)
+* Orientación del papel (vertical u horizontal) 
+* Márgenes (superior, inferior, izquierdo y derecho). En el caso de impresión a doble cara también el margen de encuadernación, con lo que se añade un espacio extra al margen izquierdo en páginas impares y al derecho en pares.
+* Si los encabezados y pies deben ser iguales para todas las páginas o no.
+* Desde el borde, Encabezado: Distancia desde el borde superior de la página hasta la primera línea del encabezado.
+* Desde el borde, Pie: Distancia desde el borde inferior de la página hasta la última línea del cuerpo de la página (texto normal).
+* Y otros aspectos menos trascendentes.
+* Es conveniente que antes de insertar tablas en el texto o en los encabezados y pies, estén definidos el tamaño de papel y los márgenes izquierdo y derecho del documento, ya que las tablas insertadas tendrán una anchura igual a la distancia entre estos márgenes.
+Formato de fuente
+Se refiere al aspecto de los caracteres del texto, es decir, fuente, tamaño, grosor, color, subrayado, tachado, subíndice, superíndice… y alguna otra característica como el espaciado entre caracteres consecutivos.
+Todas estas características o propiedades relativas al formato de fuente se pueden establecer desde el cuadro de diálogo que aparece al ejecutar el comando de menú “Formato, Fuente...”
+Si cambiamos el formato de fuente con el cursor parpadeando, a partir de ese punto los caracteres escritos tendrán el nuevo formato.
+Si movemos el cursor hasta una posición del documento y escribimos texto, éste tendrá el mismo formato de fuente que tiene el carácter de la izquierda.
+Si marcamos (o seleccionamos) un bloque de texto y aplicamos un nuevo formato de fuente, sólo se aplicará al texto seleccionado, quedando el resto como estaba.
+Formato de párrafo
+Indica la forma en que las líneas de un párrafo tienen que colocarse en la página. Básicamente se refiere a colocación horizontal.
+Este formato incluye las siguientes propiedades:
+* Alineación horizontal de todo el párrafo: izquierda, derecha, centrada o justificada.
+* Sangría izquierda: distancia entre el párrafo y el margen izquierdo.
+* Sangría derecha: distancia entre el párrafo y el margen derecho.
+* Sangría en primera línea: distancia entre la primera línea del párrafo y el margen izquierdo
+* Sangría francesa: distancia entre todas las líneas del párrafo (excepto la primera) y el margen izquierdo.
+* Espaciado anterior: distancia entre un párrafo y el que le precede.
+* Espaciado posterior: distancia entre un párrafo y el siguiente.
+* Si entre dos párrafos están definidos  espaciado anterior y posterior, no se suman, se toma el mayor de ellos.
+* Normalmente los párrafos de tipo título deben llevar espaciado anterior y posterior, siendo el espaciado anterior mucho mayor. Los párrafos normales, únicamente llevan espaciado posterior.
+* Interlineado: separación entre las líneas de un mismo párrafo.
+* Control de líneas viudas y huérfanas: evita que un párrafo de varia líneas tenga la primera o la última línea en distinta página, (al menos habrá dos líneas juntas). Esta propiedad la tienen todos los párrafos a menos que se desactive.
+* Conservar líneas juntas: obliga a que todas las líneas de ese párrafo estén en la misma página.
+* Conservar con el siguiente: este párrafo y el que le precede estarán en la misma página.
+* Todos los párrafos que sean título o subtítulo deben tener activada la propiedad “conservar con el siguiente”, de esta forma evitamos que el título esté el final de una página y el texto siguiente en otra. Es necesario que no haya párrafos vacíos entre el título y el siguiente párrafo para conseguirlo.
+* Salto de página anterior: el párrafo con esta propiedad será el primero de una página, muy útil para títulos de capítulo.
+Las propiedades del formato de párrafo se puede establecer desde el cuadro de diálogo que aparece al ejecutar el comando de menú “Formato, Párrafo...”
+Para cambiar el formato de un párrafo, el cursor debe estar en dicho párrafo (en cualquier lugar).
+Para aplicar formato a varios párrafos a la vez, éstos deben estar seleccionados (marcados como bloque de texto). No es necesario que esté seleccionado el párrafo al completo, basta con que lo esté una parte.
+La unidad de medida puntos
+Muchas de las propiedades relativas a “formato de fuente”, “formato de párrafo” y “configurar página” se establecen en centímetros (cm) o en puntos (pto). Estas unidades de medida se pueden cambiar entre sí sin más que escribir la cantidad, seguida por un espacio y el símbolo pto o cm.
+La unidad habitual para expresar la altura de las fuentes es el punto. Un centímetro equivale a 28,35 puntos.
+Una fuente de tamaño 28,35 puntos realmente no mide un centímetro, se refiere a la distancia entre las hipotéticas líneas que servirían de guía para escribir sobre un papel marcado.
+* Las letras no miden tanto como indica el tamaño de fuente, de hecho, unas letras son más altas que otras aun teniendo el mismo tamaño.
+Modos de visualización del texto
+Son dos los modos habituales de ver el texto mientras trabajamos con la aplicación:
+* Normal: Sólo se ve el texto que hay en el cuerpo del documento y no se visualizan imágenes.
+* Diseño de impresión: se ven los espacios que ocupan los márgenes, texto en encabezados y pies, imágenes, etc.
+Word puede cambiar a “vista diseño de impresión” cuando lo considere necesario. Manualmente podemos variar la visualización desde el menú “Ver”. Desde este menú también se puede hacer “Zoom” para acercar o alejar la vista.
+Qué es una plantilla
+Es la forma que tiene Word para trabajar. Cualquier documento nuevo debe estar basado en una plantilla, y generalmente si no especificamos una diferente será la “plantilla documento en blanco”.
+Cada plantilla tiene definidas una serie de características, que son:
+* Configuración de página.
+* Estilos disponibles.
+* Texto e imágenes que pueden estar en el encabezado, en el pie o en el cuerpo de la página.
+* ¡Ojo al estilo del primer párrafo donde escribiremos!, tiene su formato de fuente y más cosas.
+Microsoft incorpora algunas “plantillas generales” para cartas, tesis, fax, etc., además se pueden descargar otras plantillas desde la web de Microsoft.
+Los usuarios podemos crear nuevas plantillas y modificar las existentes, para posteriormente crear nuevos documentos basados en alguna de esas plantillas.
+* A veces algún desaprensivo o alguien por error introduce modificaciones en la “plantilla documento en blanco” que suelen producir confusión en otros usuarios que utilicen posteriormente esa instalación de Word.
+Concepto de estilo
+Es la agrupación bajo un nombre único de una serie de propiedades de formato de fuente, formato de párrafo, viñetas, bordes… 
+Cada tipo de párrafo tendrá un estilo identificado por “el nombre de estilo”, es importante que todos los párrafos que sean del mismo tipo tengan aplicado el mismo estilo.
+* Puede haber estilos que sólo contengan formato de fuente,  pero son menos trascendentes.
+* También pueden existir estilos especiales para tablas y listas.
+Los estilos pueden ser creados, modificados y eliminados a voluntad por el usuario. Word también va creando estilos propios sin que nos demos cuenta. Además, las plantillas incorporan estilos que “vienen de fábrica”.
+El hecho de tener nuestros propios estilos, los que ha creado Microsoft y los que se van generando, puede hacer engorroso localizar uno en concreto. Para agilizar la localización podemos cambiar la forma en que Word presentarnos los estilos:
+* Mostrar estilos disponibles: Vemos los nuestros y los de la plantilla que utilizamos.
+* Mostrar formatos utilizados: Vemos los estilos que hemos aplicado en nuestro documento y otros generados automáticamente.
+* Mostrar todos los estilos: Vemos los nuestros, y los de todas las plantillas disponibles.
+* Mostrar formatos disponibles: Aquí hay de todo, mejor no utilizar este modo de visualización.
+Consideraciones previas a la escritura de texto.
+El caso más general consiste en escribir un texto que ocupará varias páginas.
+No debemos olvidarnos que en Word escribimos párrafos, y que estos párrafos tendrán unas características (formato) propias. No escribimos líneas (aunque lo pueda parecer). 
+A su vez, tenemos que pensar que los párrafos serán de distinto tipo, unos serán párrafos de título y otros contendrán texto “normal”.
+A su vez los párrafos de título serán de distinto tipo según el nivel de título. Por ejemplo: título de documento, título de capítulo, título de apartado, etc.
+Y los párrafos de texto “normal” podrán ser distintos, unos con sangría, otros con viñeta, otros enmarcados en un cuadro, etc.
+Debe haber homogeneidad a la hora de imprimir, o lo que es lo mismo, que los párrafos del mismo tipo tengan el mismo formato. Con esto se consiguen varias cosas:
+* Que las distancias entre párrafos “normales” sea la misma en todo el documento.
+* Que la separación entre cada uno de los “párrafo de título” con el párrafo precedente y con el siguiente sea la misma.
+* Que no ocurra la fatalidad de que un “párrafo de título” sea el último de una página y que el texto normal aparezca al principio de la página siguiente.
+Para conseguir esta homogeneidad, facilitarnos la labor y de paso ahorrar tiempo, usaremos los estilos. Además, el hecho de aplicar bien los estilos, nos permitirá cambiar (por decisiones estéticas) el aspecto del documento completo de forma fácil y rápida.
+Primeros pasos para la creación de un documento 
+Cuando se crea un documento nuevo (si no especificamos una plantilla diferente) se aplican las características definidas en la plantilla “documento en blanco”. 
+La plantilla “documento en blanco” trae una configuración de página predeterminada (tamaño de papel, márgenes, etc.). Además ya trae un párrafo vacío con un formato de párrafo establecido y un formato de fuente predeterminado.
+Es muy buena práctica seguir los siguientes pasos y criterios para la escritura de un documento nuevo:
+* Se escribirá el texto teniendo especial cuidado en no dejar párrafos vacíos. 
+* Escribir varios párrafos (de título y normales) con los formatos predeterminados.
+* Posteriormente aplicar a esos párrafos los formatos (de fuente y de párrafo) a nuestro gusto.
+* Crear un nuevo estilo para cada tipo de párrafo partiendo de los párrafos escritos.
+* Aplicar los estilos creados a los párrafos ya escritos.
+* Seguir escribiendo párrafos, pero ahora indicando previamente a qué estilo pertenecerán.
+* Modificar los estilos creados (si fuese necesario), y crear nuevos estilos si surgen nuevos tipos de párrafos.
+Pasos para la creación de estilos nuevos
+* Para crear un estilo es conveniente aplicar previamente a un párrafo que va a pertenecer a ese estilo los formatos de fuente, párrafo, tabulaciones, bordes, numeración, viñetas, etc.
+* Desde el menú “Formato- Estilos y formato…” abrir el panel de estilos, se verá  a la derecha de la ventana.
+* Pulsar el botón Nuevo. 
+* Aplicar las propiedades que aparecen en el cuadro de diálogo de la imagen.
+* Aceptar los cambios.
+Propiedades de los estilos
+* Todas las propiedades correspondientes a los formatos que aparecen en la lista de la imagen adjunta.
+* Nombre: es el nombre del estilo por el cual será conocido en adelante. No puede haber dos nombres iguales.
+* Tipo de estilo: usaremos únicamente el tipo “párrafo”, pero existen más.
+* Estilo basado en: aquí se indica el “estilo padre” del estilo que estamos creando. El nuevo heredará las propiedades de su padre, no sólo en este momento, también cuando en el futuro se modifique el “estilo padre”. Se recomienda que salvo excepciones estén basados en “sin estilo”.
+* Estilo de párrafo siguiente: al terminar de escribir un párrafo de este tipo, el siguiente párrafo será del tipo indicado aquí.
+* Agregar a la plantilla: si está activada, el estilo estará disponible en todos los documentos nuevos basados en esta plantilla.
+* Actualizar automáticamente: si está activada esta casilla (se recomienda que no), cualquier cambio en un párrafo que tenga aplicado este estilo, modificará el estilo mismo, y por consiguiente todos los párrafos con ese estilo.
+* No se debe permitir que Word actualice automáticamente los estilos.
+* Es mucho más versátil si queremos modificar todos los párrafos con el mismo estilo, que lo hagamos nosotros manualmente modificando el estilo.
+* Si sólo se pretende modificar un único párrafo, se cambian los formatos de ese párrafo y no afectará al resto de los párrafos con el mismo estilo.
+Modificar y eliminar estilos
+Se hace desde el panel de estilos, haciendo clic con el botón derecho del ratón en un estilo existente, aparecerá un menú contextual que permite modificar o eliminar dicho estilo.
+Tabulaciones
+Introducción
+Las tabulaciones consisten en un sistema de marcas en la regla horizontal que permite ajustar texto en forma de columnas.
+Marca de tabulación: Define la posición en la regla y el comportamiento de las tabulaciones.
+Carácter de tabulación: Es el carácter especial no visible que se inserta al pulsar la “tecla de tabulación”. Este carácter se simboliza por una flechita que apunta a la derecha, y puede hacerse visible en el texto activando el botón de comando “Mostrar u ocultar”.
+Las marcas de tabulación pertenecen al formato de párrafo, por lo que hay que tener muy presente que los nuevos párrafos creados a partir de uno que tenga fijadas unas marcas de tabulación heredarán estas mismas marcas.
+Lo habitual al trabajar con tabulaciones es que los párrafos sean de una única línea.
+Por defecto existen unas marcas de tabulación predeterminadas que desaparecerán si se fijan otras definidas por el usuario.
+Tipos de tabulaciones
+* Tabulación izquierda: establece la posición inicial del texto que se irá extendiendo hacia la derecha a medida que se escribe.
+* Tabulación centrada: establece la posición del centro del texto, se centra en este punto a medida que se escribe.
+* Tabulación derecha: establece el extremo derecho del texto. A medida que se escribe, el texto se desplaza hacia la izquierda.
+* Tabulación decimal: alinea los números en torno a una coma decimal. Independientemente de los dígitos que tenga el número, la coma decimal permanece en la misma posición. 
+* Tabulación tipo barra: no establece la posición del texto, si no que inserta una barra vertical en la posición de la tabulación.
+Mecanismo de funcionamiento.
+Cuando se pulsa la “tecla de tabulación” se escribe un carácter de tabulación. Como consecuencia el cursor se desplaza a la marca de tabulación más próxima por la derecha. 
+Si se continúa escribiendo, el nuevo texto se comportará según el tipo de tabulación que tenga definida esta marca.
+Para eliminar una tabulación basta con borrar el carácter de tabulación como si fuese un carácter de texto más.
+* Word tiene previstos unos comportamientos especiales para cuando se pulsa la “tecla de tabulación” al principio de un párrafo.
+Ejemplo: Generar un índice. 
+Desde “Formato-tabulaciones” fijamos las siguientes marcas:
+* Posición: 1 cm, tabulación izquierda
+* Posición: 2 cm, tabulación izquierda
+* Posición: 3 cm, tabulación izquierda
+* Posicón 12 cm, tabulación derecha y con relleno de puntos.
+Con estas marcas de tabulación se puede generar un índice como el siguiente. Nótese que se insertarán, uno, dos o tres caracteres de tabulación al principio de cada párrafo para que el texto comience en el centímetro uno, dos o tres respectivamente.
+* Las tabulaciones no permiten tabular párrafos de varias líneas, para ello se utilizan las tablas, que no sólo admiten alineaciones de párrafos de varias líneas, si no también varios párrafos e incluso imágenes.
+Por contra, las tablas no contemplan el relleno automático de puntos que se observa en el caso del ejemplo.  
+Tablas en Word
+Introducción
+Una tabla consiste un una serie de celdas distribuidas en filas y en columnas.
+Dentro de cada celda habrá uno o más párrafos, y en ocasiones imágenes.
+Básicamente sirven para presentar información organizada en filas y en columnas.
+Las tablas son muy útiles cuando queremos tener párrafos con distinta alineación y en la misma posición vertical. 
+Son muy utilizadas para contener imágenes que no corran por el texto, ya que si las imágenes están atrapadas en una tabla, no se mueven.
+Las tablas y las celdas tienen bordes, las líneas de los bordes pueden cambiar a discreción.
+El color del fondo de las celdas se denomina trama.
+El menú “Tabla” es el adecuado para el manejo de las mismas.
+Existen numerosas formas de crear y modificar tablas, pero aquí proponemos un método sencillo donde el usuario puede controlar perfectamente cual va a ser el resultado final.
+Crear una tabla
+Para crear una tabla primero se coloca el cursor en la posición donde va a ser creada. Luego desde el menú “Tabla-Insertar-Tabla…” se indica el número de filas y de columnas que queremos.
+La tabla resultante tiene todas las celdas iguales y la anchura total va desde el margen izquierdo hasta el derecho. A continuación se muestra una tabla con 2 filas y 5 columnas.
+Celda 1,1La anchura de las celdas corresponde al total de la tabla dividido entre el número de columnas.
+La altura de las filas corresponde a los formatos de fuente y de párrafo que había en la posición del cursor cuando se insertó la tabla. La altura de las filas depende de:
+* Tamaño de la fuente (en el ejemplo, 12 puntos)
+* Espaciado anterior y posterior de párrafo (en el ejemplo, 0 y 6 puntos).
+* Interlineado de párrafo (en el ejemplo, sencillo)
+* Si se escribe mucho texto en una celda, la altura de la fila se expandirá para contenerlo
+* Si se escribe una palabra muy larga (sin espacios), la anchura de la columna se expandirá, reduciendo a su vez la anchura de otras columnas.
+En la tabla del ejemplo, si sólo hay un párrafo en una celda estará más próximo al borde superior que al posterior, esto se debe a que en “formato de párrafo” el espaciado anterior es menor que el posterior. Para centrar el texto en altura estos espaciados deben ser iguales.
+Por defecto, las tablas tienen una pequeña separación (horizontal y vertical) entre todas sus celdas, que no suele ser habitual modificar.
+La anchura de las celdas no es bueno cambiarlas posteriormente, aunque se hace a menudo. Es preferible combinar o dividir celdas que cambiar la anchura de éstas.
+La altura de las filas puede variar seleccionando toda la tabla desde ele menú “Tabla” y aplicando nuevos formatos.
+Seleccionar elementos de la tabla
+Hay que evitar seleccionar elementos de la tabla arrastrando con el botón izquierdo del ratón, se aconseja hacerlo colocando el cursor dentro de la celda, fila o columna a seleccionar, y utilizar el menú “Tabla-seleccionar-xxxxxx”.
+Cuando se necesite tener seleccionadas varias celdas que no ocupan toda una fila o columna habrá que hacerlo con el ratón, o mejor aún con el teclado.
+* Recuerda: para seleccionar con el teclad, coloca el cursor al principio del bloque a marcar, mantén presionada la tecla “shift” (la de mayúsculas) y desplaza el cursor hasta el final del bloque deseado con las teclas de movimiento del cursor.
+La tecla tabulación
+Cuando el cursor está dentro de una tabla, la tecla de tabulación toma un funcionamiento diferente al habitual, se utiliza para desplazar el cursor de celda en celda.
+Pulsando tabulación derecha (la tecla que está encima de la de bloqueo de mayúsculas), el cursor se desplaza a la celda siguiente.
+Si se ha llegado a la última celda, se crea una fila añadida.
+Pulsando tabulación izquierda (“shift” combinada con la tecla de tabulación), el cursor se desplaza a la celda anterior.
+Combinar y dividir celdas
+Dos celdas combinadasAbajo divididaDos celdas combinadasCombinar y dividir permite múltiples variaciones donde el tamaño de las distintas celdas son proporcionales entre sí.
+Combinar celdas significa que dos o más celdas contiguas se convierten en una única.
+Para combinar: primero se seleccionan las celdas implicadas y luego desde el menú “Tabla” utilizar el comando “Combinar celdas”.
+Cuando ya hay texto en las celdas, puede aparecer un cuadro de diálogo preguntando qué debe hacer con ese texto.
+Dividir celdas consiste en obtener varias filas y/o columnas dentro de una celda.
+Eliminar celdas
+En cualquier momento es posible eliminar una o varias celdas, una o varias filas, una o varias columnas, o toda la tabla.
+Para ello, colocamos el cursor en la celda, fila o columna a eliminar, y utilizar el comando “Tabla-eliminar-xxxxxxx”.
+Si van a ser varios los elementos a eliminar habrá que seleccionarlos primero.
+Insertar celdas
+Cuando el cursor está dentro de una tabla, el menú “Tabla-insertar” posibilita añadir nuevos elementos tomando como referencia la posición del cursor.
+Cuando el cursor está en un párrafo que no pertenece a una tabla, el comando “insertar” se utiliza para crear una tabla nueva.
+Propiedades de tabla (comando de menú)
+El comando del menú “Tabla-Propiedades de tabla…” esta disponible siempre que el cursor esté dentro de una tabla o haya celdas seleccionadas. Al ejecutarlo aparece un cuadro de diálogo con cuatro pestañas que posibilitan muchas acciones, a continuación se exponen las más habituales.
+Desde la pestaña “Tabla”
+* Alinear la tabla: se refiere a toda la tabla en conjunto, no a los párrafos dentro de las celdas.
+* Trazado de bordes y sombreados: se explicará durante la ponencia.
+* Establecer márgenes o distancias entre las celdas: se refiere a la separación entre los párrafos escritos en el interior de una celda y los párrafos dentro de las celdas contiguas (arriba, abajo, izquierda y derecha).
+Desde la pestaña “Fila” 
+* Especificar la altura de las filas: puede ser automática (se incrementan automáticamente si el texto escrito no cabe), o exacta (se fija un tamaño que no cambiará).
+* Repetir como fila de encabezado: La primera fila y las siguientes consecutivas pueden servir como encabezado de tabla para el caso que la tabla ocupe más de una página. Esta opción también está disponible directamente desde el menú “Tabla”.
+* Decidir si una fila, que puede tener muchos párrafos, debe estar al completo en una página, o en caso de necesidad, parte en una página y parte en la siguiente.
+Desde la pestaña “Columna”
+* Cambiar el ancho de toda la columna.
+* Es posible cambiar el ancho de una única celda sin que afecte al ancho de las otras celdas de la misma columna. Para conseguirlo, la celda en cuestión debe estar seleccionada al completo, y sólo ella. A continuación arrastre con el ratón el borde de la celda hasta la posición deseada.
+Desde la pestaña “Celda”
+Para las celdas seleccionadas, recuerde que puede utilizar el comando de menú “Tabla-Seleccionar”, desde esta pestaña se determina:
+* La alineación vertical de los párrafos y/o imágenes que puedan contener.
+Y utilizando el botón de comando “Opciones”:
+* Los márgenes de la celda.
+* Reducir texto hasta ajustarlo: se amplía el espacio entre las letras, o se reduce el texto (ancho de las letras) hasta ajustarlo a la anchura total de la celda.
+Fila con altura fijaEn esta celda no se ve todo el texto escrito, ni mucho menosHola genteHolaQué día más bonito haceLas celdas de arriba tienen activado “Reducir texto hasta ajustar”El menú “Tabla-Autoajustar”
+Se utiliza para que Word establezca automáticamente la anchura de las columnas y la altura de las filas.
+Las opciones mas frecuentes son las de fijar la anchura y/o la altura de las celdas al tamaño actual para evitar que éstas crezcan al escribir texto.
+Estas propiedades no son reversibles, salvo deshaciendo todos los cambios hasta el momento en que se fijaron.
+Tratamiento de imágenes
+Introducción
+La inserción de imágenes en un texto a menudo provoca que el documento se vuelva difícil de manejar, esto es debido a que al seguir escribiendo texto las imágenes se desplazan entre los párrafos sin control. Para evitarlo se pueden seguir estos consejos.
+Tablas con imágenes
+Si una o varias imágenes en paralelo (a la misma altura) es necesario que estén entre dos párrafos, se puede insertar primero una tabla de una fila y tantas columnas como imágenes, y luego insertar las imágenes en las celdas. Como se ve en el ejemplo siguiente.
+Posteriormente se pueden eliminar los bordes de la tabla y sólo quedarían las imágenes. Además es muy fácil alinear las imágenes tanto horizontal como verticalmente en las celdas.
+Veamos otro ejemplo de las gallinas, variando los tamaños y eliminando los bordes.
+Tabla con imagen y texto a su altura
+Hemos insertado una tabla de una fila y dos columnas, La celda de la izquierda contiene este texto, es de una anchura superior a la celda de la derecha que contiene únicamente la imagen de la gallina. Este texto tiene una alineación vertical centrada, y en la tabla siguiente desaparecen los bordes. Así se garantiza que este párrafo y la gallina estarán siempre a la misma altura. Ahora sin bordes. Para eliminar los bordes se coloca el cursor en la tabla, se ejecuta el menú “Formato-Bordes y sombreado…”, y desde la pestaña bordes, se hace clic en el icono de Valor: “Ninguno”. Compruebe previamente (mirando en la esquina inferior derecha del cuadro de diálogo) que se aplicará a toda la tabla, y no sólo a la celda donde está el cursor. Así queda:
+Hemos insertado una tabla de una fila y dos columnas, La celda de la izquierda contiene este texto, es de una anchura superior a la celda de la derecha que contiene únicamente la imagen de la gallina. Este texto tiene una alineación vertical centrada, y en la tabla siguiente desaparecen los bordes. Así se garantiza que este párrafo y la gallina estarán siempre a la misma altura.
+Especificando el párrafo al que va unida la imagen
+No siempre el párrafo o párrafos que acompañan a una imagen tienen una altura similar, en este caso se hace necesario insertar la imagen y posteriormente establecer algunas propiedades.
+Una vez tenemos la imagen (sin tabla), haciendo clic en la propia imagen se selecciona, a continuación, haciendo clic con el botón derecho del ratón en la imagen seleccionada aparece un menú contextual donde se elige “Formato de…”.
+Se activa la pestaña “Diseño”, se pulsa en el botón “Avanzado” y se establecen las propiedades adecuadas a nuestro caso. Son muchas, pero su manejo es bastante intuitivo. Se recomienda probarlas todas.
+La imagen podemos arrastrarla con el ratón o, mejor aún, seleccionarla y moverla con las flechas de movimiento del cursor hasta que esté en la posición idónea.
+Con estos pasos, si está la imagen seleccionada y activamos el botón “Mostrar u ocultar” (el de ver los fines de párrafo, espacios y demás), podremos ver un ancla que simboliza a qué párrafo va unida la imagen.
+Podemos arrastrar con el ratón este ancla para asociar la imagen con otro párrafo.
+Formularios en Word
+Introducción
+Se utilizan formularios en Word cuando se necesita que otros usuarios completen en pantalla la información necesaria sin correr el riesgo de que modifiquen el documento original.
+Realmente un formulario en Word consiste en un documento que incluye “campos de formulario”.
+Si el formulario ha sido creado como una plantilla, cada vez que se rellena el documento se puede guardar en forma de documento independiente.
+Insertar un campo de formulario
+Existen dos formas para insertar campos de formulario en un documento: 
+* Seleccionando la opción Campo de formulario en el menú Insertar (no se recomienda).
+* A través de la barra de herramientas llamada “Formulario”. Para activar esta barra de herramientas, desde el menú “Ver”, elegir “Barra de herramientas” y activar “Formulario”.
+Tipos de Campos de formulario
+Campos de formulario con Texto: * Texto normal: Se deberá usar un campo de formulario de este tipo cuando se pueda introducir cualquier tipo de entrada: texto, números e incluso símbolos. 
+* Número: Se utilizará este tipo de campo cuando la entrada de datos sean numéricas. El usuario está obligado a introducir sólo datos numéricos, de no ser así aparecerá “cero”o Word dará un error avisando que se necesita un número válido. 
+* Fecha: Se utilizará este campo cuando se necesite un formato de fecha. 
+* Fecha actual y Hora actual: Este dato lo suministrará el propio sistema. Este campo se actualizará cada vez que se haga la presentación preliminar del documento ó se imprima el documento con la opción de "Actualizar campos" activada. 
+* Cálculo: Se utiliza este campo cuando se necesite efectuar algún cálculo de otros campos de formulario tipo numérico. 
+Campos de formulario con casilla de selección: Este tipo de campos pide a los usuarios que especifiquen un SÍ o NO como respuesta. 
+Campos de formulario con lista desplegable: Este tipo de campos ofrecen una serie de opciones para que el usuario seleccione una de ellas. 
+Propiedades de los campos de formulario
+No son muchas y son bastante intuitivas, se explicarán durante la ponencia y en las prácticas.
+Decir solamente que cada campo tiene un nombre, y que éste debe ser único para el formulario. Word asigna de forma automática nombres a los campos.
+Eliminar campos de formulario
+Para eliminar los campos de formulario basta con borrarlos como si fuesen un carácter de texto más.
+Modo de operación para crear formularios
+Hay que distinguir dos fases: los formularios primero se crean y posteriormente se utilizan. Hay que tener presente a la hora de crearlos que los usuarios que los utilizarán posiblemente sean poco avezados, por lo que se entregarán bloqueados (que no puedan estropearlos) y con texto de ayuda (para que sepan qué información deben plasmar en cada campo.
+* Se diseña el documento (el uso de tablas puede facilitar esta labor) con el “texto fijo”, es decir aquel que no van a modificar el resto de usuarios.
+* Desde el menú “Ver-Barras de herramientas” se activa la barra de herramientas “Formulario”. 
+* Activar el sombreado de campos (haciendo clic en el botón de la figura), así es más fácil localizarlos y detectar si hay varios repetidos consecutivos.
+* Se añaden los campos (haciendo clic en el botón del tipo apropiado) en las posiciones del documento donde los usuarios los finales deben rellenar información.
+* Se modifican las propiedades de cada tipo de campo en función de las necesidades. Para activar las propiedades sitúe el cursor en el campo deseado y haga clic en el botón 
+* Se selecciona cada campo y se le asigna un formato de fuente distinto si se desea que los campos completados por otros usuarios cambien de aspecto respecto al texto fijo.
+* Desactivar el “sombreado de campos” haciendo clic en este botón. 
+* Bloquear el formulario haciendo clic en el icono del candado. A partir de este momento no es posible ninguna modificación de este documento.
+* Probar el funcionamiento del formulario. Si se desean modificaciones hay que desbloquear el formulario haciendo clic en el icono del candado.
+* Guardar este documento como plantilla asignando un nombre descriptivo. Debe cerciorarse que el formulario está bloqueado antes de guardar.
+* Cierre Word.
+Modo de operación para rellenar formularios
+* Iniciar la aplicación Word. y ejecutar el menú “Archivo- Nuevo”. Elegir en el panel de la derecha “Plantillas generales…” que aparece debajo del espacio “Nuevo a partir de una plantilla…”
+* En el cuadro de diálogo que se muestra, desde la pestaña “General”, dejar activado Crear nuevo “Documento” y hacer clic en el icono de la plantilla de nuestro formulario.
+* Se creará un documento nuevo (que no infiere en la plantilla) donde se pueden rellenar los campos del formulario.
+* Para desplazar el cursor de un campo del formulario a otro, el usuario pude usar la tecla de tabulación (recomendado) o hacer clic con el ratón. Para borrar el contenido de todos los campos hay que hacer clic en el icono de la goma de borrar.
+* Este nuevo documento puede ser guardado y/o impreso.
+Bloquear con contraseña
+Si se desea que los usuarios no puedan desbloquear el formulario, se puede bloquear con una contraseña que se pedirá cuando se vaya a desbloquear.
+Para bloquear con contraseña ejecute la opción de menú “Herramientas-Proteger documento…” y en el cuadro de diálogo resultante active la casilla “Formularios”, introduzca una contraseña (habrá que repetirla) y acepte los cambios.
+* En el cuadro de diálogo anterior las opciones indican “Proteger excepto para:”, y al activar la casilla correspondiente a “Formularios” parece que los formularios no se van a proteger... Bueno, no se alarme, las pruebas empíricas desmienten este parecer.
+Modificar la plantilla
+Word guarda las plantillas en un sitio (carpeta) poco intuitivo de localizar, aun así no se debe cambiar esta localización, pues acarrearía otros problemas. Utilice los métodos que se describen en este tratado para modificar o llevar plantillas a otro equipo.
+Para modificar una plantilla existente se recomienda seguir estos pasos:
+* Ejecutar el menú “Archivo- Nuevo” y elegir en el panel de la derecha “Plantillas generales…” que aparece debajo del espacio “Nuevo a partir de una plantilla…”
+* En el cuadro de diálogo que aparece, desde la pestaña “General” localice el icono correspondiente a la plantilla que desea modificar y haga clic con el botón derecho sobre dicho icono.
+* En el menú emergente que se despliega ejecute la opción “Abrir”
+* En este momento tiene todo el contenido de la plantilla pero con otro nombre. Realice las modificaciones oportunas.
+* Ejecute el menú “Archivo-Guardar como…”, observe que los cambios se van a guardar como plantilla, el nombre sugerido será distinto al de la plantilla original. En este punto se puede decidir:
+a) Generar una nueva plantilla (modificada de la original), para ello asigne a la plantilla un nombre nuevo.
+b) Que estos cambios afecten a la plantilla antigua. En cuyo caso debe hacer clic sobre el icono de la plantilla original y contestar que “desea reemplazar la plantilla existente”.
+Si se desea usar la plantilla en otro ordenador
+* Crear un documento nuevo basado en la plantilla del formulario. Y guardarlo como documento Word normal. 
+* Abrir este documento normal en otro ordenador.
+* Guardar (sin rellenar nada) como plantilla, asignando un nombre (se aconseja que el mismo para no liarse).
+* Cierre Word. Ya está disponible.
+Este método sirve para “pasar” la plantilla a usuarios de otros ordenadores.
+Otros controles de formulario
+Los campos de formularios son muy básicos y frecuentemente no son suficientes para nuestras necesidades, existen otros “controles de formulario” que hacen más y mejores cosas, pero son más complejos de utilizar y de alinear al ser insertados en el texto. Durante la ponencia se verá un pequeño ejemplo.
+Combinar correspondencia (con Excel)
+Introducción
+Combinar correspondencia es una herramienta que proporciona Word para hacer cartas personalizadas, generar facturas, recibos, y otros documentos de forma masiva.
+Se necesita un documento modelo con “campos de combinación” y un fichero con los datos ordenados (tabulados) que se insertarán en los campos combinados. El resultado es una serie de documentos similares donde únicamente variará el contenido de los campos.
+Algunos conceptos
+Combinación: El hecho de generar un documento para cada destinatario.
+Documento combinado: se refiere a un único documento con todas las páginas procedentes de la combinación. Se puede calcular el número de páginas del documento combinado multiplicando las páginas del documento modelo por el número de registros (personas destinatarias) del archivo de datos
+Documento modelo: es el documento hecho con Word que contiene el texto común a todos los destinatarios junto con los campos de combinación.
+Datos externos: Un archivo externo a Word (en nuestro caso un libro de la hoja de cálculo Excel) que contiene los datos que van a ser objeto de la combinación.
+Modo de operación
+Word dispone de un “asistente para generar correspondencia” que nos guiará paso a paso para conseguir la combinación. Está disponible desde el menú “Herramientas-Cartas y correspondencia…” y se compone de 6 pasos:
+Paso 1: Seleccionar el tipo de documento
+Usaremos siempre el tipo “Carta”.
+Paso 2: Seleccionar el documento inicial o documento modelo
+Se sugiere que sea el documento que tenemos en uso, en otro caso indicar cual.
+Paso 3: Selección de los destinatarios
+Pulsaremos el botón “Examinar”, aparecerá un cuadro de diálogo donde  elegiremos el archivo de Excel (*.xls) como origen de datos.
+* El archivo origen de los datos es preferible que esté cerrado para evitar incongruencias.
+¡Ojo! a la casilla de verificación que indica si la primera fila es encabezado de datos o datos propiamente dicho. 
+Se especifica qué hoja del libro es la que contiene los datos.
+En este momento se pueden ordenar los datos y/o hacer una selección de registros. 
+Paso 4: Escribir la carta modelo e insertar campos
+Aunque el documento modelo esté escrito al llegar a este punto aún se pueden hacer modificaciones.
+Añadir los campos de combinación, para ello desde el menú “Ver-Barras de herramientas” activaremos la rotulada “Combinar correspondencia” y hacemos clic en el botón “Insertar campos combinados”.
+Elegiremos el campo correspondiente en los datos de origen.
+Se insertan tantos campos combinados como se necesiten.
+Paso 5: Obtener vista previa de los datos
+Para comprobar que todo va bien.
+Paso 6: Completar la combinación
+Aunque Word proporciona dos opciones: “imprimir directamente” o “editar cartas individuales”, se recomienda usar esta última, pues una vez generado el documento se puede revisar, guardar, e imprimir.
+* Desde la barra de herramientas “Combinar correspondencia” se puede “abrir el origen de datos”, por lo que si el asistente arranca después, empezará en la fase final del paso 3.
+Recomendaciones
+Para facilitar la labor de especificar qué datos que van a intervenir se aconseja generar un archivo de hoja de cálculo nuevo que contenga todos y sólo los datos objeto de la combinación.
+Estos datos estará en la primera hoja del libro, en la primera fila no debe haber datos propiamente dicho, si no los nombres de los campos.
+Se recomienda además que no haya filas vacías entre las de datos, aunque existe la posibilidad de indicar a Word que no las tenga en cuenta.
+Las celdas de Excel muestran su contenido con un formato que a menudo Word no reconoce, por lo que es necesario utilizar una columna nueva donde transforme valores numéricos a texto.
+Por ejemplo la fórmula =TEXTO(B2;"#.##0,00 €") transforma un valor numérico a texto formateado a dos decimales e incluyendo el símbolo del euro.
+Para saber el formato exacto a emplear en la fórmula, se recomienda poner una celda en el formato deseado y luego echar un vistazo en “personalizar” (dentro de formato-celda) para ver cómo lo hace Excel.
+Si se desean eliminar columnas que intervienen en los cálculos, se debe “hacer un pegado especial de sólo valores” de la columna que queremos combinar para que no produzca errores.
+Estas recomendaciones se explicarán durante la ponencia.
+Índice
+Tratado sobre la herramienta Word	1
+Introducción:	1
+Documento o archivo de Word	1
+Crear un documento nuevo	2
+Modificar un documento existente	2
+Guardar un documento	2
+Guardando versiones:	2
+Algunos conceptos útiles:	3
+Configuración de página	4
+Formato de fuente	4
+Formato de párrafo	5
+La unidad de medida puntos	6
+Modos de visualización del texto	6
+Qué es una plantilla	6
+Concepto de estilo	7
+Consideraciones previas a la escritura de texto.	7
+Primeros pasos para la creación de un documento	8
+Pasos para la creación de estilos nuevos	8
+Propiedades de los estilos	8
+Modificar y eliminar estilos	9
+Tabulaciones	10
+Introducción	10
+Tipos de tabulaciones	10
+Mecanismo de funcionamiento.	10
+Ejemplo: Generar un índice.	11
+Tablas en Word	12
+Introducción	12
+Crear una tabla	12
+Seleccionar elementos de la tabla	13
+La tecla tabulación	13
+Combinar y dividir celdas	13
+Eliminar celdas	13
+Insertar celdas	14
+Propiedades de tabla (comando de menú)	14
+Desde la pestaña “Tabla”	14
+Desde la pestaña “Fila”	14
+Desde la pestaña “Columna”	14
+Desde la pestaña “Celda”	14
+El menú “Tabla-Autoajustar”	15
+Tratamiento de imágenes	15
+Introducción	15
+Tablas con imágenes	15
+Tabla con imagen y texto a su altura	16
+Especificando el párrafo al que va unida la imagen	16
+Formularios en Word	17
+Introducción	17
+Insertar un campo de formulario	17
+Tipos de Campos de formulario	17
+Propiedades de los campos de formulario	18
+Eliminar campos de formulario	18
+Modo de operación para crear formularios	18
+Modo de operación para rellenar formularios	18
+Bloquear con contraseña	19
+Modificar la plantilla	19
+Si se desea usar la plantilla en otro ordenador	19
+Otros controles de formulario	20
+Combinar correspondencia (con Excel)	20
+Introducción	20
+Algunos conceptos	20
+Modo de operación	20
+Recomendaciones	21
+
+
+
+
+
+     22     Tratado sobre la herramienta Word (Ver.2002)   
+
+     © BlancoArenal     23    
+
+
+

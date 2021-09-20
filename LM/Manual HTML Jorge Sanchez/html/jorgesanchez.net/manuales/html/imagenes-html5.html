@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/imagenes-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Imágenes</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[5] </span><br>Imágenes</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+<div id="_idContainer006" class="Marco-de-texto-b-sico">
+    <h2 class="titulo2"><span class="numero2">[5.1] </span><a id="_idTextAnchor001"></a>introducción al uso de imágenes</h2>
+    <p class="Normal2">Las imágenes son fundamentales para que una página web sea más atractiva. Son el primer contenido no textual que se planteó poder incorporar al estándar HTML. Prácticamente no hay páginas sin imágenes. </p>
+    <p class="Normal">Los navegadores tienen capacidad de mostrar imágenes, pero sólo las que pertenezcan a tipos concretos. Los tipos de imágenes reconocidos por la mayoría de navegadores son:</p>
+    <ul>
+        <li class="punto"><strong class="Negritta">Formato jpg</strong>. Son imágenes que ocupan muy poco gracias a su alta compresión. No admiten animaciones ni zonas marcadas con transparencia. Son el formato habitual de la imagen digital en una página web.</li>
+        <li class="punto"><strong class="Negritta">Formato gif</strong>. Imágenes con hasta 256 colores, por lo que son buenas para dibujos y logotipos, pero no para fotografías. Pueden incluso contener animaciones (uno de sus usos habituales) y colores marcados como transparentes, a través de los cuales se mostraría lo que esté <em class="cursiva">por debajo</em> de la imagen. </li>
+        <li class="punto"><strong class="Negritta">Formato png</strong>. Imágenes fotográficas comprimidas al estilo de jpg pero con más calidad (ocupan más, normalmente) Permite la posibilidad además de utilizar canales alfa, es decir marcar opacidades con hasta 255 niveles. De esta forma habrá partes de la imagen que se mezclarán con el fondo. También hay posibilidad de hacer animaciones estilo gif.</li>
+        <li class="punto"><strong class="Negritta">Formato svg</strong>. Es un formato vectorial de imágenes. Las imágenes vectoriales tienen la ventaja de que nunca pierden calidad independientemente de cuanto las ampliemos o las reduzcamos. La desventaja es que no se pueden utilizar para imágenes fotográficas. En este capítulo no se explicará este formato, que en realidad es texto XML que sigue unas reglas concretas.</li>
+    </ul>
+    <p class="Normal2">Descartando a las imágenes <strong class="Negritta">SVG</strong>, el tamaño en disco de las imágenes puede ser mayor o menor dependiendo de su tamaño y su compresión. De modo que un tamaño grande implica más tardanza al cargar la página, pero una mayor nitidez en la imagen. </p>
+    <p class="Normal">Las imágenes son fundamentales en las páginas web, su elección resulta vital para la estética de la misma, nunca se considera un mero acompañamiento ya que el impacto visual y las sensaciones sobre la profesionalidad de la página siempre le consiguen las imágenes con ayuda de la tipografía (pero ahí ya entra el lenguaje CSS) y la disposición o maquetación (para lo que también necesitamos CSS).</p>
+    <h2 class="titulo2"><span class="numero2">[5.2] </span><a id="_idTextAnchor002"></a>añadir imágenes con elñ elemento <em class="cursiva">img</em></h2>
+    <h3 class="titulo3"><span class="numero3">[5.2.1]</span><a id="_idTextAnchor003"></a>inserción de imágenes</h3>
+    <p class="Normal2">Las imágenes se colocan mediante la etiqueta <strong class="Negritta">img</strong>. El atributo <strong class="Negritta">src</strong> indica la URL (relativa o absoluta) a la imagen. Ejemplo:</p>
+    <table id="table003" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;img </strong><span class="atributo">src=</span><span class="texto">”imagenes/boton.gif”</span><strong class="resaltado">&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2"><strong class="Negritta" lang="en-US">img</strong> es una etiqueta sin cierre, la imagen se coloca directamente en la posición de esta etiqueta. Se la considera como texto al maquetarla. De modo que aparece entre el texto si ponemos la etiqueta entre el texto. Colocar de forma adecuada las imágenes respecto al texto es todo un arte que se consigue (una vez más) con ayuda de CSS.</p>
+    <h3 class="titulo3"><span class="numero3">[5.2.2]</span><a id="_idTextAnchor004"></a>atributos de la etiqueta <em class="cursiva">img</em></h3>
+    <table id="table004" class="tabla-manual">
+        <colgroup>
+            <col />
+            <col />
+        </colgroup>
+        <thead>
+            <tr class="tabla-manual">
+                <td class="tabla-manual cabecera-tabla">
+                    <p class="cabeceraTabla">atributo</p>
+                </td>
+                <td class="tabla-manual cabecera-tabla">
+                    <p class="cabeceraTabla">significado</p>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta">alt</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal"><strong class="Negritta">Obligatorio. </strong>Indica un texto alternativo. Ese texto aparece cuando la imagen no se ha podido cargar (o durante la carga). También suele aparecer cuando arrimamos el cursor a la imagen a fin de informarnos sobre ella.</p>
+                    <p class="Normal">Es un texto también tenido en cuenta por los buscadores a fin de identificar lo que muestra la imagen.</p>
+                    <p class="Normal">Deberíamos tomarnos este atributo como obligatorio</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta">width</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Anchura de la imagen. No es aconsejable usarle para cambiar el tamaño de la imagen, ya que si la ampliamos no se verá en buena calidad y si la reducimos estaremos cargando una imagen grande para luego mostrarla en pequeño; sería más inteligente reducirla primero con un editor de imágenes.</p>
+                    <p class="Normal">En cualquier caso es importante utilizar este atributo (junto con height) para que el navegador sepa de antemano el tamaño de la imagen y así que prepare la página correctamente. De este modo si la imagen no se carga, al menos veremos el rectángulo que la misma ocuparía y la página no se desbarata.</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta">height</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Altura de la imagen. Tiene las mismas connotaciones que el atributo anterior.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 class="titulo2"><span class="numero2">[5.3] </span><a id="_idTextAnchor005"></a>mapas de imagen</h2>
+    <h3 class="titulo3"><span class="numero3">[5.3.1]</span><a id="_idTextAnchor006"></a>introducción</h3>
+    <p class="Normal2">Se trata de una técnica que permite dividir en trozos a una imagen, de modo que podremos asignar un enlace a cada trozo.</p>
+    <p class="Normal">Se utiliza en mapas propiamente dichos, en los que el usuario selecciona regiones del mapa y en imágenes donde hay elementos claramente destacados que al hacer clic nos permitan ir a una nueva URL.</p>
+    <p class="Normal">Hoy en día está en desuso ya que el uso del lenguaje JavaScript ofrece capacidades muy superiores a los mapas de imágenes; pero la ventaja de los mapas es que no requieren conocer ningún lenguaje aparte de HTML</p>
+    <h3 class="titulo3"><span class="numero3">[5.3.2]</span><a id="_idTextAnchor007"></a>uso</h3>
+    <h4 class="titulo4"><span class="numeroOculto">12</span>elemento <em class="cursiva">map</em></h4>
+    <p class="Normal2">Los mapas se basan en una imagen previamente colocada en la página web mediante la etiqueta <strong class="Negritta">img</strong>. A partir de esa imagen se crea un elemento nuevo en la página de tipo <strong class="Negritta">map</strong>.</p>
+    <p class="Normal">El elemento <strong class="Negritta" lang="en-US">map</strong><span lang="en-US"> al menos debe indicar estos atributos:</span></p>
+    <ul>
+        <li class="punto"><strong class="Negritta" lang="en-US">name</strong><span lang="en-US">. Nombre del mapa de imágenes. Identifica el mapa de imágenes (no se debe de utilizar para este fin el atributo </span><strong class="Negritta" lang="en-US">id</strong><span lang="en-US">) </span></li>
+    </ul>
+    <h4 class="titulo4"><span class="numeroOculto">13</span>atributos para mapas en el elemento <em class="cursiva">img</em></h4>
+    <p class="Normal2">Por otro lado, en la etiqueta <strong class="Negritta">img</strong> asociada a la imagen del mapa se debe utilizar este atributo:</p>
+    <ul>
+        <li class="punto"><strong class="Negritta">usemap</strong>. A la que se le da como valor el nombre del mapa (el que se utilice en el atributo <strong class="Negritta" lang="en-US">name</strong><span lang="en-US"> </span>del elemento <strong class="Negritta">map</strong>), pero anteponiendo el símbolo <strong class="Negritta">#</strong>.</li>
+    </ul>
+    <p class="Normal2">También es posible usar un segundo atributo (apenas se usa en la práctica)</p>
+    <ul>
+        <li class="punto"><strong class="Negritta">ismap</strong>. Se le puede dejar sin valor o ponerle valor <strong class="Negritta">true</strong>, en cuyo caso se está diciendo que el mapa de imágenes es un mapa del lado del servidor. Es decir será el servidor de la imagen el que maneje los clics en la imagen que haga el usuario. Para ello debemos saber crear imágenes de servidor, algo que va más allá de la pretensión de este manual.</li>
+    </ul>
+    <h4 class="titulo4"><span class="numeroOculto">14</span>elemento <em class="cursiva">area</em></h4>
+    <p class="Normal2">Con los elementos <strong class="Negritta">img</strong> y <strong class="Negritta">map</strong> sólo se está indicando que la imagen es un mapa, pero falta decir qué zonas tiene el mapa y qué hacer cuando se hace clic en ellas. Esa es la labor de los elementos de tipo <strong class="Negritta">area</strong>.</p>
+    <p class="Normal">La etiqueta <strong class="Negritta">map</strong> debe contener dentro tantos elementos <strong class="Negritta">area</strong> como secciones en el mapa queramos crear. En cada elemento <em class="cursiva">area</em> rellenaremos estos atributos: </p>
+    <ul>
+        <li class="punto"><strong class="Negritta">coords</strong><strong class="Negritta">. Coordenadas del área. La forma de indicarlas depende de lo que se haya elegido en el atributo shape.</strong></li>
+        <li class="punto"><strong class="Negritta">shape</strong><span class="atributo">. Permite indicar la forma del área. Puede ser:</span><ul><li class="Punto2"><strong class="Negritta">shape=”rect”</strong>. El área será rectangular. En este caso el atributo <strong class="Negritta">coords</strong> indicará cuatro coordenadas. Las dos primeras marcan la coordenada X y la coordenada Y de la esquina superior izquierda de la imagen, las dos últimas las coordenadas X e Y de la esquina inferior derecha. Las coordenadas cuentan desde la esquina superior izquierda de la imagen (que serían las coordenadas 0,0).</li><li class="Punto2"><strong class="Negritta">shape=”circle”</strong>. El área es una región circular en la imagen. El atributo <strong class="Negritta">coords</strong> tendría tres coordenadas: las dos primeras son la coordenada X e Y del centro del círculo y la tercera el radio del mismo.</li><li class="Punto2"><strong class="Negritta">shape=”poly”</strong>. Permite indicar una región poligonal. El atributo <strong class="Negritta">coords</strong> permite indicar las coordenadas X e Y de cada punto del polígono. Al final se cerrará el polígono.</li><li class="Punto2"><strong class="Negritta">area=”default”</strong>. Hace lo mismo que la opción <strong class="Negritta">rect</strong>.</li></ul></li>
+        <li class="punto"><strong class="Negritta">alt</strong>. Texto alternativo en el área de la imagen. Funciona igual que el atributo <strong class="Negritta">alt</strong> de la etiqueta <strong class="Negritta">img</strong>. No es obligatorio, pero sí muy interesante.</li>
+        <li class="punto"><strong class="Negritta">href</strong>. Funciona como el atributo del mismo nombre en la etiqueta <strong class="Negritta">a</strong>: indica una URL a la que se dirigirá el navegador cuando el usuario haga clic sobre la imagen. Es decir cada área del mapa de imagen será un enlace cuyo destino lo marca este atributo (que tiene las mismas posibilidades que el atributo <strong class="Negritta">href</strong> del elemento <strong class="Negritta">a</strong>)</li>
+    </ul>
+    <h3 class="titulo3"><span class="numero3">[5.3.3]</span><a id="_idTextAnchor008"></a>ejemplo de mapa</h3>
+    <p class="Normal">En la siguiente imagen se detallan las coordenadas necesarias para hacer un mapa con tres áreas sobre la imagen siguiente. Como se observa, aunque es una sola imagen, se distingue muy bien visualmente lo que va a ser cada área</p>
+    <p class="Normal"><img src="imagenes-html-2016-web-resources/image/1.png" alt="" /></p>
+    <p class="Normal">Si deseamos que al hacer clic en el cuadrado, el círculo y la forma libre saltemos a una URL, necesitamos conocer las coordenadas que tienen estas formas (en esto nos pueden ayudar los programas de retoque gráfico como Adobe <em class="cursiva">Photoshop</em> o <em class="cursiva">Adobe Fireworks</em>). En esta imagen se muestran las coordenadas necesarias:</p>
+    <p class="Normal"><img src="imagenes-html-2016-web-resources/image/2.png" alt="" /></p>
+    <p class="normalespacio">El código HTML para hacer el mapa sería (suponiendo que la imagen se llama <em class="cursiva">formas.jpg</em>):</p>
+    <table id="table005" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;img</strong><span class="atributo">  src=</span><span class="texto">”formas.jpg” </span><span class="atributo">alt=</span><span class="texto">”Formas geométricas básicas”</span><span class="atributo"> usemap=</span><span class="texto">”#formas”</span><span class="atributo">ismap=</span><span class="texto">”ismap”</span><strong class="resaltado">&gt;<br />&lt;map</strong><span class="atributo"> name=</span><span class="texto">”formas”</span><span class="atributo"> id=</span><span class="texto">”formas”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">&#9;&lt;area</strong><span class="atributo"> shape=</span><span class="texto">”rect”</span><span class="atributo"> coords=</span><span class="texto">”62,65,171,177”</span><span class="atributo"> </span></pre>
+                    <pre class="codigo"><span class="atributo"> &#9;&#9;&#9;&#9;href=</span><span class="texto">”rectangulo.html”</span><span class="atributo">alt=</span><span class="texto">”Rectángulo”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">&#9;&lt;area</strong><span class="atributo"> shape=</span><span class="texto">”circle”</span><span class="atributo"> coords=</span><span class="texto">”369,116,84”</span><span class="atributo"> </span></pre>
+                    <pre class="codigo"><span class="atributo">&#9;&#9;&#9;href=</span><span class="texto">”circulo.html”</span><span class="atributo"> alt=</span><span class="texto">”Círculo”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado"> &lt;area</strong><span class="atributo"> shape=</span><span class="texto">”poly” <br /></span><span class="atributo">coords=</span><span class="texto">”113,308,242,230,401,252,556,157,463,324,287,284”</span><span class="atributo"> </span><br /><span class="atributo"> &#9;&#9;href=</span><span class="texto">”poligono.html”</span><span class="atributo"> alt=</span><span class="texto">”Polígono”</span><span class="atributo"> </span><strong class="resaltado">/&gt;</strong><br /><strong class="resaltado">&lt;/map&gt;</strong> </pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2">El uso del atributo <strong class="Negritta">id</strong> en el elemento <strong class="Negritta">map</strong> no es obligatorio para que el mapa funcione, pero sí es necesario para cumplir las nuevas normas HTML donde se intenta retirar el atributo <strong class="Negritta">name</strong> para sustituirle por <strong class="Negritta">id</strong> (aunque los mapas siguen funcionando con el atributo <em class="cursiva">name</em>); es decir se aconseja para una posible compatibilidad futura.</p>
+</div>
+
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/imagenes-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:57 GMT -->
+</html>
+

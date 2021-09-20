@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/texto-y-parrafo-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Elementos de texto y párrafo</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[3] </span><br>Elementos de texto y párrafo</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+
+<div id="_idContainer021" class="Marco-de-texto-b-sico">
+    <h2 class="titulo2"><span class="numero2">[3.1] </span><a id="_idTextAnchor001"></a>elementos para marcar caracteres</h2>
+    <h3 class="titulo3"><span class="numero3">[3.1.1]</span><a id="_idTextAnchor002"></a>introducción</h3>
+    <p class="Normal2">Hoy en día en una página web, todo el texto está dentro de algún elemento (delimitados mediante etiquetas), en realidad hay tres contextos principales a tener en cuenta sobre el texto</p>
+    <ul>
+        <li class="punto"><strong class="Negritta">Elementos capaces de contener varios párrafos</strong>. La W3C llama a estos elementos <em class="cursiva">sectioning content</em>. Es lo que hoy en día se conoce como <strong class="Negritta">capa </strong>o <strong class="Negritta">sección</strong>. Si no indicamos capa alguna, entonces todos los párrafos están contenidos en la etiqueta <strong class="Negritta" lang="en-US">body</strong>, lo que significa que el contenedor de los párrafos será el área que el navegador deja para el texto y que puede ser casi toda la pantalla. </li>
+        <li class="punto"><strong class="Negritta">Elementos que contienen párrafos individuales</strong>. Aunque en HTML 5 se permite escribir texto que no esté dentro de un párrafo, no es una buena práctica, ya que no podríamos indicar más adelante el formato del párrafo (alineaciones, márgenes,…). <p class="sinpunto">Lógicamente dentro de un párrafo, no podemos indicar otro párrafo; es decir no podemos meter una etiqueta <strong class="Negritta">p</strong>, dentro de una etiqueta <strong class="Negritta">h1</strong>.</p><p class="sinpunto">Cuando un texto está dentro de un elemento de párrafo (como <strong class="Negritta">p</strong>), hará que el texto siguiente quede en otro párrafo, por lo tanto habrá un salto de párrafo entre ambos textos.</p></li>
+        <li class="punto"><strong class="Negritta">Elementos que contienen texto simple o conjuntos de caracteres</strong>. La W3C llama a estos elementos <em class="cursiva">phrasing content</em>. Son elementos pensados para ser interiores a un párrafo. Un mismo párrafo puede contener muchos elementos de este tipo. El mismo texto puede estar contenido en varios elementos de este tipo a la vez. <p class="sinpunto">Por ejemplo, podemos indicar que un texto es <strong class="Negritta">strong </strong>y <strong class="Negritta">em </strong>a la vez.</p><h2 class="titulo2"><span class="numero2">[3.2] </span><a id="_idTextAnchor003"></a>etiquetas básicas de párrafo</h2></li>
+    </ul>
+    <p class="Normal2">Desde hace años todo texto en un documento HTML debe ir dentro de una etiqueta que sirva para decir qué tipo de texto es. Y eso significa, que el texto debe de ir dentro de una etiqueta de párrafo. Se comentan las etiquetas disponibles para marcar párrafos.</p>
+    <h3 class="titulo3"><span class="numero3">[3.2.1]</span><a id="_idTextAnchor004"></a>párrafo simple</h3>
+    <p class="Normal2">La norma HTML estándar establece que el texto de la página debe estar contenido dentro de un elemento. Es decir, no se puede poner texto directamente dentro de la etiqueta <em class="cursiva">body</em>; ha de haber un contenedor para ese texto.</p>
+    <p class="Normal">El elemento más sencillo lo marca la etiqueta <strong class="Negritta">p</strong>, que indica un elemento de párrafo normal. Todo texto dentro de una etiqueta <em class="cursiva">p</em>, queda marcado como texto dentro de un párrafo normal. </p>
+    <p class="Normal">Normalmente los navegadores utilizan fuentes tipo <em class="cursiva">Times</em> de tamaño <em class="cursiva">11pt</em> para la letra de párrafo normal. Ejemplo de uso:</p>
+    <table id="table003" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong></pre>
+                    <pre class="codigo">&#9;Párrafo con un poco de texto</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong><br /> Este es un párrafo completo englosado dentro de una etiqueta <strong class="resaltado">&lt;em&gt;</strong>p<strong class="resaltado">&lt;/em&gt;</strong>,<br /> aunque<br />    el texto se escriba <br />    con todos estos saltos de línea      y        espacios<br />    se mostrará seguido,<br />    sin saltos     de <br />    línea interiores</pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&#9;&#9;&#9;&#9;</strong>y entre cada palabra dejando un solo espacio<br /><strong class="resaltado">&lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">En el navegador saldría:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/1.png" alt="" /></p>
+    <p class="Normal2">En la imagen se observa el modo en el que el navegador muestra el párrafo. Por defecto los párrafos tipo p dejan espacio arriba y abajo (normalmente media línea en cada dirección).</p>
+    <h3 class="titulo3"><span class="numero3">[3.2.2]</span><a id="_idTextAnchor005"></a>títulos</h3>
+    <p class="Normal">Hay una serie de siete etiquetas que comienzan con la letra <em class="cursiva">h</em> a la que le sigue un número del 1 al 7. Sirven para marcar párrafos de forma que se considerarán títulos del texto. De modo que el elemento <strong class="Negritta">h1</strong> marcará títulos de primer nivel, <strong class="Negritta">h2</strong> de segundo nivel,…</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/2.png" alt="" /></p>
+    <p class="normalespacio"> Ejemplo:</p>
+    <table id="table004" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado"> </strong><strong class="resaltado">&lt;!DOCTYPE</strong> html<strong class="resaltado">&gt;</strong><br /><strong class="resaltado">&lt;html</strong> <span class="atributo">lang=</span><span class="texto">”es”</span><strong class="resaltado">&gt;</strong><br />    <strong class="resaltado">&lt;head&gt;</strong><br />        <strong class="resaltado">&lt;title&gt;</strong>Estrellas<strong class="resaltado">&lt;/title&gt;</strong><br />        <strong class="resaltado">&lt;meta</strong> <span class="atributo">charset</span><span class="texto">=”<a id="_idTextAnchor006"></a>UTF-8”</span><strong class="resaltado">&gt;</strong><br />    <strong class="resaltado">&lt;/head&gt;</strong><br />    <strong class="resaltado">&lt;body&gt;</strong><br />     <strong class="resaltado">&lt;h1&gt;</strong>Sistema Solar<strong class="resaltado">&lt;/h1&gt;</strong><br />     <strong class="resaltado">&lt;h2&gt;</strong> Planetas<strong class="resaltado">&lt;/h2&gt;</strong><br />     <strong class="resaltado">&lt;h3&gt;</strong>Mercurio<strong class="resaltado">&lt;/h3&gt;</strong><br />     <strong class="resaltado">&lt;p&gt;</strong><br />&#9;&#9;Mercurio es el planeta del Sistema Solar más próximo al Sol y el más pequeño (a excepción de los planetas enanos). Forma parte de los denominados planetas interiores o rocosos y carece de satélites<br />     <strong class="resaltado">&lt;/p&gt;</strong><br />     <strong class="resaltado">&lt;h3&gt;</strong>Venus<strong class="resaltado">&lt;/h3&gt;</strong><br />     <strong class="resaltado">&lt;p&gt;</strong><br />     &#9;Venus es el segundo planeta del Sistema Solar en orden de distancia desde el Sol, y el tercero en cuanto a tamaño, de menor a mayo<br />     <strong class="resaltado">&lt;/p&gt;</strong> <br />     <strong class="resaltado">&lt;p&gt;</strong>...<strong class="resaltado">&lt;/p&gt;</strong><br />     <strong class="resaltado">&lt;h2&gt;</strong>Sol<strong class="resaltado">&lt;/h2&gt;</strong><br /></pre>
+                    <pre class="codigo">     <strong class="resaltado">&lt;p&gt;</strong><br />       El Sol es la estrella del sistema planetario en el que se encuentra la Tierra; por tanto, es la más cercana a la Tierra y el astro con mayor brillo aparente<br />     <strong class="resaltado">&lt;/p&gt;</strong><br />      <strong class="resaltado">&lt;h2&gt;</strong>Satélites<strong class="resaltado">&lt;/h2&gt;</strong><br />     <strong class="resaltado">&lt;h3&gt;</strong>Luna<strong class="resaltado">&lt;/h3&gt;</strong><br />     <strong class="resaltado">&lt;p&gt;</strong><br />       La Luna es el único satélite natural de la Tierra y el quinto satélite más grande del Sistema Solar.<br />     <strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="table005" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">     <strong class="resaltado">&lt;h3&gt;</strong>Ío<strong class="resaltado">&lt;/h3&gt;</strong><br />     <strong class="resaltado">&lt;p&gt;</strong><br />       Fue descubierto por Galileo Galilei en 1610 y recibió inicialmente <br />       el nombre de Júpiter I como primer satélite de Júpiter.<br />     <strong class="resaltado">&lt;/p&gt;</strong><br />     <strong class="resaltado">&lt;p&gt;</strong>...<strong class="resaltado">&lt;/p&gt;</strong><br /></pre>
+                </td>
+            </tr>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">     &lt;h1&gt;</strong>Otros Sistemas<strong class="resaltado">&lt;/h1&gt;</strong><br />     <strong class="resaltado">&lt;h2&gt;</strong>Fomalhaut<strong class="resaltado">&lt;/h2&gt;</strong><br />     <strong class="resaltado">&lt;p&gt;<br />&#9;&#9;</strong>Estrella conocida desde la prehistoria ahora se le han descubierto planetas</pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;    &lt;/p&gt;</strong><br />     <strong class="resaltado">&lt;h2&gt;</strong>Vega<strong class="resaltado">&lt;/h2&gt;</strong><br />     <strong class="resaltado">&lt;p&gt;</strong>Antigua estrella polar, muy venerada. Posee un disco de polvo que podría contener planetas o bien formarse pronto</pre>
+                    <pre class="codigo">&#9;    <strong class="resaltado">&lt;/p&gt;</strong><br />    <strong class="resaltado">&lt;/body&gt;</strong><br /><strong class="resaltado">&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <pre class="codigo">El resultado en el navegador es el mostrado en la <a href="#">Ilustración 27</a></pre>
+    <p class="caption"> <a id="_idTextAnchor007"></a>líneas y saltos</p>
+    <h3 class="titulo3"><span class="numero3">[3.2.3]</span><a id="_idTextAnchor008"></a>salto de línea</h3>
+    <p class="Normal2">A veces es necesario dentro del texto de un determinado párrafo hacer un salto de línea. El elemento que lo realiza no tiene cierre y se llama <strong class="Negritta">br</strong>. Ejemplo:</p>
+    <table id="table006" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Primera línea <strong class="resaltado">&lt;br&gt;</strong>Segunda línea<strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2">Aparecerá cada texto en una línea distinta.</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/3.png" alt="" /></p>
+    <h3 class="titulo3"><span class="numero3">[3.2.4]</span><a id="_idTextAnchor009"></a>línea horizontal</h3>
+    <p class="Normal2">Otra posibilidad es hacer un salto pero dejando una línea horizontal en el hueco de las palabras. Esto lo hace la etiqueta <strong class="Negritta">hr</strong> (que tampoco tiene cierre):</p>
+    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Primera línea <strong class="resaltado">&lt;hr&gt;</strong>Segunda línea<strong class="resaltado">&lt;/p&gt;</strong></pre>
+    <p class="normalespacio">Aunque los navegadores entienden este código. En realidad <strong class="Negritta">hr</strong> tiene que estar fuera de las etiquetas de párrafo, es decir lo correcto es:</p>
+    <table id="table007" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Primer párrafo<strong class="resaltado">&lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;hr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Segundo párrafo<strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/4.png" alt="" /></p>
+    <h2 class="titulo2"><span class="numero2">[3.3] </span><a id="_idTextAnchor010"></a>elementos de marcado de texto simple</h2>
+    <p class="Normal">En este caso, detallaremos los elementos que se emplean para señalar texto interior a un párrafo. </p>
+    <h3 class="titulo3"><span class="numero3">[3.3.1]</span><a id="_idTextAnchor011"></a>texto importante</h3>
+    <p class="Normal">En HTML 5 el texto importante se marca con el elemento <strong class="Negritta" lang="en-US">strong</strong>. En general todos los navegadores marcan el texto <em class="cursiva">strong</em> en negrita (letra más gruesa), pero que se muestre en negrita es un acuerdo visual que se puede modificar con el lenguaje CSS. Es decir, no es lo mismo texto en negrita que texto importante. </p>
+    <p class="Normal">Sin duda, <strong class="Negritta">strong </strong>es uno de los elementos HTML fundamentales e imprescindible en los documentos HTML.</p>
+    <h3 class="titulo3"><span class="numero3">[3.3.2]</span><a id="_idTextAnchor012"></a>texto enfatizado</h3>
+    <p class="Normal2">El elemento <strong class="Negritta">em</strong> marca texto como enfatizado. El resultado visual con que le dan formato por defecto los navegadores es texto en cursiva. </p>
+    <p class="Normal2">La idea semántica es marcar con <strong class="Negritta">em</strong> texto con énfasis de segundo nivel (dejando a <strong class="Negritta">strong </strong>el primer nivel) que normalmente se dedica a palabras no aceptadas aun, títulos de trabajos, apodos, texto subjetivo, etc.</p>
+    <h3 class="titulo3"><span class="numero3">[3.3.3]</span><a id="_idTextAnchor013"></a>texto resaltado</h3>
+    <p class="Normal">Se trata del tercer elemento de HTML5 para remarcar texto. Se hace a través el elemento <strong class="Negritta" lang="en-US">mark</strong>. En este caso, su efecto visual, suele ser aplicar en el texto así marcado un fondo de color vivo que simula el uso de un subrayador. Ejemplo:</p>
+    <table id="table008" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Yo soy texto normal, <strong class="resaltado">&lt;mark&gt;</strong>y yo estoy remarcado</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/mark&gt;&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Obtendría el resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/5.png" alt="" /></p>
+    <p class="Normal">Este elemento no es tan antiguo como los anteriores porque apareció con HTML5 (los navegadores antiguos no lo reconocen). La idea semántica es marcar texto que queremos realzar de forma muy llamativa indicado texto a recordar o sobre el que profundizar.</p>
+    <h2 class="titulo2"><span class="numero2">[3.4] </span><a id="_idTextAnchor014"></a>citas</h2>
+    <p class="Normal">En HTML5 existen tres formas de marcar citas:</p>
+    <ul>
+        <li class="punto"><strong class="Negritta">q</strong>. Usada para indicar citas cortas incluidas en un párrafo con otro tipo de texto. Indica un texto que procede de otra fuente. Remarca una cita, con la connotación de “texto entrecomillado”. De hecho, los navegadores, por defecto, entrecomillan su contenido. <span lang="ar-SA"> </span>Ejemplo de uso:<table id="table009" class="tabla-codigo _idGenTablePara-3"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo">Como dijo Julio César<strong class="resaltado">, &lt;q</strong> </pre><pre class="codigo"><span class="atributo">cite=</span><span class="texto">”http://es.wikipedia.org/wiki/Alea_iacta_est”</span><strong class="resaltado">&gt;</strong><br />Alea Jacta es<strong class="resaltado">&lt;/q&gt;</strong></pre></td></tr></tbody></table><p class="sinpunto">No es obligatorio utilizar el atributo <strong class="Negritta">cite</strong>. Este atributo permite indicar una fuente para consultar la cita original (los navegadores, sin embargo no hacen nada con el contenido de este enlace).</p></li>
+        <li class="punto"><strong class="Negritta" lang="en-US">cite</strong>. Este elemento era el que originalmente se usaba para citas literales. Actualmente se recomienda su uso para indicar títulos de trabajos y el nombre de sus autores. Eso incluye títulos de libros, memorias, ensayos, poemas, obras musicales, sitios web, entradas de blog o foros, comentarios, tweets, discursos, etc. Es decir cualquier trabajo creativo. Ejemplo<table id="table010" class="tabla-codigo _idGenTablePara-3"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong></pre><pre class="codigo">Edgar Codd publicó: <strong class="resaltado">&lt;cite&gt;</strong>Un modelo relacional de datos para grandes bancos de datos compartidos</pre><pre class="codigo"><strong class="resaltado">&lt;/cite&gt;</strong> en 1970</pre><pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre></td></tr></tbody></table><p class="sinpunto">Los navegadores suelen mostrar el contenido de <strong class="Negritta">cite </strong>en cursiva.</p></li>
+        <li class="punto"><strong class="Negritta">blockquote</strong>. Este es el único elemento de marcado de citas que trabaja a nivel de párrafo. Es decir, indicado párrafos completos que son citas procedente de fuentes externas al documento. Se le puede indicar (al igual que se hace con el elemento <strong class="Negritta">q</strong>) el atributo <strong class="Negritta">cite </strong>para indicar un enlace a la fuente de la cita.Ejemplo:<table id="table011" class="tabla-codigo _idGenTablePara-3"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">&lt;blockquote</strong><span class="atributo"> <br />cite=</span><span class="texto">”http://noticias.juridicas.com/base_datos/Admin/constitucion.tp.html#a1”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">&lt;strong&gt;</strong>Artículo 1 de la constitucion<strong class="resaltado">&lt;strong&gt;&lt;br&gt;</strong></pre><pre class="codigo">España se constituye en un Estado social y democrático de Derecho, que propugna como valores superiores de su ordenamiento jurídico la libertad, la justicia, la igualdad y el pluralismo político.<br /><strong class="resaltado">&lt;/blockquote&gt;</strong></pre></td></tr></tbody></table><p class="sinpunto">Puede utilizar el atributo cite (como se observa en el ejemplo), para indicar la dirección URL que se ha utilizado como fuente de la cita. </p></li>
+    </ul>
+    <p class="Normal2">Visualmente los navegadores muestran el texto <strong class="Negritta" lang="en-US">blockquote</strong> añadiendo una sangría a la derecha y a la izquierda. Ignoran, visualmente, el uso del atributo <strong class="Negritta" lang="en-US">cite</strong>, pero otras herramientas sí usan este contenido.</p>
+    <h2 class="titulo2"><span class="numero2">[3.5] </span><a id="_idTextAnchor015"></a>otros elementos de marcado de caracteres</h2>
+    <h3 class="titulo3"><span class="numero3">[3.5.1]</span><a id="_idTextAnchor016"></a>subíndices</h3>
+    <p class="normalespacio">Permite que el texto aparezca por debajo de la línea base y en un tamaño más pequeño. Lo hace el elemento <strong class="Negritta">sub</strong>, ejemplo:</p>
+    <table id="table012" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>La fórmula del agua es H<strong class="resaltado">&lt;sub&gt;</strong>2<strong class="resaltado">&lt;/sub&gt;</strong>O<strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2">Mostraría: H2O</p>
+    <h3 class="titulo3"><span class="numero3">[3.5.2]</span><a id="_idTextAnchor017"></a>superíndices</h3>
+    <p class="normalespacio">Parecida al anterior, pero ahora el texto marcado con el elemento <strong class="Negritta">sup</strong> aparecerá por encima y en pequeño. Ejemplo:</p>
+    <table id="table013" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>La fórmula del agua es H<strong class="resaltado">&lt;sup&gt;</strong>2<strong class="resaltado">&lt;/sup&gt;</strong>O<strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2">Obtendría: H2O </p>
+    <h3 class="titulo3"><span class="numero3">[3.5.3]</span><a id="_idTextAnchor018"></a>elemento <em class="cursiva">small</em></h3>
+    <p class="normalespacio">Marcado de letra pequeña. Se usa, por ejemplo en textos que marquen copyright, derechos de uso, comentarios, notas anexas y letra pequeña (tipo la de los contratos) en general. El efecto visual es que el texto sale con un tamaño más pequeño. Es posible incluso anidar un elemento <strong class="Negritta" lang="en-US">small</strong> dentro de otro, de modo que cada vez sale más pequeño el texto. Ejemplo:</p>
+    <table id="table014" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">Texto normal <strong class="resaltado">&lt;small&gt;</strong>Pequeño </pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;small&gt;</strong>Aún<strong class="resaltado"> </strong>más pequeño<strong class="resaltado">&lt;/small&gt;&lt;/small&gt; </strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2">Resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/6.png" alt="" /></p>
+    <h3 class="titulo3"><span class="numero3">[3.5.4]</span><a id="_idTextAnchor019"></a>elemento <em class="cursiva">s</em></h3>
+    <p class="normalespacio">Se trata de un antiguo elemento de las páginas web que permitía indicar un subrayado. En la versión de HTML 4 quedó obsoleto, no se recomendaba su uso ya que el subrayado se reserva para los enlaces. Con HTML 5 se ha redefinido su uso para marcar texto obsoleto que, visualmente, se muestra con efecto de tachado. </p>
+    <p class="normalespacio">Ejemplo:</p>
+    <table id="table015" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">La capital de Alemania es <strong class="resaltado">&lt;s&gt;</strong>Bonn<strong class="resaltado">&lt;/s&gt;</strong> Berlín</pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2">Resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/7.png" alt="" /></p>
+    <h3 class="titulo3"><span class="numero3">[3.5.5]</span><a id="_idTextAnchor020"></a>elemento <em class="cursiva">b</em></h3>
+    <p class="Normal2">Se trata del elemento histórico (de las primeras versiones de HTML) utilizado para marcar texto en negrita. En HTML 4 quedó como obsoleto. En HTML 5 se volvió a permitir pero solo si necesitamos un nivel de marcado de texto más allá del uso de <strong class="Negritta" lang="en-US">strong</strong>, <strong class="Negritta" lang="en-US">em</strong> o <strong class="Negritta" lang="en-US">mark</strong>. En definitiva, elemento de uso muy poco aconsejable que se mantienen solo por la gran cantidad de creadores que lo siguen utilizando.</p>
+    <h3 class="titulo3"><span class="numero3">[3.5.6]</span><a id="_idTextAnchor021"></a>elemento <em class="cursiva">i</em></h3>
+    <p class="Normal2">Tiene el mismo problema que el anterior. Es el elemento histórico (de las primeras versiones de HTML) utilizado para marcar texto en cursiva. En HTML 4 quedó como obsoleto. En HTML 5 se puede utilizar para marcar texto tipo alternativo si no encaja con otros elementos de marcado de caracteres. </p>
+    <p class="Normal2">Al igual que ocurre con el elemento <em class="cursiva">b</em>, su uso no es aconsejable.</p>
+    <h3 class="titulo3"><span class="numero3">[3.5.7]</span><a id="_idTextAnchor022"></a>abreviaturas con <em class="cursiva">abbr</em></h3>
+    <p class="Normal2">Marca texto que indica una abreviatura o un acrónimo. Su uso requiere utilizar el atributo title para indicar el significado de la abreviatura. En general, los navegadores no muestran ningún resultado, pero sí un cartel con el contenido de <strong class="Negritta">title </strong>cuando se arrima el ratón. Ejemplo:</p>
+    <table id="table016" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Se ha coronado a </pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;abbr</strong><span class="atributo"> </span><span class="atributo">title=</span><span class="texto">”Su Alteza Real”</span><strong class="resaltado">&gt;</strong>SAR<strong class="resaltado">&lt;/abbr&gt;</strong><strong class="resaltado"> </strong>el Rey Felipe VI <strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="table017" class="Tabla-comentario">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="Tabla-comentario">
+                <td class="Tabla-comentario primera-celda-tabla">
+                    <p class="comentario">En HTML 5 se eliminó el uso del elemento <strong class="Negritta">acronym</strong> que estaba pensado para acrónimos. Ahora tanto acrónimos como abreviaturas se deben utilizar con <strong class="Negritta">abbr</strong>.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="titulo3"><span class="numero3">[3.5.8]</span><a id="_idTextAnchor023"></a>definiciones</h3>
+    <p class="Normal2">El elemento <strong class="Negritta">dfn </strong>se usa de forma similar al anterior. Sirve para indicar definiciones para el término o palabras que encuadra.</p>
+    <p class="Normal">Ejemplo:</p>
+    <table id="table018" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;dfn</strong><span class="atributo"> </span><span class="atributo">title=</span><span class="texto">”usar dos conceptos de significado opuesto en una sola expresión”</span><strong class="resaltado">&gt;</strong>oxímoron</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/dfn&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Los navegadores suelen mostrar el contenido del elemento en cursiva y, como siempre, en un cartelito muestran el contenido del atributo <strong class="Negritta">title</strong>:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/8.png" alt="" /></p>
+    <h3 class="titulo3"><span class="numero3">[3.5.9]</span><a id="_idTextAnchor024"></a>escritura de código o texto informático</h3>
+    <h4 class="titulo4"><span class="numeroOculto">8</span>escritura de código</h4>
+    <p class="Normal2">HTML proporciona un elemento llamado <strong class="Negritta">code</strong> que se utiliza cuando en un documento deseamos escribir ejemplos de código escritos en un lenguaje de programación. Por ejemplo:</p>
+    <table id="table019" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Este es un ejemplo de código en JavaScript:&lt;/p&gt;</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;code&gt;</strong></pre>
+                    <pre class="codigo">&#9;window.onload=function(){</pre>
+                    <pre class="codigo">&#9;&#9;alert(“Hola”);</pre>
+                    <pre class="codigo">&#9;}</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/code&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Lo cual obtendría este resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/9.png" alt="" /></p>
+    <p class="Normal">Se puede observar como los navegadores modifican el tipo de letra (utilizan un tipo de letra monoespaciada) pero no respetan los espacios y tabuladores utilizados para indicar el código. Como es muy normal querer respetar los espacios y tabuladores cuando se escriben ejemplos de código, lo habitual es hacer esta combinación:</p>
+    <table id="table020" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Este es un ejemplo de código en JavaScript:&lt;/p&gt;</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;pre&gt;&lt;code&gt;</strong></pre>
+                    <pre class="codigo">&#9;window.onload=function(){</pre>
+                    <pre class="codigo">&#9;&#9;alert(“Hola”);</pre>
+                    <pre class="codigo">&#9;}</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/code&gt;&lt;/pre&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Y así obtenemos este otro resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/10.png" alt="" /></p>
+    <h4 class="titulo4"><span class="numeroOculto">9</span>resultados de operaciones en un ordenador</h4>
+    <p class="Normal2">Con intenciones similares al elemento anterior, tenemos el elemento <strong class="Negritta">samp</strong>. Se utiliza cuando queremos en un documento indicar ejemplos de resultados de operaciones en un ordenador. Ejemplo:</p>
+    <table id="table021" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Al ejecutar el comando obtuve el mensaje <br /><strong class="resaltado">&lt;samp&gt;</strong>Comando o nombre de archivo incorrecto <strong class="resaltado">&lt;/samp&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Los navegadores suelen mostrar este elemento en letra monoespaciada. La salida del código anterior suele ser:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/11.png" alt="" /></p>
+    <h4 class="titulo4"><span class="numeroOculto">10</span>teclas</h4>
+    <p class="Normal2">El elemento <strong class="Negritta">kbd </strong>sirve para indicar el nombre de una tecla o combinación de teclas (también comandos de voz o entradas de menú). Se puede indicar el atributo <strong class="Negritta">title</strong> para señalar el significado de la tecla.</p>
+    <p class="Normal">Ejemplo:</p>
+    <table id="table022" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Para finalizar puse <strong class="resaltado">&lt;kbd&gt;</strong>Ctrl+C<strong class="resaltado">&lt;/kbd&gt;&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4 class="titulo4"><span class="numeroOculto">11</span>variables</h4>
+    <p class="Normal2">El elemento <strong class="Negritta">var </strong>sirve para indicar texto que se refiere a nombres de variables de un programa informático. Sólo tiene sentido su uso para documentos sobre programación.</p>
+    <h3 class="titulo3"><span class="numero3">[3.5.10]</span><a id="_idTextAnchor025"></a>fechas y horas</h3>
+    <p class="Normal2">El elemento <strong class="Negritta">time </strong>está presente desde HTML5 (en Internet Explorer desde la versión 9) y permite indicar una fecha y una hora (por ejemplo 10:00). Atributos:</p>
+    <ul>
+        <li class="punto"><strong class="Negritta">datetime. </strong>Hora en formato estándar (<em class="cursiva">yyyy-mm-dd </em>o <em class="cursiva">yyyy-mm-ddThh:mm:ssTZ</em>) que representa la hora exacta que muestra el texto.</li>
+    </ul>
+    <p class="normalespacio">Ejemplo:</p>
+    <table id="table023" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">Hoy es <strong class="resaltado">&lt;time</strong> <span class="atributo">datetime=</span><span class="texto">”2013-10-13”</span><strong class="resaltado">&gt;</strong>13 de Octubre de 2013<strong class="resaltado">&lt;/time&gt;</strong>,se encendió el servidor a la <br /><strong class="resaltado">&lt;time</strong> <span class="atributo">datetime=</span><span class="texto">”2013-10-13T01:12:00-0100”</span><strong class="resaltado">&gt;</strong>1 y 12 de la mañana (hora local)<strong class="resaltado">&lt;/time&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class="titulo3"><span class="numero3">[3.5.11]</span><a id="_idTextAnchor026"></a>elementos especiales</h3>
+    <ul>
+        <li class="punto"><strong class="Negritta">bdi</strong>. Se usa para aislar texto de su contenedor a fin de aplicarle formato diferenciado. Se usa si queremos marcar texto con una intención especial y atípica.</li>
+        <li class="punto"><strong class="Negritta">bdo</strong>. Permite indicar la dirección del texto. Ejemplo:<table id="table024" class="tabla-codigo _idGenTablePara-3"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">&lt;bdo</strong><span class="atributo"> </span><span class="atributo">dir=</span><span class="texto">”rtl”</span><strong class="resaltado">&gt;</strong>Este texto sale al revés<strong class="resaltado">&lt;/bdo&gt;</strong></pre></td></tr></tbody></table><p class="sinpunto">Saldría <em class="cursiva">séver la elas otxet etsE</em></p><p class="sinpunto">Tiene un atributo llamado <strong class="Negritta">dir </strong>que posee dos valores posibles: <strong class="Negritta">ltr</strong> (el texto se muestra de izquierda a derecha) y <strong class="Negritta">rtl</strong> (el texto se muestra de derecha a izquierda)</p></li>
+        <li class="punto"><strong class="Negritta">u</strong>. Hasta HTML 3.2 indicaba subrayado. Como este formato, fuera de un enlace, no es recomendable, se eliminó del estándar. HTML 5 le ha recuperado para indicar texto que tiene un estilo muy diferente del texto general, como palabras mal escritas, fallos de ortografía o combinaciones de texto sin sentido. <p class="sinpunto">Los navegadores siguen mostrando este texto con un subrayado.</p></li>
+        <li class="punto"><strong class="Negritta">wbr</strong>. Contiene una palabra a la que estaremos indicando que puede ser partida por un guión por parte del navegador.<h3 class="titulo3"><span class="numero3">[3.5.12]</span><a id="_idTextAnchor027"></a>span</h3></li>
+    </ul>
+    <p class="Normal2">Sirve para marcar un trozo de texto de forma inespecífica, sin indicar semántica alguna. En definitiva, selecciona un trozo de texto por necesidades técnicas (por ejemplo para indicar un formato CSS diferente a ese texto). </p>
+    <p class="Normal">La recomendación es utilizar un elemento más semántico siempre que sea posible.</p>
+    <h2 class="titulo2"><span class="numero2">[3.6] </span><a id="_idTextAnchor028"></a>elemento <em class="cursiva">address</em></h2>
+    <p class="Normal">El elemento <strong class="Negritta" lang="en-US">address</strong> permite indicar una dirección, especialmente indicada para mostrar información sobre el autor o los créditos del documento (con información de los autores por ejemplo) al estilo de los pies de artículos periodísticos. </p>
+    <p class="Normal">Aunque, de forma clásica, se le considera un elemento de marcado de párrafos, actualmente se le ha denotado como un elemento de marcado de secciones </p>
+    <p class="Normal">Ejemplo:</p>
+    <table id="table025" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;address&gt;</strong><br />Texto escrito por <strong class="resaltado">&lt;a</strong>&#160;<span class="atributo">href</span>=<span class="texto">”http://www.jorgesanchez.net”</span>&gt;</pre>
+                    <pre class="codigo">Jorge Sánchez<strong class="resaltado">&lt;/a&gt;&lt;br&gt;&#160;</strong></pre>
+                    <pre class="codigo">Calle Los Informáticos 5<strong class="resaltado">&lt;br&gt;</strong><br />Palencia<strong class="resaltado">&lt;br&gt;</strong></pre>
+                    <pre class="codigo">34001<strong class="resaltado">&lt;br&gt;</strong><br />España<br /><strong class="resaltado">&lt;/address&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Los navegadores suelen mostrar este tipo de párrafos en cursiva y centrados.</p>
+    <h2 class="titulo2"><span class="numero2">[3.7] </span><a id="_idTextAnchor029"></a>elementos de marcado de <a id="_idTextAnchor030"></a>correcciones</h2>
+    <p class="Normal2">Permiten marcar texto para indicar como texto que se está revisando y que falta decidir su contenido final. Hay dos elementos de este tipo <strong class="Negritta">ins </strong>y <strong class="Negritta">del</strong>.</p>
+    <ul>
+        <li class="punto"><strong class="Negritta">ins</strong>. Indica un texto añadido al documento. Puede utilizar dos atributos:</li>
+        <li class="punto"><strong class="Negritta">del</strong>. Indica un texto que se desea retirar del documento.</li>
+    </ul>
+    <p class="Normal">Ambos elementos pueden utilizar dos atributos:</p>
+    <ul>
+        <li class="punto"><strong class="Negritta">cite</strong>. Con un enlace a una dirección de Internet que proveerá de más información sobre la corrección.</li>
+        <li class="punto"><strong class="Negritta">datetime</strong>. Indica la fecha de la modificación con cuatro cifras para el año, dos para el mes y dos para el día. </li>
+    </ul>
+    <p class="normalespacio">Ejemplo:</p>
+    <table id="table026" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>La capital de Alemania es <strong class="resaltado">&lt;del&gt;</strong>Bonn<strong class="resaltado">&lt;/del&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;ins</strong><span class="atributo"> datetime=</span><span class="texto">”20120312”</span><strong class="resaltado">&gt;</strong>Berlín<strong class="resaltado">&lt;/ins&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2">Resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/12.png" alt="" /></p>
+    <p class="Normal2">El código marcado para eliminar aparece tachado y el de inserción aparece subrayado.</p>
+    <h2 class="titulo2"><span class="numero2">[3.8] </span><a id="_idTextAnchor031"></a>listas</h2>
+    <p class="Normal2">Las listas permiten crear párrafos agrupados y alineados mediante símbolos como viñetas o números para facilitar la lectura y organización de las ideas del documento.</p>
+    <h3 class="titulo3"><span class="numero3">[3.8.1]</span><a id="_idTextAnchor032"></a>listas con viñetas</h3>
+    <p class="Normal">Las listas con viñetas se deben englobar dentro de un elemento <strong class="Negritta">ul </strong>(acrónimo de<strong class="Negritta"> </strong><em class="cursiva">unordered list</em>, lista no ordenada), después cada párrafo de la lista estará dentro de elementos de tipo <strong class="Negritta">li</strong> (de <em class="cursiva">list item</em>, elemento de lista). </p>
+    <p class="Normal">Ejemplo:</p>
+    <table id="table027" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Lista de la compra<strong class="resaltado">&lt;/p&gt; </strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;ul&gt;<br />    &lt;li&gt;</strong>Agua<strong class="resaltado">&lt;/li&gt;</strong><br /><strong class="resaltado">    &lt;li&gt;</strong>Vino<strong class="resaltado">&lt;/li&gt;</strong><br /><strong class="resaltado">    &lt;li&gt;</strong>Cerveza<strong class="resaltado">&lt;/li&gt;</strong><br /><strong class="resaltado">&lt;/ul&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/13.png" alt="" /></p>
+    <h3 class="titulo3"><span class="numero3">[3.8.2]</span><a id="_idTextAnchor033"></a>numéricas</h3>
+    <p class="Normal2">Las listas numéricas aparecen dentro del elemento <strong class="Negritta">ol </strong>(de<strong class="Negritta"> </strong><em class="cursiva">ordered list</em>, lista ordenada), después cada párrafo de la lista estará dentro de elementos de tipo <strong class="Negritta">li</strong>,<strong class="Negritta"> </strong>al igual que las anteriores. La diferencia ahora es que cada párrafo con <strong class="Negritta">li</strong>, aparece con un número y no con una viñeta. </p>
+    <p class="Normal2">Ejemplo:</p>
+    <table id="table028" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Lista de la compra<strong class="resaltado">&lt;/p&gt; </strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;ol&gt;<br />    &lt;li&gt;</strong>Agua<strong class="resaltado">&lt;/li&gt;</strong><br />  <strong class="resaltado">  &lt;li&gt;</strong>Vino<strong class="resaltado">&lt;/li&gt;</strong><br />  <strong class="resaltado">  &lt;li&gt;</strong>Cerveza<strong class="resaltado">&lt;/li&gt;</strong><br /><strong class="resaltado">&lt;/ol&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/14.png" alt="" /></p>
+    <h3 class="titulo3"><span class="numero3">[3.8.3]</span><a id="_idTextAnchor034"></a>listas anidadas</h3>
+    <p class="Normal">Es posible meter una lista dentro de otra, por ejemplo:</p>
+    <table id="table029" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Lista de la compra<strong class="resaltado">&lt;/p&gt; </strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;ul&gt;<br />   &lt;li&gt;</strong><br />       No alcohólicas<br /><strong class="resaltado">       &lt;ul&gt;<br />           &lt;li&gt;</strong>Agua&lt;/li&gt;<br /><strong class="resaltado">       &lt;/ul&gt;<br />   &lt;/li&gt;<br />   &lt;li&gt;</strong><br />       Alcohólicas<br />       <strong class="resaltado">&lt;ul&gt;<br />           &lt;li&gt;</strong>Vino<strong class="resaltado">&lt;/li&gt;<br />           &lt;li&gt;</strong>Cerveza<strong class="resaltado">&lt;/li&gt;<br />       &lt;/ul&gt;<br />   &lt;/li&gt;            <br />&lt;/ul&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Con el resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/15.png" alt="" /></p>
+    <p class="Normal2">También es posible anidar mezclando tipos de listas:</p>
+    <table id="table030" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Lista de la compra<strong class="resaltado">&lt;/p&gt; </strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;ol&gt;<br />   &lt;li&gt;</strong><br />       No alcohólicas<br /><strong class="resaltado">       &lt;ul&gt;<br />           &lt;li&gt;</strong>Agua<strong class="resaltado">&lt;/li&gt;<br />       &lt;/ul&gt;<br />   &lt;/li&gt;<br />   &lt;li&gt;<br /></strong>       Alcohólicas<br />       <strong class="resaltado">&lt;ul&gt;<br />           &lt;li&gt;</strong>Vino<strong class="resaltado">&lt;/li&gt;<br />           &lt;li&gt;</strong>Cerveza<strong class="resaltado">&lt;/li&gt;<br />       &lt;/ul&gt;<br />   &lt;/li&gt;            <br />&lt;/ol&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal2">Con el resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/16.png" alt="" /></p>
+    <h3 class="titulo3"><span class="numero3">[3.8.4]</span><a id="_idTextAnchor035"></a>listas de términos</h3>
+    <p class="Normal">Permite crear una lista de definiciones de términos. En ellas se indica el término a definir y su significado. Ejemplo:</p>
+    <table id="table031" class="tabla-codigo">
+        <colgroup>
+            <col />
+        </colgroup>
+        <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;dl&gt;<br />   &lt;dt&gt;</strong>Windows<strong class="resaltado">&lt;/dt&gt;<br />   &lt;dd&gt;<br /></strong>       Sistema operativo de <strong class="resaltado">&lt;strong&gt;</strong>Microsoft<strong class="resaltado">&lt;/strong&gt;</strong> disponible para PC <br />       disponible en versiones de 32 y 64 bits y para servidores, <br />       ordenadores e incluso tabletas y móviles<strong class="resaltado">.&lt;br&gt;</strong><br />       La última versión es la 8 y la 2012 para servidores.<br /><strong class="resaltado">   &lt;/dd&gt;</strong></pre>
+                </td>
+            </tr>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">   &lt;dt&gt;</strong>Linux<strong class="resaltado">&lt;/dt&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">   &lt;dd&gt;</strong><br />       Sistema operativo de código abierto disponible<br />       en numerosas distribuciones gratuitas y de pago.<br />       Es la base del sistema <strong class="resaltado">&lt;strong&gt;</strong>Android<strong class="resaltado">&lt;/strong&gt;.</strong><br /><strong class="resaltado">   &lt;/dd&gt;<br />   &lt;dt&gt;</strong>Mac OS<strong class="resaltado">&lt;/dt&gt;<br />   &lt;dd&gt;<br /></strong>       Sistema operativo de los ordenadores de la empresa <strong class="resaltado">&lt;strong&gt;</strong>Apple<strong class="resaltado">&lt;/strong&gt; </strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&#9; &lt;br&gt;<br /></strong>        La última versión es la <strong class="resaltado">&lt;strong&gt;</strong>Mountain Lion<strong class="resaltado">&lt;/strong&gt;</strong><br /><strong class="resaltado">    &lt;/dd&gt;<br />&lt;/dl&gt;</strong></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="Normal">Resultado:</p>
+    <p class="Normal"><img src="texto-y-parrafo-html-2016-web-resources/image/17.png" alt="" /></p>
+</div>
+
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/texto-y-parrafo-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:45 GMT -->
+</html>
+

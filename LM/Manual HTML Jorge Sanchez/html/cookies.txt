@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+jorgesanchez.net	TRUE	/	FALSE	1999999999	60gpBAK	R1224194687
+jorgesanchez.net	TRUE	/	FALSE	1999999999	60gp	R591425506
+

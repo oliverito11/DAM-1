@@ -1,0 +1,72 @@
+<Biblioteca>
+	<libro>
+		<título>La buena suerte</título>
+		<autor>Rosa Montero</autor>
+		<códigoISBN>978-84-204-3945-7</códigoISBN>
+		<editorial>ALFAGUARA</editorial>
+		<estadoPrestamo>prestado</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>Como polvo en el viento</título>
+		<autor>Leonardo Padura</autor>
+		<códigoISBN>978-84-9066-861-0</códigoISBN>
+		<editorial>Tusquets Editores</editorial>
+		<estadoPrestamo>prestado</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>La vida mentirosa de los adultos</título>
+		<autor>Elena Ferrante</autor>
+		<códigoISBN>978-84-264-0834-1</códigoISBN>
+		<editorial>LUMEN</editorial>
+		<estadoPrestamo>libre</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>El bosque de los cuatro vientos</título>
+		<autor>María Oruña</autor>
+		<códigoISBN>978-84-233-5754-3</códigoISBN>
+		<editorial>Ediciones Destino</editorial>
+		<estadoPrestamo>prestado</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>Patria</título>
+		<autor>Fernando Aramburu</autor>
+		<códigoISBN>978-84-9066-834-4</códigoISBN>
+		<editorial>Maxi-Tusquets</editorial>
+		<estadoPrestamo>prestado</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>Exhalación</título>
+		<autor>Ted Chiang</autor>
+		<códigoISBN>978-84-17517-79-3</códigoISBN>
+		<editorial>Sexto Piso</editorial>
+		<estadoPrestamo>libre</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>Un amor</título>
+		<autor>Sara Mesa</autor>
+		<códigoISBN>978-84-339-9903-0</códigoISBN>
+		<editorial>Editorial Anagrama</editorial>
+		<estadoPrestamo>libre</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>Un ciudadano libre</título>
+		<autor>Albert Rivera</autor>
+		<códigoISBN>978-84-670-5915-1</códigoISBN>
+		<editorial>Espasa</editorial>
+		<estadoPrestamo>libre</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>Fin de temporada</título>
+		<autor>Ignacio Martínez de Pisón</autor>
+		<códigoISBN>978-84-322-3699-0</códigoISBN>
+		<editorial>Seix Barral</editorial>
+		<estadoPrestamo>prestado</estadoPrestamo>
+	</libro>
+	<libro>
+		<título>El príncipe de la Niebla</título>
+		<autor>Carlos Ruiz Zafón</autor>
+		<códigoISBN>978-84-08-07280-5</códigoISBN>
+		<editorial>Booket</editorial>
+		<estadoPrestamo>prestado</estadoPrestamo>
+	</libro>
+</Biblioteca>

@@ -1,0 +1,18 @@
+<!ELEMENT semanaSanta (viernesDolores, domingoRamos, lunes, martes, miercoles, jueves, viernes, sabado, domingoResurrec)>
+<!ELEMENT viernesDolores (cofradias)>
+<!ELEMENT domingoRamos (cofradias)>
+<!ELEMENT lunes (cofradias)>
+<!ELEMENT martes (cofradias)>
+<!ELEMENT miercoles (cofradias)>
+<!ELEMENT jueves (cofradias)>
+<!ELEMENT viernes (cofradias)>
+<!ELEMENT sabado (cofradias)>
+<!ELEMENT domingoResurrec (cofradias)>
+<!ELEMENT cofradias (pasos+)>
+<!ATTLIST cofradias numeroCofrades CDATA #REQUIRED>
+<!ATTLIST cofradias añoFundacion CDATA #REQUIRED>
+<!ELEMENT pasos (nombrePaso, autorPaso, madera?, numFiguras?)>
+<!ELEMENT nombrePaso (#PCDATA)>
+<!ELEMENT autorPaso (#PCDATA)>
+<!ELEMENT madera (#PCDATA)>
+<!ELEMENT numFiguras (#PCDATA)>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raiz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dniunico.xsd">
+  
+    <persona numero="7" codPersona="cod_123">
+        <edad>7</edad>
+        <nombre>Alberto</nombre>
+        <producto>teclado</producto>
+
+        <producto>teclado2</producto>
+
+        <codigo>fgh</codigo>
+
+        <codigo>fgt</codigo>
+
+        <dni>DNI_12345678-L</dni>
+        <dni>DNI_12345679-L</dni>
+    </persona>
+
+    <persona numero="7" codPersona="cod_124">
+        <edad>7</edad>
+        <nombre>Alberto</nombre>
+        <producto>teclado</producto>
+
+        <producto>teclado2</producto>
+
+        <codigo>agh</codigo>
+
+        <codigo>tgt</codigo>
+
+        <dni>DNI_72345678-L</dni>
+        <dni>DNI_72345679-M</dni>
+    </persona>
+
+    
+          
+</raiz>

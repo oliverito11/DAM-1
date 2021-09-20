@@ -1,0 +1,14 @@
+<!-- Elemento raíz -->
+<!ELEMENT lista_de_notas (nota+)>
+
+<!-- Todas las notas tienen los siugientes elementos-->
+<!ELEMENT nota (para, de, titulo, contenido)>
+<!-- También, las notas pueden o no estar marcadas por un día y/o una hora-->
+<!ATTLIST nota dia CDATA #IMPLIED>
+<!ATTLIST nota hora CDATA #IMPLIED>
+
+<!-- Definición de los elementos de las notas -->
+<!ELEMENT para (#PCDATA)>
+<!ELEMENT de (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>

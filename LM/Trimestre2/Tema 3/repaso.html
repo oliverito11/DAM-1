@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <video width="500px" height="500" controls>
+            <source src="video.mp4" type="video/mp4">
+            Error al cargar el video
+        </video>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mp3">
+            Error al cargar el audio
+        </audio>
+        <img src="Ejercicios/Actividad 6/Ejercicio/imagenes/avila.svg" alt="Mapa de avila" width="20%" usemap="#mapa">
+        <map name="mapa">
+            <area shape="rect" coords="0, 0, 200, 200" href="_blank">
+        </map>
+        <form action="serv.php" method="GET">
+            <fieldset>
+                <legend>Formulario</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <br><br>
+                <label for="provincia">Provincia:</label>
+                <select name="provincia">
+                    <optgroup label="CyL">
+                        <option value="z">Zamora</option>
+                    </optgroup>
+                    <optgroup label="Cantabria">
+                        <option value="s">Santander</option>
+                    </optgroup>
+                </select>
+                <br><br>
+                <label for="contra">Contraseña</label>
+                <input type="password" name="contra" id="contra">
+                <br><br>
+                <input type="radio" name="sexo" id="hombre" value="h">
+                <label for="hombre">Hombre</label>
+                <br>
+                <input type="radio" name="sexo" id="mujer" value="m">
+                <label for="hombre">Mujer</label>
+                <br><br>
+                <label for="desc">Descripcion</label>
+                <textarea name="desc" rows="10" cols="20"></textarea>
+                <input type="submit" name="enviar" value="enviar">
+            </fieldset>
+        </form>
+    </body>
+</html>

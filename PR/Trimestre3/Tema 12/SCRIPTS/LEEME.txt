@@ -1,0 +1,4 @@
+
+- Se requiere crear la base de datos instituto previamente.
+- Los datos han de ser insertados manualmente (a través de la aplicación Workbench, o como se prefiera)
+

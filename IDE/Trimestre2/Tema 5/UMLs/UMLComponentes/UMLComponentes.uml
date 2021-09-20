@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_7iOfwGU7EeutUqSQ2y-7aA" name="UMLComponentes">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_7jwJwGU7EeutUqSQ2y-7aA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_A0GpEGU8EeutUqSQ2y-7aA" name="Botón Actualizar">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_7X-iIGU8EeutUqSQ2y-7aA" client="_A0GpEGU8EeutUqSQ2y-7aA" supplier="_vCsAcGU8EeutUqSQ2y-7aA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ZPDVAGU8EeutUqSQ2y-7aA" name="Botón Cancelar"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_geAPAGU8EeutUqSQ2y-7aA" name="Area nombre"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_h0cdgGU8EeutUqSQ2y-7aA" name="Area DNI"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_kXea8GU8EeutUqSQ2y-7aA" name="Area Tlfno"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_vCsAcGU8EeutUqSQ2y-7aA" name="Actualizar BD">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_11FhUGU8EeutUqSQ2y-7aA" client="_vCsAcGU8EeutUqSQ2y-7aA" supplier="_geAPAGU8EeutUqSQ2y-7aA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_3aSkkGU8EeutUqSQ2y-7aA" client="_vCsAcGU8EeutUqSQ2y-7aA" supplier="_kXea8GU8EeutUqSQ2y-7aA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_2mphIGU8EeutUqSQ2y-7aA" client="_vCsAcGU8EeutUqSQ2y-7aA" supplier="_h0cdgGU8EeutUqSQ2y-7aA"/>
+</uml:Model>

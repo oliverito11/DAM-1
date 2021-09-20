@@ -1,0 +1,1644 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/selectores-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Selectores CSS</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[7] </span><br>Selectores CSS</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+<div id="_idContainer001" class="Marco-de-texto-b-sico">
+			<h2 class="titulo2"><span class="numero2">[7.1] </span><a id="_idTextAnchor000"></a>introducción</h2>
+			<p class="Normal2">Los estilos CSS se aplican hacia el elemento (o elementos) HTML que indiquemos, por ello es muy importante utilizar correctamente los selectores. </p>
+			<p class="Normal2">Un selector es el instrumento que proporciona CSS para determinar qué partes de la página web se van a ver afectados por el código CSS que indiquemos.</p>
+			<p class="Normal2">Podemos indicar los elementos a los que aplicar un determinado código CSS, por ejemplo con el nombre del elemento (por ejemplo, <strong class="Negritta">h1</strong>), pero también podemos hacer selecciones más elaboradas para seleccionar un elemento concreto mediante su identificador, seleccionar elementos mediante su jerarquía en la página, mediante el valor de sus atributos, etc.. </p>
+			<p class="Normal">Hacer buenas selecciones nos permitirá conseguir hojas de estilos muy sofisticadas, coherentes y fáciles de mantener. Lo ideal es que HTML y CSS funcionen de forma independiente, de forma que cuando queramos dar formato a nuestros documentos, no tengamos que tocar el código HTML. </p>
+			<p class="Normal">Eso solo se puede conseguir estructurando bien a nivel semántico nuestro HTML y dominando el uso de selectores.</p>
+			<h2 class="titulo2"><span class="numero2">[7.2] </span><a id="_idTextAnchor001"></a>selectores simples</h2>
+			<h3 class="titulo3"><span class="numero3">[7.2.1]</span><a id="_idTextAnchor002"></a>selección de elementos completos HTML</h3>
+			<p class="Normal2">Podemos aplicar un estilo a los elementos de un tipo de etiqueta concreta de HTML. Ejemplo:</p>
+			<table id="table001" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p{<br />   <span class="atributo"> </span><strong class="resaltado">color</strong>:<span class="atributo">blue</span>;<br />    <strong class="resaltado">font-size</strong>:<span class="atributo">12pt</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">En principio, con ese código todos los elementos de tipo p de la página saldrán de color azul.</p>
+			<p class="Normal">Podemos incluso aplicar el estilo a varias etiquetas a la vez:</p>
+			<table id="table002" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">h1,h2,h3{<br />    <strong class="resaltado">color</strong>:<span class="atributo">blue</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Los títulos de tipo <strong class="Negritta">h1</strong>, <strong class="Negritta">h2</strong> o <strong class="Negritta">h3</strong> saldrán de color azul. </p>
+			<h3 class="titulo3"><span class="numero3">[7.2.2]</span><a id="_idTextAnchor003"></a>selección por clases de elementos</h3>
+			<p class="Normal2">Una de las primeras formas que tiene CSS para diferenciar elementos del mismo tipo (por ejemplo un párrafo de otro) son las clases.</p>
+			<p class="Normal">Una clase es un nombre que asignamos a una serie de propiedades y valores CSS. Posteriormente simplemente aplicaremos el nombre de la clase a aquellos elementos que deseamos se modifiquen. La forma de configurar, es:</p>
+			<table id="table003" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis">selector.nombreclase<strong class="resaltado">{</strong></pre>
+							<pre class="sintaxis"><strong class="resaltado">&#9;</strong>propiedad1<strong class="resaltado">:</strong>valor1<strong class="resaltado">;</strong></pre>
+							<pre class="sintaxis">&#9;propiedad2<strong class="resaltado">:</strong>valor2<strong class="resaltado">;</strong></pre>
+							<pre class="sintaxis">&#9;…</pre>
+							<pre class="sintaxis"><strong class="resaltado">}</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Por ejemplo:</p>
+			<table id="table004" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p.rojo{<br />    <strong class="resaltado">color</strong>: <span class="atributo">red</span>;<span class="texto"><br /></span>}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Para que un párrafo (necesariamente marcado con la etiqueta <strong class="Negritta">p</strong>) adopte este estilo (y por lo tanto coloree la letra de color rojo) hay que indicarlo gracias a un atributo presente en todos los elemento HTML; se trata del atributo <strong class="Negritta">class</strong>. Ejemplo:</p>
+			<table id="table005" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;p</strong> <span class="atributo">class=”</span><span class="texto">rojo</span><span class="atributo">”</span>&gt;<br /><strong class="resaltado">     </strong>Este texto sale de color rojo<strong class="resaltado"><br />&lt;/p&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Podemos definir la clase sin indicar a qué tipo de elementos se aplica, de ese modo podremos aplicar la clase a cualquier elemento:</p>
+			<table id="table006" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">.</strong>rojo<strong class="resaltado">{</strong><br /><span class="atributo">    </span><strong class="resaltado">color</strong>:<span class="atributo">red</span>;<span class="texto"><br /></span><strong class="resaltado">}</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Cualquier elemento HTML podrá utilizar esa clase. Ejemplo:</p>
+			<table id="table007" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;h1</strong> <span class="atributo">class=</span><span class="texto">”rojo”</span>&gt;<br />     Título con letras rojas</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;p</strong> <span class="atributo">class=</span><span class="texto">”rojo”</span>&gt;<br />     Párrafo con letras rojas</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">En el ejemplo tanto los elementos <em class="cursiva">h1 </em>como los <em class="cursiva">p</em> de clase <em class="cursiva">rojo</em>, aparecerán con la letra en rojo.</p>
+			<p class="Normal2">Hay que tener en cuenta que podemos aplicar más de una clase al mismo elemento:</p>
+			<table id="table008" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><span class="comentario">/* CSS */</span></pre>
+							<pre class="codigo">.rojo<strong class="resaltado">{</strong></pre>
+							<pre class="codigo">   <strong class="resaltado">color</strong>:<span class="atributo">red</span>;</pre>
+							<pre class="codigo"><strong class="resaltado">}</strong></pre>
+							<pre class="codigo">.borde<strong class="resaltado">{</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   border-bottom</strong><strong class="resaltado">:</strong><span class="atributo">1px solid black</span><strong class="resaltado">;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">.......</strong></pre>
+							<pre class="codigo"><strong class="resaltado">...</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;h1</strong> <span class="atributo">class</span><span class="texto">=”rojo borde”</span><strong class="resaltado">&gt;</strong><br />     Título de color rojo y con borde</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/h1&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">En este último caso se suman al elemento las propiedades y valores de ambas clases definidas. En el caso de que las dos clases modifiquen las mismas propiedades (por ejemplo el color de la letra), se aplican las propiedades de la última clase definida en el código.</p>
+			<p class="Normal">También en CSS es posible aplicar formato cuando un determinado elemento tenga dos clases a la vez. Eso se hace usando como selector las dos clases seguidas (sin separarlas con un espacio):</p>
+			<table id="table009" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><span class="comentario">/* CSS */</span></pre>
+							<pre class="codigo">.rojo.borde<strong class="resaltado">{</strong></pre>
+							<pre class="codigo">   <strong class="resaltado">color</strong>:<span class="atributo">red</span>;</pre>
+							<pre class="codigo"><strong class="resaltado">   border-bottom</strong><strong class="resaltado">:</strong><span class="atributo">1px solid black</span><strong class="resaltado">;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">.......</strong></pre>
+							<pre class="codigo"><strong class="resaltado">...</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;h1</strong> <span class="atributo">class</span><span class="texto">=”rojo”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   </strong>No tendrá borde ni color rojo</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;h1</strong> <span class="atributo">class</span><span class="texto">=”rojo borde”</span><strong class="resaltado">&gt;</strong><br />     Este sí es título de color rojo y con borde</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/h1&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[7.2.3]</span><a id="_idTextAnchor004"></a>selección por identificadores</h3>
+			<p class="Normal2">La idea es parecida a la de las clases, pero en este caso se usa el valor del atributo <strong class="Negritta">id</strong> (disponible en todos los elementos del lenguaje HTML). El valor de este atributo no se puede repetir en un documento (aunque los navegadores lo permitan). </p>
+			<p class="Normal2">Para indicar el valor se usa el símbolo # seguido del identificador.</p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table010" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><span class="comentario">/* CSS */</span></pre>
+							<pre class="codigo">#parrafo1{<br /><strong class="resaltado">    color</strong>:<span class="atributo"> #339999</span>;<span class="texto"><br /></span><span class="atributo">    </span><strong class="resaltado">background-color</strong>: <span class="atributo">#D6D6D6</span>;<br />}</pre>
+							<pre class="codigo"><strong class="resaltado">.......</strong></pre>
+							<pre class="codigo"><strong class="resaltado">...</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;p</strong> <span class="atributo">id=</span><span class="texto">”parrafo1”</span>&gt;<br />     texto del párrafo coloreado</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[7.2.4]</span><a id="_idTextAnchor005"></a>selector de limitación</h3>
+			<p class="Normal2">Permite indicar que el estilo definido se aplica a una determinada etiqueta pero cuando esté contenida en otra. Ejemplo:</p>
+			<table id="table011" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">td p</strong>{<br /><span class="atributo">    </span><strong class="resaltado">color</strong>:<span class="atributo">red</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Se aplica a los elementos de tipo <em class="cursiva">p</em> cuando están dentro de elementos de celda (<em class="cursiva">td</em>). Ejemplo:</p>
+			<table id="table012" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Este texto sale normal <strong class="resaltado">&lt;p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;table&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;  &lt;td&gt;</strong>Sale normal<strong class="resaltado">&lt;/td&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   &lt;td&gt;&lt;p&gt;</strong>Sale de color rojo<strong class="resaltado">&lt;/p&gt;&lt;/td&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Podemos hacer limitaciones más complejas, por ejemplo:</p>
+			<table id="table013" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">section article p</strong>{</pre>
+							<pre class="codigo">  <strong class="resaltado">color</strong>:<span class="atributo">red</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">El código anterior se aplicará a los párrafos que estén dentro de un artículo que, a su vez, estén dentro de una sección.</p>
+			<p class="Normal">Esta técnica vale para cualquier selector:</p>
+			<table id="table014" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">section</strong> .rojo{</pre>
+							<pre class="codigo">  <strong class="resaltado">color</strong>:<span class="atributo">red</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">En este caso se colorean de  rojo los elementos de clase <em class="cursiva">rojo </em>interiores a un elemento <em class="cursiva">section</em>.</p>
+			<h3 class="titulo3"><span class="numero3">[7.2.5]</span><a id="_idTextAnchor006"></a>selector universal</h3>
+			<p class="Normal2">Permite aplicar un estilo a todas las etiquetas del documento. Esto lo consigue el asterisco. Ejemplo:</p>
+			<table id="table015" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">*{<br /><span class="atributo">    </span><strong class="resaltado">color</strong>:<span class="atributo">black</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">No se suele utilizar de esa forma ya que es demasiado indiscriminada. Pero sí se utiliza para elementos de este tipo:</p>
+			<table id="table016" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;title&gt;</strong>Documento<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="remarcado">&#9;&#9;table *{</pre>
+							<pre class="remarcado">&#9;&#9;&#9;<strong class="resaltado">color</strong>:<span class="atributo">red</span>;</pre>
+							<pre class="remarcado">&#9;&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p&gt;</strong>Sale normal<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;table&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;th&gt;</strong>Sale rojo<strong class="resaltado">&lt;/th&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;/tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;td&gt;</strong>Sale rojo<strong class="resaltado">&lt;/td&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;/tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/table&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Permite colorear en rojo el texto que esté dentro de una tabla; no importará que etiqueta sea la que está dentro de la tabla. Otro ejemplo:</p>
+			<table id="table017" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;title&gt;</strong>Documento<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="remarcado">&#9;&#9;p *{ <strong class="resaltado">color</strong>:<span class="atributo">red</span><span class="texto">;</span>}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p&gt;</strong>Sale normal <strong class="resaltado">&lt;span&gt;</strong>Sale rojo<strong class="resaltado">&lt;/span&gt;&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Ahora sale de color rojo el texto dentro de la etiqueta <em class="cursiva">span</em>.</p>
+			<h3 class="titulo3"><span class="numero3">[7.2.6]</span><a id="_idTextAnchor007"></a>selección por atributos</h3>
+			<p class="Normal2">Permite aplicar estilos a un elemento cuando este tiene un determinado valor sobre un atributo. Para ello se indica el atributo entre corchetes, seguido del signo de igualdad y el valor entre comillas. Ejemplo:</p>
+			<table id="table018" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;title&gt;</strong>Documento<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="remarcado"><span class="realzado">&#9;&#9;p[lang</span><span class="realzado">=</span><span class="realzado">”en”]{<br />&#9;&#9;&#9;font-style: italic;<br />&#9;&#9;</span><span class="realzado">}</span></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;<br /> &lt;/head&gt;<br /> &lt;body&gt;<br />     &lt;p</strong> <span class="atributo">lang</span><span class="texto">=”es”</span>&gt;texto que sale de forma normal<strong class="resaltado">&lt;/p&gt;<br />     &lt;p</strong> <span class="realzado">lang=”en”</span>&gt;texto que sale en cursiva<strong class="resaltado">&lt;/p&gt;<br /> &lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Se puede mezclar este tipo de definiciones con clases o definiciones por identificador:</p>
+			<table id="table019" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p.clase1[<span class="atributo">lang</span>=<span class="texto">”en”</span>]{<br /><span class="atributo">&#9;</span><strong class="resaltado">font-style</strong>: <span class="atributo">italic</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En este caso el estilo definido se aplica a párrafos de <strong class="Negritta">clase 1</strong> que estén marcados con el valor <em class="cursiva">en</em> en el atributo <em class="cursiva">lang</em> (es decir que estén en inglés).</p>
+			<p class="Normal">Se puede incluso utilizar más de un atributo:</p>
+			<table id="table020" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p[<span class="atributo">lang</span>=<span class="texto">”en”</span>][<span class="atributo">spellcheck</span>=<span class="texto">”true”</span>]{<br /><span class="atributo">&#9;</span><strong class="resaltado">font-style</strong>: <span class="atributo">italic</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En este caso se aplica el estilo para los elementos de tipo p que usen los atributos <strong class="Negritta">lang</strong> y <strong class="Negritta" lang="en-US">spellcheck</strong> con los valores indicados.</p>
+			<p class="Normal">Podemos incluso usar varios valores para el mismo atributo:</p>
+			<table id="table021" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p[<span class="atributo">lang</span>=<span class="texto">”en”</span>][<span class="atributo">lang</span>=<span class="texto">”fr”</span>]{<br /><span class="atributo">&#9;</span><strong class="resaltado">font-style</strong>: <span class="atributo">italic</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Aplica la cursiva a párrafos cuyo lenguaje sea inglés o francés.</p>
+			<p class="Normal">También podemos indicar el estilo simplemente para los elementos que usen el atributo independientemente de su valor:</p>
+			<table id="table022" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;title&gt;</strong>Documento<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;p[<span class="atributo">lang</span>]{<br /><span class="atributo">&#9;&#9;&#9;</span><strong class="resaltado">font-style</strong>: <span class="atributo">italic</span>;<br />&#9;&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p&gt;</strong>Este texto se muestra de forma normal<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p </strong><span class="atributo">lang</span><strong class="resaltado">=</strong><span class="texto">”en”</span><strong class="resaltado">&gt;</strong>This text is shown with italics (se muestra con </pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;</strong>cursiva)<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p </strong><span class="atributo">lang</span>=<span class="texto">”es”</span><strong class="resaltado">&gt;</strong>Este texto también se muestra en cursiva<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Por otro lado gracias a CSS3 disponemos de estas posibilidades:</p>
+			<table id="table023" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">sintaxis</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento[<strong class="resaltado">atributo</strong>~=<span class="atributo">”valor”</span><strong class="resaltado">]</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Elementos que usen el atributo indicado que contengan el valor aunque separado de otros valores por espacios</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento[<strong class="resaltado">atributo</strong>$=<span class="atributo">”valor”</span><strong class="resaltado">]</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Elementos que utilicen el atributo y cuyo contenido finalice con el valor indicado</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento[<strong class="resaltado">atributo</strong>^=<span class="atributo">”valor”</span>]</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Elementos que utilicen el atributo y cuyo contenido empiece con el valor indicado</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento[<strong class="resaltado">atributo</strong>|=<span class="atributo">”valor”</span>]</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Elementos que utilicen el atributo, cuyo contenido empiece con el valor indicado y además ese valor sea una palabra</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento[<strong class="resaltado">atributo</strong>*=<span class="atributo">”valor”</span>]</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Elementos que utilicen el atributo indicado y contengan (en cualquier parte) el atributo indicado</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table024" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">&#9;<strong class="resaltado">&lt;title&gt;</strong>Documento<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;p[<span class="atributo">lang</span><strong class="resaltado">*=</strong><span class="texto">”es”</span>]{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">font-style</strong>: <span class="atributo">italic</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;p </strong><span class="atributo">lang</span>=<span class="texto">”es-AR”</span><strong class="resaltado">&gt;</strong>Este texto se muestra en cursiva</pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;p </strong><span class="atributo">lang</span>=<span class="texto">”es-ES”</span><strong class="resaltado">&gt;</strong>Este texto también se muestra en   </pre>
+							<pre class="codigo">   cursiva<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;p </strong><span class="atributo">lang</span>=<span class="texto">”es”</span><strong class="resaltado">&gt;</strong>Incluso este también<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;p </strong><span class="atributo">lang</span>=<span class="texto">”en”</span><strong class="resaltado">&gt;</strong>Este no<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[7.3] </span><a id="_idTextAnchor008"></a>selectores jerárquicos</h2>
+			<p class="Normal2"><img src="css-selectores-html-2016-web-resources/image/1.png" alt="" /></p>
+			<p class="Normal2">Podemos entender HTML como un documento formado de manera jerárquica, donde hay elementos que contienen otros elementos formando una estructura de árbol. Esta es una parte importante del funcionamiento tanto de una página web HTML como de un documento XML. Esta visión permite seleccionar elementos que casen con una cierta jerarquía. </p>
+			<p class="Normal2">De este modo esta página web:</p>
+			<table id="table025" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;<br />&lt;html</strong> lang=”es-ES”&gt;<br />    <strong class="resaltado">&lt;head&gt;<br />        &lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;<br />            &lt;title&gt;&lt;/title&gt;<br />    &lt;/head&gt;<br />    &lt;body&gt;<br />        &lt;h1&gt;</strong>Monumentos de Palencia<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;p&gt;</strong>Palencia dispone de numerosos monumentos interesantes. Debido a su importante actividad medieval posee una gran cantidad de edificios religiosos entre los que destaca la <strong class="resaltado">&lt;strong&gt;</strong>Catedral de Palencia<strong class="resaltado">&lt;/strong&gt;</strong> así como la iglesia de San Miguel con su peculiar torre de defensa y el monumento más conocido de la ciudad: El Cristo del Otero<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p&gt;</strong>A finales del siglo <strong class="resaltado">&lt;em&gt;</strong>XIX<strong class="resaltado">&lt;/em&gt;</strong> y principios del <strong class="resaltado">&lt;em&gt;</strong>XX<strong class="resaltado">&lt;/em&gt;</strong> aparecieron edificios suntuosos y civiles que han embellecido una buena parte de la ciudad, en especial la transitada Calle Mayor<strong class="resaltado">.&lt;/p&gt;        &lt;h2&gt;</strong>Edificios religiosos<strong class="resaltado">&lt;/h2&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;ul&gt;<br />            &lt;li&gt;</strong>Cristo del Otero<strong class="resaltado">&lt;/li&gt;</strong><br />            <strong class="resaltado">&lt;li&gt;</strong>Catedral Mayor<strong class="resaltado">&lt;/li&gt;</strong><br />            <strong class="resaltado">&lt;li&gt;</strong>Iglesia de San Miguel<strong class="resaltado">&lt;/li&gt;</strong><br />            <strong class="resaltado">&lt;li&gt;</strong>Iglesia de San Lázaro<strong class="resaltado">&lt;/li&gt;<br /></strong>            <strong class="resaltado">&lt;li&gt;</strong>Convento de San Pablo<strong class="resaltado">&lt;/li&gt;<br /></strong>            <strong class="resaltado">&lt;li&gt;</strong>Iglesia de la Compañía<strong class="resaltado">&lt;/li&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9; &lt;/ul&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   &lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Podemos entender que sus elementos forman la <a href="#">Ilustración 47</a>.</p>
+			<p class="Normal2">En él se observa como los elementos <em class="cursiva">body</em> y <em class="cursiva">head</em> son hijos de <em class="cursiva">html</em>. Mientras que meta y <em class="cursiva" lang="en-US">title</em> son hijos de <em class="cursiva">head</em> (luego nietos de <em class="cursiva">html</em>). Los nodos al mismo nivel forman hermanos (<em class="cursiva">h1</em>, <em class="cursiva">h2,</em> <em class="cursiva">p</em> y <em class="cursiva">ul</em> en este esquema son hermanos).</p>
+			<h3 class="titulo3"><span class="numero3">[7.3.1]</span><a id="_idTextAnchor009"></a>selector para un descendiente</h3>
+			<p class="Normal2">Es posible aplicar un formato cuando un elemento está contenido en otro (es su descendiente). </p>
+			<p class="Normal2">La forma (vista anteriormente es):</p>
+			<table id="table026" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">section p{<br />    <strong class="resaltado">color</strong>:<span class="atributo">red</span>; <span class="comentario">/* Selecciona párrafos p si están dentro de una tabla</span><br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Ese código colorea de rojo el texto contenido en elementos de párrafo (de tipo <strong class="Negritta">p</strong>) cuando son <strong class="Negritta">descendientes</strong> de algún elemento <strong class="Negritta">section</strong> (sea <em class="cursiva">hijo </em>o <em class="cursiva">nieto</em>). </p>
+			<p class="Normal2">Así usando el CSS anterior este código HTML:</p>
+			<table id="table027" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;section&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;h1&gt;</strong>Título<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;p</strong> <span class="atributo">id=</span><span class="texto">”p1”</span><strong class="resaltado">&gt;</strong>Sale de color rojo&lt;<strong class="resaltado">/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;article&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;p </strong><span class="atributo">id=</span><span class="texto">”p2”</span><strong class="resaltado">&gt;</strong>También sale de color rojo<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;/article&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/section&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Se colorean ambos párrafos de tipo p.</p>
+			<h3 class="titulo3"><span class="numero3">[7.3.2]</span><a id="_idTextAnchor010"></a>selector de elementos hijos</h3>
+			<p class="Normal2">En este caso, solo funciona para elementos que son hijos directos. Se hace de esta forma:</p>
+			<table id="table028" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">section &gt; p{<br />    <strong class="resaltado">color</strong>:<span class="atributo">red</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">El signo <strong class="Negritta">&gt; </strong>indica una relación jerárquica de padre a hijo. En el texto HTMl del ejemplo anterior solo se colorearía el primer párrafo:</p>
+			<table id="table029" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;section&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;h1&gt;</strong>Título<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;p</strong> <span class="atributo">id=</span><span class="texto">”p1”</span><strong class="resaltado">&gt;</strong>Sale de color rojo&lt;<strong class="resaltado">/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;article&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;p </strong><span class="atributo">id=</span><span class="texto">”p2”</span><strong class="resaltado">&gt;</strong>No sale de color rojo<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;/article&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/section&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[7.3.3]</span><a id="_idTextAnchor011"></a>otros selectores jerárquicos</h3>
+			<table id="table030" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">sintaxis</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento1 <strong class="Negritta">+</strong> elemento2</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El estilo se aplica al <em class="cursiva">elemento2</em> cuando es hermano del <em class="cursiva">elemento1</em> y además el <em class="cursiva">elemento1</em> precede inmediatamente al <em class="cursiva">elemento2</em>.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento1 <strong class="Negritta">~ </strong>elemento2</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica al <em class="cursiva">elemento2</em> cuando es hermano del <em class="cursiva">elemento1</em> y éste le precede, aunque no sea inmediatamente.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="Negritta">:empty</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica cuando el elemento está vacío</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento:<strong class="Negritta">nth-child(</strong>número<strong class="Negritta">)</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="normalEnTabla">Se aplica al elemento indicado cuando sea el hijo con el número indicado (por ejemplo número sería 3, para el tercer hijo). </p>
+							<p class="normalEnTabla">Se pueden utilizar expresiones más complejas mediante el uso de la variable <strong class="Negritta">n </strong>para conseguir fórmulas más complejas (la <em class="cursiva">n</em> el navegador la sustituirá automáticamente por cadas número entero para calcular qué filas se seleccionan)</p>
+							<p class="normalEnTabla">Se permite también usa las palabras clave <strong class="Negritta">odd </strong>(<em class="cursiva">impar</em>) y <strong class="Negritta">even </strong>(<em class="cursiva">par</em>)</p>
+							<p class="normalEnTabla">Ejemplos de uso:</p>
+							<ul>
+								<li class="punto"><strong class="Negritta">tr:nth-child(3)</strong>. Selecciona la tercera fila de una tabla</li>
+								<li class="punto"><strong class="Negritta">tr:nth-child(odd)</strong>. Selecciona las filas impares</li>
+								<li class="punto"><strong class="Negritta">td:nth-child(even)</strong>. A los pares</li>
+								<li class="punto"><strong class="Negritta">tr:nth-child(2n+1)</strong>. Selecciona las filas 1,3,5,... (las impares)</li>
+								<li class="punto"><strong class="Negritta">tr:nth-child(3n+1)</strong>. Selecciona las filas 1, 4, 7, 10, 13... (de tres en tres)</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="Negritta">:nth-last-child(</strong>n<strong class="Negritta">)</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Funciona igual que el anterior pero cuenta los elementos hijos a partir del último (es decir, el orden de atrás hacia delante).</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="resaltado">:</strong><strong class="Negritta">first-child</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica al elemento cuando es el primer hijo</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="Negritta">:last-child</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica al elemento cuando es el último hijo</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="Negritta">:only-child</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica cuando el elemento es el único hijo</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="Negritta">:first-of-type</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Primer descendiente de su tipo</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="Negritta">:last-of-type</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal"><span lang="ar-SA">Último descendiente de su hijo</span></p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="resaltado">:</strong><strong class="Negritta">nth-of-type</strong>(n)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Funciona como <strong class="Negritta">nth-child</strong>, pero se refiere al número de hijo de ese tipo. No cuenta hijos, sino hijos del tipo indicado. </p>
+							<p class="Normal">Ejemplo:</p>
+							<table id="table031" class="tabla-codigo">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tabla-codigo">
+										<td class="tabla-codigo celda-codigo">
+											<pre class="codigo">  <strong class="resaltado"> &lt;style&gt;</strong></pre>
+											<table id="table032" class="tablaRemarcada">
+												<colgroup>
+													<col />
+												</colgroup>
+												<tbody>
+													<tr class="tablaRemarcada">
+														<td class="tablaRemarcada celda-remarcada">
+															<pre class="codigo">     article p:<strong class="resaltado">nth-of-type(2){</strong></pre>
+															<pre class="codigo">            <strong class="resaltado">color:</strong><span class="atributo">red</span>;</pre>
+															<pre class="codigo">     <strong class="resaltado">}</strong></pre>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<pre class="codigo"><strong class="resaltado">   &lt;/style&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado"> &lt;article&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">   &lt;h1&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">&#9;</strong>Primer hijo, no se colorea</pre>
+											<pre class="codigo">   <strong class="resaltado">&lt;/h1&gt;</strong></pre>
+											<pre class="codigo">   <strong class="resaltado">&lt;p&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">&#9;</strong>Segundo hijo, primero de </pre>
+											<pre class="codigo">&#9;tipo p. No se colorea</pre>
+											<pre class="codigo">   <strong class="resaltado">&lt;/p&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">   &lt;p&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">&#9;</strong>Tercer hijo, segundo de </pre>
+											<pre class="codigo">&#9;tipo p. SE COLOREA</pre>
+											<pre class="codigo">   <strong class="resaltado">&lt;/p&gt;</strong></pre>
+											<pre class="codigo">   <strong class="resaltado">&lt;p&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">&#9;</strong>Cuarto hijo, tercero de</pre>
+											<pre class="codigo">&#9;tipo p. No se colorea</pre>
+											<pre class="codigo">   <strong class="resaltado">&lt;/p&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado"> &lt;/article&gt;</strong></pre>
+											<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="Negritta">:nth-last-of-type(</strong>n<strong class="Negritta">)</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Como el anterior pero cuenta <em class="cursiva">n</em> desde el final.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">elemento<strong class="Negritta">:only-of-type</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica cuando el elemento es el único hijo de ese tipo</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Ejemplo de uso de formatos jerárquicos</p>
+			<table id="table033" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<table id="table034" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="codigo">&#9;&#9;h1 + p{</pre>
+											<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">color</strong>:<span class="atributo">red</span>;</pre>
+											<pre class="codigo">&#9;&#9;}</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;section&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">&lt;h1&gt;</strong>Este es un título<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">&lt;p&gt;</strong>Párrafo que sale de color rojo<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">&lt;p&gt;</strong>Párrafo que sale normal<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">&lt;h1</strong>&gt;Otro titulo<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo">&#9;<strong class="resaltado">&#9;&lt;address&gt;</strong>C/ Mayor...<strong class="resaltado">&lt;/address&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">&lt;p&gt;</strong>Este sale normal<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/section&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body</strong>&gt;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">En el ejemplo, el operador +, hace que se coloree la letra de color rojo, para todos los párrafos de tipo <em class="cursiva">p</em> que estén justo detrás de un párrafo <em class="cursiva">h1</em>. Por ello se colorea solo el párrafo con el texto <em class="cursiva">Párrafo que sale de color rojo</em> ya que es el único que cumple la condición. Sin embargo si se hubiera definido de esta forma:</p>
+			<table id="table035" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;h1 ~ p{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">color</strong>:<span class="atributo">red</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Ahora todos los párrafos de tipo <em class="cursiva">p </em>aparecen de color rojo ya que no es necesario que estén inmediatamente detrás de un <em class="cursiva">h1</em>, basta con que sean hermanos; es decir, que estén dentro del mismo contenedor y <em class="cursiva">h1</em> aparezca antes que <em class="cursiva">p</em>.</p>
+			<p class="Normal">Ejemplo de uso de <strong class="Negritta">nth-child</strong>:</p>
+			<table id="table036" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta </strong><span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;title&gt;</strong>Prueba nth-child<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;table{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">width</strong>:<span class="atributo">450px</span>;&#9;&#9;</pre>
+							<pre class="codigo">&#9;&#9;  <span class="atributo">border-collapse</span>:<span class="atributo">collapse</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+							<pre class="codigo">        td,th{</pre>
+							<pre class="codigo">          <strong class="resaltado">border</strong>:<span class="atributo">1px solid black</span>;</pre>
+							<pre class="codigo">        }&#9;  </pre>
+							<table id="table037" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="codigo">&#9;&#9;td<span class="atributo">:nth-child</span>(<span class="texto">2</span>){</pre>
+											<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">background-color</strong>:<span class="atributo">red</span>;</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo">&#9;&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;table</strong><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;th&gt;</strong>&amp;nbsp;<strong class="resaltado">&lt;/th&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;td&gt;</strong>&amp;nbsp;<strong class="resaltado">&lt;/td&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;td&gt;</strong>&amp;nbsp;<strong class="resaltado">&lt;/td&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;td&gt;</strong>&amp;nbsp;<strong class="resaltado">&lt;/td&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;/tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;th&gt;</strong>&amp;nbsp;<strong class="resaltado">&lt;/th&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;td&gt;</strong>&amp;nbsp;<strong class="resaltado">&lt;/td&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;td&gt;</strong>&amp;nbsp;<strong class="resaltado">&lt;/td&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&lt;td&gt;</strong>&amp;nbsp;<strong class="resaltado">&lt;/td&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;/tr&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/table&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El resultado del código es:</p>
+			<table id="table038" class="Ningún-estilo-de-tabla">
+				<colgroup>
+					<col />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="Ningún-estilo-de-tabla">
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+					</tr>
+					<tr class="Ningún-estilo-de-tabla">
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">La segunda columna sale con fondo rojo, ya que en ella la etiqueta <strong class="Negritta">td</strong> es el segundo hijo de la etiqueta <strong class="Negritta">tr</strong>. Pero si el código CSS fuera este:</p>
+			<table id="table039" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;table{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">width</strong>:<span class="atributo">450px</span>;&#9;&#9;</pre>
+							<pre class="codigo">&#9;&#9;  <span class="atributo">border-collapse</span>:<span class="atributo">collapse</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+							<pre class="codigo">        td,th{</pre>
+							<pre class="codigo">          <strong class="resaltado">border</strong>:<span class="atributo">1px solid black</span>;</pre>
+							<pre class="codigo">        }&#9;  </pre>
+							<table id="table040" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="codigo">&#9;&#9;td<span class="atributo">:nth-of-type</span>(<span class="texto">2</span>){</pre>
+											<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">background-color</strong>:<span class="atributo">red</span>;</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo">&#9;&#9;}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El resultado sería:</p>
+			<table id="table041" class="Ningún-estilo-de-tabla">
+				<colgroup>
+					<col />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="Ningún-estilo-de-tabla">
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+					</tr>
+					<tr class="Ningún-estilo-de-tabla">
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="Ningún-estilo-de-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Porque ahora se colorea la etiqueta <strong class="Negritta">td</strong> cuando es el segundo hijo de su tipo (la primera columna es de tipo <strong class="Negritta">th</strong> y no <strong class="Negritta">td</strong>). </p>
+			<p class="Normal2">Podemos incluso hacer combinaciones avanzadas. Ejemplo:</p>
+			<table id="table042" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">ul &gt; li + li {<br />&#9;<strong class="resaltado">color</strong>:<span class="atributo">green</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Se aplica a los elementos <em class="cursiva">li</em> que estén dentro de elementos <em class="cursiva">ul</em> y además estén inmediatamente precedidos por otro elemento <em class="cursiva">li</em>. Ejemplo:</p>
+			<table id="table043" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;ul&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;li&gt;</strong>Yo salgo normal<strong class="resaltado">&lt;/li&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;li&gt;</strong>Yo salgo verde<strong class="resaltado">&lt;/li&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;li&gt;</strong>Yo también salgo verde<strong class="resaltado">&lt;/li&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/ul&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[7.4] </span><a id="_idTextAnchor012"></a>pseudoclases</h2>
+			<h3 class="titulo3"><span class="numero3">[7.4.1]</span><a id="_idTextAnchor013"></a>básicas</h3>
+			<p class="Normal2">Las pseudoclases permiten asociar estilos a un selector cuando le ocurre una determinada circunstancia. Inicialmente las pseudoclases se aplicaban a los enlaces (elemento <em class="cursiva">a</em>), pero ahora se aplican a cualquier elemento. Las pseudoclases clásicas son:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">:link</strong>. Se aplica para los enlaces no visitados</li>
+				<li class="punto"><strong class="Negritta">:visited</strong>. Enlaces visitados</li>
+				<li class="punto"><strong class="Negritta">:active</strong>. Enlaces activos (aquellos sobre los que hacemos clic)</li>
+				<li class="punto"><strong class="Negritta">:</strong><strong class="Negritta" lang="en-US">hover</strong>. Se aplica cuando el ratón pasa por encima del elemento (sea un enlace o no)</li>
+			</ul>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table044" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;style&gt;</strong></pre>
+							<pre class="codigo">    a{</pre>
+							<pre class="codigo">        <strong class="resaltado">text-decoration</strong>:<span class="atributo">none</span>;</pre>
+							<pre class="codigo">    }</pre>
+							<pre class="codigo">    a:<span class="atributo">visited</span>{</pre>
+							<pre class="codigo">        <strong class="resaltado">color</strong>:<span class="atributo">gray</span>;</pre>
+							<pre class="codigo">    }</pre>
+							<pre class="codigo">    a:<span class="atributo">hover</span>{</pre>
+							<pre class="codigo">        <strong class="resaltado">text-decoration</strong>:<span class="atributo">underline</span>;</pre>
+							<pre class="codigo">    }</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/style&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">En el ejemplo los enlaces a los que se aplique esta hoja de estilo saldrán sin subrayar, si están visitados saldrán de color gris y si se arrima el ratón en ellos será cuando se muestren subrayados.</p>
+			<p class="Normal">Estas pseudoclases permiten un cierto dinamismo en la página HTML. Actualmente además es posible utilizarlas en otros elementos distintos de la etiqueta <em class="cursiva">a</em> (como <strong class="Negritta">p</strong>, <strong class="Negritta">div</strong>, etc.) lo que da enormes posibilidades.</p>
+			<h3 class="titulo3"><span class="numero3">[7.4.2]</span><a id="_idTextAnchor014"></a>más pseudoclases</h3>
+			<p class="Normal">CSS3 ha incorporado muchas más pseudoclases:</p>
+			<table id="table045" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">pseudoclase</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">selecciona...</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:focus</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Cuando el elemento obtiene el foco, es decir cuando el elemento ha capturado la entrada del teclado. Muy útil en formularios.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:lang(</strong>código<strong class="Negritta">)</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica cuando el elemento esté marcado con el lenguaje indicado por su código de idioma en el atributo <strong class="Negritta">lang</strong> (<em class="cursiva">es</em> para español, <em class="cursiva">en</em> para inglés,…)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:enabled</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Cuando  el elemento está habilitado (útil en formularios)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:disabled</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Cuando el elemento está deshabilitado (útil en formularios)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:checked</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">En controles de formulario de tipo <strong class="Negritta" lang="en-US">radio</strong> o <strong class="Negritta" lang="en-US">checkbox,</strong> cuando el elemento pasa a estar activado.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:in-range</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="normalEnTabla">En controles de formulario (de tipo <strong class="Negritta">input</strong>) cuando el valor que contienen está dentro de rango. Esto significa que los atributos <strong class="Negritta">min </strong>y <strong class="Negritta">max </strong>(que solo se aplican a algunos tipos de controles <strong class="Negritta">input</strong>) han delimitado valores el contenido del control cumple.</p>
+							<p class="normalEnTabla">No funciona en Internet Explorer.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:out-of-range</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Al revés del anterior. Aplica el contenido CSS a controles cuyos valores están fuera de rango.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:target</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica cuando el elemento al que se refiere ha sido destino de un enlace. Ejemplo:</p>
+							<table id="table046" class="tabla-codigo">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tabla-codigo">
+										<td class="tabla-codigo celda-codigo">
+											<pre class="codigo"><strong class="resaltado">&lt;style&gt;</strong></pre>
+											<pre class="codigo">&#9;#intro:<span class="atributo">target</span>{</pre>
+											<pre class="codigo">&#9;&#9;<strong class="resaltado">color</strong>:<span class="atributo">blue</span>;</pre>
+											<pre class="codigo">&#9;}</pre>
+											<pre class="codigo">...</pre>
+											<pre class="codigo"><strong class="resaltado">&lt;h1 </strong><span class="atributo">id</span><strong class="resaltado">=</strong><span class="texto">”intro”</span><strong class="resaltado">&gt;</strong>Introducción<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+											<pre class="codigo">...</pre>
+											<pre class="codigo"><strong class="resaltado">&lt;a </strong><span class="atributo">href=</span><span class="texto">”#intro”</span><strong class="resaltado">&gt;</strong>Ir a la introducción<strong class="resaltado">&lt;/a&gt;</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="Normal2">Cuando hagamos clic sobre el enlace <em class="cursiva">ir a la introducción</em>, el título <em class="cursiva">Introducción </em>se pondrá de color azul.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:valid</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Controles de formulario que contienen valores válidos (lo serán o no dependiendo del tipo de elemento). Por ejemplo no será válido un texto en un cuadro <strong class="Negritta">input </strong>de tipo <strong class="Negritta">numérico </strong>(<em class="cursiva">number</em>).</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:invalid</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Inverso al anterior. Es decir, selecciona controles cuyos valores no sean válidos.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:read-only</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Controles de formulario que están en modo de solo lectura (debido a usar el atributo HTMl <strong class="Negritta">readonly</strong>). No funciona en Internet Explorer y en Mozilla Firefox solo si se usa con el prefijo <strong class="Negritta">-moz-</strong></p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:read-write</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Inverso al anterior. Controles que se puedan leer y escribir.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:required</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Controles de formulario que están marcados (gracias al atributo HTMl <strong class="Negritta">required</strong>) para ser rellenados obligatoriamente.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:optional</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Contrario al anterior. Controles que no están obligados a ser rellenados.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:default</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Selecciona los elementos de un formulario que son las opciones marcadas por defecto. Por ejemplo el botón de radio que actualmente esté activado. No funciona en Internet Explorer.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:first-line</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">La primera línea del elemento.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:first-letter</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">La primera letra del elemento.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:before</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="normalEnTabla">Contenido anterior al elemento. Siempre se suele usar con la propiedad <strong class="Negritta">content</strong> para añadir contenido al elemento. Ejemplo:</p>
+							<table id="table047" class="tabla-codigo">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tabla-codigo">
+										<td class="tabla-codigo celda-codigo">
+											<pre class="codigo">p:<strong class="resaltado">before{</strong></pre>
+											<pre class="codigo">  <strong class="resaltado">content</strong>:<span class="atributo">url(‘flecha.gif’)</span>;</pre>
+											<pre class="codigo">}</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="normalEnTabla">Coloca la imagen de una flecha delante del párrafo</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:after</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Para indicar contenido después del elemento.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:lang(</strong>codigoLenguaje<strong class="Negritta">)</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="normalEnTabla">Selecciona los elementos que hayan utilizado el atributo <strong class="Negritta">lang </strong>con el código indicado. Es equivalente a <em class="cursiva">[lang=”codigoLenguaje”]</em>.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:not(</strong>selector<strong class="Negritta">)</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="normalEnTabla">Se aplica cuando el elemento no cumple ser del tipo indicado por el selector dentro de la palabra <strong class="Negritta">not</strong>. Ejemplo:</p>
+							<table id="table048" class="tabla-codigo">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tabla-codigo">
+										<td class="tabla-codigo celda-codigo">
+											<pre class="codigo">div &gt;<span class="atributo">:not</span>(p){</pre>
+											<pre class="codigo">&#9;<strong class="resaltado">color</strong>:<span class="atributo">red</span>;</pre>
+											<pre class="codigo">}</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="normalEnTabla">El color rojo se aplicará al contenido de los elementos <strong class="Negritta">div</strong> salvo que estén dentro de elementos p.</p>
+							<p class="normalEnTabla">Otro  ejemplo:</p>
+							<table id="table049" class="tabla-codigo">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tabla-codigo">
+										<td class="tabla-codigo celda-codigo">
+											<pre class="codigo">p<span class="atributo">:not</span>(<span class="atributo">:first-of-type</span>){</pre>
+											<pre class="codigo">&#9;<strong class="resaltado">color</strong>:<span class="atributo">green</span>;</pre>
+											<pre class="codigo">}</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="normalEnTabla">Se aplica a todos los párrafos excepto al primero de cada grupo de hermanos.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:root</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Solo tiene utilidad cuando se aplica CSS sobre documentos XML. Aplica el estilo al elemento cuando es raíz del documento. En un documento HTML la raíz es siempre el elemento <strong class="Negritta">html</strong>, por lo que carece de utilidad.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:dir(</strong>direccion<strong class="Negritta">)</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Aunque es estándar, no lo soporta aun casi ningún navegador. Selecciona en base a la dirección en la que se escribe el texto. Esa dirección puede tomar el valor <strong class="Negritta">ltr </strong>(izquierda a derecha) o <strong class="Negritta">rtl </strong>(derecha a izquierda)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:fullscreen</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Selector interesante, pero experimental que se aplica a los elementos que se muestran cuando la página HTML está en modo de pantalla completa. Todos los navegadores actuales la soportan pero si se usa el prefijo del navegador (por ejemplo <strong class="Negritta">-moz-fullscreen</strong>). Solo el navegador <strong class="Negritta">Edge</strong> de <strong class="Negritta">Microsoft</strong> la reconoce sin prefijo.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:left</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica cuando la página se imprime. Selecciona la página izquierda (en impresión a doble cara).</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">:right</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica cuando la página se imprime. Selecciona la página derecha (en impresión a doble cara).</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Las pseudoclases se pueden combinar, de modo que se pueden construir cosas como:</p>
+			<table id="table050" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">input:focus:hover<strong class="resaltado"> {</strong><br /><strong class="resaltado">&#9;background-color:</strong> <span class="atributo">yellow</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Se pondrá color de fondo amarillo, cuando el cuadro de tipo input tenga el foco y el ratón pase por encima de él. O cosas más complejas como:</p>
+			<table id="table051" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">input.clase1:focus:hover<strong class="resaltado">[</strong><span class="atributo">type</span>=<span class="texto">”password”</span><strong class="resaltado">] {<br /></strong>&#9;<strong class="resaltado">background-color</strong>: <span class="atributo">yellow</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En este caso se aplica el fondo amarillo cuando el cursor esté encima de un control de texto de tipo contraseña que además tenga el foco y sea de <em class="cursiva">clase1</em>.</p>
+			<h3 class="titulo3"><span class="numero3">[7.4.3]</span><a id="_idTextAnchor015"></a>pseudoelementos</h3>
+			<p class="Normal2">Se trata una mejora de CSS3 que permite aplicar estilos a elementos, aunque estos no existan en el árbol de elementos del documento. La razón para que un elemento no esté en el árbol es que no existe en el código hasta que se ejecute, por ejemplo, una determinada sentencia en lenguaje JavaScript.</p>
+			<p class="Normal">Los pseudoelementos utilizan los símbolos <strong class="Negritta">::</strong> en lugar de simplemente <strong class="Negritta">: </strong>como ocurre con las pseudoclases.</p>
+			<table id="table052" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">pseudoelemento</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">::first-line</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Primera línea del elemento</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">::first-letter</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Primera letra del elemento</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">::after</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica para colocar código tras el elemento</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">::before</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica para colocar código antes del elemento</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">::selection</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Se aplica al texto seleccionado del elemento. En el caso de los navegadores de <strong class="Negritta">Mozilla</strong>, requiere usar el prefijo <strong class="Negritta">-moz-</strong></p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">::placeholder</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Pseudoclase experimental (solo funciona si se usa el prefijo de cada navegador) que se aplica al texto de tipo <em class="cursiva">placeholder </em>de los controles de los formularios.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[7.5] </span><a id="_idTextAnchor016"></a>CSS3 en los navegadores</h2>
+			<p class="Normal2">Hasta la versión 9, Internet Explorer no ha aplicado los selectores avanzados pertenecientes a CSS3. El resto de navegadores les incorporó mucho antes.</p>
+			<p class="Normal">No es el único caso de aplicación tardía. Internet Explorer es, sin duda, el navegador que más está tardando en incorporar mejoras de CSS3 que los otros navegadores llevan implementando desde hace un tiempo. Pero el resto también tardan en aplicar estas mejoras de CSS (lógico puesto que CSS3 no deja de crecer).</p>
+			<p class="Normal">Su sucesor, <strong class="Negritta">Edge</strong>, es más respetuoso con CSS3. Pero la cuestión es que todavía hay bastantes usuarios que utilizan Internet Explorer.</p>
+			<p class="Normal">También puede ocurrir que algunos navegadores acepten algunas cosas y otras no. Por ejemplo que acepten la pseudoclase avanzada <strong class="Negritta">::selection</strong> y sim embargo no reconozcan <strong class="Negritta">:not</strong>. Esto complica enormemente el trabajo del diseñador de páginas web.</p>
+			<p class="Normal">Las últimas versiones de todos los navegadores ya incorporan la mayoría de los selectores. </p>
+			<p class="Normal">Aunque a veces hay que comprobar que no se requiere prefijo. Es el caso del selector <strong class="Negritta">::selection</strong>, solo los últimos navegadores le reconocen y en el caso de Firefox hay que acompañarle del prefijo <em class="cursiva">–moz-</em></p>
+			<p class="normalespacio">Ejemplo:</p>
+			<table id="table053" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p::-moz-selection{</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">background-color:</strong><span class="atributo">red</span>;</pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En definitiva, hay que utilizar con cautela este tipo de selectores.</p>
+			<p class="normalespacio">Debido a la falta de compatibilidad tan grande de Internet Explorer con CSS3, es habitual usar código concreto para este navegador (y que solo queremos que ejecute este navegador) para lo cual se utiliza este truco:</p>
+			<table id="table054" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><span class="comentario">&lt;!--[if lt IE 9]&gt;</span></pre>
+							<pre class="codigo"><span class="comentario"> ..código ignorado por todos los navegadores salvo por los Internet Explorer anteriores a la versión 9</span></pre>
+							<pre class="codigo"><span class="comentario">&lt;![endif]--&gt;</span></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/selectores-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:29:01 GMT -->
+</html>
+

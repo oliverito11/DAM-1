@@ -1,0 +1,14 @@
+<!-- Etiqueta raíz de la que colgarán las distintas personas -->
+<!ELEMENT empresa (persona+)>
+
+<!-- Toda persona tiene los siguientes elementos -->
+<!ELEMENT persona (nombre, apellidos, telefono+, email?, provincia)>
+<!-- Además, tendrán un código único para cada una -->
+<!ATTLIST persona codigoPersona ID #REQUIRED>
+
+<!-- Elementos de las personas -->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>

@@ -1,0 +1,68 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(255, 234, 208);
+    font-size: 1.5vw;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5vw;
+    text-shadow: 5px 5px 5px white;
+    text-transform: uppercase;
+}
+
+h2{
+    text-align: center;
+    font-size: 2vw;
+    border: 3px solid black;
+    text-transform: uppercase;
+}
+
+p{
+    color: black;
+    font-size: 1.5vw;
+    word-spacing: 1.2vw;
+    line-height: 2.5vw;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.izda, .izdaCentro, .centro, .drchaCentro, .drcha{
+    float: left;
+    width: 20%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgb(133, 118, 101);
+}
+
+@media screen and (max-width: 800px){
+    .izda, .izdaCentro, .centro, .drchaCentro, .drcha{
+        width: 100%;
+    }
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:visited{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    color: rgb(255, 160, 160);
+}

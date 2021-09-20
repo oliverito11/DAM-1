@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="empresa.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<empresa>
+    <departamento atributoDepartamento="Informática">
+        <trabajador DNI="DNI_23456789-A">
+            <nombre>Pedro</nombre>
+            <apellidos>Pedrin Lugo</apellidos>
+            <direccion>C/Una</direccion>
+            <telefono>666666666</telefono>
+        </trabajador>
+    </departamento>
+    <departamento atributoDepartamento="Contabilidad">
+        <trabajador DNI="DNI_98764321-A">
+            <nombre>Luis</nombre>
+            <apellidos>De la carretera Hugo</apellidos>
+            <direccion>C/Dos</direccion>
+            <telefono>698654725</telefono>
+        </trabajador>
+    </departamento>
+    <departamento atributoDepartamento="Electrónica">
+        <trabajador DNI="DNI_59874632-B">
+            <nombre>Marta</nombre>
+            <apellidos>Gómez Lago</apellidos>
+            <direccion>C/Tres</direccion>
+            <telefono>695843271</telefono>
+        </trabajador>
+    </departamento>
+</empresa>

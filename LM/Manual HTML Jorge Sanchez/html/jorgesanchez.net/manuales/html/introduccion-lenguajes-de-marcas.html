@@ -1,0 +1,1860 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/introduccion-lenguajes-de-marcas.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Introducción a los lenguajes de marcas</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[1] </span><br>Introducción a los lenguajes de marcas</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+<div id="_idContainer003" class="Marco-de-texto-b-sico">
+			<h2 class="titulo2"><span class="numero2">[1.1] </span><a id="_idTextAnchor000"></a>ordenador e información </h2>
+			<h3 class="titulo3"><span class="numero3">[1.1.1]</span><a id="_idTextAnchor001"></a>formas de representar información en el ordenador</h3>
+			<p class="Normal2">El ordenador es una máquina digital, por lo tanto solo es capaz de representar información utilizando el sistema binario de numeración. Esto obliga a que, para poder almacenar información en un ordenador, previamente haya que codificarla en forma de números binarios.</p>
+			<p class="Normal">El problema de los números binarios es que están muy alejados del ser humano; es decir, que las personas no estamos capacitadas para manejar información en binario. Nosotros usamos un sistema numérico decimal para los números y sistemas mucho más complejos para representar otros tipos de información (como el texto, las imágenes, la música,…)</p>
+			<p class="Normal">Al principio los ordenadores solo eran capaces de manipular números (de hecho todavía, la CPU, el cerebro de los ordenadores sigue trabajando en binario), pero en la actualidad no hay prácticamente ningún tipo de información que no estemos manipulando a través del ordenador: así manejamos texto, imágenes, música, vídeo,... etc. a través del ordenador. Esto es posible porque se ha conseguido que casi cualquier tipo de información se pueda transformar a binario. </p>
+			<p class="Normal">Los seres humanos tenemos la capacidad de diferenciar claramente lo que es un texto de una imagen, lo que es un número de una canción,… Pero en un ordenador todo es más complicado, porque todo es binario.</p>
+			<p class="Normal">Ese proceso de transformar la información humana a su equivalente máquina, se conoce como <strong class="Negritta">codificación</strong>. El principal problema es que no hay una sola forma de codificar, es decir una misma información (una fotografía por ejemplo) se puede codificar a binario de diferentes formas. Aunque hoy día ya tenemos numerosos estándares, todavía sigue siendo uno de los aspectos problemáticos de la informática.</p>
+			<p class="Normal">Fundamentalmente la información que un ordenador maneja son números y texto. Pero, curiosamente, a nivel formal solo se consideran datos binarios a la información representable en el ordenador que no es texto (imagen, sonido, vídeo,…); aunque, como ya hemos comentado, en realidad toda la información que maneja un ordenador es binaria, incluido el texto.</p>
+			<h3 class="titulo3"><span class="numero3">[1.1.2]</span><a id="_idTextAnchor002"></a>datos en forma de texto y datos binarios</h3>
+			<h4 class="titulo4"><span class="numeroOculto">1</span>datos binarios</h4>
+			<p class="Normal2">Como se ha comentado antes, a cualquier dato codificado en una computadora que no sea texto, se le considera dato binario. Ejemplos de datos binarios son: una canción, un vídeo, una imagen, una aplicación informática o un documento creado con el software Microsoft Word.</p>
+			<p class="Normal">La forma de codificar ese tipo de datos a su forma binaria es diferente en cada caso. Por ejemplo, en el caso de las imágenes, cada punto (<strong class="Negritta">píxel</strong>) de la imagen se codifica utilizando su nivel de rojo, verde y azul. Así por ejemplo el código <em class="cursiva">11111111 00000000 000000</em>,  se correspondería a un píxel de color rojo puro (tiene a tope los niveles de rojo y totalmente apagados los niveles de verde y azul). De modo que una sola imagen requiere millones de dígitos binarios (es decir, millones de bits).</p>
+			<p class="Normal">En cualquier caso, sea cual sea la información que estamos codificando en binario, para poder acceder a dicha información, el ordenador necesita un software que sepa como <strong class="Negritta">decodificar</strong> la misma. Esto significa qué debe de conocer qué significa cada dígito binario para traducirle a su forma original. Eso solo es posible utilizando el mismo software con el que se codificó, o bien otro software capaz de reconocer ese formato.</p>
+			<p class="Normal">Por ejemplo, el software Microsoft Word graba los documentos que el usuario crea en formato <strong class="Negritta">docx</strong>. Si abrimos un documento así creado con un editor de texto (como el Bloc de Notas), no conseguiremos ver el archivo original. Pero si le abrimos con Word sí lo veremos. Word sabe como interpretar la información binaria del archivo. También podemos abrir el archivo con otro software como Google Docs, ya que es capaz de entender esa información.</p>
+			<h4 class="titulo4"><span class="numeroOculto">2</span>texto</h4>
+			<p class="Normal2">El texto es quizá la forma más humana de representar información. Antes de la llegada del ordenador, la información se transmitía mediante documentos o libros en papel. Esa forma de transmitir es milenaria y sigue siendo la forma más habitual de transmitir información entre humanos; incluso con la tecnología actual, aplicaciones como <strong class="Negritta">twitter</strong> o <strong class="Negritta">whassap </strong>siguen usando el texto como formato fundamental para transmitir información.</p>
+			<p class="Normal">En cuanto apareció la informática como la ciencia que se ocupó de la información digital, apareció también el problema de cómo codificar texto en forma de dígitos binarios para hacerlo representable en el ordenador. La forma habitual ha sido codificar cada carácter en una serie de números binarios. Así  ejemplo el carácter <em class="cursiva">A</em> se codifica como <em class="cursiva">01000001</em> y la <em class="cursiva">B</em> el <em class="cursiva">01000010</em> (así se codifican usando el código ASCII). </p>
+			<p class="Normal">El problema surgió por la falta de estandarización: la letra <em class="cursiva">A</em> se codificaba de diferente forma dependiendo del sistema que se utilice. El problema ocurre cuan do queremos trasladar la información de un ordenador a otro.</p>
+			<p class="Normal">Por ello, poco a poco aparecieron estándares que pretendían conseguir que todo el hardware y el software codificaran los caracteres de la misma forma, independientemente del sistema que utilizáramos.</p>
+			<p class="Normal">Este problema sigue ocurriendo actualmente. Así, si escribimos en el Bloc de Notas de Windows un texto que contenga la letra eñe (como <em class="cursiva">España</em>), y luego nos vamos al terminal del sistema y mostramos ese archivo, veremos que la <em class="cursiva">eñe </em>no se lee bien en el terminal. La razón es que Windows utiliza la codificación llamada <em class="cursiva">Windows 1252</em> y el terminal clásico (procedente del viejo sistema <strong class="Negritta">MS-DOS</strong>) usa normalmente (en España) la página de códigos <em class="cursiva">CP 850</em>.</p>
+			<h2 class="titulo2"><span class="numero2">[1.2] </span><a id="_idTextAnchor003"></a>codificación de texto a binario </h2>
+			<h3 class="titulo3"><span class="numero3">[1.2.1]</span><a id="_idTextAnchor004"></a>el código ASCII</h3>
+			<p class="Normal2">El problema de la codificación de texto que hacía incompatibles los documentos de texto entre diferentes sistemas, se palió cuando se ideó en 1967 un código estándar por parte de la <strong class="Negritta">ANSI</strong>, la agencia de estándares norteamericana, dicho código es el llamado <strong class="Negritta">ASCII</strong> (<em class="cursiva">American Standard Code for Information Interchange</em>, código estándar americano para el intercambio de información). El código utiliza el alfabeto inglés (que utiliza caracteres latinos) y para codificar todos los posibles caracteres necesarios para escribir en inglés se ideó un sistema de 7 bits (con 7 bits se pueden representar 128 símbolos, suficientes para todas las letras del alfabeto inglés, en minúsculas y mayúsculas, caracteres de puntuación, símbolos especiales e incluso símbolos de control).</p>
+			<p class="Normal">El código ASCII es el siguiente:</p>
+			<p class="Normal"></p>
+			<table id="table001" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceratabla"><a id="_idTextAnchor005"></a>Núm.</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceratabla">Significado</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceratabla">¿Control?</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceratabla">Núm</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceratabla">Sign.</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceratabla">¿Control?</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">0</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Carácter nulo</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">64</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">@</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">1</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Inicio de Encabezado</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-A</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">65</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">A</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">2</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Inicio de Texto</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-B</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">66</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">B</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">3</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Fin de Texto</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-C</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">67</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">C</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">W4</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Fin de Transmisión</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-D</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">68</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">D</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">5</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Petición</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-E</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">69</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">E</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">6</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Confirmación</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-F</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">70</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">F</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">7</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Timbre</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-G</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">71</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">G</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">8</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Retroceso</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-H</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">72</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">H</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">9</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Tabulación horizontal</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-I</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">73</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">I</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">10</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Alimentación de línea</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-J</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">74</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">J</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">11</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Tabulación Vertical</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-K</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">75</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">K</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">12</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Alimentación de carro</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-L</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">76</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">L</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">13</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Retorno de carro</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-M</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">77</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">M</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">14</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Quitar mayúsculas</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-N</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">78</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">N</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">15</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Poner mayúsculas</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-O</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">79</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">O</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">16</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Data Link Escape</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-P</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">80</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">P</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">17</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Control Disp-1</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-Q</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">81</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Q</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">18</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Control Disp-2</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-R</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">82</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">R</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">19</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Control Disp-3</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-S</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">83</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">S</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">20</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Control Disp-4</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-T</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">84</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">T</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">21</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Confirmación negativa</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-U</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">85</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">U</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">22</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Idle síncrono</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-V</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">86</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">V</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">23</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Fin de bloque de transmisión</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-W</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">87</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">W</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">24</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Cancelar</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-X</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">88</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">X</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">25</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Fin de mitad</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-Y</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">89</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Y</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">26</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Sustituto</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-Z</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">90</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Z</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">27</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Escape</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-[</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">91</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">[</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">28</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">EOF</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-\</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">92</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">\</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">29</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Separador de Grupo</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-]</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">93</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">]</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">30</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Separador de registro</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-^</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">94</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">^</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">31</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Separador de unidad</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">Sí, ctrl-_</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">95</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">_</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">32</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Espacio</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">96</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">`</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">33</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">!</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">97</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">a</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">34</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">“</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">98</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">b</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">35</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">#</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">99</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">c</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">36</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">$</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">100</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">d</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">37</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">%</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">101</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">e</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">38</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">&amp;</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">102</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">f</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">39</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">‘</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">103</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">g</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">40</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">(</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">104</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">h</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">41</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">)</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">105</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">i</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">42</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">*</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">106</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">j</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">43</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">+</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">107</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">k</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">44</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">,</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">108</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">l</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">45</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">-</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">109</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">m</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">46</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">.</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">110</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">n</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">47</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">/</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">111</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">o</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">48</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">0</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">112</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">p</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">49</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">1</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">113</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">q</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">50</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">2</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">114</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">r</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">51</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">3</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">115</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">s</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">52</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">4</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">116</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">t</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">53</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">5</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">117</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">u</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">54</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">6</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">118</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">v</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">55</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">7</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">119</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">w</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">56</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">8</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">120</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">x</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">57</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">9</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">121</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">y</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">58</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">:</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">122</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">z</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">59</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">;</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">123</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">{</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">60</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">&lt;</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">124</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">|</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">61</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">=</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">125</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">}</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">62</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">&gt;</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">126</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">~</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal">63</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">?</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal">127</p>
+						</td>
+						<td class="tabla-manual celda-normal celda-normal">
+							<p class="Normal">Borrado</p>
+						</td>
+						<td class="tabla-manual tercera-celda-tabla celda-normal">
+							<p class="Normal">No</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Pero, en países con lenguas distintas del inglés, surgió el problema de que parte de los símbolos de sus alfabetos quedaban fuera del ASCII (como ocurría con la letra eñe en España).</p>
+			<p class="Normal">Por ello se diseñaron códigos de 8 bits que añadían 128 símbolos más y así aparecieron los llamados códigos <strong class="Negritta">ASCII extendidos</strong>. En ellos, los 128 primeros símbolos son los mismos de la tabla ASCII original y los 128 siguientes se corresponden a símbolos extra. Así por ejemplo el sistema MS-DOS utilizaba el llamado código <em class="cursiva">437,</em> que incluía símbolos y caracteres de lenguas de Europa Occidental, además de caracteres útiles, como por ejemplo los que permitían hacer marcos y bordes en pantallas de texto. Por su parte, Windows usa el código <em class="cursiva">1252</em> y su consola clásica el <em class="cursiva">850</em>. </p>
+			<p class="Normal">8 bits siguen siendo insuficientes para codificar todos los alfabetos del planeta, por lo que cada zona usaba su propia tabla ASCII extendida. Ante el caos consiguiente, la ISO decidió normalizar dichas tablas de códigos para conseguir versiones estándares de los mismos. Lo hizo mediante las siguientes normas (cada una de las cuales definía una tabla de 256 caracteres; siempre los 128 primeros son el ASCII original y los siguientes 128 son los que se utilizan para los símbolos de la zona geográfica concreta)</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">8859-1</strong>. &#9;ASCII extendido para Europa Occidental (incluye símbolos como <span class="simbolo">ñ </span>o <span class="simbolo">β</span>)</li>
+				<li class="punto"><strong class="Negritta">8859-2</strong>. &#9;ASCII extendido para Europa Central y del Este (incluye símbolos como <span class="simbolo">Ź </span>o <span class="simbolo">č</span>)</li>
+				<li class="punto"><strong class="Negritta">8859-3</strong>. &#9;ASCII extendido para Europa del Sur (incluye símbolos como <span class="simbolo">Ġ</span><em class="cursiva"> </em>o <span class="simbolo">Ï</span>) </li>
+				<li class="punto"><strong class="Negritta">8859-4</strong>. &#9;ASCII extendido para Europa del Norte (incluye símbolos como <span class="simbolo">ø</span><em class="cursiva"> </em>o <span class="simbolo">å</span>)</li>
+				<li class="punto"><strong class="Negritta">8859-5</strong>. &#9;ASCII extendido para alfabeto cirílico (incluye símbolos como <span class="simbolo">д </span>o <span class="simbolo">Ж</span>)</li>
+				<li class="punto"><strong class="Negritta">8859-6</strong>. &#9;ASCII extendido para alfabeto árabe (incluye símbolos como <span class="simbolo">ن</span><em class="cursiva"> </em>o <span class="simbolo">ي</span>)</li>
+				<li class="punto"><strong class="Negritta">8859-7</strong>. &#9;ASCII extendido para alfabeto griego moderno (incluye símbolos como <span class="simbolo">φ</span><em class="cursiva"> </em>o <span class="simbolo">α</span>)</li>
+				<li class="punto"><strong class="Negritta">8859-8</strong>. &#9;ASCII extendido para alfabeto hebreo (incluye símbolos como <em class="cursiva">ץ </em>o <span class="simbolo">ק</span>)</li>
+				<li class="punto"><strong class="Negritta">8859-9</strong>. &#9;ASCII extendido, versión de 8859-1 que incluye símbolos turcos en lugar de otros poco utilizados</li>
+				<li class="punto"><strong class="Negritta">8859-10</strong>. &#9;ASCII extendido, versión de 8859-4 que incluye símbolos más utilizados en las lenguas nórdicas actuales</li>
+				<li class="punto"><strong class="Negritta">8859-11</strong>. &#9;ASCII extendido para alfabeto tailandés (incluye símbolos como <em class="cursiva">๗</em><em class="cursiva"> </em>o <em class="cursiva">๔</em>)</li>
+				<li class="punto"><strong class="Negritta">8859-12</strong>. &#9;ASCII extendido para alfabeto devanagari de India y Nepal que ya no se usa</li>
+				<li class="punto"><strong class="Negritta">8859-13</strong>. &#9;ASCII extendido para alfabetos bálticos con símbolos que no estaban en 8859-4</li>
+				<li class="punto"><strong class="Negritta">8859-14</strong>. &#9;ASCII extendido para alfabeto celta (incluye símbolos como <span class="simbolo">ŵ</span><em class="cursiva"> </em>o<span class="simbolo"> Ẃ</span>)</li>
+				<li class="punto"><strong class="Negritta">8859-15</strong>. &#9;ASCII extendido, versión de 8859-1 que incluye el símbolo del euro y símbolos de lenguas bálticas. Es el recomendado actualmente para Europa Occidental.</li>
+				<li class="punto"><strong class="Negritta">8859-16</strong>. &#9;ASCII extendido, versión de 8859-1 pensada para los países del sureste de Europa</li>
+				<li class="punto"><strong class="Negritta">2022-JP</strong>. &#9;Símbolos japoneses (parte 1)</li>
+				<li class="punto"><strong class="Negritta">2022-JP-2</strong>. Símbolos japoneses (parte 2)</li>
+				<li class="punto"><strong class="Negritta">2022-KR. &#9;</strong>Símbolos coreanos</li>
+			</ul>
+			<p class="Normal">Este problema sigue existiendo ahora, de modo que en los documentos de texto hay que indicar el sistema de codificación utilizado (el caso más evidente son las páginas web), para saber cómo interpretar los códigos del archivo. Así en 8859_1 el código <em class="cursiva">245</em> es el carácter <span class="simbolo">õ</span> y en <em class="cursiva">8859_2</em> es el carácter <span class="simbolo">ő</span></p>
+			<h3 class="titulo3"><span class="numero3">[1.2.2]</span><a id="_idTextAnchor006"></a>Unicode</h3>
+			<p class="Normal2">La complicación de las tablas de código se intenta resolver gracias al sistema <strong class="Negritta">Unicode.</strong> Este sistema pretende aglutinar en una misma tabla de códigos, todos los caracteres de cualquier lengua del planeta. A cambio, cada carácter ya no ocupa un solo byte. </p>
+			<p class="Normal2">En Unicode a cada carácter se le asigna un número. Los 128 primeros siguen siendo los originales de ASCII para mantener la compatibilidad con los textos ya codificados. Los 128 siguientes se corresponden a los de la tabla ISO-8859_1, de modo que los textos codificados en esa tabla (la habitual de las lenguas de Europa Occidental) son compatibles con Unicode. </p>
+			<p class="Normal">Para ello un organismo, también llamado Unicode (<a href="http://unicode.org/"><span class="hyperlink">http://unicode.org/</span></a>), participado por numerosas e influyentes empresas informáticas y coordinado por la propia ISO, se encarga de definir la tabla de códigos y además ha definido tres formas fundamentales de codificar los caracteres:</p>
+			<ul>
+				<li class="estilos-indesign_punto-doble-tabulador"><strong class="Negritta">UTF-8</strong>.  &#9;Es la más utilizada (y la más compleja de procesar para el ordenador). Para cada carácter se usa de uno a cuatro bytes, de forma que: <ul><li class="estilos-indesign_punto2-para-doble-tab">Los caracteres pertenecientes que pertenecen al código ASCII original ocupan un byte.</li><li class="estilos-indesign_punto2-para-doble-tab">Dos bytes ocupan los pertenecientes a lenguas latinas, cirílicas, griegas, árabes, hebreas y otras de Europa, Asia Menor y Egipto.</li><li class="estilos-indesign_punto2-para-doble-tab">Tres para símbolos de los alfabetos en uso distintos de los del apartado anterior como el chino, el tailandés, coreano o el japonés.</li><li class="estilos-indesign_punto2-para-doble-tab">Cuatro para otros símbolos: por ejemplo los matemáticos y símbolos de lenguas muertas como el fenicio o el asirio o símbolos asiáticos de uso poco frecuente.</li></ul></li>
+				<li class="estilos-indesign_punto-doble-tabulador"><strong class="Negritta">UTF-16. &#9;</strong>Utiliza para cada carácter dos (para los dos primeros grupos del punto anterior) o cuatro caracteres (para el resto). Es más sencillo que el anterior</li>
+				<li class="estilos-indesign_punto-doble-tabulador"><strong class="Negritta">UTF-32. &#9;</strong>La más sencilla de todas. Cada carácter independientemente del grupo al que pertenezca ocupa 4 caracteres. No se utiliza.</li>
+			</ul>
+			<p class="Normal2">Ejemplo, el texto: 取得cigüeña&#x1041d; se codificaría de esta forma:</p>
+			<ul>
+				<li class="estilos-indesign_punto-doble-tabulador">En UTF-8:</li>
+			</ul>
+			<ul>
+				<li class="Punto2">Como <em class="cursiva">取得</em><span class="simbolo"> </span><span class="carPunto">son símbolos chinos, ocupan 3 bytes cada uno</span></li>
+				<li class="Punto2"><span class="carPunto">Los caracteres </span><em class="cursiva">c i g e a</em> ocupan un solo byte cada uno al ser parte del ASCII original</li>
+				<li class="Punto2">Los símbolos <span class="simbolo">ü </span>y <span class="simbolo">ñ</span><span class="simbolo"> </span>ocupan dos bytes</li>
+				<li class="Punto2">El símbolo <em class="cursiva">&#x1041d;</em> es persa antiguo y ocupa 4 bytes</li>
+				<li class="Punto2">En total el texto ocupa 19 bytes</li>
+			</ul>
+			<ul>
+				<li class="punto">En UTF-16:<ul><li class="Punto2">Los símbolos <em class="cursiva">取得 </em>y <em class="cursiva">&#x1041d; </em>ocupan 4 bytes cada uno</li><li class="Punto2">El resto 2 bytes</li><li class="Punto2">En total ocupan 26 bytes</li></ul></li>
+				<li class="punto">En UTF-32<ul><li class="Punto2">Todos ocupan 4 bytes</li><li class="Punto2">Total: 40 bytes</li></ul></li>
+			</ul>
+			<p class="Normal2">Aunque UTF-8 es más compleja de procesar, en la actualidad es el claro estándar para codificar texto. Todos los sistemas y dispositivos actuales  tienen capacidad para codificar de esta forma, por lo que parece que será el estándar definitivo en los años venideros.</p>
+			<h3 class="titulo3"><span class="numero3">[1.2.3]</span><a id="_idTextAnchor007"></a>archivos binarios y archivos de texto</h3>
+			<h4 class="titulo4"><span class="numeroOculto">3</span>ventajas de los archivos binarios </h4>
+			<p class="Numeros"><span class="numeroNumero">[1]</span>Ocupan menos espacio que los archivos de texto, ya que optimizan mejor su codificación a binario (por ejemplo el número <em class="cursiva">213</em> ocupa un solo byte y no tres como ocurriría si fuera un texto).</p>
+			<p class="Numeros"><span class="numeroNumero">[2]</span>Son más rápidos de manipular por parte del ordenador (se parecen más al lenguaje de la máquina)</p>
+			<p class="Numeros"><span class="numeroNumero">[3]</span>Permiten el acceso directo a los datos. Los archivos de texto siempre se manejan de forma secuencial, más lenta</p>
+			<p class="Numeros"><span class="numeroNumero">[4]</span>Los datos no son fácilmente interpretables, lo que aporta cierta ocultación al contenido. El contenido de los archivos de texto es fácilmente interpretable.</p>
+			<p class="Numeros"><span class="numeroNumero">[5]</span>Los archivos binarios son ideales para almacenar contenido cifrado. Es posible cifrar el texto también, pero los algoritmos de cifrado son más seguros si se usan técnicas <em class="cursiva">no textuales</em>.</p>
+			<h4 class="titulo4"><span class="numeroOculto">4</span>ventajas de los archivos de texto</h4>
+			<p class="Numeros"><span class="numeroNumero">[1]</span>Son ideales para almacenar datos para exportar e importar información a cualquier dispositivo electrónico.</p>
+			<p class="Numeros"><span class="numeroNumero">[2]</span>Son directamente modificables, sin tener que acudir a software específico.</p>
+			<p class="Numeros"><span class="numeroNumero">[3]</span>Su manipulación es más sencilla que la de los archivos binarios.</p>
+			<p class="Numeros"><span class="numeroNumero">[4]</span>Los dispositivos de red y software cliente permiten el paso de archivos de texto ya que no son susceptibles de contener virus informáticos.</p>
+			<h2 class="titulo2"><span class="numero2">[1.3] </span><a id="_idTextAnchor008"></a>exportar/importar datos </h2>
+			<h3 class="titulo3"><span class="numero3">[1.3.1]</span><a id="_idTextAnchor009"></a>el problema de compartir datos</h3>
+			<p class="Normal2">Los problemas relacionados con el intercambio de información entre aplicaciones y máquinas informáticas es tan viejo como la propia informática. </p>
+			<p class="Normal">El problema parte del hecho de haber realizado un determinado trabajo con un software en un determinado ordenador y después querer pasar dicho trabajo a otro software en ese u otro ordenador. </p>
+			<p class="Normal">Los archivos binarios tienen la complicación de que para hacer ese proceso, el origen y el destino de los datos deben comprender cómo codificar y decodificar la información. Eso, en muchos casos, ha sido un gran problema que ha obligado a que todos los trabajadores y trabajadoras hayan tenido que adaptarse al software de la empresa. Por otro lado dificulta que las empresas migren a otros sistemas por el miedo a perder los datos. </p>
+			<p class="Normal">En la informática actual eso es aún más problemático al tener una necesidad de disponibilidad global del trabajo a través de dispositivos muy distintos como tabletas, smartphones y otros dispositivos portátiles.</p>
+			<p class="Normal">Por ello, poco a poco han aparecido formatos binarios de archivo que han sido estándares de facto (aunque la mayoría no han sido reconocidos por ningún organismo de estándares) como por ejemplo el formato documental <strong class="Negritta">PDF</strong>, el formato de imagen <strong class="Negritta">JPEG</strong> o el formato de audio <strong class="Negritta">MP3</strong>.</p>
+			<p class="Normal">Pero el problema fundamental sigue estando en el software empresarial. El caso típico podría ser una empresa que utiliza en sus oficinas el software <strong class="Negritta">Apache Open Office </strong>y luego una persona de la empresa quiere abrir el documento en el que está trabajando en un dispositivo que tiene instalado<strong class="Negritta"> Microsoft Office.</strong> Es probable que no pueda ver el trabajo en ambos dispositivos.</p>
+			<p class="Normal">Este problema puede ocurrir incluso con el mismo software pero con versiones distintas (por ejemplo intentar abrir un documento creado con <strong class="Negritta">Microsoft Word 2016</strong> en una máquina con <strong class="Negritta">Microsoft Word 2001</strong>).</p>
+			<p class="Normal">De ahí que muchas veces la opción para exportar e importar datos sea utilizar <strong class="Negritta">conversores</strong>. Software con capacidad de convertir los datos de un formato a otro (por ejemplo de <strong class="Negritta">Word</strong> a <strong class="Negritta">Open Office</strong>; de <strong class="Negritta">MP3</strong> a <strong class="Negritta">MOV</strong> de Apple, etc.).</p>
+			<h3 class="titulo3"><span class="numero3">[1.3.2]</span><a id="_idTextAnchor010"></a>el texto como el formato más versátil</h3>
+			<p class="Normal2">Como ya se ha explicado, hay un formato de archivo que cualquier dispositivo es capaz de entender: el texto. La cuestión es que los archivos llamados de texto, solo son capaces de almacenar <strong class="Negritta">texto plano</strong>; es decir, solo texto sin indicar ningún formato o añadir información no textual. </p>
+			<p class="Normal">Debido a la facilidad de ser leído con cualquier aparato, se intenta que el propio texto sirva para almacenar otros datos, es decir información que no es texto sin más. Evidentemente hay tipos de información prácticamente imposibles de representar en un archivo de texto, pero sí hay trucos para poder representar información de diversos tipos. </p>
+			<p class="Normal">Para ello dentro del archivo habrá contenido que no se interpretará como texto sin más, sino que dentro del archivo habrá <strong class="Negritta">texto especial</strong>, marcado de una forma que permita darle otro significado. Es lo que se conoce como <strong class="Negritta">metadatos</strong>: datos que sirven para describir otros datos. En el caso de los archivos de texto, son palabras marcadas de forma especial que sirve para describir el texto al que acompaña.</p>
+			<p class="Normal">Desde hace muchos años hay tres campos en los que está idea ha funcionado muy bien: en las bases de datos, en los procesadores de texto y, especialmente, en las páginas web. El éxito de Internet ha permitido espolear esta tecnología a otros muchos campos.</p>
+			<p class="Normal">Hay que recordar un problema fundamental con el texto: al ser formato tan universal, y ser su contenido tan accesible, es peligroso como fuente para almacenar datos confidenciales, ya que queda fácilmente expuesto a cualquier persona. </p>
+			<h2 class="titulo2"><span class="numero2">[1.4] </span><a id="_idTextAnchor011"></a>lenguajes de marcas </h2>
+			<h3 class="titulo3"><span class="numero3">[1.4.1]</span><a id="_idTextAnchor012"></a>introducción histórica</h3>
+			<h4 class="titulo4"><span class="numeroOculto">5</span>aparición de los lenguajes de marcas</h4>
+			<p class="Normal2">Como se ha comentado en el punto anterior, el problema de la exportación de datos ha puesto en entredicho a los archivos binarios como fuente para exportar e importar información. </p>
+			<p class="Normal">En su lugar, parece que los archivos de texto poseen menos problemas. Por ello, se ha intentado que los archivos de <strong class="Negritta">texto plano</strong> (archivos que solo contienen texto y no otros datos binarios) pudieran servir para almacenar otros datos como por ejemplo detalles sobre el formato del propio texto u otras indicaciones. </p>
+			<p class="Normal">Los <strong class="Negritta">procesadores de texto</strong> fueron el primer software en encontrarse con este dilema. Puesto que son programas que sirven para escribir texto parecía que lo lógico era que sus datos se almacenaran como tal. Pero necesitan guardar datos referidos al formato del texto, tamaño de la página, color, tipografía, márgenes, etc. La solución clásica ha sido guardar la información de forma binaria, lo que provoca los ya comentados problemas.</p>
+			<p class="Normal">Algunos procesadores de texto optaron por guardar toda la información como texto, haciendo que las indicaciones de formato no se almacenen de forma binaria sino textual. Dichas indicaciones son caracteres <strong class="Negritta">marcados</strong> de manera especial para que así un programa adecuado pueda traducir dichos caracteres no como texto sino como operaciones que finalmente producirán mostrar el texto del documento de forma adecuada. </p>
+			<p class="Normal">La idea del marcado procede del inglés <em class="cursiva">marking up </em>término con el que se referían a la técnica de marcar manuscritos con lápiz de color para hacer anotaciones como por ejemplo la tipografía a emplear en las imprentas. Este mismo término se ha utilizado para los documentos de texto que contienen comandos u anotaciones. </p>
+			<p class="Normal">Las posibles anotaciones o indicaciones incluidos en los documentos de texto han dado lugar a <em class="cursiva">lenguajes </em>(entendiendo que en realidad son formatos de documento y no lenguajes en el sentido de los lenguajes de programación de aplicaciones) llamados <strong class="Negritta">lenguajes de marcas</strong>, <strong class="Negritta">lenguajes de marcado</strong> o <strong class="Negritta">lenguajes de etiquetas</strong>.</p>
+			<h3 class="titulo3"><span class="numero3">[1.4.2]</span><a id="_idTextAnchor013"></a>Charles Goldfarb y el GML</h3>
+			<p class="Normal2">Se considera a <strong class="Negritta">Charles Goldfarb</strong> como al padre de los lenguajes de marcas.  La razón para esta consideración es, precisamente, su ayuda en la creación del lenguaje GML (<em class="cursiva">Generalized Markup Language</em>). </p>
+			<p class="Normal2">Golfarb era un investigador de IBM que propuso ideas para que los documentos de texto que incluyeran la posibilidad de marcar el formato del mismo. Al final ayudó a realizar el lenguaje <strong class="Negritta">GML</strong> de <strong class="Negritta">IBM</strong> el cual puso los cimientos del futuro <strong class="Negritta">SGML </strong>(padre de <strong class="Negritta">HTML </strong>y <strong class="Negritta">XML</strong>) ideado por el propio Goldfarb y padre de la mayoría de lenguajes de marcas actuales.</p>
+			<p class="Normal">Ejemplo de código GML</p>
+			<table id="table002" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">:h0.</strong>El reino de los animales</pre>
+							<pre class="codigo"><strong class="resaltado">:h1.</strong>Mamíferos</pre>
+							<pre class="codigo"><strong class="resaltado">:p.</strong>Los mamíferos (<strong class="resaltado">:hp1.</strong>Mammalia<strong class="resaltado">:ehp1.</strong>) son una clase de </pre>
+							<pre class="codigo">vertebrados <strong class="resaltado">:hp2.</strong>amniotas homeotermos<strong class="resaltado">:ehp2.</strong> que poseen </pre>
+							<pre class="codigo">glándulas mamarias productoras de leche con las que </pre>
+							<pre class="codigo">alimentan a las crías</pre>
+							<pre class="codigo"><strong class="resaltado">:h1.</strong>Aves</pre>
+							<pre class="codigo"><strong class="resaltado">:p. </strong>Las aves son animales vertebrados, de sangre </pre>
+							<pre class="codigo">caliente, que caminan, saltan o se mantienen solo sobre </pre>
+							<pre class="codigo">las extremidades posteriores</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Ese código renderizado por un software que interprete ese código obtendría como resultado:</p>
+			<p class="Normal"><img src="introduccion-lenguajes-de-marcas-web-resources/image/1.png" alt="" /></p>
+			<p class="Normal">La idea es que los elementos arcados con símbolos “:” y “.” delimiten marcas de formato. Así <em class="cursiva">:h1. </em>significa título principal  y <em class="cursiva">:p. </em>significa párrafo.</p>
+			<h3 class="titulo3"><span class="numero3">[1.4.3]</span><a id="_idTextAnchor014"></a>TeX y LaTeX</h3>
+			<p class="Normal2">En la década de los 70 <strong class="Negritta">Donald Knuth</strong> (uno de los ingenieros informáticos más importantes de la historia, padre del análisis de algoritmos y premio Turing 1974) creó el lenguaje <strong class="Negritta">TeX</strong> para producir documentos científicos utilizando una tipografía y capacidades que fueran iguales en cualquier computadora, asegurando además una gran calidad en los resultados.</p>
+			<p class="Normal">Para ello apoyó a TeX con tipografía especial (fuentes <strong class="Negritta">Modern </strong><strong class="Negritta" lang="en-US">Computer</strong>) y un lenguaje de definición de tipos (<strong class="Negritta">METAFONT</strong>). TeX ha tenido cierto éxito en la comunidad científica gracias a sus 300 comandos que permiten crear documentos con tipos de gran calidad. Requiere de software capaz de convertir el archivo TeX a un formato de impresión.</p>
+			<p class="Normal">El éxito de TeX produjo numerosos derivados de los cuales el más popular es  <strong class="Negritta">LaTeX</strong>. LaTeX fue definido en 1984 por <strong class="Negritta">Leslie Lamport </strong>(premio Turing 2003), aunque después ha sido numerosas veces revisado. Al utilizar comandos de TeX y toda su estructura tipográfica, adquirió rápidamente notoriedad y sigue siendo utilizado para producir documentos con expresiones científicas, de gran calidad. La idea es que los científicos se centren en el contenido y no en la presentación. </p>
+			<p class="Normal">Ejemplo de código LaTeX:</p>
+			<pre class="codigo"></pre>
+			<table id="table003" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">\documentclass</strong><span class="atributo">[12pt]</span><strong class="resaltado">{</strong><span class="atributo">article</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">\usepackage{</strong><span class="atributo">amsmath</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">\title{\</strong><span class="texto">Ejemplo</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">\begin{</strong><span class="atributo">document</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo">Este es el texto ejemplo de <strong class="resaltado">\LaTeX{}</strong></pre>
+							<pre class="codigo">Con datos en \emph{cursiva} o <strong class="resaltado">\textbf</strong>{negrita}.</pre>
+							<pre class="codigo">Ejemplo de f<strong class="resaltado">\’</strong>ormula</pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">\begin{</strong><span class="atributo">align</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo">E &amp;= mc^2 </pre>
+							<pre class="codigo"><strong class="resaltado">\end{</strong><span class="atributo">align</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">\end{</strong><span class="atributo">document</span><strong class="resaltado">}</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Que con un traductor daría lugar al resultado:</p>
+			<p class="Normal"><img src="introduccion-lenguajes-de-marcas-web-resources/image/2.png" alt="" /></p>
+			<h3 class="titulo3"><span class="numero3">[1.4.4]</span><a id="_idTextAnchor015"></a>RTF</h3>
+			<p class="Normal2"><strong class="Negritta">RTF</strong> es el acrónimo de <strong class="Negritta" lang="en-US">Rich Text Format</strong> (<em class="cursiva">Formato de Texto Enriquecido</em>) un lenguaje ideado por Richard Brodie, <strong class="Negritta">Charles Simonyi</strong> y <strong class="Negritta">David Luebbert</strong> (miembros del equipo de desarrollo de <strong class="Negritta">Microsoft Word)</strong> en 1987 para producir documentos de texto que incluyan anotaciones del formato. Es un formato propiedad de <strong class="Negritta">Microsoft</strong>, pero reconocido por la mayoría de aplicaciones de proceso de texto.</p>
+			<p class="Normal">Actualmente se trata de un formato aceptado para documentos de texto que contengan información sobre el estilo del texto. Se usa mucho como formato de intercambio entre distintos procesadores por su potencia.  El procesador de texto <strong class="Negritta">Word Pad</strong> incorporado dentro del sistema operativo <strong class="Negritta">Windows </strong>lo utiliza como formato nativo. </p>
+			<p class="Normal2">Codifica el texto usando 8 bits, para caracteres fuera del ASCII requiere de secuencias de escape lo que, prácticamente, le hace inviable como formato legible de texto en la mayoría de lenguas del planeta. En las últimas versiones de RTF ya sí se ofrece un mayor soporte a Unicode.</p>
+			<p class="Normal">Su éxito procede de que las indicaciones de formato son potentes y son más legibles por las personas que el formato nativo de los procesadores de textos, aunque es, como lenguaje de marcado, uno de los más crípticos.</p>
+			<pre class="codigo"></pre>
+			<table id="table004" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">{\rtf\ansicpg1252\deff0\deflang3082</strong></pre>
+							<pre class="codigo"><strong class="resaltado">{\fonttbl</strong></pre>
+							<pre class="codigo"><strong class="resaltado">{\f0\fcharset0\froman </strong><span class="atributo">Times New Roman</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">{\f1\fcharset0\fswiss</strong> <span class="atributo">Arial Black</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">{\pard \f1\fs48</strong></pre>
+							<pre class="codigo">El reino de los animales</pre>
+							<pre class="codigo"><strong class="resaltado">\par}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">{\pard \f1\fs40</strong></pre>
+							<pre class="codigo">Mamíferos</pre>
+							<pre class="codigo"><strong class="resaltado">\par}</strong></pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">{<strong class="resaltado">\pard \f0\fs25</strong></pre>
+							<pre class="codigo">Los mamíferos (<strong class="resaltado">{\b </strong>Mammalia<strong class="resaltado">}</strong>) son una clase de </pre>
+							<pre class="codigo">vertebrados <strong class="resaltado">{\i </strong>amniotas homeotermos<strong class="resaltado">}</strong> que poseen </pre>
+							<pre class="codigo">glándulas mamarias productoras de leche con las que </pre>
+							<pre class="codigo">alimentan a las crías</pre>
+							<pre class="codigo"><strong class="resaltado">\par}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">{\pard \f1\fs40</strong></pre>
+							<pre class="codigo">Aves</pre>
+							<pre class="codigo"><strong class="resaltado">\par}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">{\pard \f0\fs25</strong></pre>
+							<pre class="codigo">Las aves son animales vertebrados, de sangre caliente, </pre>
+							<pre class="codigo">que caminan, saltan o se mantienen solo sobre las </pre>
+							<pre class="codigo">extremidades posteriores</pre>
+							<pre class="codigo"><strong class="resaltado">\par}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">}</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Produce el resultado:</p>
+			<pre class="codigo"><img src="introduccion-lenguajes-de-marcas-web-resources/image/3.png" alt="" /></pre>
+			<h3 class="titulo3"><span class="numero3">[1.4.5]</span><a id="_idTextAnchor016"></a>SGML</h3>
+			<p class="Normal2">Se trata de una mejora muy notable del lenguaje de <strong class="Negritta">GML</strong> que estandarizaba el lenguaje de marcado y que fue definida finalmente por ISO como estándar mundial en documentos de texto con etiquetas de marcado. Su responsable fue <strong class="Negritta">Charles Goldfarb</strong>.</p>
+			<p class="Normal2">Su importancia radica en que es el padre del lenguaje XML y la base sobre la que se sostiene el lenguaje HTML, dos de los lenguajes de marcas más populares de la historia.</p>
+			<p class="Normal">En SGML los elementos que contienen indicaciones para el texto se colocan entre símbolos <strong class="Negritta">&lt;</strong> y <strong class="Negritta">&gt;.</strong> Las etiquetas se cierran con el signo <strong class="Negritta">/</strong>. Es decir las reglas fundamentales de los lenguajes de etiquetas actuales ya las había definido SGML.</p>
+			<p class="Normal">En realidad (como XML) no es un lenguaje con unas etiquetas concretas, sino que se trata de un lenguaje que sirve para definir lenguajes. Entre los lenguajes definidos mediante SGML, sin duda HTML es el más popular.</p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table005" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;articulo&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;titulo1&gt;</strong>El reino de los animales<strong class="resaltado">&lt;/titulo1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;titulo2&gt;</strong>Mamíferos<strong class="resaltado">&lt;/titulo2&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;normal&gt;</strong>Los mamíferos (<strong class="resaltado">&lt;negrita&gt;</strong>Mammalia<strong class="resaltado">&lt;/negrita&gt;</strong>) son una clase de vertebrados <strong class="resaltado">&lt;cursiva&gt;</strong>amniotas homeotermos<strong class="resaltado">&lt;/cursiva&gt;</strong>. que poseen glándulas mamarias productoras de leche con las que alimentan a las crías<strong class="resaltado">&lt;/normal&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;titulo2&gt;</strong>Aves<strong class="resaltado">&lt;/titulo2&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;normal&gt;</strong>Las aves son animales vertebrados, de sangre caliente, que caminan, saltan o se mantienen solo sobre las extremidades posteriores<strong class="resaltado">&lt;/normal&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/articulo&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Como veremos más adelante, este documento es muy parecido a un documento realizado en XML, de hecho XML es un subconjunto de SGML más restrictivo (es un lenguaje que tiene normas más estrictas). </p>
+			<p class="Normal">SGML necesitará definir cómo se debe mostrar los elementos <em class="cursiva">titulo1</em>, <em class="cursiva">titulo2</em>, etc. Ya que son nombres de elementos que habrá que definir. Esa es la prueba de que es un lenguaje para definir tipos de documento.</p>
+			<p class="Normal">SGML aportó las etiquetas tal cual las conocemos actualmente gracias al éxito de HTML.</p>
+			<h3 class="titulo3"><span class="numero3">[1.4.6]</span><a id="_idTextAnchor017"></a>PostScript</h3>
+			<p class="Normal2">Se trata de un lenguaje de descripción de páginas. De hecho es el más popular para ese fin, siendo el lenguaje más utilizado por los sistemas de impresión de alta gama. </p>
+			<p class="Normal2">Permite crear documentos en los que se dan indicaciones potentísimas sobre como mostrar información en el dispositivo final. Se inició su desarrollo en 1976 por <strong class="Negritta">John Warnock</strong>  y dos años más tarde se continuo con la empresa <strong class="Negritta">Xerox</strong>, hasta que en 1985 el propio Warnock funda <strong class="Negritta">Adobe  Systems</strong> y desde esa empresa se continua su desarrollo.</p>
+			<p class="Normal">Es en realidad todo un lenguaje de programación que indica la forma en que se debe mostrar la información que puede incluir texto y el tipo de letra del mismo, píxeles individuales y formas vectoriales (líneas, curvas). Sus posibilidades son muy amplias. </p>
+			<p class="Normal">Ejemplo<span class="numeroPie"><span id="footnote-000-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="introduccion-lenguajes-de-marcas.html#footnote-000">1</a></span></span>:</p>
+			<table id="table006" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><span class="comentario">%colocar el cursor</span></pre>
+							<pre class="codigo">100 100 <strong class="resaltado">moveto</strong></pre>
+							<pre class="codigo"><span class="comentario">%dibuja cuadrado</span></pre>
+							<pre class="codigo">100 200 <strong class="resaltado">lineto</strong></pre>
+							<pre class="codigo">200 200 <strong class="resaltado">lineto</strong></pre>
+							<pre class="codigo">200 100 <strong class="resaltado">lineto</strong></pre>
+							<pre class="codigo">100 100 <strong class="resaltado">lineto</strong></pre>
+							<pre class="codigo"><span class="comentario">%relleno</span></pre>
+							<pre class="codigo"><strong class="resaltado">stroke</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[1.4.7]</span><a id="_idTextAnchor018"></a>HTML</h3>
+			<p class="Normal2"><strong class="Negritta">Tim Bernes Lee</strong> utilizó SGML para definir un nuevo lenguaje de etiquetas que llamó <strong class="Negritta">Hypertext Markup Language</strong> (lenguaje de marcado de hipertexto) para crear documentos transportables a través de Internet en los que fuera posible el hipertexto; es decir la posibilidad que determinadas palabras marcadas de forma especial permitieran abrir un documento relacionado con ellas.</p>
+			<p class="Normal">A pesar de tardar en ser aceptado, HTML fue un éxito rotundo y la causa indudable del éxito de Internet. Hoy en día casi todo en Internet se ve a través de documentos HTML, que popularmente se denominan <strong class="Negritta">páginas web</strong>.</p>
+			<p class="Normal">Inicialmente estos documentos se veían con ayuda de intérpretes de texto (como por ejemplo el <strong class="Negritta">Lynx </strong>de<strong class="Negritta"> Unix</strong>) que simplemente coloreaban el texto y remarcaban el hipertexto. Después el software se mejoró y aparecieron navegadores con capacidad más gráfica para mostrar formatos más avanzados y visuales. </p>
+			<p class="Normal">Ejemplo (usando el mismo contenido de los ejemplos anteriores):</p>
+			<table id="table007" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!DOCTYPE </strong><span class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html </strong><span class="atributo">lang=</span><span class="texto">”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta </strong><span class="atributo">charset</span><span class="texto">=”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;h1&gt;</strong>El reino de los animales<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;h2&gt;Mamíferos&lt;/h2&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p&gt;</strong>Los mamíferos (<strong class="resaltado">&lt;strong&gt;Mammalia&lt;/strong&gt;) </strong>son una clase de vertebrados <strong class="resaltado">&lt;em&gt;</strong>amniotas homeotermos<strong class="resaltado">&lt;/em&gt; </strong>que poseen glándulas mamarias productoras de leche con las que alimentan a las crías<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;h2&gt;</strong>Aves<strong class="resaltado">&lt;/h2&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p&gt;</strong>Las aves son animales vertebrados, de sangre caliente, que caminan, saltan o se mantienen solo sobre las extremidades posteriores<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[1.4.8]</span><a id="_idTextAnchor019"></a>XML</h3>
+			<p class="Normal2">Se trata de un subconjunto de SGML ideado para mejorar el propio SGML y con él definir lenguajes de marcado con sintaxis más estricta, pero más entendible. </p>
+			<p class="Normal2">Ha sido enormemente popular desde finales de los 90 y ha conseguido incorporar numerosos lenguajes a su alrededor para conseguir documentos muy dinámicos y con gran capacidad de formato. Es uno de los formatos de documentos más populares para exportación e importación de datos.</p>
+			<p class="Normal">Actualmente está siendo sobrepasado en la mayoría de sus usos por JSON</p>
+			<table id="table008" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;?xml </strong><span class="atributo">version=</span><span class="atributo">”1.0”</span> <span class="atributo">encoding=</span><span class="atributo">”UTF-8”</span><strong class="resaltado">?&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;nombre&gt;</strong>Jorge&lt;<strong class="resaltado">/nombre&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;apellido1&gt;</strong>Sánchez<strong class="resaltado">&lt;/apellido1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;dirección&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;calle&gt;</strong>C/ Falsa nº 0<strong class="resaltado">&lt;/calle&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;localidad&gt;</strong>Palencia&lt;<strong class="resaltado">/localidad&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;código_Postal&gt;</strong>34001<strong class="resaltado">&lt;/código_Postal&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;pais&gt;</strong>España<strong class="resaltado">&lt;/pais&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/direccion&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;teléfonos&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;teléfono </strong><span class="atributo">tipo=</span><span class="atributo">”fijo”</span><strong class="resaltado">&gt;</strong>999 999 999<strong class="resaltado">&lt;/teléfono&gt;</strong></pre>
+							<pre class="codigo"> <strong class="resaltado"> &lt;teléfono</strong> <span class="atributo">tipo=</span><span class="atributo">”móvil”</span><strong class="resaltado">&gt;</strong>666 666 666<strong class="resaltado">&lt;/teléfono&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/telefono&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[1.4.9]</span><a id="_idTextAnchor020"></a>Markdown</h3>
+			<p class="Normal">Se trata de un formato de marcado simple que permite crear documentos sencillos y convertirles en documentos HTML.</p>
+			<p class="Normal">Fue creado por <strong class="Negritta"><a id="_idTextAnchor021"></a>John Gruber </strong>con la ayuda de <strong class="Negritta">Aaron Shwartz</strong>. La pretensión de este lenguaje es definir unas normas muy sencillas para crear documentos semejantes a los que se crean mediante el lenguaje HTML.</p>
+			<p class="Normal">Ha tenido un éxito muy notable, especialmente desde que fue adoptado por sitios tan populares como <a href="http://github/"><span class="hyperlink">GitHub</span></a><strong class="Negritta">,</strong> <a href="https://www.reddit.com/"><span class="hyperlink">Reddit</span></a> o <a href="http://stackexchange.com/"><span class="hyperlink">StackExchange</span></a> para que los usuarios publicaran contenido con formato. </p>
+			<p class="Normal">Ejemplo de texto con formato Markdown:</p>
+			<table id="table009" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado"># </strong>El reino de los animales</pre>
+							<pre class="codigo"><strong class="resaltado">## </strong>Mamíferos</pre>
+							<pre class="codigo">Los mamíferos (<strong class="resaltado">**</strong>Mammalia<strong class="resaltado">**</strong>) son una clase de vertebrados <strong class="resaltado">*</strong>amniotas<strong class="resaltado"> </strong>homeotermos<strong class="resaltado">*</strong>. que poseen glándulas mamarias productoras de leche con las que alimentan a las crías</pre>
+							<pre class="codigo"><strong class="resaltado">## Aves</strong></pre>
+							<pre class="codigo">Las aves son animales vertebrados, de sangre caliente, que caminan, saltan o se mantienen solo sobre las extremidades posteriores</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Este código genera el mismo resultado que el código mostrado en el apartado de HTML, pero se percibe claramente su sencillez.</p>
+			<h3 class="titulo3"><span class="numero3">[1.4.10]</span><a id="_idTextAnchor022"></a>JSON</h3>
+			<p class="Normal2">Abreviatura de <em class="cursiva">JavaScript Object Notation</em>, Se trata de una notación de datos procedente del lenguaje JavaScript estándar (concretamente en la versión <strong class="Negritta">ECMAScript </strong>de 1999). En el año 2002 se le daba soporte desde muchos de los navegadores y su fama ha sido tal que ahora se ha convertido en una notación independiente de JavaScript que compite claramente con XML en funcionalidad. </p>
+			<p class="Normal">Las razones de su éxito se deben a su versatilidad, ya que permiten definir datos complejos, como arrays o código de funciones, elementos pertenecientes al mundo de la programación de aplicaciones. El éxito de JavaScript junto a la versatilidad comentada, le han convertido en el lenguaje de marcado más popular para almacenar datos.</p>
+			<p class="Normal">En JSON, el texto se divide en datos y metadatos. De modo que el símbolo de los dos puntos separa el metadato del dato. Por otro lado, los símbolos de llave y corchete permiten agrupar de diversas formas los datos. </p>
+			<p class="normalespacio">Ejemplo de código JSON:</p>
+			<pre class="codigo"></pre>
+			<table id="table010" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">{</pre>
+							<pre class="codigo">    <strong class="resaltado">“nombre”:</strong> “Jorge”,</pre>
+							<pre class="codigo">    <strong class="resaltado">“apellido1”:</strong> “Sánchez”,    </pre>
+							<pre class="codigo">    <strong class="resaltado">“dirección”: {</strong></pre>
+							<pre class="codigo">        <strong class="resaltado">“calle”</strong>: “C/ Falsa nº 0”,</pre>
+							<pre class="codigo">        <strong class="resaltado">“localidad”</strong>: “Palencia”,</pre>
+							<pre class="codigo">        <strong class="resaltado">“código Postal”</strong>: 34001,</pre>
+							<pre class="codigo">        <strong class="resaltado">“país”</strong>:”España”</pre>
+							<pre class="codigo">    <strong class="resaltado">},</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    “teléfonos”: [</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        {</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            “tipo”:</strong> “fijo”,</pre>
+							<pre class="codigo">            <strong class="resaltado">“número”:</strong> “999 999 999”</pre>
+							<pre class="codigo">       <strong class="resaltado"> },</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        {</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            “tipo”:</strong> “móvil”,</pre>
+							<pre class="codigo">            <strong class="resaltado">“number”:</strong> “666 666 666”</pre>
+							<pre class="codigo">    <strong class="resaltado">    }</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    ]</strong></pre>
+							<pre class="codigo"><strong class="resaltado">}</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[1.5] </span><a id="_idTextAnchor023"></a>tipos de lenguajes de marcas</h2>
+			<ul>
+				<li class="punto"><strong class="Negritta">Orientados a la presentación</strong>. En ellos los metadatos permiten indicar el formato en el que se debe presentar el texto. Es el caso de <strong class="Negritta">RTF</strong>, en el que sus etiquetas especifican tipos de letra, tamaños de página, colores, etc. Las primeras versiones de <strong class="Negritta">HTML</strong> también se consideran así, ya que incluían etiquetas como <strong class="Negritta">font </strong>mediante la cual se especificaba el formato de fuente. </li>
+				<li class="punto"><strong class="Negritta">Orientados a la descripción</strong>. En ellos las marcas especiales permiten dar significado al texto pero no indican cómo se debe presentar en pantalla el mismo. Sería el caso de <strong class="Negritta">XML</strong> (o de <strong class="Negritta">SGML</strong>), <strong class="Negritta">JSON</strong>, <strong class="Negritta">Markdown </strong>y de las versiones actuales de <strong class="Negritta">HTML</strong>. En estos lenguajes simplemente se indica el significado del contenido: si el texto es un título, un párrafo normal, un pie de ilustración, una dirección postal etc.</li>
+				<li class="punto"><strong class="Negritta">Orientados a procedimientos</strong>. Se trata de documentos en los que el texto marcado, se interpreta como órdenes a seguir, y así el archivo en realidad contiene instrucciones a realizar con el texto (girarle, convertirle en una fórmula, realizar una suma, etc.). Es el caso de <strong class="Negritta">LaTeX</strong> o <strong class="Negritta">PostScript</strong>. </li>
+			</ul>
+			<hr class="HorizontalRule-1" />
+			<div class="_idFootnotes">
+				<div id="footnote-000" class="_idFootnote">
+					<p class="pie"><a class="_idFootnoteAnchor _idGenColorInherit" href="introduccion-lenguajes-de-marcas.html#footnote-000-backlink">1</a>&#9; Tomado de <a href="#"><span class="hyperlink">http://en.wikipedia.org/wiki/PostScript</span></a> </p>
+				</div>
+			</div>
+		</div>
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/introduccion-lenguajes-de-marcas.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:02 GMT -->
+</html>
+

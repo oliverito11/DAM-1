@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="empresa.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<empresa>
+    <!-- Persona sin email pero con varios teléfonos -->
+    <persona codigoPersona="ab7">
+        <nombre>Juan</nombre>
+        <apellidos>Lopez Martin</apellidos>
+        <DNI>DNI_12345678-L</DNI>
+        <telefono>123456789</telefono>
+        <telefono>123123123</telefono>
+        <provincia>Leon</provincia>
+    </persona>
+
+    <!-- Persona con email -->
+    <persona codigoPersona="ab8">
+        <nombre>Sandra</nombre>
+        <apellidos>Rodrigo Rodrigo</apellidos>
+        <DNI>DNI_23456789-M</DNI>
+        <telefono>919999999</telefono>
+        <email>sandra@gmail.com</email>
+    <provincia>Leon</provincia>
+    </persona>
+</empresa>

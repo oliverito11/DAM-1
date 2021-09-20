@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio2.xsd">
+
+    <persona codigoPersona="ab7">
+        <nombre>Juan</nombre>
+        <apellidos>Lopez Martin</apellidos>
+        <dni>DNI_12345678-L</dni>
+        <telefono>123456789</telefono>
+        <telefono>123123123</telefono>
+        <provincia>Leon</provincia>
+    </persona>
+
+    <persona codigoPersona="ab8">
+        <nombre>Sandra</nombre>
+        <apellidos>Rodrigo Rodrigo</apellidos>
+        <dni>DNI_99345678-L</dni>
+        <telefono>717171717</telefono>
+        <email>sandra@gmail.com</email>
+        <provincia>Leon</provincia>
+    </persona>
+
+</empresa>

@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/css-visualizacion.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:31:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Display y media queries</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[14] </span><br>Display y media queries</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+    <div id="_idContainer003" class="Marco-de-texto-b-sico">
+        <h2 class="titulo2"><span class="numero2">[14.1] </span><a id="_idTextAnchor000"></a><a
+                id="_idTextAnchor001"></a><a id="_idTextAnchor002"></a>propiedad <span lang="en-US">display</span></h2>
+        <h3 class="titulo3"><span class="numero3">[14.1.1]</span><a id="_idTextAnchor003"></a>formas de aparecer un
+            elemento en un navegador</h3>
+        <p class="Normal2">Los distintos elementos de HTML tiene un modo por defecto de presentarse por pantalla. Así,
+            por ejemplo, los elementos <strong class="Negritta">p </strong>o <strong class="Negritta">h1</strong>,
+            utilizan un área rectangular, mientras que los elementos <strong class="Negritta">strong </strong>o <strong
+                class="Negritta">em</strong> se muestran seguidos en la pantalla.</p>
+        <p class="Normal">La propiedad que se encarga de estos es<span class="resaltadoEpigrafe"> </span><em
+                class="cursiva">display,</em> una propiedad aparecida en CSS2 que permite establecer la forma en la que
+            se muestra por pantalla un elemento. Está especialmente indicada para documentos distintos a HTML (<strong
+                class="Negritta">XML</strong> especialmente) en los que su contenido no tiene por defecto una forma de
+            mostrarse.</p>
+        <p class="Normal">En HTML permite modificar la forma en la que se muestra un elemento. Por ejemplo, en HTML los
+            elementos de tipo <em class="cursiva">p</em> (párrafos) se entiende que se mostrarán como párrafos
+            independientes, es decir, con cada etiqueta p comienza un nuevo párrafo o bloque. No irán seguidos dos
+            elementos de párrafo consecutivos.</p>
+        <p class="Normal2">Gracias a <strong class="Negritta" lang="en-US">display</strong> el comportamiento de un
+            elemento se puede modificar. Por ejemplo en esta página:</p>
+        <table id="table001" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span
+                            class="atributo">html</span><strong class="resaltado">&gt;<br/>&lt;html</strong> <span
+                            class="atributo">lang</span><span class="texto">=”es”</span><strong
+                            class="resaltado">&gt;<br/>    &lt;head&gt;<br/>        &lt;meta </strong><span
+                            class="atributo">charset</span><span class="texto">=”UTF-8”</span><strong class="resaltado">&gt;</strong><br/>       <strong
+                            class="resaltado">     &lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong><br/>       <strong
+                            class="resaltado">     &lt;style&gt;</strong><br/>&#9;<strong class="resaltado">&#9;&#9;&#9;&#9;</strong>p{<br/>&#9;&#9;&#9;&#9;&#9;&#9;<strong
+                            class="resaltado">display</strong>:<span class="atributo">inline</span>;<br/>&#9;&#9;&#9;&#9;&#9;}<br/><strong
+                            class="resaltado">&#9;&lt;/style&gt;<br/>    &lt;/head&gt;<br/>    &lt;body&gt;</strong><br/>        <strong
+                            class="resaltado">&lt;p&gt;</strong>Uno<strong class="resaltado">&lt;/p&gt;</strong><br/>        <strong
+                            class="resaltado">&lt;p&gt;</strong>Dos<strong class="resaltado">&lt;/p&gt;</strong><br/>        <strong
+                            class="resaltado">&lt;p&gt;</strong>Tres<strong class="resaltado">&lt;/p&gt;</strong><br/>        <strong
+                            class="resaltado">&lt;p&gt;</strong>Cuatro<strong class="resaltado">&lt;/p&gt;</strong><br/>        <strong
+                            class="resaltado">&lt;p&gt;</strong>Cinco<strong class="resaltado">&lt;/p&gt;</strong><br/>        <strong
+                            class="resaltado">&lt;p&gt;</strong>Seis<strong
+                            class="resaltado">&lt;/p&gt;</strong><br/><strong class="resaltado">    &lt;/body&gt;<br/>&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2">Se mostrará el contenido de esta forma:</p>
+        <p class="Normal">Uno Dos Tres Cuatro Cinco Seis</p>
+        <p class="Normal2">Ya que se ha modificado la propiedad para que los elementos de tipo p vayan seguidos en la
+            misma línea.</p>
+        <h3 class="titulo3"><span class="numero3">[14.1.2]</span><a id="_idTextAnchor004"></a>principales valores de
+            display</h3>
+        <ul>
+            <li class="punto"><strong class="Negritta" lang="en-US">none</strong>. El elemento queda oculto (también sus
+                elementos hijos) y el espacio que ocupaba el elemento, se retira. Incluso desaparecerá del árbol de
+                elementos del documento, lo que impedirá, por ejemplo, el acceso a dicho elemento desde JavaScript.
+            </li>
+            <li class="punto"><strong class="Negritta">inline</strong>. Los elementos con este display, se muestran sin
+                romper la línea actual. Se muestran dentro de la línea. Por lo tanto podemos colocar dos elementos
+                inline seguidos.<p class="sinpunto">Los elementos <em class="cursiva">inline </em>ignoran los márgenes
+                    superior e inferior, pero sí reconocen los rellenos y los márgenes izquierdo y derecho, así como los
+                    bordes y los colores e imágenes de relleno. No hacen caso de las propiedades <strong
+                        class="Negritta">width</strong>, <strong class="Negritta">height. </strong></p>
+                <p class="sinpunto">Ejemplos de elementos que son por defecto de este tipo serían: <strong
+                        class="Negritta">span</strong>, <strong class="Negritta">small</strong>, <strong
+                        class="Negritta">strong</strong>, <strong class="Negritta">em</strong>, <strong
+                        class="Negritta">mark</strong>, <strong class="Negritta">abbr</strong>, <strong
+                        class="Negritta">kbd</strong>, etc.</p></li>
+            <li class="punto"><strong class="Negritta">block</strong>. Son elementos que se muestran dentro de una caja
+                rectangular. Rompen la línea actual y, por defecto, no admiten otro elemento a su lado
+                (independientemente de su tamaño o alineación). <p class="sinpunto">Los elementos de tipo block admiten
+                    manipular cualquier propiedad. Elementos, por defecto, de este tipo son: <strong
+                        class="Negritta">p</strong>, <strong class="Negritta">h1</strong>, <strong
+                        class="Negritta">div</strong>, <strong class="Negritta">section</strong>, <strong
+                        class="Negritta">article</strong>, <strong class="Negritta">nav</strong>, <strong
+                        class="Negritta">figure</strong>, <strong class="Negritta">ul</strong>, etc.</p></li>
+            <li class="punto"><strong class="Negritta" lang="en-US">inline-block</strong>. El elemento forma un bloque
+                rectangular, pero es interior a su contenedor (no rompe la línea actual). Sí admiten elementos a su
+                lado. Admiten manipular las propiedades <strong class="Negritta">width </strong>y <strong
+                    class="Negritta">height</strong> lo que demuestra su parecido con el valor <strong class="Negritta">block</strong>.
+                <p class="sinpunto">Ejemplos de elementos de este tipo son: <strong class="Negritta">button</strong>,
+                    <strong class="Negritta">image</strong>, <strong class="Negritta">input</strong>, <strong
+                        class="Negritta">textarea</strong>, <strong class="Negritta">select</strong>, etc.</p>
+                <h3 class="titulo3"><span class="numero3">[14.1.3]</span><a id="_idTextAnchor005"></a>otros valores de
+                    display</h3></li>
+            <li class="punto"><strong class="Negritta" lang="en-US">list-item</strong>. El elemento se considerará un
+                ítem de una lista (al igual que la etiqueta <strong class="Negritta">li</strong>). Por lo tanto los
+                elementos así marcados admiten las propiedades: <strong class="Negritta">list-style-type,
+                    list-style-image, list-style-position y list-style</strong>.
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">run-in.</strong><span lang="en-US"> </span>El
+                elemento se comporta como <strong class="Negritta">block</strong> o como <strong
+                    class="Negritta">inline </strong>dependiendo del contexto.
+            </li>
+            <li class="punto"><strong class="Negritta">table</strong>. Considera que el elemento contiene una tabla
+                (como el elemento <strong class="Negritta">table</strong>).
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">table-caption</strong>. Considera al elemento un
+                título de tabla (como ocurre con <strong class="Negritta">caption</strong>).
+            </li>
+            <li class="punto"><strong class="Negritta">table-cell</strong>. Considera al elemento una celda de una tabla
+                (como <strong class="Negritta">th </strong>o <strong class="Negritta">td</strong>).
+            </li>
+            <li class="punto"><strong class="Negritta">table-row</strong>. Considera que el elemento contiene una fila
+                de una tabla (como <strong class="Negritta">tr</strong>).
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">table-row-group</strong>. Considera al elemento un
+                grupo de filas (como <strong class="Negritta">tbody</strong>).
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">table-column</strong>. Considera al elemento una
+                columna (como <strong class="Negritta">col</strong>).
+            </li>
+            <li class="punto"><strong class="Negritta">table-column-group</strong>. Considera al elemento un grupo de
+                columnas (como <strong class="Negritta">colgroup</strong>).
+            </li>
+            <li class="punto"><strong class="Negritta">table-footer-group</strong>. Considera que el elemento contiene
+                el pie de una tabla (como <strong class="Negritta">tfoot</strong>)
+            </li>
+            <li class="punto"><strong class="Negritta">table-header-group</strong>. Considera al elemento una cabecera
+                de tabla (como <strong class="Negritta">theader</strong>)
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">inline-table</strong>. Elemento <strong
+                    class="Negritta" lang="en-US">inline</strong> interior a una tabla.<h3 class="titulo3"><span
+                        class="numero3">[14.1.4]</span><a id="_idTextAnchor006"></a>valores de display para
+                    maquetaciones avanzadas</h3></li>
+            <li class="punto"><strong class="Negritta">flex</strong>. Permite establecer contenedores de tipo “caja
+                flexible” que facilitan el diseño adaptable de una página. Sólo lo reconocen las últimas versiones de
+                navegadores
+            </li>
+            <li class="punto"><strong class="Negritta">inline-flex</strong>. Semejante al anterior, pero el elemento se
+                entiende que se muestra en la misma línea que sus elementos adyacentes.
+            </li>
+            <li class="punto"><strong class="Negritta">grid</strong>. Elemento que contiene una estructura de tipo
+                <strong class="Negritta">grid</strong>.
+            </li>
+            <li class="punto"><strong class="Negritta">inline-grid</strong>. Elemento que contiene una estructura
+                <strong class="Negritta">grid </strong>de fila.
+            </li>
+            <li class="punto"><strong class="Negritta">subgrid</strong>. Elemento interior a un <strong
+                    class="Negritta">grid </strong>que también se comportará como un <strong
+                    class="Negritta">grid</strong>.
+            </li>
+        </ul>
+        <p class="Normal">Todos estos valores son muy modernos (algunos no funcionan en casi ningún navegador de los
+            existentes en el momento de escribir estas líneas).</p>
+        <p class="Normal">Se detallará su funcionamiento en capítulos posteriores.</p>
+        <h3 class="titulo3"><span class="numero3">[14.1.5]</span><a id="_idTextAnchor007"></a>modificación de la
+            propiedad display</h3>
+        <p class="Normal">En el siguiente ejemplo se ha modificado la presentación habitual del elemento <strong
+                class="Negritta">span </strong>(que normalmente es <strong class="Negritta">inline</strong>) para que
+            sea <strong class="Negritta">inline-block </strong>y además se le ha colocado borde y sombreado para
+            observar cuál es la forma y posición del elemento.</p>
+        <table id="table002" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span
+                            class="atributo">html</span><strong class="resaltado">&gt;<br/>&lt;html</strong> <span
+                            class="atributo">lang</span><span class="texto">=”es”</span><strong
+                            class="resaltado">&gt;<br/>&lt;head&gt;<br/>  &lt;meta </strong><span class="atributo">charset</span><span
+                            class="texto">=”UTF-8”</span><strong class="resaltado">&gt;</strong><br/>  <strong
+                            class="resaltado">&lt;title&gt;</strong>Document<strong
+                            class="resaltado">&lt;/title&gt;</strong><br/>  <strong
+                            class="resaltado">&lt;style&gt;</strong><br/>    #marco{<br/>&#9;<strong class="resaltado">background-color</strong>:<span
+                            class="atributo">lightgray</span>; <br/>&#9;<strong class="resaltado">border</strong>:<span
+                            class="atributo">2px</span> <span class="atributo">solid</span> <span
+                            class="atributo">black</span>;</pre>
+                    <pre class="remarcado"><strong class="resaltado">&#9;display</strong>:<span class="atributo">inline-block</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">width</strong>:<span
+                            class="atributo">50</span>%;<br/>    }<br/>    p{<br/>&#9;<strong
+                            class="resaltado">border</strong>:<span class="atributo">1px solidgray</span>;<br/><strong
+                            class="resaltado">    }</strong><br/>  <strong class="resaltado">&lt;/style&gt;<br/>&lt;body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">  &lt;p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">      </strong>Nadie podía suponer que el inspecto Albert iba a</pre>
+                    <pre class="codigo">      consentir que se escapara el ladrón, por ello todos</pre>
+                    <pre class="codigo">      miraron en su dirección absolutamente consternados</pre>
+                    <pre class="codigo"><strong class="resaltado">  &lt;span </strong><span
+                            class="atributo">id=</span><span class="texto">”marco”</span><strong
+                            class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">      </strong>Jamás había ocurrido una situación así. todos</pre>
+                    <pre class="codigo">      consideraban a Albert, esclavo de su moralidad.</pre>
+                    <pre class="codigo">      Era la primera vez que incumplía su cometido</pre>
+                    <pre class="codigo"><strong class="resaltado">  &lt;/span&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">     </strong> El resto de policías inició la marcha hacia la</pre>
+                    <pre class="codigo">      comisaria cabizbajos, con la total seguridad de</pre>
+                    <pre class="codigo">      que nada iba a ser lo mismo</pre>
+                    <pre class="codigo"><strong class="resaltado">  &lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">  &lt;p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">      </strong>El último en llegar fue el propio Albert,       dirigió a sus compañeros una mirada con una extraña</pre>
+                    <pre class="codigo">      sonrisa. Se le adivinaba el resto de una lágrima</pre>
+                    <pre class="codigo">      mezclada con el polvo de sus mejillas.</pre>
+                    <pre class="codigo"><strong class="resaltado">  &lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2">El resultado del código es:</p>
+        <p class="Normal"><img src="css-visualizacion-web-resources/image/1.png" alt=""/></p>
+        <p class="normalespacio">Otro ejemplo (creación de tablas sin usar la etiqueta <strong
+                class="Negritta">table</strong>):</p>
+        <table id="table003" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;!doctype</strong> <span
+                            class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;html </strong><span
+                            class="atributo">lang=</span><span class="texto">”es”</span><strong
+                            class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;meta </strong><span
+                            class="atributo">charset=</span><span class="texto">”UTF-8”&gt;</span></pre>
+                    <pre class="codigo"><span class="texto">    &lt;title&gt;</span>Ejemplo de inline-block<span
+                            class="texto">&lt;/title&gt;</span></pre>
+                    <pre class="codigo"><span class="texto">    &lt;style&gt;</span></pre>
+                    <pre class="codigo">        #contenedor{</pre>
+                    <pre class="codigo">            <strong class="resaltado">display:</strong><span class="atributo">table</span>;</pre>
+                    <pre class="codigo">        }</pre>
+                    <pre class="codigo">        #fila{</pre>
+                    <pre class="codigo">            <strong class="resaltado">display:</strong><span class="atributo">table-row</span>;</pre>
+                    <pre class="codigo">        }</pre>
+                    <pre class="codigo"><strong class="resaltado">        p{</strong></pre>
+                    <pre class="codigo">            <strong class="resaltado">display:</strong><span class="atributo">table-cell;</span></pre>
+                    <pre class="codigo">            <strong class="resaltado">border:</strong><span class="atributo">1px solid black</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">        }</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">  &lt;div </strong><span
+                            class="atributo">id=</span><span class="texto">”contenedor”</span><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">      &lt;div </strong><span
+                            class="atributo">id=</span><span class="texto">”fila”</span><strong
+                            class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">          &lt;p&gt;</strong></pre>
+                    <pre class="codigo">              Nadie podía suponer que el inspecto Albert</pre>
+                    <pre class="codigo">              iba a consentir que se escapara el ladrón,</pre>
+                    <pre class="codigo">              por ello todos miraron en su dirección</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="table004" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">              absolutamente consternados</pre>
+                    <pre class="codigo"><strong class="resaltado">          &lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">          &lt;p&gt;</strong></pre>
+                    <pre class="codigo">              Jamás había ocurrido una situación así. </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  todosconsideraban a Albert, esclavo de su </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  moralidad. Era la primera vez que incumplía </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  su cometido</pre>
+                    <pre class="codigo"><strong class="resaltado">          &lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">          &lt;p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">              </strong>El resto de policías inició la marcha hacia </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  la comisaria cabizbajos, con la total </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  seguridad de que nada iba a ser lo mismo</pre>
+                    <pre class="codigo"><strong class="resaltado">          &lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">          &lt;p&gt;</strong></pre>
+                    <pre class="codigo">              El último en llegar fue el propio Albert, al </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  hacerlo dirigió a sus compañeros una mirada </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  con una extraña sonrisa. Se le adivinaba el </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  resto de una lágrima mezclada con el polvo </pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;  de sus mejillas.</pre>
+                    <pre class="codigo"><strong class="resaltado">         &lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">      &lt;/div&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">  &lt;/div&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Resultado:</p>
+        <p class="Normal"><img src="css-visualizacion-web-resources/image/2.png" alt=""/></p>
+        <p class="Normal">En el código que se muestra a continuación se consigue que los elementos de tipo p se muestren
+            como si fueran listas y no párrafos normales:</p>
+        <table id="table005" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;!doctype</strong> <span
+                            class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;html </strong><span
+                            class="atributo">lang=</span><span class="texto">”es”</span><strong
+                            class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;meta </strong><span
+                            class="atributo">charset=</span><span class="texto">”UTF-8”&gt;</span></pre>
+                    <pre class="codigo"><span class="texto">    &lt;title&gt;</span>Ejemplo de list-item<span
+                            class="texto">&lt;/title&gt;</span></pre>
+                    <pre class="codigo"><span class="texto">    &lt;style&gt;</span></pre>
+                    <pre class="codigo">  <strong class="resaltado">      p{</strong></pre>
+                    <pre class="codigo">            <strong class="resaltado">display:</strong><span class="atributo">list-item</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">list-style-type:</strong> <span
+                            class="atributo">disc</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">list-style-position:</strong> <span
+                            class="atributo">inside</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">        }</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;h1&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        C</strong>onocimientos a adquirir en</pre>
+                    <pre class="codigo">        el departamento de diseño</pre>
+                    <pre class="codigo">  <strong class="resaltado">  &lt;/h1&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;p&gt;</strong>HTML<strong class="resaltado">&lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;p&gt;</strong>CSS<strong class="resaltado">&lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;p&gt;</strong>JavaScript<strong
+                            class="resaltado">&lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;p&gt;</strong>jQuery<strong class="resaltado">&lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Resultado:</p>
+        <p class="Normal"><img src="css-visualizacion-web-resources/image/3.png" alt=""/></p>
+        <h2 class="titulo2"><span class="numero2">[14.2] </span><em class="cursiva"><a id="_idTextAnchor008"></a>media
+            </em><em class="cursiva" lang="en-US">queries</em>. páginas <em class="cursiva" lang="en-US">responsive</em>
+        </h2>
+        <p class="Normal2">Debido a la proliferación de dispositivos de todo tipo para navegar por páginas web, es cada
+            vez más difícil hacer un diseño fijo; más bien hay que hacer diseños adaptables a las diferentes pantallas
+            posibles (la de un ordenador personal, la de una tableta, la de un móvil). </p>
+        <p class="Normal">Además es deseable que nuestra página se adapte ante un cambio de resolución en caliente: como
+            el que se produce cuando un usuario ve una página usando el móvil en posición vertical, y después decide
+            poner el móvil en posición apaisada. La página debe adaptarse al instante a la nueva posición.</p>
+        <p class="Normal">Esta adaptabilidad extrema de las páginas es lo que se conoce como <em class="cursiva">páginas
+                responsive</em>, páginas que se adaptan a diferentes formatos de medios.</p>
+        <h3 class="titulo3"><span class="numero3">[14.2.1]</span><a id="_idTextAnchor009"></a>atributo <em
+                class="cursiva">media</em></h3>
+        <p class="Normal">Las páginas de estilos siempre han tenido la posibilidad de indicar a qué medio se dirigen a
+            través de un atributo, presente en el elemento link llamado <strong class="Negritta">media</strong>.</p>
+        <p class="Normal">Ejemplo:</p>
+        <table id="table006" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;link </strong><span
+                            class="atributo">rel=</span><span class="texto">”stylesheet” </span><span class="atributo">href=</span><span
+                            class="texto">”estilos.css”  </span></pre>
+                    <pre class="codigo">       <strong class="resaltado">media=”print”</strong>&gt;</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">El código anterior indica que la hoja de estilos se aplica cuando el documento se imprima (por
+            lo tanto no para lo que se ve en la pantalla).</p>
+        <p class="Normal">También podemos hacer especificaciones más complejas:</p>
+        <table id="table007" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;link </strong><span
+                            class="atributo">rel=</span><span class="texto">”stylesheet” </span><span class="atributo">href=</span><span
+                            class="texto">”estilos.css”  </span></pre>
+                    <pre class="codigo">       <strong class="resaltado">media=”screen and (max-width:640px)”</strong>&gt;</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">La hoja se aplicará cuando la página se vea en una pantalla y la ventana que muestra la misma
+            no supere los 640 píxeles de anchura.</p>
+        <h3 class="titulo3"><span class="numero3">[14.2.2]</span><a id="_idTextAnchor010"></a>directiva <em
+                class="cursiva">@media</em></h3>
+        <p class="Normal">Otra posibilidad de realizar media queries es usar la directiva @media dentro del código CSS.
+            Ejemplo:</p>
+        <table id="table008" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">@media screen and </strong>(<span class="atributo">max-width:</span><span
+                            class="texto">640px</span><strong class="resaltado">){</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;</strong><span class="comentario">/* código que se ejecuta si la pantalla no tiene </span></pre>
+                    <pre class="codigo"><span class="comentario">         un ancho mayor de 640*/</span></pre>
+                    <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">En realidad se utiliza más habitualmente esta posibilidad. Incluso podemos indicar más de una
+            directiva de este tipo en la misma página.</p>
+        <h3 class="titulo3"><span class="numero3">[14.2.3]</span><a id="_idTextAnchor011"></a>consultas sobre el tipo de
+            medio</h3>
+        <p class="Normal">Los medios posibles son:</p>
+        <ul>
+            <li class="punto"><strong class="Negritta">all. </strong>Valor por defecto. Indica que se aplica el CSS a
+                todos los medios.
+            </li>
+            <li class="punto"><strong class="Negritta">print.</strong> Para dispositivos de impresión.</li>
+            <li class="punto"><strong class="Negritta">screen.</strong> Para dispositivos de pantalla.</li>
+            <li class="punto"><strong class="Negritta">speech. </strong>Para dispositivos sintetizadores de voz.</li>
+            <li class="punto"><strong class="Negritta">braille</strong>. Dispositivos táctiles de lenguaje braille.</li>
+            <li class="punto"><strong class="Negritta">embossed</strong>. Impresoras de lenguaje braille.</li>
+        </ul>
+        <p class="Normal">La norma indica<span class="numeroPie"><span id="footnote-000-backlink"><a
+                        class="_idFootnoteLink _idGenColorInherit"
+                        href="css-visualizacion-2.html#footnote-000">1</a></span></span> que se abre la posibilidad de que
+            aparezcan nuevos dispositivos (por ejemplo <strong class="Negritta">3d-glasses).</strong></p>
+        <h3 class="titulo3"><span class="numero3">[14.2.4]</span><a id="_idTextAnchor012"></a>consultas sobre
+            propiedades del medio</h3>
+        <p class="Normal2">Dentro de un media query podemos utilizar las siguientes propiedades:</p>
+        <table id="table009" class="tabla-manual">
+            <colgroup>
+                <col/>
+                <col/>
+            </colgroup>
+            <thead>
+            <tr class="tabla-manual">
+                <td class="tabla-manual cabecera-tabla">
+                    <p class="cabeceraTabla">propiedad</p>
+                </td>
+                <td class="tabla-manual cabecera-tabla">
+                    <p class="cabeceraTabla">valor</p>
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">height</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Altura de la ventana que muestra la página. Ejemplo:</p>
+                    <table id="table010" class="tabla-codigo">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tabla-codigo">
+                            <td class="tabla-codigo celda-codigo">
+                                <pre class="codigo"><strong class="resaltado">@media </strong>screen <strong
+                                        class="resaltado">and</strong> <strong class="resaltado">(</strong><span
+                                        class="atributo">height:</span><span class="texto">800px</span><strong
+                                        class="resaltado">){</strong></pre>
+                                <pre class="codigo"><strong class="resaltado">  </strong><span class="comentario">/* código que se ejecuta si la ventana   </span></pre>
+                                <pre class="codigo"><span
+                                        class="comentario">   mide 800 píxeles exactos de altura */</span></pre>
+                                <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre class="codigo"><span class="comentario">    </span></pre>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">width</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Anchura de la ventana que muestra la página</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">device-height</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Altura del dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">device-width</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Anchura del dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-height</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Altura máxima de la ventana que muestra el dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-width</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Anchura máxima de la ventana que muestra el dispositivo </p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-height</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Anchura mínima de la ventana que muestra el dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-width</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Anchura mínima de la ventana en la que se muestra la página</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-device-height</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Altura máxima del dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-device-width</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Anchura máxima del dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-device-height</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Altura mínima del dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-device-width</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Anchura mínima del dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">orientation</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Indica la orientación del dispositivo. Se le puede dar el valor <strong
+                            class="Negritta" lang="en-US">portrait</strong> (aspecto tipo retrato, proporciones
+                        verticales del dispositivo) o <strong class="Negritta" lang="en-US">landscape</strong>
+                        (apaisado).</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">aspect-ratio</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Relación de aspecto que debe de cumplir la ventana que muestra la página. Por
+                        ejemplo 16/9</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">device-aspect-ratio</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Relación de aspecto que debe de cumplir la pantalla. Por ejemplo 16/9</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-aspect-ratio</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Relación de aspecto máxima que debe de cumplir la ventana que muestra la página.
+                        Por ejemplo si ponemos 16/9 un ratio mayor (como 20/9) hace que el código no se ejecute.</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-device-aspect-ratio</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Máxima relación de aspecto, pero referida al dispositivo y no a la ventana</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-aspect-ratio</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Relación de aspecto mínima que debe de cumplir la ventana que muestra la
+                        página</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-device-aspect-ratio</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Relación de aspecto mínima que debe de cumplir el dispositivo que muestra la
+                        página</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">resolution</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Resolución del dispositivo.</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-resolution</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Resolución máxima del dispositivo (por ejemplo <em class="cursiva">300dpi</em>)
+                    </p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-resolution</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Resolución mínima del dispositivo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">color</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Indica si el dispositivo tiene capacidad para mostrar colores:</p>
+                    <table id="table011" class="tabla-codigo">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tabla-codigo">
+                            <td class="tabla-codigo celda-codigo">
+                                <pre class="codigo"><strong class="resaltado">@media </strong>print <strong
+                                        class="resaltado">and</strong> <strong class="resaltado">(</strong><span
+                                        class="atributo">color</span><strong class="resaltado">){</strong></pre>
+                                <pre class="codigo"><span
+                                        class="comentario">/* codigo que se ejecuta si se imprime a </span></pre>
+                                <pre class="codigo"><span class="comentario">&#9;color */</span></pre>
+                                <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="Normal">También permite indicar el número de bits de profundidad de colores del
+                        dispositivo:</p>
+                    <table id="table012" class="tabla-codigo">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tabla-codigo">
+                            <td class="tabla-codigo celda-codigo">
+                                <pre class="codigo"><strong class="resaltado">@media</strong><strong
+                                        class="resaltado"> </strong>print <strong class="resaltado">and (</strong><span
+                                        class="atributo">color</span><strong class="resaltado">:3){</strong></pre>
+                                <pre class="codigo"><strong class="resaltado"> </strong><span class="comentario">/* código que se ejecuta si se imprime    </span></pre>
+                                <pre class="codigo"><span
+                                        class="comentario">    con 3 bits de profundidad de color</span></pre>
+                                <pre class="codigo"><span class="comentario"> */</span></pre>
+                                <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">monochrome</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Indica si el dispositivo es monocromo y asignando un número, se entenderá que se
+                        refiere al número de bits disponibles para mostrar las gamas de colores monocromos.</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-color</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Máximo número de bits de profundidad para los colores del dispositivo de
+                        salida</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-color</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Mínimo número de bits de profundidad para los colores del dispositivo de
+                        salida</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">color-index</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">En dispositivos con colores indexados, indica el número de colores en la tabla de
+                        índices que tiene que tener el dispositivo para que el código CSS en esta directiva
+                        funcione.</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-color-index</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Máximo número de entradas de color</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-color-index</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Mínimo número de entradas de color</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">max-monochrome</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Máxima profundidad en bits de colores en una pantalla monocromo</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">min-monochrome</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Profundidad en bits de colores siendo monocromo el dispositivo.</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">scan</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Modo de escaneo de imágenes en el dispositivo, puede valer <strong
+                            class="Negritta" lang="en-US">progressive</strong> (modo progresivo) e <strong
+                            class="Negritta" lang="en-US">interlace</strong> (entrelazado)</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta" lang="en-US">grid</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Indica si el dispositivo es táctil. Ejemplo:</p>
+                    <table id="table013" class="tabla-codigo">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tabla-codigo">
+                            <td class="tabla-codigo celda-codigo">
+                                <pre class="codigo"><strong class="resaltado">@media</strong><strong
+                                        class="resaltado"> </strong>handheld <strong
+                                        class="resaltado">and</strong> (<span class="atributo">grid</span>)</pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="normalespacio">Ejemplo combinando consultas:</p>
+        <table id="table014" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">@media</strong> screen &#9;<strong class="resaltado">and</strong> <strong
+                            class="resaltado">(</strong><span class="atributo">device-max-width:</span><span
+                            class="texto">640px</span><strong class="resaltado">) </strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&#9;&#9;and (</strong><span
+                            class="atributo">orientation:</span><span class="texto">landscape</span><strong
+                            class="resaltado">){</strong></pre>
+                    <pre class="codigo"> <strong class="resaltado">html{</strong></pre>
+                    <pre class="codigo">&#9;&#9;<span class="atributo">font-size</span>:<span class="texto">10px</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2">En dispositivos con pantallas de menos de 640píxeles y que estén en formato horizontal, la
+            letra general o base mide 10 píxeles.</p>
+        <h3 class="titulo3"><span class="numero3">[14.2.5]</span><a id="_idTextAnchor013"></a>navegadores antiguos</h3>
+        <p class="Normal">Todos os navegadores modernos reconocen media queries. Si tenemos necesidad de utilizar en
+            navegadores antiguos podemos incorporar la librería JavaScript de <strong class="Negritta">Wouter van der
+                Graaf</strong>&#160;disponible en:</p>
+        <p class="Normal2"><a href="../../../css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.html"><span
+                    class="hyperlink">http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js</span></a>
+        </p>
+        <p class="Normal">Ejemplo de uso (código que enlaza dicha librería si nuestro navegador es Internet Explorer con
+            versión anterior a la 9):</p>
+        <table id="table015" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><span class="comentario">&lt;!--[if lt IE 9]&gt;</span></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;script</strong> <strong
+                            class="resaltado">src</strong><span class="texto">=</span></pre>
+                    <pre class="codigo"><span class="texto">”http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js”</span><strong
+                            class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/script&gt;</strong></pre>
+                    <pre class="codigo"><span class="comentario">&lt;![endif]--&gt;</span></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal"></p>
+        <hr class="HorizontalRule-1"/>
+        <div class="_idFootnotes">
+            <div id="footnote-000" class="_idFootnote">
+                <p class="pie"><a class="_idFootnoteAnchor _idGenColorInherit"
+                                  href="css-visualizacion-2.html#footnote-000-backlink">1</a>&#9;Más información en <a
+                        href="https://www.w3.org/TR/css3-mediaqueries/"><span class="hyperlink">https://www.w3.org/TR/css3-mediaqueries/</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/css-visualizacion.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:31:31 GMT -->
+</html>
+

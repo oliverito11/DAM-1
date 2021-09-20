@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <script>
+    function suma()
+    {
+		var numeroA=Number(document.getElementById("numeroA").value);
+		var numeroB=Number(document.getElementById("numeroB").value);
+		if (numeroA==""){
+				document.getElementById("Mensajes").innerHTML="El campo NúmeroA no ha sido completado";
+				document.getElementById("resultado").value="";
+				window.setTimeout("document.getElementById('Mensajes').innerHTML='';",1000)
+		}else if (numeroB=="") {
+				document.getElementById("Mensajes").innerHTML="El campo NúmeroB no ha sido completado";
+				document.getElementById("resultado").value="";
+				window.setTimeout("document.getElementById('Mensajes').innerHTML='';",1000)
+		}else {
+			var resultado=numeroA+numeroB;
+			if (resultado > "9999999999"){
+				document.getElementById("Mensajes2").innerHTML="El resultado excede el máximo permitido!";
+				document.getElementById("resultado").value="" ;
+				window.setTimeout("document.getElementById('Mensajes2').innerHTML='';",1000)
+			}else{
+				document.getElementById("resultado").value=resultado ;
+			}
+		}
+    }
+	function producto()
+    {
+        var numeroA=Number(document.getElementById("numeroA").value);
+		var numeroB=Number(document.getElementById("numeroB").value);
+		if (numeroA==""){
+				document.getElementById("Mensajes").innerHTML="El campo NúmeroA no ha sido completado";
+				document.getElementById("resultado").value="";
+				window.setTimeout("document.getElementById('Mensajes').innerHTML='';",1000)
+		}else if (numeroB=="") {
+				document.getElementById("Mensajes").innerHTML="El campo NúmeroB no ha sido completado";
+				document.getElementById("resultado").value="";
+				window.setTimeout("document.getElementById('Mensajes').innerHTML='';",1000)
+		}else {
+			var resultado=numeroA*numeroB;
+			document.getElementById("resultado").value=resultado ;
+			if (resultado > "9999999999"){
+				document.getElementById("Mensajes2").innerHTML="El resultado excede el máximo permitido!";
+				document.getElementById("resultado").value="" ;
+				window.setTimeout("document.getElementById('Mensajes2').innerHTML='';",1000)
+			}else{
+				document.getElementById("resultado").value=resultado ;
+			}
+		}
+    }
+    function porciento()
+    {
+        var numeroA=Number(document.getElementById("numeroA").value);
+		var numeroB=Number(document.getElementById("numeroB").value);
+		if (numeroA==""){
+				document.getElementById("Mensajes").innerHTML="El campo NúmeroA no ha sido completado";
+				document.getElementById("resultado").value="";
+				window.setTimeout("document.getElementById('Mensajes').innerHTML='';",1000)
+		}else if (numeroB=="") {
+				document.getElementById("Mensajes").innerHTML="El campo NúmeroB no ha sido completado";
+				document.getElementById("resultado").value="";
+				window.setTimeout("document.getElementById('Mensajes').innerHTML='';",1000)
+		}else {
+			var resultado=numeroA*numeroB/100;
+			document.getElementById("resultado").value=resultado ;
+			if (resultado > "9999999999"){
+				document.getElementById("Mensajes2").innerHTML="El resultado excede el máximo permitido!";
+				document.getElementById("resultado").value="" ;
+				window.setTimeout("document.getElementById('Mensajes2').innerHTML='';",1000)
+			}else{
+				document.getElementById("resultado").value=resultado ;
+			}
+		}
+    }
+    </script>
+    <style>
+        form   {margin:0 auto;
+				width:440px;
+				height:200px;
+				border:2px solid #ccc;
+				padding:10px;
+				border-radius:8px;
+				background-color:lightgrey;}
+        input[type=number]  {width:120px;
+				text-align:right;
+				padding: 4px 2px;
+				margin: 2px 0;
+				box-sizing: border-box;
+				border: 2px solid grey;
+				border-radius:4px;}
+		input[type=button]	{background-color:darkgrey;
+				color:brown;
+				font-weight:bold;
+				text-align:center;
+				padding: 4px;
+				margin: 10px 0;
+				box-sizing: border-box;
+				border: 2px solid grey;
+				border-radius:4px;}
+        span.form   {width:100px;
+				text-align:right;
+				padding: 2px 15px 4px 15px;
+				box-sizing: border-box;
+				border: 2px solid grey;
+				display:inline-block;
+				margin:2px 0 2px 0;}
+		span {text-align:center;
+				margin:o auto;
+				color:red;}
+		td, th {border:1px solid black; padding-left:5px; padding-right:5px;}
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Calculo 1</h1>
+    <form id="form1">
+        <br>
+		<input type="number" name="numeroA" max="9999999999" maxLength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="numeroA">
+		NúmeroA 
+		<input type="number" name="numeroB" max="9999999999" maxLength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="numeroB" style="position:relative;margin-left:50px;">
+		NúmeroB 
+		<br><span Id="Mensajes"></span><br>
+		<input type="button" value="Suma" onclick="suma()" style="position:relative;left:110px;">
+		<input type="button" value="Producto" onclick="producto()" style="position:relative;left:110px;margin-left:10px;">
+		<input type="button" value="%" onclick="porciento()" style="position:relative;left:110px;margin-left:10px;">
+		<br><br>
+		<input type="number" name="resultado" id="resultado" style="position:relative;">
+		Resultado 
+		<br><span Id="Mensajes2"></span><br>
+    </form>
+</body>
+</html>

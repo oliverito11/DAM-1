@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/css-posicionamiento.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:31:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Posicionamiento mediante CSS</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[15] </span><br>Posicionamiento mediante CSS</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+    <div id="_idContainer016" class="Marco-de-texto-b-sico">
+        <h2 class="titulo2"><span class="numero2">[15.1] </span><a id="_idTextAnchor000"></a>introducción</h2>
+        <p class="Normal2">Una de las grandes e históricas peticiones de los diseñadores web ha sido la posibilidad de
+            poder colocar contenido en una posición concreta de la página, haciendo que los contenidos no se vayan
+            mostrando en el orden en el que aparecen en el código, sino en el que decidamos libremente.</p>
+        <p class="Normal">Fue la principal aportación de CSS2 y ha provocado que, en lugar de usar tablas para definir
+            la maquetación de la página, ahora sean las capas las encargadas de hacerlo. Las <strong class="Negritta">capas </strong>son
+            elementos que permiten una distribución de contenidos más libre. La etiqueta <strong
+                class="Negritta">div</strong> suele ser la encargada de crear capas, aunque con HTML5 son otros
+            elementos los que también se usan para esta labor como <strong class="Negritta"
+                                                                           lang="en-US">section</strong> o <strong
+                class="Negritta" lang="en-US">article</strong>, ya que <strong class="Negritta">div</strong> no es una
+            etiqueta semántica (no dice qué tipo de contenido posee, si es un artículo, un título, un menú,…).</p>
+        <p class="Normal">Hay que tener en cuenta que la posición de un elemento también estará influido por su valor de
+            la propiedad display, como se explicó en el capítulo anterior.</p>
+        <h2 class="titulo2"><span class="numero2">[15.2] </span><a id="_idTextAnchor001"></a>flotación</h2>
+        <p class="Normal2">La propiedad <strong class="Negritta" lang="en-US">float </strong>es muy útil para contenidos
+            multimedia como imágenes o tablas. Permite indicar cómo se comporta el contenido de los elementos adyacentes
+            sobre el actual.</p>
+        <p class="Normal">Normalmente todos los elementos <em class="cursiva">no flotan</em>. Es decir, cuando
+            colocamos, por ejemplo, una imagen, el contenido que va a continuación aparece en su línea base, dejando un
+            hueco poco estético.</p>
+        <p class="Normal">Podemos hacer que ese contenido contornee la imagen a su derecha (<em class="cursiva">float:left</em>)
+            o a su izquierda (<em class="cursiva">float:right</em>). En definitiva, los posibles valores de la propiedad
+            <strong class="Negritta" lang="en-US">float </strong><span lang="en-US">son</span>:</p>
+        <ul>
+            <li class="punto"><strong class="Negritta" lang="en-US">left</strong>. El elemento <em
+                    class="cursiva">flota</em> a la izquierda. El contenido inmediatamente siguiente le contornea a su
+                derecha, siempre y cuando quepa
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">right</strong>. El elemento <em class="cursiva">flota</em>
+                a la derecha. El contenido inmediatamente siguiente le contornea a su izquierda.
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">none</strong>. El elemento no flota (valor por
+                defecto). En el caso del texto, la primera línea iría seguida al elemento, el resto caería por debajo.
+            </li>
+        </ul>
+        <p class="Normal">Hay que tener en cuenta que esta propiedad está pensada para elementos de bloque, que son
+            aquellos que tengan un display con valor <strong class="Negritta">block </strong>o <strong class="Negritta">inline-block</strong>.
+        </p>
+        <p class="Normal">Por ejemplo si tenemos este código HTML:</p>
+        <table id="table001" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;img</strong> <span
+                            class="atributo">src=</span><span class="texto">”friso.jpg”</span><strong class="resaltado"> alt=</strong><span
+                            class="texto">”Friso Egipcio”</span><strong class="resaltado">/&gt;</strong></pre>
+                    <pre class="codigo">    Lorem ipsum dolor sit amet, consectetur </pre>
+                    <pre class="codigo">    adipisicing elit. Ad, aliquam, aliquid </pre>
+                    <pre class="codigo">    aspernatur ducimus error harum illo in</pre>
+                    <pre class="codigo">    libero modi mollitia nostrum odit omnis rem, </pre>
+                    <pre class="codigo">    reprehenderit sed soluta tempore </pre>
+                    <pre class="codigo">    tenetur voluptatum.</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Y este código CSS:</p>
+        <table id="table002" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">img{</strong></pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">float:</strong><span class="atributo">none</span>;</pre>
+                    <pre class="codigo">      <strong class="resaltado">width:</strong><span
+                            class="atributo">300px</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal"><img src="css-posicionamiento-web-resources/image/1.png" alt=""/></p>
+        <p class="Normal">El texto que sigue a la imagen pega solo la primera línea. Este es el comportamiento normal de
+            flotación de elementos de tipo <strong class="Negritta">inline-block </strong>(al que pertenece la imagen).
+        </p>
+        <p class="Normal">En el caso de que la imagen estuviera dentro de un contenedor de bloque (un elemento <strong
+                class="Negritta">div </strong>por ejemplo), ni la primera línea aparecería seguida.</p>
+        <p class="Normal">Sin embargo el mismo código HTML usando <strong class="Negritta">float-left</strong>, queda
+        </p>
+        <p class="Normal2"><img src="css-posicionamiento-web-resources/image/2.png" alt=""/></p>
+        <p class="Normal">En el caso de flotación derecha (<strong class="Negritta">float-right</strong>):</p>
+        <p class="Normal"><span class="tituloEpigrafe"><img src="css-posicionamiento-web-resources/image/3.png" alt=""/></span>
+        </p>
+        <h3 class="titulo3"><span class="numero3">[15.2.1]</span><a id="_idTextAnchor002"></a>propiedad shape-outside
+        </h3>
+        <p class="Normal2">Muchos diseñadores se han quejado durante años de la imposibilidad de que el texto contornee
+            a las imágenes al estilo de los programas de autoedición (como por ejemplo <strong
+                class="Negritta">InDesign </strong>o <strong class="Negritta">QuarkXPress</strong>). </p>
+        <p class="Normal">El caso es que CSS aporta una nueva propiedad llamada shape-outside que, desgraciadamente, no
+            la reconoce del todo casi ningún navegador, aunque sí las últimas versiones del popular navegador Google
+            Chrome.</p>
+        <p class="Normal">Esta propiedad permite diseñar una forma a través del cual el contenido adyacente se
+            contornea. Por supuesto, el elemento debe de poseer valores left o right para la propiedad float para que
+            <strong class="Negritta">shape-outside </strong>haga su labor.</p>
+        <p class="Normal">Las posibles valores de esta propiedad son:</p>
+        <ul>
+            <li class="punto"><strong class="Negritta">none</strong>. La forma de la imagen flotada será rectangular.
+            </li>
+            <li class="punto"><strong class="Negritta">margin-box</strong>. El contenido se contornea a través del
+                margen de la imagen. Es la distancia habitual
+            </li>
+            <li class="punto"><strong class="Negritta">content-box</strong>. El contenido se acerca al contenido del
+                elemento, más allá del margen y del relleno.
+            </li>
+            <li class="punto"><strong class="Negritta">border-box</strong>. El contenido se contornea alrededor del
+                borde.
+            </li>
+            <li class="punto"><strong class="Negritta">padding-box</strong>. El contenido se contornea alrededor del
+                relleno del elemento.
+            </li>
+            <li class="punto"><strong class="Negritta">circle()</strong>. Función que permite indicar un círculo a
+                través del cual el texto se contornea.
+            </li>
+            <li class="punto"><strong class="Negritta">ellipse()</strong>. En este caso se usa una forma elíptica.</li>
+            <li class="punto"><strong class="Negritta">url(ruta)</strong>. Se usa la ruta a una imagen a cuya forma
+                (suponiendo que sea PNG o GIF con píxeles transparentes) se adaptará el contenido.
+            </li>
+            <li class="punto"><strong class="Negritta">polygon()</strong>. Permite indicar coordenadas para establecer
+                un polígono alrededor del cual se contorneará el texto. Existe un plugin para el navegador muy útil
+                llamado <strong class="Negritta">Shape Editor</strong> que permite indicar fácilmente estas coordenadas
+                de forma visual. Simplemente se instala el plugin y se siguen las instrucciones.
+            </li>
+        </ul>
+        <p class="Normal">Para profundizar con ejemplos en el uso de esta propiedad se puede ver el vídeo disponible en
+            la dirección:</p>
+        <p class="Normal"><a href="https://www.youtube.com/watch?v=7INGXiuialw"><span class="hyperlink">https://www.youtube.com/watch?v=7INGXiuialw</span></a>
+        </p>
+        <h2 class="titulo2"><span class="numero2">[15.3] </span><a id="_idTextAnchor003"></a>tamaño del elemento</h2>
+        <p class="Normal2">Dos propiedades permiten establecer el tamaño de un elemento:</p>
+        <ul>
+            <li class="punto"><strong class="Negritta" lang="en-US">width</strong>. Anchura del elemento. Su valor por
+                defecto es <strong class="Negritta">auto</strong>, lo que implica que el elemento se hará lo
+                suficientemente ancho para que quepa su contenido. De otro modo indicaremos su tamaño utilizando la
+                unidad de medida deseada (<strong class="Negritta">px</strong>, <strong class="Negritta">em</strong>,
+                <strong class="Negritta">%</strong>, etc.). <p class="sinpunto">En el caso de las unidades relativas, se
+                    toma como referencia lo que mide el contenedor; si indicamos un 50% a un elemento que está dentro de
+                    un elemento <strong class="Negritta">div</strong>, tomará la mitad de la anchura de ese <strong
+                        class="Negritta">div</strong>, si nuestro elemento cuelga directamente de <strong
+                        class="Negritta">body</strong>, tomará la mitad de la anchura de la página.</p></li>
+            <li class="punto"><strong class="Negritta" lang="en-US">height</strong>. Altura del elemento. Tiene las
+                mismas posibilidades que el elemento anterior.
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">max</strong><strong
+                    class="Negritta">-</strong><strong class="Negritta" lang="en-US">width</strong>. Se utiliza cuando
+                la medida de la anchura de un elemento se indica de forma relativa, por ejemplo con porcentajes. Esta
+                propiedad indica un tamaño máximo para el elemento. <p class="sinpunto">Es decir, si hemos indicado <em
+                        class="cursiva">width:50%;</em> y además <em class="cursiva">max-width:750px;</em> entonces el
+                    elemento medirá de ancho la mitad de su contenedor. Si por ejemplo el contenedor mide 2000 píxeles,
+                    nuestro elemento mediría 1000 píxeles aplicando el 50%; pero como hemos indicado la propiedad <em
+                        class="cursiva">max-width:750px</em>, medirá exactamente 750 píxeles.</p>
+                <p class="sinpunto">Esta propiedad es muy interesante para aplicar diseños de tipo adaptable.</p></li>
+            <li class="punto"><strong class="Negritta" lang="en-US">min-width</strong>. La idea es la misma que en la
+                propiedad anterior, pero ahora se indica un tamaño mínimo que tendrá prioridad sobre el tamaño relativo
+                de la propiedad <strong class="Negritta">width</strong>.
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">max-height</strong>. La misma idea aplicada a la
+                altura del elemento. Indica la altura máxima que podrá tomar el elemento.
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">min-height</strong>. Altura mínima del elemento.<h2
+                    class="titulo2"><span class="numero2">[15.4] </span><a id="_idTextAnchor004"></a>posicionamiento
+                </h2></li>
+        </ul>
+        <p class="Normal2">La propiedad <strong class="Negritta" lang="en-US">position</strong> es la fundamental para
+            establecer el posicionamiento. Sirve para indicar de qué forma un elemento fluye por la página. Gracias esta
+            propiedad podremos indicar si el elemento al que se aplica realmente se comportará como una capa de
+            contenidos que se colocará libremente en la página. Se detallan los posibles valores que puede tomar <strong
+                class="Negritta">position</strong>.</p>
+        <h3 class="titulo3"><span class="numero3">[15.4.1]</span><a id="_idTextAnchor005"></a>posicionamiento estático
+        </h3>
+        <p class="Normal">Se consigue usando el valor <strong class="Negritta" lang="en-US">static</strong> en la
+            propiedad <strong class="Negritta">position</strong>. </p>
+        <p class="Normal">El posicionamiento estático es el que se aplica por defecto. Si se establece así, el elemento
+            al que se aplique aparece en la página en la posición que dicte el flujo natural (de izquierda a derecha y
+            de arriba abajo) del código. Es decir, ignorará las propiedades de posicionamiento (<strong class="Negritta"
+                                                                                                        lang="en-US">left</strong><span
+                lang="en-US">, </span><strong class="Negritta" lang="en-US">top</strong><span
+                lang="en-US">, </span><strong class="Negritta" lang="en-US">right </strong>y<strong
+                class="Negritta"> </strong><strong class="Negritta" lang="en-US">bottom</strong>).</p>
+        <h3 class="titulo3"><span class="numero3">[15.4.2]</span><a id="_idTextAnchor006"></a>posicionamiento relativo
+        </h3>
+        <p class="Normal">Se logra con el valor<span lang="en-US"> </span><strong class="Negritta"
+                                                                                  lang="en-US">relative</strong>.
+            Funciona como <strong class="Negritta" lang="en-US">static</strong> solo que, en este caso, sí permite
+            modificar su posición inicial usando las propiedades <strong class="Negritta"
+                                                                         lang="en-US">left</strong><span
+                lang="en-US">, </span><strong class="Negritta" lang="en-US">top</strong><span
+                lang="en-US">, </span><strong class="Negritta" lang="en-US">right </strong>y<strong
+                class="Negritta"> </strong><strong class="Negritta" lang="en-US">bottom</strong>. </p>
+        <p class="Normal">En modo <strong class="Negritta" lang="en-US">relative</strong>, el elemento marcado con este
+            posicionamiento sí se mueve con las propiedades de posicionamiento, pero deja el hueco que le correspondería
+            en modo <strong class="Negritta" lang="en-US">static</strong>. En definitiva, <strong class="Negritta">relative</strong>
+            provoca un desplazamiento en el elemento.</p>
+        <p class="Normal">Ejemplo de posicionamiento relative:</p>
+        <table id="table003" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;!doctype html&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;html </strong><span
+                            class="atributo">lang=</span><span class="texto">”es”</span><strong
+                            class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;meta </strong><span
+                            class="atributo">charset=</span><span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;title&gt;</strong>Estático<strong
+                            class="resaltado">&lt;/title&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;style&gt;</strong></pre>
+                    <pre class="codigo">        <strong class="resaltado">div{</strong></pre>
+                    <pre class="codigo">            <span class="atributo">width:</span><span
+                            class="texto">400px;</span></pre>
+                    <pre class="codigo">            <span class="atributo">border:</span><span class="texto">2px solid gray;</span></pre>
+                    <pre class="codigo"><strong class="resaltado">        }</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        #capa1{</strong></pre>
+                    <table id="table004" class="tablaRemarcada">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tablaRemarcada">
+                            <td class="tablaRemarcada celda-remarcada">
+                                <pre class="codigo">           <span class="atributo">position:</span><span
+                                        class="texto">relative;</span></pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre class="codigo">            <span class="atributo">left:</span><span class="texto">80px;</span></pre>
+                    <pre class="codigo">            <span class="atributo">top:</span><span
+                            class="texto">40px;</span></pre>
+                    <pre class="codigo">            <strong class="resaltado">background-color: </strong><span
+                            class="atributo">lightgrey;</span></pre>
+                    <pre class="codigo">        <strong class="resaltado">}</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;div </strong><span
+                            class="atributo">id=</span><span class="texto">”capa1”</span><strong
+                            class="resaltado">&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae blanditiis consequatur debitis</pre>
+                    <pre class="codigo">    deleniti ducimus ea in maiores, molestias mollitia, nisi, quaerat. Consequatur eveniet fugit impedit incidunt odit</pre>
+                    <pre class="codigo">    quas ullam?</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/div&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;div&gt;</strong>Ab amet deserunt eaque, eveniet hic illo itaque magni reprehenderit soluta temporibus ut vel. Architecto at, facere</pre>
+                    <pre class="codigo">    id iste laboriosam praesentium provident sint. Aliquam asperiores et molestias, optio sit ullam.</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/div&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;div&gt;</strong>Beatae culpa cupiditate rem similique ullam. Aliquid atque eaque eius error ex expedita harum id itaque iure</pre>
+                    <pre class="codigo">    laboriosam nemo quasi quos repellendus rerum sapiente, tempora temporibus veniam voluptas voluptate voluptatem?</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/div&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">El resultado es el que se observa en la <a href="#">Ilustración 116</a>, el primer párrafo se
+            desplaza pero deja el hueco que ocuparía la capa en el posicionamiento habitual, <em
+                class="cursiva">static</em>.</p>
+        <p class="Normal"><strong class="Negritta"><img src="css-posicionamiento-web-resources/image/4.png"
+                                                        alt=""/></strong></p>
+        <h3 class="titulo3"><span class="numero3">[15.4.3]</span><a id="_idTextAnchor007"></a>posicionamiento fijo</h3>
+        <p class="Normal">El valor para este posicionamiento es <strong class="Negritta" lang="en-US">fixed</strong>.
+            Con este posicionamiento, el elemento flota libremente por la ventana y abandona el hueco que, por su orden
+            natural, le correspondería. De hecho, ese hueco se elimina y le ocupa el siguiente elemento disponible. La
+            posición del elemento se fija en base a las coordenadas de la ventana, independientemente de dónde esté
+            situado o contenido el elemento. Es decir toma como referencia la ventana del documento de modo que la
+            esquina superior izquierda será la coordenada 0,0.</p>
+        <p class="Normal">La posición de los elementos fixed, además, no varía cuando el usuario desplace (<em
+                class="cursiva">scroll</em>) la ventana. La posición que ocupan los elementos <em
+                class="cursiva">fixed</em> no se modifica con el scroll.</p>
+        <p class="Normal">Usando el mismo código del apartado anterior, si el posicionamiento fuera fixed, ocurre lo
+            siguiente:</p>
+        <p class="Normal"><img src="css-posicionamiento-web-resources/image/5.png" alt=""/></p>
+        <p class="Normal">Aunque la posición de la capa es la misma que en el caso del posicionamiento relativo, se
+            observa, que el hueco que ocupaba la misma, esta totalmente ocupada por la capa siguiente. Con el
+            posicionamiento fijo, la capa realmente flota por encima del documento.</p>
+        <h3 class="titulo3"><span class="numero3">[15.4.4]</span><a id="_idTextAnchor008"></a>posicionamiento absoluto
+        </h3>
+        <p class="Normal">El valor de la propiedad <strong class="Negritta">position</strong> relacionado con este
+            posicionamiento es <strong class="Negritta" lang="en-US">absolute</strong>. </p>
+        <p class="Normal">Como ocurría con el valor <strong class="Negritta" lang="en-US">fixed, </strong>permite
+            cambiar la posición del elemento a voluntad, pero toma como referencia la de su contenedor (en lugar de la
+            ventana); siempre que el contenedor no tenga posicionamiento <strong class="Negritta">static</strong>. Si el
+            contenedor es <em class="cursiva">static</em>, se usa al contenedor de dicho contenedor (si no es <em
+                class="cursiva">static</em>) y así sucesivamente hasta encontrar un ancestro que no sea <em
+                class="cursiva">static</em> o bien llegar al elemento <em class="cursiva">body</em>, en cuyo caso se
+            tomará (como ocurre con <em class="cursiva">fixed</em>) a la ventana como origen de coordenadas. </p>
+        <p class="Normal">Es decir, si tenemos un elemento (por ejemplo de tipo <strong class="Negritta">div</strong>)
+            identificado como <em class="cursiva">interior</em> dentro de otro div llamado <em
+                class="cursiva">padre</em>, si utilizamos la propiedad <strong
+                class="Negritta">position:absolute;</strong> dentro del CSS de la capa interior, entonces las
+            coordenadas de la capa <em class="cursiva">interior</em> tomarán los límites de la capa <em class="cursiva">padre</em>
+            como referencia. Poniendo en la capa interior: <strong class="Negritta">left:30px;</strong> separamos esta
+            capa treinta píxeles del margen izquierdo de la capa padre (en lugar de separarnos del borde de la ventana
+            como hace <strong class="Negritta" lang="en-US">fixed</strong>). </p>
+        <p class="Normal">Ahora bien si el padre es <em class="cursiva">static</em>, entonces tendríamos que tomar las
+            coordenadas del padre de ese padre (<em class="cursiva">abuelo</em>) suponiendo que no sea <em
+                class="cursiva">static</em>.</p>
+        <p class="Normal">Hay otra importante diferencia. Con <em class="cursiva">fixed</em>, los elementos no varían la
+            posición dentro de la ventana, pero con <em class="cursiva">absolute</em> sí. Por lo que los elementos de
+            tipo <em class="cursiva">absolute </em>sí son desplazables.</p>
+        <p class="Normal">Ejemplo (posicionamiento absoluto):</p>
+        <table id="table005" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span
+                            class="atributo">html</span><strong class="resaltado">&gt;<br/>&lt;html</strong> <span
+                            class="atributo">lang</span><span class="texto">=”es”</span><strong
+                            class="resaltado">&gt;<br/>&lt;head&gt;<br/></strong>  <strong class="resaltado">&lt;title&gt;</strong>Absolute<strong
+                            class="resaltado">&lt;/title&gt;</strong><br/>  <strong
+                            class="resaltado">&lt;style&gt;</strong><br/><strong
+                            class="resaltado">    </strong>div{<br/>&#9;<strong
+                            class="resaltado">position</strong>:<span class="atributo">fixed</span>;<br/>&#9;<strong
+                            class="resaltado">left</strong>:<span class="atributo">50px</span>;<br/>&#9;<strong
+                            class="resaltado">top</strong>:<span class="atributo">50px</span>;<br/>&#9;<strong
+                            class="resaltado">width</strong>:<span class="atributo">600px</span>;<br/>&#9;<strong
+                            class="resaltado">height</strong>:<span class="atributo">300px</span>;<br/>&#9;<strong
+                            class="resaltado">background-color</strong>: <span class="atributo">gray</span>;</pre>
+                    <pre class="codigo">    }<br/>    p{</pre>
+                    <table id="table006" class="tablaRemarcada">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tablaRemarcada">
+                            <td class="tablaRemarcada celda-remarcada">
+                                <pre class="remarcado">&#9;<strong class="resaltado">position</strong>:<span
+                                        class="atributo">absolute</span>;</pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre class="codigo">&#9; <strong class="resaltado">background-color</strong>: <span
+                            class="atributo">lightgray</span>;<br/>&#9; <strong class="resaltado">width</strong>:<span
+                            class="atributo">75</span>%;<br/>&#9; <strong class="resaltado">left</strong>:<span
+                            class="atributo">40px</span>;<br/><strong class="resaltado">    </strong>}</pre>
+                </td>
+            </tr>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">  <strong class="resaltado">&lt;/style&gt;<br/>&lt;/head&gt;</strong></pre>
+                    <pre class="codigo"><strong
+                            class="resaltado">&lt;body&gt;<br/>  &lt;div&gt;<br/>    &lt;p&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur provident eum praesentium placeat aperiam enim non voluptatem ab eaque modi laboriosam error esse dicta in impedit debitis vel veniam optio dolore facilis est dolorem ut officiis excepturi sint quasi fugit fugiat! Assumenda numquam amet porro sint nemo non perspiciatis vero laboriosam voluptate vel nihil deleniti ut consequuntur! In accusamus assumenda harum veniam blanditiis tenetur excepturi debitis sit est minima vel quia nihil? </pre>
+                    <pre class="codigo">    <strong
+                            class="resaltado">&lt;/p&gt;<br/> &lt;/div&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Mostraría este resultado:</p>
+        <p class="Normal2"><img src="css-posicionamiento-web-resources/image/6.png" alt=""/></p>
+        <p class="Normal2">Si modificamos el CSS y cambiamos la línea remarcada a <strong class="Negritta">position:fixed</strong>:
+        </p>
+        <p class="Normal2"><img src="css-posicionamiento-web-resources/image/7.png" alt=""/></p>
+        <p class="Normal2">Ahora el párrafo se sale de su contenedor porque las coordenadas se refieren a la ventana y
+            no se calculan a partir de la etiqueta <strong class="Negritta">div</strong> que contiene al párrafo.</p>
+        <h2 class="titulo2"><span class="numero2">[15.5] </span><a id="_idTextAnchor009"></a>establecer coordenadas de
+            posicionamiento</h2>
+        <p class="Normal2">Cuatro propiedades se encargan de mostrar un elemento en una posición exacta en la
+            página:</p>
+        <ul>
+            <li class="punto"><strong class="Negritta" lang="en-US">left</strong>. Permite indicar la coordenada
+                izquierda del elemento. Tomada desde el margen izquierdo
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">top</strong>. Coordenada superior. Tomada desde el
+                borde superior.
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">bottom</strong>. Coordenada inferior. Distancia al
+                borde inferior
+            </li>
+            <li class="punto"><strong class="Negritta" lang="en-US">right</strong>. Coordenada derecha. Distancia al
+                borde derecho.
+            </li>
+        </ul>
+        <p class="Normal2">Las coordenadas se calculan desde la referencia de coordenadas establecidas por la propiedad
+            <strong class="Negritta" lang="en-US">position</strong>. Si es <strong class="Negritta"
+                                                                                   lang="en-US">fixed</strong> se toma
+            los bordes de la ventana. Es incompatible usar <strong class="Negritta" lang="en-US">bottom</strong> y
+            <strong class="Negritta" lang="en-US">right</strong> y, a la vez, los tamaños con <strong class="Negritta"
+                                                                                                      lang="en-US">width</strong>
+            y <strong class="Negritta" lang="en-US">height</strong>. </p>
+        <p class="Normal2">Ejemplo:</p>
+        <table id="table007" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span
+                            class="atributo">html</span><strong class="resaltado">&gt;<br/>&lt;html</strong> <span
+                            class="atributo">lang</span><span class="texto">=”es”</span><strong
+                            class="resaltado">&gt;<br/>    &lt;head&gt;<br/>        &lt;meta </strong><span
+                            class="atributo">charset</span><span class="texto">=”UTF-8”</span><strong class="resaltado">&gt;</strong><br/>       <strong
+                            class="resaltado">     &lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong><br/>       <strong
+                            class="resaltado">     &lt;style&gt;</strong><br/><strong class="resaltado">&#9;&#9;&#9;&#9;&#9;</strong>div{<br/>&#9;&#9;&#9;&#9;&#9;&#9;<strong
+                            class="resaltado">position</strong>:<span class="atributo">fixed</span>;</pre>
+                    <pre class="remarcado">&#9;&#9;&#9;&#9;&#9;&#9;<strong class="resaltado">left</strong>:<span
+                            class="atributo">50px</span>;<br/>&#9;&#9;&#9;&#9;&#9;&#9;<strong
+                            class="resaltado">top</strong>:<span class="atributo">50px</span>;<br/>&#9;&#9;&#9;&#9;&#9;&#9;<strong
+                            class="resaltado">right</strong>:<span class="atributo">80px</span>;<br/>&#9;&#9;&#9;&#9;&#9;&#9;<strong
+                            class="resaltado">bottom</strong>:1<span class="atributo">00px</span>;</pre>
+                    <pre class="codigo">&#9;&#9;&#9;&#9;&#9;&#9;<strong
+                            class="resaltado">background-color</strong>: <span
+                            class="atributo">yellow</span>;<br/><strong class="resaltado">&#9;&#9;&#9;&#9;&#9;</strong>}<br/>&#9;&#9;&#9;&#9;<strong
+                            class="resaltado">&lt;/style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/head&gt;<br/>    &lt;body&gt;<br/>        &lt;div&gt;<br/>            &lt;p&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur provident eum praesentium placeat aperiam enim non voluptatem ab eaque modi laboriosam error esse dicta in impedit debitis vel veniam optio dolore facilis est dolorem ut officiis excepturi sint quasi fugit fugiat! Assumenda numquam amet porro sint nemo non perspiciatis vero laboriosam voluptate vel nihil deleniti ut consequuntur! In accusamus assumenda harum veniam blanditiis tenetur excepturi debitis sit est minima vel quia nihil? Accusamus beatae quod hic </pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="table008" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">optio nostrum quibusdam adipisci modi aspernatur alias eaque laudantium dignissimos sed pariatur dolore obcaecati explicabo maxime possimus dolores non facilis deleniti placeat laborum recusandae<strong
+                            class="resaltado">!&lt;/p&gt;<br/>        &lt;/div&gt;<br/>    &lt;/body&gt;<br/>&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2">Resultado:</p>
+        <p class="Normal2"><img src="css-posicionamiento-web-resources/image/8.png" alt=""/></p>
+        <h2 class="titulo2"><span class="numero2">[15.6] </span><a id="_idTextAnchor010"></a>coordenada <strong
+                class="Negritta">z </strong></h2>
+        <p class="Normal2">La pantalla es un medio en dos dimensiones y por tanto la posición de los elementos se indica
+            con las coordenadas <em class="cursiva">x</em> e <em class="cursiva">y</em>. Sin embargo se puede simular la
+            tercera dimensión (la profundidad) mediante una coordenada ficticia, <em class="cursiva">z</em>.</p>
+        <p class="Normal">Realmente, lo que aporta es la posibilidad de que los elementos se solapen y podamos decidir
+            qué elemento está por encima, de modo que el que tenga la coordenada z más alta diríamos que está más cerca
+            del espectador y por lo tanto tiene prioridad; es decir, quedará <em class="cursiva">encima</em> de los
+            otros.</p>
+        <p class="Normal">Es el mismo efecto que logran los sistemas operativos gráficos como Windows u OS X cuando
+            tenemos dos ventanas solapadas; una de ellas tapa a la otra entendiendo que está <em class="cursiva">por
+                delante</em>.</p>
+        <p class="Normal">La propiedad que permite controlar la coordenada z es<strong class="Negritta" lang="en-US">
+                z-index </strong>a la que se le otorga un número entero de modo que cuanto mayor sea, más quedará por
+            delante de los otros elementos. El texto normal (de elementos que no tengan marcado un <em class="cursiva">z-index</em>)
+            está en el nivel cero; con lo cual, si indicamos un nivel negativo en la propiedad <em class="cursiva">z-index</em>
+            de un elemento, entenderemos que por detrás del contenido normal (no se verá el elemento, quedará tapado).
+        </p>
+        <p class="Normal">Hay que tener en cuenta que incluso a las capas se les puedan dar valores negativos,
+            entendiendo que por debajo del cero estamos por debajo del texto normal de la página.</p>
+        <p class="Normal">Por ejemplo si tenemos este código CSS:</p>
+        <table id="table009" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">#capa1<strong class="resaltado">{</strong></pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">position</strong>:<span
+                            class="atributo">fixed</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">left</strong>:<span class="atributo">50px;</span></pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">top</strong>:<span
+                            class="atributo">50px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">width</strong>:<span class="atributo">400px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">height</strong>:<span
+                            class="atributo">300px</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;background-color</strong>:<span class="atributo">cyan</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;z-index:</strong><span class="atributo">1</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">}</strong>&#9;</pre>
+                    <pre class="codigo">#capa2<strong class="resaltado">{</strong></pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">position</strong>:<span
+                            class="atributo">fixed</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">left</strong>:<span class="atributo">100px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">top</strong>:<span class="atributo">100px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">width</strong>:<span class="atributo">400px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">height</strong>:<span
+                            class="atributo">300px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">background-color</strong>:<span class="atributo">cyan</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">z-index</strong>:<span class="atributo">1</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                    <pre class="codigo">#capa3<strong class="resaltado">{</strong></pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">position</strong>:<span
+                            class="atributo">fixed</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">left</strong>:<span class="atributo">150px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">top</strong>:<span class="atributo">150px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">width</strong>:<span class="atributo">400px</span>;</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">height</strong>:<span
+                            class="atributo">300px</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;background-color</strong>:<span class="atributo">cyan</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;z-index</strong>:<span class="atributo">1</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">}</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2"><img src="css-posicionamiento-web-resources/image/9.png" alt=""/></p>
+        <p class="Normal2">Si creamos tres elementos con esos identificadores y el mismo contenido, el resultado es el
+            que muestra la <a href="#">Ilustración 121</a>.</p>
+        <h2 class="titulo2"><span class="numero2">[15.7] </span><a id="_idTextAnchor011"></a>visibilidad de los
+            contenidos</h2>
+        <h3 class="titulo3"><span class="numero3">[15.7.1]</span><a id="_idTextAnchor012"></a>desbordamiento</h3>
+        <p class="Normal2">El contenido de las capas puede ocupar más que las dimensiones que le hemos dado a la misma.
+            En este caso podemos establecer cómo comportarnos respecto al contenido</p>
+        <h3 class="titulo3"><span class="numero3">[15.7.2]</span><em class="cursiva"><a id="_idTextAnchor013"></a>overflow</em>,
+            desbordamiento</h3>
+        <p class="Normal">Se trata de una propiedad que permite decidir la política que debe adoptar el navegador cuando
+            un contenido rebasa el tamaño previsto de su contenedor. Posibles valores<strong class="Negritta">:</strong>
+        </p>
+        <ul>
+            <li class="punto"><strong class="Negritta">visible. </strong>El contenido se muestra aun cuando rebase el
+                tamaño previsto<strong class="Negritta">.</strong></li>
+            <li class="punto"><strong class="Negritta">hidden. </strong>Oculta el contenido que rebasa el tamaño
+                prefijado para la capa:
+            </li>
+            <li class="punto"><strong class="Negritta">scroll. </strong>Se muestra barras de desplazamiento para poder
+                acceder al contenido que supera el tamaño esta€blecido para la capa<strong class="Negritta">.</strong>
+            </li>
+            <li class="punto"><strong class="Negritta">auto. </strong>Es igual que el anterior, pero las barras solo se
+                muestran si el contenido no cabe en el tamaño fijado para la capa; si sí cabe no se muestra barra de
+                desplazamiento alguna.
+            </li>
+        </ul>
+        <p class="Normal">Por ejemplo en este código:</p>
+        <table id="table010" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&#9;</strong>#capa1{</pre>
+                    <pre class="codigo">            <strong class="resaltado">position:</strong><span class="atributo">fixed</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">left:</strong><span
+                            class="atributo">50px</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">top:</strong><span
+                            class="atributo">50px</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">width:</strong><span class="atributo">500px</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">height:</strong><span class="atributo">100px</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">background-color:</strong> <span
+                            class="atributo">orange</span>;</pre>
+                    <table id="table011" class="tablaRemarcada">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tablaRemarcada">
+                            <td class="tablaRemarcada celda-remarcada">
+                                <pre class="codigo">&#9;&#9;&#9;  <strong class="resaltado">overflow:</strong><span
+                                        class="atributo">visible</span>;</pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre class="codigo">        }</pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+                </td>
+            </tr>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+                    <pre class="codigo">  <strong class="resaltado">&lt;div </strong><span
+                            class="atributo">id=</span><span class="texto">”</span><span
+                            class="texto">capa1”</span><strong class="resaltado">&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto asperiores atque earum et, eveniet incidunt iure magnam maxime nesciunt nisi quas quibusdam rem repellat rerum sunt, tempora. Expedita ipsum laudantium modi mollitia voluptatem! Dolores earum eius iure suscipit voluptatibus. Autem, consectetur, praesentium. Cumque eligendi fugiat itaque nihil, nisi praesentium quidem quod totam. Commodi deserunt earum laborum laudantium natus nisi, odio optio provident quas quia, quo sequi tempora tempore temporibus, tenetur! Aliquam cum cupiditate doloremque, ea laboriosam nobis odit praesentium similique? Adipisci amet asperiores beatae dignissimos doloremque eaque eum fugiat ipsam laboriosam, libero minima molestiae mollitia possimus quam repudiandae ut.</pre>
+                    <pre class="codigo">  <strong class="resaltado">&lt;/div&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="sinpunto">Se ha establecido <strong class="Negritta">overflow:visible</strong>, lo que provoca:</p>
+        <p class="Normal"><strong class="Negritta"><img src="css-posicionamiento-web-resources/image/10.png"
+                                                        alt=""/></strong></p>
+        <p class="Normal">Si hubiéramos elegido <strong class="Negritta">overflow:hidden,</strong> el resultado sería
+            (dramatizando lo oculto como semitransparente:</p>
+        <p class="Normal"><strong class="Negritta"><img src="css-posicionamiento-web-resources/image/11.png"
+                                                        alt=""/></strong></p>
+        <p class="Normal">El texto que rebasa el tamaño de la capa, no se ve.</p>
+        <p class="Normal">Finalmente, con <strong class="Negritta">overflow:scroll </strong>se obtiene:</p>
+        <p class="Normal"><strong class="Negritta"><img src="css-posicionamiento-web-resources/image/12.png"
+                                                        alt=""/></strong></p>
+        <h3 class="titulo3"><span class="numero3">[15.7.3]</span><strong class="Negritta" lang="en-US"><a
+                    id="_idTextAnchor014"></a>desbordamiento horizontal y vertical</strong></h3>
+        <p class="Normal2">Las propiedad <strong class="Negritta">overflow</strong> vista en el apartado anterior trata
+            de igual forma el desbordamiento horizontal y el vertical. Sin embargo es posible tratar de manera distinta
+            el desbordamiento en horizontal (<strong class="Negritta">overflow-x</strong>) y el vertical (<strong
+                class="Negritta">overflow-y</strong>). </p>
+        <p class="Normal">Así por ejemplo en el último ejemplo anterior, si en lugar de establecer <br/><strong
+                class="Negritta">overflow:scroll</strong>, establecemos <strong
+                class="Negritta">overflow-y:scroll</strong>, entonces se tomará para el desbordamiento horizontal la
+            opción visible (se muestra el contenido y no se muestra barra alguna de desplazamiento), mientras que sí
+            habrá barras para el desplazamiento vertical:</p>
+        <p class="Normal"><img src="css-posicionamiento-web-resources/image/13.png" alt=""/></p>
+        <p class="Normal">Solo aparece la barra vertical (además de mostrar una línea más gracias a no tener que mostrar
+            la barra de desplazamiento horizontal).</p>
+        <p class="Normal">Los posibles valores para <strong class="Negritta">overflow-x </strong>y <strong
+                class="Negritta">overflow-y </strong>son los mismos que para <strong class="Negritta">overflow</strong>.
+        </p>
+        <h3 class="titulo3"><span class="numero3">[15.7.4]</span><a id="_idTextAnchor015"></a>propiedad <strong
+                class="Negritta">visibility</strong></h3>
+        <p class="Normal">En el apartado <a href="#">[14.1] propiedad display en la página 282</a>, se mostró como el uso
+            de <strong class="Negritta">display:none</strong> ocultaba un elemento HTML. La cuestión es que esta es una
+            ocultación absoluta, en el sentido en el que dicho elemento deja de formar parte de los contenidos del
+            documento y no sería por tanto accesible desde lenguajes como JavaScript que intenten acceder a dicho
+            elemento.</p>
+        <p class="Normal">Por ello puede ser interesante utilizar la propiedad <strong
+                class="Negritta">visibility</strong>. Esta propiedad puede tomar los valores:</p>
+        <ul>
+            <li class="punto"><strong class="Negritta">visible</strong>. Valor por defecto que establece que el elemento
+                es visible en la página
+            </li>
+            <li class="punto"><strong class="Negritta">hidden</strong>. El elemento es invisible, pero ocupa el espacio
+                que le correspondería en ella.
+            </li>
+        </ul>
+        <p class="normalespacio">Así, por ejemplo este código:</p>
+        <table id="table012" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <table id="table013" class="tablaRemarcada">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tablaRemarcada">
+                            <td class="tablaRemarcada celda-remarcada">
+                                <pre class="codigo"><strong class="resaltado">&lt;p </strong><span class="atributo">style=</span><span
+                                        class="texto">”visibility: hidden”</span><strong class="resaltado">&gt;</strong></pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre class="codigo">    Lorem ipsum dolor sit amet, consectetur adipisicing</pre>
+                    <pre class="codigo">    elit. Atque corporis deserunt laboriosam </pre>
+                    <pre class="codigo">    praesentium, soluta sunt tenetur! Accusantium </pre>
+                    <pre class="codigo">    aliquam animi commodi culpa itaque labore odit </pre>
+                    <pre class="codigo">    pariatur quae quod quos? Nulla, sequi.</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    </strong>Architecto autem beatae corporis dicta, ducimus eius</pre>
+                    <pre class="codigo">    eos error, ex excepturi explicabo harum illo in </pre>
+                    <pre class="codigo">    ipsam iste itaque labore nisi nostrum nulla quae </pre>
+                    <pre class="codigo">    quia quidem quis tenetur, vel. Cum, officiis.</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal"><img src="css-posicionamiento-web-resources/image/14.png" alt=""/></p>
+        <p class="Normal">Con este código, el primer párrafo queda oculto. Si estos son los únicos párrafos de la página
+            se observará como el segundo párrafo deja el hueco que ocupa el primer párrafo.</p>
+        <h3 class="titulo3"><span class="numero3">[15.7.5]</span><a id="_idTextAnchor016"></a>opacidad</h3>
+        <p class="Normal">Es sin duda una de las características más atractivas del uso de capas. Consiste en que el
+            elemento al que se aplique no se muestre al 100% de luz, sino que se muestra con un efecto de transparencia
+            que permite ver lo que quedaría <em class="cursiva">detrás </em>de él (que serán los elementos con menor
+            índice z en la misma posición.</p>
+        <p class="normalespacio">La opacidad de un elemento se controla con la propiedad <strong class="Negritta">opacity </strong>a
+            la cual se indica un número decimal entre cero (transparencia total) y uno (opacidad total). </p>
+        <p class="normalespacio">Ejemplo:</p>
+        <table id="table014" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span
+                            class="atributo">html</span><strong class="resaltado">&gt;<br/>&lt;html</strong> <span
+                            class="atributo">lang</span><span class="texto">=”es”</span><strong
+                            class="resaltado">&gt;<br/>  &lt;head&gt;<br/>    &lt;meta </strong><span class="atributo">charset</span><span
+                            class="texto">=”UTF-8”</span><strong class="resaltado">&gt;</strong><br/>    <strong
+                            class="resaltado">&lt;title&gt;</strong>Document<strong
+                            class="resaltado">&lt;/title&gt;</strong><br/>    <strong
+                            class="resaltado">&lt;style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        div{</strong></pre>
+                    <pre class="codigo">            <strong class="resaltado">position:</strong><span class="atributo">fixed</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">width:</strong><span class="atributo">300px</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">height:</strong><span class="atributo">150px</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">top:</strong><span
+                            class="atributo">0</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">        }</strong></pre>
+                    <pre class="codigo">        #c1<strong class="resaltado">{</strong></pre>
+                    <pre class="codigo">            <strong class="resaltado">z-index:</strong> <span
+                            class="atributo">1</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">background-color:</strong><span
+                            class="atributo"> green</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">            left:</strong><span
+                            class="atributo">0</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">        }</strong></pre>
+                    <pre class="codigo">        #c2{</pre>
+                    <pre class="codigo">            <strong class="resaltado">z-index: </strong><span
+                            class="atributo">2</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">background-color:</strong> <span
+                            class="atributo">yellow</span>;</pre>
+                    <pre class="codigo">            <strong class="resaltado">left:</strong><span
+                            class="atributo">200px</span>;</pre>
+                    <table id="table015" class="tablaRemarcada">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tablaRemarcada">
+                            <td class="tablaRemarcada celda-remarcada">
+                                <pre class="codigo">            <strong class="resaltado">opacity:</strong> <span
+                                        class="atributo">.5</span>;</pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre class="codigo">        <strong class="resaltado">}</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;div </strong><span
+                            class="atributo">id=</span><span class="texto">”c1”</span><strong
+                            class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo">    Lorem ipsum dolor sit amet, consectetur</pre>
+                    <pre class="codigo">    adipisicing lit. Distinctio, ex, qui. Cumque</pre>
+                    <pre class="codigo">    eaque eos laboriosam minima placeat, porro</pre>
+                    <pre class="codigo">    Animi, beatae cupiditate explicabo ipsam</pre>
+                    <pre class="codigo">    neque nostrum.</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/div&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="table016" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;div </strong><span
+                            class="atributo">id=</span><span class="texto">”c2”</span><strong
+                            class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo">    Deleniti, earum harum iste possimus quasi</pre>
+                    <pre class="codigo">    voluptatibus. A atque cum distinctio harum</pre>
+                    <pre class="codigo">    illo in inventore iste iure laudantium</pre>
+                    <pre class="codigo">    mollitia officiis possimus quasi rem saepe</pre>
+                    <pre class="codigo">    vel veritatis, vero, voluptas! Laborum, placeat.</pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/div&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Provocarían este resultado:</p>
+        <p class="Normal"><img src="css-posicionamiento-web-resources/image/15.png" alt=""/></p>
+        <p class="Normal">La opacidad es muy interesante para hacer efectos.</p>
+        <h3 class="titulo3"><span class="numero3">[15.7.6]</span><a id="_idTextAnchor017"></a>recortar contenidos</h3>
+        <p class="Normal2">La propiedad <strong class="Negritta">clip </strong>permite dentro de un elemento hacer que
+            se contenido aparezca recortado según las dimensiones que se establezcan.</p>
+        <p class="Normal">Como posibles valores acepta el valor <strong class="Negritta">auto </strong>(no hay recorte)
+            o la función <strong class="Negritta">rect</strong> que establece un rectángulo tomando como base de
+            coordenadas (0,0) la esquina superior izquierda del elemento. El rectángulo se dibuja usando cuatro
+            coordenadas: <strong class="Negritta">top, right, bottom, left</strong>, es decir: distancia superior,
+            izquierda, abajo y derecha. El orden es el mismo que en las propiedades de caja (como <strong
+                class="Negritta">margin </strong>por ejemplo), pero en la función clip todas las referencias toman la
+            esquina superior izquierda como origen de coordenadas. </p>
+        <p class="normalespacio">Ejemplo:</p>
+        <table id="table017" class="tabla-codigo">
+            <colgroup>
+                <col/>
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">   #capa1 {</pre>
+                    <pre class="codigo">        <strong class="resaltado">position: </strong><span class="atributo">fixed</span>;</pre>
+                    <pre class="codigo">        <strong class="resaltado">left:</strong> <span
+                            class="atributo">50px</span>;</pre>
+                    <pre class="codigo">        <strong class="resaltado">top: </strong><span
+                            class="atributo">50px</span>;</pre>
+                    <pre class="codigo">        <strong class="resaltado">width: </strong><span
+                            class="atributo">400px</span>;</pre>
+                    <pre class="codigo">        <strong class="resaltado">height: </strong><span
+                            class="atributo">250px</span>;</pre>
+                    <table id="table018" class="tablaRemarcada">
+                        <colgroup>
+                            <col/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="tablaRemarcada">
+                            <td class="tablaRemarcada celda-remarcada">
+                                <pre class="codigo">        <strong class="resaltado">clip:</strong> <span
+                                        class="atributo">rect(20px, 170px, 70px, 50px)</span>;</pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre class="codigo">        <strong class="resaltado">background-color:</strong> <span
+                            class="atributo">orange</span>;</pre>
+                    <pre class="codigo"><strong class="resaltado">        z-index: </strong><span
+                            class="atributo">2</span>;</pre>
+                    <pre class="codigo">    }</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Si hemos creado una capa con ese identificador (<em class="cursiva">capa1</em>) con texto de
+            prueba obtendremos:</p>
+        <p class="Normal"><img src="css-posicionamiento-web-resources/image/16.png" alt=""/></p>
+    </div>
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/css-posicionamiento.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:33:58 GMT -->
+</html>
+

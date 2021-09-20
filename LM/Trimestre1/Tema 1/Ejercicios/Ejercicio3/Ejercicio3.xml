@@ -1,0 +1,34 @@
+<instituto>
+	<eso>
+		<grupo>
+			<nombreGrupo>
+			1ºA
+			</nombreGrupo>
+			<alumno>
+				<nombre></nombre>
+				<apellidos></apellidos>
+				<DNI></DNI>
+				<numMat></numMat>
+			</alumno>
+			<nombreGrupo>
+			<nombreGrupo>
+			1ºB
+			</nombreGrupo>
+			<alumno>
+				<nombre></nombre>
+				<apellidos></apellidos>
+				<DNI></DNI>
+				<numMat></numMat>
+			</alumno>
+			2ºA
+			</nombreGrupo>
+			...
+		</grupo>
+	</eso>
+	<bach>
+		...
+	</bach>
+	<fp>
+		...
+	</fp>
+</instituto>

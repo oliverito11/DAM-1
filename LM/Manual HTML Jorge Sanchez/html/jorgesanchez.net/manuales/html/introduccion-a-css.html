@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/introduccion-a-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Introducción a CSS</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[6] </span><br>Introducción a CSS</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+
+<div id="_idContainer001" class="Marco-de-texto-b-sico">
+			<h2 class="titulo2"><span class="numero2">[6.1] </span><a id="_idTextAnchor000"></a>introducción a CSS</h2>
+			<h3 class="titulo3"><span class="numero3">[6.1.1]</span><a id="_idTextAnchor001"></a>las limitaciones de HTML</h3>
+			<p class="Normal2">HTML, en especial en las últimas versiones, es un lenguaje descriptivo. Es decir; indica qué elementos hay en una página web, pero no la forma de presentarlos en pantalla. En sus primeras versiones todas las posibilidades de formato se conseguían mediante etiquetas. Así existían etiquetas para modificar el tipo de letra (<strong class="Negritta">font</strong>), uso de maquetaciones complejas (<strong class="Negritta" lang="en-US">frame</strong>), etc. Es decir ante una nueva necesidad de formato, se inventaba una nueva etiqueta.</p>
+			<p class="Normal">Hoy en día (y ya desde hace muchos años) se ha entendido que ese no es el modelo lógico para desarrollar páginas web. Se ha entendido que HTML no es el lenguaje que se debe de encargar de indicar cómo se deben formatear los datos. Las razones de no usar HTML para realmente dar formato a la página son:</p>
+			<ul>
+				<li class="punto">Utilizando un lenguaje diferente que se encargue del formato, podremos reutilizar dicho formato fácilmente para diferentes páginas, manteniendo una apariencia coherente y armoniosa en todas las páginas de nuestro sitio web. </li>
+				<li class="punto">Hace que HTML sea un lenguaje puramente semántico, simplemente para dotar de significado al contenido. De esa forma nuestro texto tiene más calidad para ser buscado de forma apropiada mediante los buscadores de Internet u otras herramientas.</li>
+				<li class="punto">De usar sólo HTML, habría infinidad de etiquetas y una gran probabilidad de que cada navegador use las suyas propias (como ha ocurrido durante tantos años).</li>
+				<li class="punto">Se independiza el formato y el contenido. Así podemos usar un lenguaje para dar formato mucho más poderoso. Es más, si en el futuro se inventan mejores lenguajes que el actual dominante CSS, sería fácil adaptar nuestras páginas a esos lenguajes</li>
+				<li class="punto">Usando como único lenguaje HTML, el formato de la página web la deciden los navegadores. El tipo de letra, colores, tamaño, espacios entre párrafo,... todo eso escapa al control de HTML.  En general todos los navegadores usan los mismos formatos básicos (por ejemplo la letra del párrafo normal es de tipo <strong class="Negritta">Times</strong> en todos los navegadores), pero hay pequeñas diferencias que a veces hacen que el aspecto de una página web sea muy diferente de un navegador a otro. CSS permite una apariencia más exacta en cada navegador.<h3 class="titulo3"><span class="numero3">[6.1.2]</span><a id="_idTextAnchor002"></a>la ayuda de CSS</h3></li>
+			</ul>
+			<p class="Normal2">CSS es la abreviatura de <strong class="Negritta" lang="en-US">Cascade Style Sheets</strong> (<em class="cursiva">Hojas de Estilo en Cascada</em>) y se trata de un lenguaje de texto que se incrusta en las páginas web para definir el formato de la página. Actúa sobre los elementos HTML definiendo la forma en la que se mostrarán en pantalla (o en otros dispositivos).</p>
+			<p class="Normal">Es capaz de actuar sobre todas las etiquetas del mismo tipo o sobre unas concretas. Se puede almacenar en un archivo aparte que después se puede usar para varias páginas a la vez. De modo que si cambiamos algo en el estilo, al instante se reflejará en todas las páginas.</p>
+			<p class="Normal">CSS por lo tanto facilita la homogeneidad de las páginas y su mantenimiento. Hoy en día se considera una técnica imprescindible para dar formato a las páginas web. Además se puede aplicar también a código XML.</p>
+			<p class="Normal">No es posible hoy en día crear páginas web sin utilizar CSS.</p>
+			<h2 class="titulo2"><span class="numero2">[6.2] </span><a id="_idTextAnchor003"></a>versiones de CSS</h2>
+			<p class="Normal2">CSS se ideó a mediados de los años 90 y se ha ido estandarizando. A día de hoy se habla de tres versiones de CSS:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">CSS1.</strong> Es la versión original de CSS. Estandarizada en 1996 por la <strong class="Negritta">W3C</strong> (organismo de estándares oficial de Internet) incluye formatos de texto, párrafo, márgenes, lista, tamaños de imágenes,… </li>
+				<li class="punto"><strong class="Negritta">CSS2.</strong> Es estándar desde 1998. Amplía el CSS anterior para incluir sobre todo posicionamiento (manejo de capas), además de tipos de medios (que permite definir distintos tipos de páginas web según los diferentes medios que la usen, pantallas, impresoras, reconocedores de voz…).<p class="sinpunto">La especificación <strong class="Negritta">2.1 </strong>es el último estándar. Modificó errores de la anterior. </p></li>
+				<li class="punto"><strong class="Negritta">CSS3.</strong> Se lleva trabajando en ella desde 1998 y es un estándar <em class="cursiva">de facto</em>, pero que aún no ha sido aprobado por la W3C (se sigue trabajando en él) . En realidad se compone de una serie de módulos que definen diferentes especificaciones que, sumadas a CSS2 (con la que sigue siendo compatible), dan lugar a posibilidades muy avanzadas de formato. De hecho, en total hay unos 30 módulos, varios de ellos son ya considerados recomendación oficial.<p class="sinpunto">En conjunto, la norma aún está en fase de borrador. Pero la mayoría de sus capacidades (estén o no aprobadas por la W3C) están ya implementadas en los navegadores. Se puede observar el estado de estandarización de sus componentes en <a href="#"><span class="hyperlink">www.w3.org/Style/CSS/current-work</span></a> </p><p class="sinpunto">CSS3 ha supuesto un auténtico pistoletazo de salida para webs con una apariencia más espectacular y vistosa, por lo que ha tenido un éxito inmediato. La mayoría de las nuevas páginas web se crean mediante CSS3 y está claro que no corre peligro de que se deje de usar en el futuro. Más bien al contrario: se seguirá ampliando y será cada vez más usado.</p><h3 class="titulo3"><span class="numero3">[6.2.1]</span><a id="_idTextAnchor004"></a>adopción de nuevos elementos CSS</h3></li>
+			</ul>
+			<p class="Normal2">Se puede considerar que las normas CSS1 y CSS2 (hasta CSS 2.1) están ya soportadas por todos los navegadores actuales. Sin embargo CSS3 no está del todo adoptado. De hecho, jamás lo estará ya que la norma no está cerrada y aparecen nuevas capacidades (nuevos módulos) constantemente. </p>
+			<p class="Normal2">El proceso de adopción de nuevas propiedades para CSS sigue este proceso:</p>
+			<p class="Numeros"><span class="numeroNumero">[1]</span>Desde foros o medios influyentes se propone una posible nueva propiedad CSS.</p>
+			<p class="Numeros"><span class="numeroNumero">[2]</span>La empresa fabricante de un navegador influyente (<strong class="Negritta">Mozilla</strong>, <strong class="Negritta">Google</strong>, <strong class="Negritta">Microsoft</strong>, etc.) adopta de forma personal dicha propiedad que solo funcionará en algún navegador.</p>
+			<p class="Numeros"><span class="numeroNumero">[3]</span>La propiedad se hace popular entre los desarrolladores y cada vez más navegadores la soportan (aunque sea de forma personal). </p>
+			<p class="Numeros"><span class="numeroNumero">[4]</span>Si las entidades normalizadoras (como el <strong class="Negritta">W3C</strong>) lo estiman conveniente pasa a ser parte del estándar. </p>
+			<h3 class="titulo3"><span class="numero3">[6.2.2]</span><a id="_idTextAnchor005"></a>estandarización de características CSS</h3>
+			<p class="Normal">Que una característica forme parte del estándar tiene un largo proceso en el que esa característica pasa por diferentes fases. El estado actual de estandarización de los diferentes elementos de CSS está disponible en la URL <a href="https://www.w3.org/Style/CSS/current-work"><span class="hyperlink">https://www.w3.org/Style/CSS/current-work</span></a>. </p>
+			<p class="Normal">Para conseguir que una característica (o más bien un módulo de CSS, una serie de características) sea estándar, hay un proceso rígido en el que se debe pasar por estas fases:</p>
+			<p class="Numeros"><span class="numeroNumero">[1]</span><em class="cursiva">First Public Working Draft. </em><strong class="Negritta">Primer borrador de trabajo</strong>. Un grupo de trabajo del organismo W3C recoge propuestas detectadas en la comunidad sobre nuevas características a incluir en la norma CSS y publica un primer borrador con la propuesta. Se suelen agrupar un conjunto de características en <strong class="Negritta">módulos CSS</strong>, la propuesta hace referencia a un módulo concreto. El documento-borrador lo publicita a entidades, otros grupos de trabajo de la W3C y al público en general.</p>
+			<p class="Numeros"><span class="numeroNumero">[2]</span><em class="cursiva">Working Draft</em>. <strong class="Negritta">Borrador de trabajo</strong>. Cuando ya se ha trabajado en el borrador anterior. Se recoge este trabajo y el nuevo módulo CSS pasa a estar en estado de Borrador de Trabajo (<em class="cursiva">Working Draft</em>). Este documento se puede revisar por el público y organismos técnicos antes de decidir que pase al estado siguiente.</p>
+			<p class="Numeros"><span class="numeroNumero">[3]</span><em class="cursiva">Last Call</em>, <strong class="Negritta">Última llamada</strong>. Se pasa a este estado cuando el W3C indica que una fecha en la que el módulo CSS pasará a ser una característica recomendada por el organismo. En este estado de última llamada se avisa de que los comentarios de la comunidad deben hacerse antes de esa fecha.</p>
+			<p class="Numeros"><span class="numeroNumero">[4]</span><em class="cursiva">Candidate recomendation</em>. <strong class="Negritta">Recomendación candidata</strong>. La propuesta pasa a poseer un documento técnico revisado que cumple la forma de la W3C para las recomendaciones. En este estado ya hay plazos para que la propuesta pase a ser una propuesta formal del organismo, salvo que se detecten problemas en la misma.</p>
+			<p class="Numeros"><span class="numeroNumero">[5]</span><em class="cursiva">Proposed Recomendation</em>. <strong class="Negritta">Recomendación propuesta</strong>. En este estado, la propuesta ha sido totalmente aceptada por el W3C. En este caso habrá ya una fecha definitiva para que la propuesta pase a ser una recomendación completa de la W3C. No se pueden hacer cambios significativos en este estado de la propuesta, salvo que se publique otra recomendación candidata u otro borrador.</p>
+			<p class="Numeros"><span class="numeroNumero">[6]</span><strong class="Negritta">Recomendación</strong>. Cuando una propuesta pasa a este estado, se considera que ya es estándar y utilizable por todos los desarrolladores y herramientas.</p>
+			<p class="Numeros"><span class="numeroNumero">[7]</span><em class="cursiva">Rescinded recomendation</em>. <strong class="Negritta">Recomendación escindida</strong>. A este estado pasan recomendaciones obsoletas que no están en uso, bien por la aparición de otros elementos que la mejoran o bien porque se detecta que su uso no ha sido positivo.</p>
+			<p class="Normal"><img src="css-bases-html-2016-web-resources/image/1.png" alt="" /></p>
+			<h3 class="titulo3"><span class="numero3">[6.2.3]</span><a id="_idTextAnchor006"></a>el problema de la compatibilidad</h3>
+			<p class="Normal">Independientemente de si una característica de CSS pasa a ser estándar o no, para determinar si una página web creada por nosotros debe de utilizar esa característica, conviene tener claro qué navegadores la soportan y cuáles no.</p>
+			<p class="Normal2">Algunas páginas como <a href="#"><span class="hyperlink">http://css3test.com/</span></a> y <a href="#"><span class="hyperlink">http://caniuse.com</span></a><span class="hyperlink"> </span>permiten comprobar qué parte (incluso qué porcentaje) de CSS3 reconoce cada navegador (especialmente <em class="cursiva">caniuse.com</em>).</p>
+			<p class="Normal">Muchos navegadores incorporan elementos CSS nuevos, antes de que el estándar los recoja. Para ello, las propiedades CSS nuevas que incorpora un navegador concreto y que no son estándares, se acompañan de un prefijo. </p>
+			<p class="Normal">Los prefijos habituales son:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">-moz-</strong>. Para navegadores que usan el motor <strong class="Negritta">Mozilla</strong>, como <strong class="Negritta">Firefox</strong>.</li>
+				<li class="punto"><strong class="Negritta">-webkit-</strong>. Para navegadores que usan el motor <strong class="Negritta">Webkit,</strong> como <strong class="Negritta">Safari</strong> o <strong class="Negritta">Chrome</strong>.</li>
+				<li class="punto"><strong class="Negritta">-o-</strong>. Para el navegador Opera. Aunque desde el año 2013 utiliza webkit como motor de renderizado.</li>
+				<li class="punto"><strong class="Negritta">-ms-</strong>. Para navegadores con motor de <strong class="Negritta">Microsoft,</strong> como <strong class="Negritta">Internet Explorer</strong>.</li>
+			</ul>
+			<p class="Normal2">Así para algunas propiedades que están en proceso de desarrollo podemos encontrarnos código CSS como este:</p>
+			<table id="table001" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">div{</pre>
+							<pre class="codigo"><strong class="resaltado">   -moz-columns:3;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   -webkit-columns:3;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   columns:3;}</strong></pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">La razón es que los navegadores Mozilla y los que utilizan el motor Webkit (como Chrome) en algunas versiones implementaban las columnas (característica bastante reciente de CSS) de forma propia. Por ello se indica la propiedad con el prefijo y finalmente sin él para que los navegadores que han adoptada esta propiedad de forma estándar la lean correctamente. Además la forma estándar siempre es la última que se indica para que sea la que prevalece (los navegadores que no la reconozcan, no la tendrán en cuenta).</p>
+			<p class="Normal">Otra posibilidad es detectar el navegador de usuario (para lo que hace falta código en JavaScript) e indicarle que se actualice a uno más adecuado para nuestra página web. Esto último se puede hacer también con utilidades gratuitas como por ejemplo la disponible en <a href="http://outdatedbrowser.com/es"><span class="hyperlink">outdatedbrowser.com</span></a><span class="hyperlink">/es.</span></p>
+			<p class="Normal">Finalmente hay que señalar que hay navegadores que permiten probar nuevas características de CSS antes de que sean adoptadas por los navegadores comerciales (para que los desarrolladores se familiaricen con ellas). </p>
+			<p class="Normal">Así, Google posee el navegador <strong class="Negritta">Chrome Canary</strong> y Mozilla posee hasta tres: <strong class="Negritta">Firefox Nightly </strong>(permite probar de forma prematura nuevas características), <strong class="Negritta">Firefox Developer Edition </strong>(que posee toda una caja de herramientas para desarrolladores, además de incorporar CSS aun no disponible en la versión final) y <strong class="Negritta">Firefox Beta (</strong>que permite probar la siguiente versión de Firefox antes de que sea definitiva).</p>
+			<h2 class="titulo2"><span class="numero2">[6.3] </span><a id="_idTextAnchor007"></a>sintaxis básica de CSS</h2>
+			<p class="Normal">CSS es un lenguaje distinto de HTML. Es muy sencillo, pero su dificultad radica en que es muy extenso. </p>
+			<p class="Normal">CSS sigue esta sintaxis fundamental:</p>
+			<table id="table002" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="sintaxis">selector <strong class="resaltado">{</strong></pre>
+							<pre class="sintaxis"><strong class="resaltado">&#9;&#9;propiedad1:</strong><span class="atributo">valor1</span><strong class="resaltado">;</strong></pre>
+							<pre class="sintaxis">&#9;&#9;<strong class="resaltado">propiedad2:</strong><span class="atributo">valor2</span><strong class="resaltado">;</strong></pre>
+							<pre class="sintaxis">&#9;&#9;…</pre>
+							<pre class="sintaxis"><strong class="resaltado">}</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El <strong class="Negritta">selector</strong> nos permite indicar a qué elemento (o elementos) de la página web se va a aplicar el formato CSS. </p>
+			<p class="Normal">El <strong class="Negritta">formato</strong> se indica mediante un conjunto de propiedades y valores. Esas propiedades permiten indicar qué formato estamos cambiando y los valores indican la modificación que hacemos a esa propiedad. </p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table003" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p{</pre>
+							<pre class="codigo">&#160; &#160;&#160;<strong class="resaltado">font-size</strong>:<span class="atributo">14pt</span>;</pre>
+							<pre class="codigo">&#160; &#160;&#160;<strong class="resaltado">color</strong>:<span class="atributo">red</span>;</pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En ese código CSS, el selector es el elemento <strong class="Negritta">p</strong> (que seleccionaría todos los párrafos normales del documento). Las propiedades que se cambian es el tamaño de letra (<em class="cursiva">font-size</em>) y el color. Se conseguirá por tanto que los párrafos salgan con tamaño de letra de 14 puntos y color rojo.</p>
+			<h3 class="titulo3"><span class="numero3">[6.3.1]</span><a id="_idTextAnchor008"></a>comentarios</h3>
+			<p class="Normal2">Dentro del código CSS se pueden colocar comentarios. Para ello el texto del comentario se encierra entre los símbolos <strong class="Negritta">/* </strong>y <strong class="Negritta">*/</strong>. Ejemplo:</p>
+			<table id="table004" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p {<br />&#9;<strong class="resaltado">line-height</strong>:<span class="atributo">10pt</span>;<br /><span class="comentario">&#9;/*El siguiente código marcará el texto subrayado*/</span><br />&#9;<strong class="resaltado">text-decoration</strong>:<span class="atributo">underline</span>;<br />&#9;<strong class="resaltado">text-align</strong>:<span class="atributo">center</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[6.3.2]</span><a id="_idTextAnchor009"></a><a id="_idTextAnchor010"></a>inserción de código CSS</h3>
+			<h4 class="titulo4"><span class="numeroOculto">15</span><a id="_idTextAnchor011"></a>en una etiqueta concreta de HTML</h4>
+			<p class="Normal2">Utilizado de esta forma, el código CSS se aplicará a la etiqueta en la que se ha incluido dicho código. Eso se consigue gracias a que todos los elementos de HTML (<em class="cursiva" lang="en-US">p</em><span lang="en-US">, </span><em class="cursiva" lang="en-US">strong</em>, <em class="cursiva">abbr</em>, <em class="cursiva">h1</em>,…) pueden utilizar un atributo llamado <strong class="Negritta" lang="en-US">style</strong>, dentro del cual se coloca el código CSS. Ejemplo:</p>
+			<table id="table005" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype html&gt;</strong><br /><strong class="resaltado">&lt;html</strong> <span class="atributo">lang=</span><span class="texto">”es”</span>&gt;<br />    <strong class="resaltado">&lt;head&gt;<br />        &lt;meta</strong> <span class="atributo">charset=</span><span class="texto">”UTF-8”</span>&gt;<br /><strong class="resaltado">            &lt;title&gt;&lt;/title&gt;<br />    &lt;/head&gt;<br />    &lt;body&gt;</strong><br />        <strong class="resaltado">&lt;p&gt;</strong>Este texto sale de color negro (normal)<strong class="resaltado">&lt;/p&gt;</strong><br />        <strong class="resaltado">&lt;p</strong> <span class="estilos-indesign_codigo-remarcado">style=”color:red</span><span class="estilos-indesign_codigo-remarcado">;”</span>&gt;Este texto sale de color rojo <strong class="resaltado">&lt;/p&gt;<br />    &lt;/body&gt;<br />&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En este caso el código CSS no lleva selector alguno, porque el estilo se aplica al elemento en el que se incrustó el código CSS. El resto del documento no queda afectado por el código CSS.</p>
+			<h4 class="titulo4"><span class="numeroOculto">16</span><a id="_idTextAnchor012"></a>en la cabecera de la página</h4>
+			<p class="Normal2">En este caso el código CSS se inserta debajo del elemento HTML <strong class="Negritta" lang="en-US">style</strong> que se colocará en la zona de cabecera (<strong class="Negritta" lang="en-US">head</strong>). Este código afectará a toda la página web. Ejemplo:</p>
+			<table id="table006" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype html&gt;<br />&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”&gt;</span><br />    <strong class="resaltado">&lt;head&gt;<br /></strong><strong class="resaltado">            &lt;title&gt;&lt;/title&gt;</strong></pre>
+							<table id="table007" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="remarcado"><strong class="resaltado">            &lt;style</strong> <span class="atributo">type</span>=<span class="texto">”text/css”</span><strong class="resaltado">&gt;</strong><br />&#9;&#9;&#9;&#9;&#9;p{ </pre>
+											<pre class="remarcado">&#9;&#9;&#9;&#9;&#9;&#9;<strong class="resaltado">color</strong>:<span class="atributo">red</span>;<br />&#9;&#9;&#9;&#9;&#9;}<br /><strong class="resaltado">&#9;&#9;     &lt;/style&gt;</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="remarcado"><strong class="resaltado">    &lt;/head&gt;<br />    &lt;body&gt;<br />        &lt;p&gt;</strong>Este texto sale de color rojo&lt;<strong class="resaltado">/p</strong>&gt;<br />        <strong class="resaltado">&lt;p&gt;</strong>Este texto también  sale de color rojo <strong class="resaltado">&lt;/p&gt;<br />    &lt;/body&gt;<br />&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Con ese código todos los elementos de tipo <strong class="Negritta">p</strong> se mostrarán en color rojo ya que es a esa etiqueta (mediante el selector <strong class="Negritta">p</strong>) al que se ha aplicado el formato.</p>
+			<p class="Normal">El elemento HTML <strong class="Negritta">style</strong> usa fundamentalmente dos atributos:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">type</strong>. Que hoy en día siempre contiene el valor <strong class="Negritta">text/css</strong>. En el caso de que apareciera otro lenguaje de estilos su contenido sería el tipo MIME correspondiente a ese lenguaje. <p class="sinpunto">En la versión HTML 5 ha dejado de ser obligatorio, por lo que hoy en día no se usa (se da por hecho que el lenguaje de formato de páginas es CSS).</p></li>
+				<li class="punto"><strong class="Negritta">media</strong>. Identifica para qué tipo de dispositivo de salida se aplican los estilos. Podemos diseñar diferentes estilos de salida, dependiendo del medio por el cual estamos viendo el contenido de la página. Sus posibilidades se explican en capítulos posteriores. Si no se indica este atributo, se entiende que la hoja de estilos se aplica para cualquier tipo de medio de salida. </li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">17</span><a id="_idTextAnchor013"></a>en un archivo externo</h4>
+			<p class="Normal2">Es el caso más habitual. Se trata de crear un archivo de texto con extensión <strong class="Negritta">.css</strong> al que se le inserta código CSS. La ventaja es que el mismo archivo nos sirve para aplicar su código a diferentes documentos. De esa forma conseguimos una mayor coherencia estética y una centralización del formato; ya que, si modificamos el archivo CSS, todos los documentos que utilicen esa hoja de estilo aplicaran automáticamente los cambios. </p>
+			<p class="Normal">La forma de incorporar el código CSS de un archivo externo es mediante el elemento <strong class="Negritta" lang="en-US">link</strong> (se sitúa dentro del elemento <strong class="Negritta" lang="en-US">head</strong>).</p>
+			<p class="Normal">Por ejemplo, si hemos creado un archivo de texto css llamado <em class="cursiva">estilo1.css</em> con este contenido:</p>
+			<table id="table008" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><span class="comentario">/*Contenido del archivo estilo1.css */</span></pre>
+							<pre class="codigo"><strong class="resaltado">p</strong>{<br />&#9;<span class="atributo">color:</span><span class="texto">red</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Suponiendo que lo guardemos en el mismo directorio que la página web a la que se aplica, el código que permite aplicar dicho código CSS es:</p>
+			<table id="table009" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype html&gt;<br />&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”&gt;</span><br />    <strong class="resaltado">&lt;head&gt;<br />        &lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">            &lt;title&gt;&lt;/title&gt;</strong></pre>
+							<table id="table010" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="remarcado">           <strong class="resaltado">&lt;link</strong> <span class="atributo">rel</span>=<span class="texto">”stylesheet”</span> <span class="atributo">href=</span><span class="atributo">”estilo1.css”</span> </pre>
+											<pre class="remarcado">   &#9;&#9;&#9;&#9;     <span class="atributo">type</span>=<span class="texto">”text/css”</span><strong class="resaltado">&gt;</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="remarcado"><strong class="resaltado">    &lt;/head&gt;<br />    &lt;body&gt;<br />        &lt;p&gt;</strong>Este texto sale de color rojo<strong class="resaltado">&lt;/p&gt;<br />        &lt;p&gt;</strong>Este texto sale de color rojo <strong class="resaltado">también &lt;/p&gt;<br />    &lt;/body&gt;<br />&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">La etiqueta <strong class="Negritta">link</strong> tiene los atributos:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">href</strong>. Con el que se indica la ruta de la hoja de estilos que se está incluyendo.</li>
+				<li class="punto"><strong class="Negritta">rel</strong>. Contiene siempre el valor <strong class="Negritta">stylesheet </strong>(para indicar que estamos incluyendo una hoja de estilos, ya que este atributo se puede utilizar para otros fines).</li>
+				<li class="punto"><strong class="Negritta">type</strong>. Hoy en día no se suele usar. Se aparece, se indica el valor <strong class="Negritta">text/css</strong>.</li>
+				<li class="punto"><strong class="Negritta">media</strong>. Comentado en el apartado anterior, indica el tipo de medio de salida para el que se aplicará el código CSS (se explica más adelante).<h3 class="titulo3"><span class="numero3">[6.3.3]</span><a id="_idTextAnchor014"></a>orden de aplicación de estilos</h3></li>
+			</ul>
+			<p class="Normal">Es posible que algunas páginas web utilicen varios estilos referidos al mismo elemento. Ejemplo:</p>
+			<table id="table011" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">&lt;!doctype html&gt;<br />&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”&gt;</span><br />    <strong class="resaltado">&lt;head&gt;<br />        &lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">            &lt;title&gt;</strong>Página con estilos<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="sintaxis"><strong class="resaltado">&lt;style</strong> <span class="atributo">type</span><span class="texto">=”text/css”</span> <span class="atributo">media</span><span class="texto">=”screen”</span><strong class="resaltado">&gt;</strong><br />&#9;&#9;p{<br />&#9;&#9;&#9;<span class="estilos-indesign_codigo-remarcado">color:blue</span>;<br />&#9;&#9;}<br />            <strong class="resaltado">&lt;/style&gt;</strong><br /><strong class="resaltado">    &lt;/head&gt;<br />    &lt;body&gt;<br />        &lt;p </strong><span class="atributo">style</span>=”<span class="estilos-indesign_codigo-remarcado">color:red;</span>”&gt;Hola<strong class="resaltado">&lt;/p&gt;<br />    &lt;/body&gt;<br />&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En el código anterior, la cuestión es en qué color saldrá el texto <em class="cursiva">Hola</em> , teniendo en cuenta que por un lado saldría de color azul (ya que la etiqueta <em class="cursiva">p</em> hemos marcado que tenga ese color y hemos indicado rojo en el atributo <em class="cursiva" lang="en-US">style</em> de dicha etiqueta). </p>
+			<p class="Normal">La respuesta es: de color rojo, porque tiene prioridad la definición más restrictiva. Las reglas de aplicación de estilos son (se indica cuáles se aplican a antes y cuáles después):</p>
+			<p class="Numeros"><span class="numeroNumero">[1]</span>Los<strong class="Negritta"> estilos del navegador</strong>. Es decir el formato predefinido del navegador. Todos los navegadores poseen un estilo predefinido, que dicta con que tamaño por defecto se muestra el texto, los colores, el tipo de letra, etc. Estos estilos son los que se aplican en primer lugar. </p>
+			<p class="Numeros"><span class="numeroNumero">[2]</span>Después se aplican los <strong class="Negritta">estilos externos</strong> (los que se incorporan con la etiqueta <strong class="Negritta" lang="en-US">link</strong>).</p>
+			<p class="Numeros"><span class="numeroNumero">[3]</span>Después los que proceden de la <strong class="Negritta">etiqueta</strong> <strong class="Negritta" lang="en-US">style</strong> en la cabecera del documento.</p>
+			<p class="Numeros"><span class="numeroNumero">[4]</span>Después los que se definan internamente en el elemento (mediante el <strong class="Negritta">atributo</strong> <strong class="Negritta" lang="en-US">style</strong>).</p>
+			<p class="Numeros"><span class="numeroNumero">[5]</span>En caso de dos estilos referidos al mismo elemento y definidos en el mismo ámbito (por ejemplo ambos procedentes de archivos externos e incluidos con el elemento <strong class="Negritta">link</strong>) tiene preferencia <strong class="Negritta">el último que aparece </strong>en el código.</p>
+			<p class="Numeros"><span class="numeroNumero">[6]</span>Tienen preferencia siempre los e<strong class="Negritta">stilos definidos sobre los elementos más internos</strong></p>
+			<p class="sinpunto">Ejemplo:</p>
+			<table id="table012" class="tabla-codigo _idGenTablePara-1">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo2"><strong class="resaltado">&lt;style&gt;</strong></pre>
+							<pre class="codigo2">&#9;strong{</pre>
+							<pre class="codigo2"><strong class="resaltado">&#9;&#9;color</strong>:<span class="atributo">red</span>; </pre>
+							<pre class="codigo2">  &#9;}</pre>
+							<pre class="codigo2">&#9;p{</pre>
+							<pre class="codigo2"><strong class="resaltado">&#9;&#9;color</strong>:<span class="atributo">green</span>;</pre>
+							<pre class="codigo2">  &#9;}&#9;</pre>
+							<pre class="codigo2"><strong class="resaltado">&lt;/style&gt;</strong></pre>
+							<pre class="codigo2"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo2"><strong class="resaltado">&#9;&lt;p&gt;</strong>Soy verde<strong class="resaltado">&lt;strong&gt;</strong>Soy rojo<strong class="resaltado">&lt;/strong&gt;&lt;/p&gt;</strong></pre>
+							<pre class="codigo2"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="sinpunto">El elemento <strong class="Negritta">strong </strong>aparece de color rojo ya que es más interno que el elemento <strong class="Negritta">p</strong>.</p>
+			<h4 class="titulo4"><span class="numeroOculto">18</span>alteración del orden de aplicación de estilos </h4>
+			<p class="Normal">Se puede alterar la preferencia por defecto utilizando una palabra clave: <strong class="Negritta">!important. </strong>Los<strong class="Negritta"> </strong>estilos marcados con <strong class="Negritta">!</strong><strong class="Negritta" lang="en-US">important</strong> tienen preferencia sobre cualquier otro. Ejemplo:</p>
+			<table id="table013" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!DOCTYPE html&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span><span class="atributo">=”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta </strong><span class="atributo">charse</span><span class="atributo">t</span><span class="atributo">=”UTF-8”</span>&gt;</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">&lt;title&gt;</strong>Prueba important<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<table id="table014" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="codigo"><strong class="resaltado">&#9;&#9;strong{</strong></pre>
+											<pre class="codigo">&#9;&#9;&#9;<span class="atributo">color:</span><span class="atributo">green </span><strong class="resaltado">!important</strong>;</pre>
+											<pre class="codigo"><strong class="resaltado">&#9;&#9;}</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;h1&gt;</strong>Color&lt;/h1&gt;</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;p&gt;</strong>Esto es una <br />      <strong class="resaltado">&lt;strong</strong> <span class="estilos-indesign_codigo-remarcado">style=”color:blue”</span><strong class="resaltado">&gt;</strong>prueba<strong class="resaltado">&lt;/strong&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">      &lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El texto <em class="cursiva">prueba</em> aparece de color verde, aunque el atributo <span lang="en-US">style</span> tiene prioridad sobre el elemento del mismo nombre. La razón es que <strong class="Negritta">!</strong><strong class="Negritta" lang="en-US">important</strong><strong class="Negritta"> </strong>altera ese orden.</p>
+			<h3 class="titulo3"><span class="numero3">[6.3.4]</span><a id="_idTextAnchor015"></a>herencias</h3>
+			<p class="Normal2">Hay que tener en cuenta que hay etiquetas que son <em class="cursiva">padre</em> de otras. Es decir etiquetas que contienen a otras. En el ejemplo:</p>
+			<table id="table015" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Arturo Herrero: <strong class="resaltado">&lt;em&gt;</strong>Los años veinte<strong class="resaltado">&lt;/em&gt;&lt;/p&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="normalespacio">La etiqueta <strong class="Negritta">p</strong> es padre de la etiqueta <strong class="Negritta">em </strong>(<strong class="Negritta">em</strong> está dentro de <strong class="Negritta">p</strong>). Esto hace que <strong class="Negritta">em</strong> herede todo el estilo que posea <strong class="Negritta">p</strong> y además añada el suyo propio. Por ejemplo, si hemos definido:</p>
+			<table id="table016" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p{<br />    <strong class="resaltado">color:</strong><span class="atributo">blue</span>;<br />    <strong class="resaltado">font-size:</strong><span class="atributo">12pt;</span><br />}<br />em{<br />    <strong class="resaltado">font-size:</strong><span class="atributo">14pt</span>;<br />}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En el ejemplo anterior, <em class="cursiva">los años veinte</em> tendrán color azul, heredado del párrafo en el que se encuentra el texto de tipo <em class="cursiva">em</em>, y tamaño 14, ya que tiene prioridad el tamaño asignado al elemento <em class="cursiva">em</em>.</p>
+			<h3 class="titulo3"><span class="numero3">[6.3.5]</span><a id="_idTextAnchor016"></a>normalizar. estilo predefinido</h3>
+			<p class="Normal2">Una página HTML que no use código CSS, mostrará el contenido utilizando el formato predefinido en el navegador. </p>
+			<p class="Normal">Esto significa que el navegador decide el estilo de la página. Corremos, por tanto, el riesgo de que nuestra página se muestre distinta en diferentes navegadores porque apliquen diferente estilo inicial.</p>
+			<p class="Normal">Para no correr riesgos, muchos diseñadores de páginas web, crean un primer estilo <em class="cursiva">normalizador</em>. Esto se realiza creando una primera hoja de estilos que contenga el formato inicial deseado para cada elemento HTML (o al menos para cada elemento que utilicemos en nuestras páginas). </p>
+			<p class="Normal">Un opción muy habitual es utilizar como normalizador, la librería <br /><strong class="Negritta">normalize.css</strong> disponible en <a href="#"><span class="hyperlink">http://necolas.github.io/normalize.css/</span></a> que es una hoja de estilos ya preparada para normalizar el funcionamiento de todos los elementos HTML5 en cualquier navegador. Con ella se asegura que el aspecto inicial es el mismo en cualquier navegador, además de conseguir que la apariencia inicial sea más moderna.</p>
+			<h3 class="titulo3"><span class="numero3">[6.3.6]</span><a id="_idTextAnchor017"></a>indicación de la codificación de caracteres del archivo CSS</h3>
+			<p class="normalespacio">Como se ha visto, en HTML 5 la etiqueta:</p>
+			<table id="table017" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;meta </strong><span class="atributo">charset=</span><span class="texto">”utf-8”</span><strong class="resaltado">&gt;</strong><a id="_idTextAnchor018"></a></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Indica que el documento HTML utiliza la codificación de caracteres UTF-8.  Si tenemos un archivo CSS que dentro utiliza caracteres fuera del ASCII (algo que no ocurre a menudo), disponemos de un elemento en el lenguaje CSS que permite avisar de la codificación del archivo. Se trata de <strong class="Negritta">@charset</strong>.</p>
+			<p class="normalespacio">Esta instrucción CSS debe de ser la primera del archivo y basta simplemente con indicarla y, seguidamente, añadir la codificación utilizada. Por ejemplo:</p>
+			<table id="table018" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">@charset </strong><span class="atributo">“utf-8”</span></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/introduccion-a-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:28:59 GMT -->
+</html>
+

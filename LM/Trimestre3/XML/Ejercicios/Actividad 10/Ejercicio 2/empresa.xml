@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE red SYSTEM "empresa.dtd">
+<red>
+    <!-- IMPRESORAS -->
+    <dispositivo codigoDispositivo="A" direccionMAC="AB-12-34-CD" tipoDispositivo="IMPRESORA">
+        <nombreDispositivo>HP Color OfficeJet 8014</nombreDispositivo>
+        <direccionIP>10.1.1.99</direccionIP>
+        <fabricante>HP</fabricante>
+        <modelo>OfficeJet 8014</modelo>
+    </dispositivo>
+    <dispositivo codigoDispositivo="B" direccionMAC="EF-56-78-GH" tipoDispositivo="IMPRESORA">
+        <nombreDispositivo>HP Neverstop Laser 1202mw</nombreDispositivo>
+        <direccionIP>10.1.1.199</direccionIP>
+        <fabricante>HP</fabricante>
+        <modelo>Neverstop</modelo>
+    </dispositivo>
+
+    <!-- ORDENADORES -->
+    <dispositivo codigoDispositivo="C" direccionMAC="IJ-90-12-KL" tipoDispositivo="ORDENADOR">
+        <nombreDispositivo>Lenovo IdeaCentre 5</nombreDispositivo>
+        <direccionIP>10.1.1.10</direccionIP>
+        <fabricante>Lenovo</fabricante>
+        <modelo>IdeaCentre 5</modelo>
+    </dispositivo>
+    <dispositivo codigoDispositivo="D" direccionMAC="MN-34-56-OP" tipoDispositivo="ORDENADOR">
+        <nombreDispositivo>HP Slim Desktop S01</nombreDispositivo>
+        <direccionIP>10.1.1.20</direccionIP>
+        <fabricante>HP</fabricante>
+        <modelo>S01</modelo>
+    </dispositivo>
+    <dispositivo codigoDispositivo="J" direccionMAC="KL-78-90-MN" tipoDispositivo="ORDENADOR">
+        <nombreDispositivo>Asus S435MC-R5240G020T</nombreDispositivo>
+        <direccionIP>10.1.1.35</direccionIP>
+        <fabricante>Asus</fabricante>
+        <modelo>S435MC-R5240G020T</modelo>
+    </dispositivo>
+
+    <!-- ROUTERS -->
+    <dispositivo codigoDispositivo="E" direccionMAC="QR-78-90-ST" tipoDispositivo="ROUTER">
+        <nombreDispositivo>Huawei WS5200 AC1200</nombreDispositivo>
+        <direccionIP>10.1.1.1</direccionIP>
+        <fabricante>Huawei</fabricante>
+        <modelo>WS5200</modelo>
+    </dispositivo>
+    <dispositivo codigoDispositivo="F" direccionMAC="UV-12-34-WX" tipoDispositivo="ROUTER">
+        <nombreDispositivo>Asus RT-AX56U</nombreDispositivo>
+        <direccionIP>10.1.5.1</direccionIP>
+        <fabricante>Asus</fabricante>
+        <modelo>RT-AX56U</modelo>
+    </dispositivo>
+
+    <!-- TABLETS -->
+    <dispositivo codigoDispositivo="G" direccionMAC="YZ-56-78-AB" tipoDispositivo="TABLET">
+        <nombreDispositivo>Lenovo Tab M10 Plus</nombreDispositivo>
+        <direccionIP>10.1.5.28</direccionIP>
+        <fabricante>Lenovo</fabricante>
+        <modelo>M10 Plus</modelo>
+    </dispositivo>
+    <dispositivo codigoDispositivo="H" direccionMAC="CD-90-12-EF" tipoDispositivo="TABLET">
+        <nombreDispositivo>Samsumng Galaxy Tab A7</nombreDispositivo>
+        <direccionIP>10.1.5.67</direccionIP>
+        <fabricante>Samsung</fabricante>
+        <modelo>A7</modelo>
+    </dispositivo>
+    <dispositivo codigoDispositivo="I" direccionMAC="GH-34-56-IJ" tipoDispositivo="TABLET">
+        <nombreDispositivo>Lenovo Tab M10</nombreDispositivo>
+        <direccionIP>10.1.5.87</direccionIP>
+        <fabricante>Lenovo</fabricante>
+        <modelo>M10</modelo>
+    </dispositivo>
+</red>

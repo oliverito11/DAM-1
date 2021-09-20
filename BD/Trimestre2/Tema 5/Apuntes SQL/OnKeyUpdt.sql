@@ -1,0 +1,10 @@
+INSERT INTO TIN
+    VALUES  ('T00', 'ABC', 2),
+            ('T01', 'ABCAS', 4),
+            ('T02', 'ABC', 3)
+ON DUPLICATE KEY UPDATE C = C + 3;
+
+INSERT INTO TIN
+    VALUES  ('T04', 'WA', 2)
+    ON DUPLICATE KEY UPDATE B = C;
+SELECT * FROM TIN;

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE espanya SYSTEM "montanya.dtd">
+
+<!-- Código -->
+<espanya>
+    <!-- CCAA (Castilla y León)-->
+    <ccaa nombreCCAA="Castilla_y_León">
+        <provincia nombreProvincia="Palencia">
+            <nombrePico>Peña Prieta Sur</nombrePico>
+            <altitud>2537</altitud>
+            <coordenadas>43°01′19′′N 4°43′51′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="León">
+            <nombrePico>Torre de Cerredo</nombrePico>
+            <altitud>2652</altitud>
+            <coordenadas>43°11′53′′N 4°51′04′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Ávila">
+            <nombrePico>Almanzor</nombrePico>
+            <altitud>2591</altitud>
+            <coordenadas>40°14′48′′N 5°17′52′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Salamanca">
+            <nombrePico>Canchal de la Ceja</nombrePico>
+            <altitud>2427</altitud>
+            <coordenadas>40°18′22′′N 5°43′17′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Valladolid">
+            <nombrePico>Cuchillejo</nombrePico>
+            <altitud>932</altitud>
+            <coordenadas>41°32′55′′N 3°59′46′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Zamora">
+            <nombrePico>Peña Trevinca</nombrePico>
+            <altitud>2129</altitud>
+            <coordenadas>42°14′34′′N 6°47′46′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Burgos">
+            <nombrePico>San Millán</nombrePico>
+            <altitud>2131</altitud>
+            <coordenadas>42°13′54.84′′N 3°12′22.69′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Segovia">
+            <nombrePico>Peñalara</nombrePico>
+            <altitud>2428</altitud>
+            <coordenadas>40°51′01′′N 3°57′17′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Soria">
+            <nombrePico>Moncayo</nombrePico>
+            <altitud>2315</altitud>
+            <coordenadas>41°47′17′′N 1°50′18′′O</coordenadas>
+        </provincia>
+    </ccaa>
+
+    <!-- CCAA (Andalucía)-->
+    <ccaa nombreCCAA="Andalucía">
+        <provincia nombreProvincia="Sevilla">
+            <nombrePico>Pico de Terril</nombrePico>
+            <altitud>1129</altitud>
+            <coordenadas>36°59′55.8′′N 5°10′23.50′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Málaga">
+            <nombrePico>La Maroma</nombrePico>
+            <altitud>2066</altitud>
+            <coordenadas>36°54′14′′N 4°02′39′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Cádiz">
+            <nombrePico>El Torreón</nombrePico>
+            <altitud>1654</altitud>
+            <coordenadas>36°45′57′′N 5°25′24′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Granada">
+            <nombrePico>Mulhacén</nombrePico>
+            <altitud>3478</altitud>
+            <coordenadas>37°03′12′′N 3°18′41′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Córdoba">
+            <nombrePico>Pico de la Tiñosa</nombrePico>
+            <altitud>1567</altitud>
+            <coordenadas>37°23′05′′N 4°14′28.04′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Almería">
+            <nombrePico>Chullo</nombrePico>
+            <altitud>2611</altitud>
+            <coordenadas>37°05′46′′N 2°59′55′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Jaén">
+            <nombrePico>Mágina</nombrePico>
+            <altitud>2167</altitud>
+            <coordenadas>37°43′30′′N 3°28′00′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Huelva">
+            <nombrePico>Monte Bonales</nombrePico>
+            <altitud>1055</altitud>
+            <coordenadas>38°02′43.8′′N 6°22′00′′O</coordenadas>
+        </provincia>
+    </ccaa>
+
+    <!-- CCAA (Galicia) -->
+    <ccaa nombreCCAA="Galicia">
+        <provincia nombreProvincia="La_coruña">
+            <nombrePico>Pilar</nombrePico>
+            <altitud>802</altitud>
+            <coordenadas>42°58′25.81′′N 8°01′01.42′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Lugo">
+            <nombrePico>O Mustallar</nombrePico>
+            <altitud>1930</altitud>
+            <coordenadas>42°49′23′′N 6°50′29′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Orense">
+            <nombrePico>Peña Trevinca</nombrePico>
+            <altitud>2129</altitud>
+            <coordenadas>42°14′34′′N 6°47′46′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Pontevedra">
+            <nombrePico>Faro</nombrePico>
+            <altitud>2271</altitud>
+            <coordenadas>42°37′17.1′′N 7°53′52.7′′O</coordenadas>
+        </provincia>
+    </ccaa>
+
+    <!-- CCAA (Castilla la Mancha) -->
+    <ccaa nombreCCAA="Castilla_La_Mancha">
+        <provincia nombreProvincia="Albacete">
+            <nombrePico>La Atalaya</nombrePico>
+            <altitud>2083</altitud>
+            <coordenadas>38°03′38.5′′N 2°23′30.2′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Ciudad_Real">
+            <nombrePico>Riscos del Amor</nombrePico>
+            <altitud>1344</altitud>
+            <coordenadas>39°34′48.6′′N 4°09′32.7′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Cuenca">
+            <nombrePico>Mogorrita</nombrePico>
+            <altitud>1864</altitud>
+            <coordenadas>40°20′45′′N 1°46′13′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Guadalajara">
+            <nombrePico>Pico del Lobo</nombrePico>
+            <altitud>2274</altitud>
+            <coordenadas>41°10′59′′N 3°27′58′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Toledo">
+            <nombrePico>Corocho de Rocigalgo</nombrePico>
+            <altitud>1449</altitud>
+            <coordenadas>39°29′00′′N 4°43′00′′O</coordenadas>
+        </provincia>
+    </ccaa>
+
+    <!-- CCAA (Aragón)-->
+    <ccaa nombreCCAA="Aragón">
+        <provincia nombreProvincia="Huesca">
+            <nombrePico>Aneto</nombrePico>
+            <altitud>3408</altitud>
+            <coordenadas>42°37′56′′N 0°39′28′′E</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Teruel">
+            <nombrePico>Peñarroya</nombrePico>
+            <altitud>2028</altitud>
+            <coordenadas>40°23′24′′N 0°39′55′′O</coordenadas>
+        </provincia>
+        <provincia nombreProvincia="Zaragoza">
+            <nombrePico>Moncayo</nombrePico>
+            <altitud>2315</altitud>
+            <coordenadas>41°47′17′′N 1°50′18′′O</coordenadas>
+        </provincia>
+    </ccaa>
+</espanya>

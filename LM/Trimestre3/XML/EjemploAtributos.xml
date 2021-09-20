@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda [
+    <!ELEMENT tienda (producto | proveedor)+>
+    <!ELEMENT producto (#PCDATA)>
+    <!ATTLIST producto codigoProducto ID #REQUIRED>
+    <!ELEMENT proveedor (nombre, empresa)>
+    <!ATTLIST proveedor codigoProveedor ID #REQUIRED>
+    <!ATTLIST proveedor producto IDREF #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT empresa (#PCDATA)>
+]>
+<tienda>
+    <producto codigoProducto="C01">Carne</producto>
+    <proveedor codigoProveedor="P_01" producto="C01">
+        <nombre>Pedro</nombre>
+        <empresa>EMP1</empresa>
+    </proveedor>
+    <producto codigoProducto="C02">Fruta</producto>
+    <proveedor codigoProveedor="P_02" producto="C02">
+        <nombre>Juan</nombre>
+        <empresa>EMP2</empresa>
+    </proveedor>
+</tienda>

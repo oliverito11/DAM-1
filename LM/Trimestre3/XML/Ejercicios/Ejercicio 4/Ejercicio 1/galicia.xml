@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE galicia SYSTEM "definicion.dtd">
+<galicia>
+    <provincia cod_provincia="C">
+        <nombre>La Coruña</nombre>
+        <capital>La Coruña</capital>
+        <superficie>7950</superficie>
+        <poblacion>1119351</poblacion>
+        <num_municipios>93</num_municipios>
+    </provincia>
+    <provincia cod_provincia="LU">
+        <nombre>Lugo</nombre>
+        <capital>Lugo</capital>
+        <superficie>9856</superficie>
+        <poblacion>331327</poblacion>
+        <num_municipios>67</num_municipios>
+    </provincia>
+    <provincia cod_provincia="OR">
+        <nombre>Orense</nombre>
+        <capital>Orense</capital>
+        <superficie>7273</superficie>
+        <poblacion>309293</poblacion>
+        <num_municipios>92</num_municipios>
+    </provincia>
+    <provincia cod_provincia="PO">
+        <nombre>Pontevedra</nombre>
+        <capital>Pontevedra</capital>
+        <superficie>4495</superficie>
+        <poblacion>941772</poblacion>
+        <num_municipios>62</num_municipios>
+    </provincia>
+</galicia>

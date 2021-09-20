@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro+)>
+    <!ELEMENT libro (titulo, autor+, editorial, web?)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (nombre, apellidos)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT editorial (#PCDATA)>
+    <!ELEMENT web (#PCDATA)>
+]>
+
+<biblioteca>
+    <libro>
+        <titulo>Titulo</titulo>
+        <autor>
+            <nombre>Juan</nombre>
+            <apellidos>Uno</apellidos>
+        </autor>
+        <autor>
+            <nombre>Pedro</nombre>
+            <apellidos>Dos</apellidos>
+        </autor>
+        <editorial>SM</editorial>
+        <web>www.web.es</web>
+    </libro>
+    <libro>
+        <titulo>Titulo2</titulo>
+        <autor>
+            <nombre>Juan</nombre>
+            <apellidos>Uno</apellidos>
+        </autor>
+        <editorial>SB</editorial>
+        <web>www.web.es</web>
+    </libro>
+</biblioteca>

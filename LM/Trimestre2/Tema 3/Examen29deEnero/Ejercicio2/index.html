@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ejercicio 2</title>
+    </head>
+    <body>
+        <form action="servicio.php" method="GET">
+            <!-- Información del usuario -->
+            <label for="nombre">Escriba su nombre:</label>
+            <input type="text" id="nombre" name="nombre" size="50" maxlength="20">
+            <br>
+            <label for="clave">Escriba su clave:</label>
+            <input type="password" id="clave" name="clave">
+            <br><br>
+            <label for="sexo">Sexo:</label>
+            <br><br>
+            <input type="radio" name="sexo" id="hombre" value="h">
+            <label for="hombre">Hombre</label>
+            <br>
+            <input type="radio" name="sexo" id="mujer" value="m" checked>
+            <label for="mujer">Mujer</label>
+            <br><br>
+            
+            <!-- Otra información -->
+            <p>Sistemas Operativos que conoces:</p>
+            <label for="android">Android</label>
+            <input type="checkbox" name="android">
+            <br>
+            <label for="windows">Windows</label>
+            <input type="checkbox" name="windows">
+            <br>
+            <label for="linux">Linux</label>
+            <input type="checkbox" name="linux">
+            <br><br>
+            <label for="desc">Escribe un texto descriptivo:</label>
+            <br>
+            <textarea name="desc" rows="20" cols="80"></textarea>
+            <br><br>
+
+            <!-- Botones de enviar y restablecer -->
+            <input type="submit" name="enviar" value="Enviar">
+            <br>
+            <input type="reset" name="reset" value="Restablecer">
+        </form>
+    </body>
+</html>

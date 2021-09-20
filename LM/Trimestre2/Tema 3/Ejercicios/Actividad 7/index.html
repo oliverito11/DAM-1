@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "es">
+	<head>
+		<meta charset = "UTF-8" />
+		<title>Formulario de registro</title>
+	</head>
+	<body>
+		<h1>Formulario de registro</h1>
+		<form action="programa.php" method="GET">
+			
+			<!-- Nombre -->
+			<label for="nombre">Nombre: </label>
+			<input type="text" id="nombre" name="nombre" maxlength="50">
+			<br><br>
+			
+			<!-- Apellidos -->
+			<label for="apellidos">Apellidos: </label>
+			<input type="text" id="apellidos" name="apellidos" maxlength="50">
+			<br><br>
+			
+			<!-- Sexo -->
+			<label for="sexo">Sexo: </label>
+				<!-- Hombre -->
+				<input type="radio" id="hombre" name="sexo" value="h">
+				<label for="hombre">Hombre</label>
+				<!-- Mujer -->
+				<input type="radio" id="mujer" name="sexo" value="m">
+				<label for="mujer">Mujer</label>
+			<br><br>
+			
+			<!-- Correo -->
+			<label for="correo">Correo:</label>
+			<input type="text" id="correo" name="correo">
+			<br><br>
+
+			<!-- Contraseña -->
+			<label for="clave">Contraseña: </label>
+			<input type="password" id="clave" name="correo">
+			<br><br>
+
+			<!-- Población -->
+			<label for="poblacion">Población: </label>
+			<select name="ccaa">
+				<optgroup label="Galicia">
+					<option value="cor">La Coruña</option>
+					<option value="lug">Lugo</option>
+					<option value="ore">Orense</option>
+					<option value="pon">Pontevedra</option>
+				</optgroup>
+				<optgroup label="Castilla y León">
+					<option value="avi">Ávila</option>
+					<option value="bur">Burgos</option>
+					<option value="leo">León</option>
+					<option value="pal">Palencia</option>
+					<option value="sal">Salamanca</option>
+					<option value="seg">Segovia</option>
+					<option value="sor">Soria</option>
+					<option value="val">Valladolid</option>
+					<option value="zam">Zamora</option>
+				</optgroup>
+				<optgroup label="Extremadura">
+					<option value="cac">Cáceres</option>
+					<option value="bad">Badajoz</option>
+				</optgroup>
+			</select>
+			<br><br>
+			
+			<!-- Descripción -->
+			<label for="descripcion" id="descripcion" name="descripcion">Descripción: </label>
+			<textarea rows="6" cols="60" name="descripcion"></textarea>
+			<br><br>
+			
+			<!-- Check de recibir información -->
+			<input type="checkbox" id="informacion" name="informacion" checked>
+			<label for="informacion">Deseo recibir información sobre noedades y ofertas</label>
+			<br><br>
+			
+			<!-- Check condiciones -->
+			<input type="checkbox" id="condiciones" name="condiciones">
+			<label for="condiciones">Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+			<br><br>
+			
+			<!-- Enviar -->
+			<input type="button" id="enviar" value="Enviar">
+		</form>
+	</body>
+</html>

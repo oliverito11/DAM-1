@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/tablas-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:30:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Tablas</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[12] </span><br>Tablas</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+    <div id="_idContainer009" class="Marco-de-texto-b-sico">
+        <h2 class="titulo2"><span class="numero2">[12.1] </span><a id="_idTextAnchor000"></a>introducción a las tablas</h2>
+        <p class="Normal2">Las tablas son uno de los elementos fundamentales de HTML para mejorar la puesta visual de las páginas web. Antes de que aparecieran las capacidades de CSS para realizar maquetaciones avanzadas en las páginas web, las tablas eran la única forma de crear documentos HTML con disposiciones complejas.</p>
+        <p class="Normal">Una tabla típica podría ser esta:</p>
+        <table id="table001" class="tabla-manual">
+            <colgroup>
+                <col />
+                <col />
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-manual">
+                <td class="tabla-manual cabecera-tabla">
+                    <p class="Normal"><strong class="resaltado">Equipo</strong></p>
+                </td>
+                <td class="tabla-manual cabecera-tabla celda-normal">
+                    <p class="Normal"><strong class="resaltado">Ciudad</strong></p>
+                </td>
+                <td class="tabla-manual cabecera-tabla celda-normal">
+                    <p class="Normal"><strong class="resaltado">Títulos NBA</strong></p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual celda-normal primera-celda-tabla">
+                    <p class="Normal">Lakers</p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Los Ángeles</p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">16</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual celda-normal primera-celda-tabla">
+                    <p class="Normal">Celtics</p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Boston</p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">17</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual celda-normal primera-celda-tabla">
+                    <p class="Normal">Spurs</p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">San Antonio</p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">5</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual celda-normal primera-celda-tabla">
+                    <p class="Normal">Bulls</p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Chicago</p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">6</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2">Una tabla normal se entiende que es un conjunto de datos presentados en forma de filas y columnas.<strong class="resaltado"> </strong>En HTML las tablas tienen muchas posibilidades, lo que ha permitido, tradicionalmente, ser utilizadas como elemento de maquetación de páginas complejas.</p>
+        <p class="Normal2">En especial permiten unir varias celdas para formar tablas con una disposición irregular, lo que permite realizar acabados muy complejos en las páginas. Aún más: se permite incluso colocar una tabla dentro de una celda lo que nos proporciona aun más libertad en la maquetación de páginas.</p>
+        <p class="Normal">Sin embargo, hoy en día se recomienda no usar las tablas de esta forma ya que las mejoras que proporciona CSS en el uso de capas, permiten olvidar a las tablas como recurso de maquetación. </p>
+        <p class="Normal">El uso actual de las tablas es más semántico: indicar una disposición en celdas las cuales se marcan también de forma semántica (celdas de cabecera, celdas normales, filas, columnas, pie de tabla, título de tabla, etc.).</p>
+        <h2 class="titulo2"><span class="numero2">[12.2] </span><a id="_idTextAnchor001"></a>creación de tablas simples</h2>
+        <p class="Normal2">En HTML cada tabla está asociado a un elemento <strong class="Negritta" lang="en-US">table</strong><span lang="en-US">, </span>dentro de este elemento se indican las filas mediante el elemento <strong class="Negritta">tr</strong>  y dentro de cada fila se indican las celdas mediante elementos <strong class="Negritta">td</strong>.</p>
+        <p class="Normal">En HTML 5 las etiquetas <strong class="Negritta">table</strong> y <strong class="Negritta">tr</strong> no tienen atributos, aunque hay atributos, como por ejemplo el atributo <strong class="Negritta">border,</strong> que reconocen los navegadores por estar presentes en versiones anteriores de HTML. Es, como siempre, el lenguaje CSS el que determina la apariencia y formato de la tabla.</p>
+        <p class="Normal"><span lang="en-US">Ejemplo de tabla:</span></p>
+        <table id="table002" class="tabla-codigo">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;table&gt;</strong><br /><strong class="resaltado">    &lt;tr&gt;<br />        &lt;td&gt;&lt;/td&gt;<br />        &lt;td&gt;</strong>Lunes<strong class="resaltado">&lt;/td&gt;<br /></strong> <strong class="resaltado">       &lt;td&gt;</strong>Martes<strong class="resaltado">&lt;/td&gt;<br /></strong> <strong class="resaltado">       &lt;td&gt;</strong>Miércoles<strong class="resaltado">&lt;/td&gt;<br /></strong> <strong class="resaltado">       &lt;td&gt;</strong>Jueves<strong class="resaltado">&lt;/td&gt;<br /></strong> <strong class="resaltado">       &lt;td&gt;</strong>Viernes<strong class="resaltado">&lt;/td&gt;<br />    &lt;/tr&gt;<br />    &lt;tr&gt;<br />        &lt;td&gt;</strong>10:30<strong class="resaltado">&lt;/td&gt;<br /></strong>       <strong class="resaltado"> &lt;td&gt;</strong>Matemáticas<strong class="resaltado">&lt;/td&gt;<br /></strong>       <strong class="resaltado"> &lt;td&gt;</strong>Geografía<strong class="resaltado">&lt;/td&gt;<br /></strong>       <strong class="resaltado"> &lt;td&gt;</strong>Física<strong class="resaltado">&lt;/td&gt;<br /></strong>       <strong class="resaltado"> &lt;td&gt;</strong>Dibujo<strong class="resaltado">&lt;/td&gt;<br /></strong>       <strong class="resaltado"> &lt;td&gt;</strong>Matemáticas<strong class="resaltado">&lt;/td&gt;<br />    &lt;/tr&gt;<br /></strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;tr&gt;<br />        &lt;td&gt;</strong>11:30<strong class="resaltado">&lt;/td&gt;<br /></strong>       <strong class="resaltado"> &lt;td&gt;</strong>Inglés<strong class="resaltado">&lt;/td&gt;<br /></strong>       <strong class="resaltado"> &lt;td&gt;</strong>Lenguaje<strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">        &lt;td&gt;</strong>Geografía<strong class="resaltado">&lt;/td&gt;<br /></strong>    <strong class="resaltado">    &lt;td&gt;</strong>Química<strong class="resaltado">&lt;/td&gt;</strong><br />    <strong class="resaltado">    &lt;td&gt;</strong>Física<strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">    &lt;/tr&gt;<br />&lt;/table&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2">Obtiene el resultado:</p>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/1.png" alt="" /></p>
+        <h2 class="titulo2"><span class="numero2">[12.3] </span><a id="_idTextAnchor002"></a>elementos de marcado semántico en las tablas</h2>
+        <h3 class="titulo3"><span class="numero3">[12.3.1]</span><a id="_idTextAnchor003"></a>celdas de cabecera</h3>
+        <p class="Normal2">Es muy habitual que las tablas muestren datos y que estos posean celdas que sirvan para describirles. Esas celdas se consideran de cabecera y se marcan con <strong class="Negritta">th.</strong> </p>
+        <p class="Normal2">Ejemplo:</p>
+        <table id="table003" class="tabla-codigo">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;table&gt;<br />    &lt;tr&gt;<br />        &lt;th&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/th&gt;<br />        &lt;th&gt;</strong>Lunes<strong class="resaltado">&lt;/th&gt;<br />        &lt;th&gt;</strong>Martes<strong class="resaltado">&lt;/th&gt;<br />        &lt;th&gt;</strong>Miércoles<strong class="resaltado">&lt;/th&gt;<br />        &lt;th&gt;</strong>Jueves<strong class="resaltado">&lt;/th&gt;</strong><br /><strong class="resaltado">        &lt;th&gt;</strong>Viernes<strong class="resaltado">&lt;/th&gt;</strong><br /><strong class="resaltado">    &lt;/tr&gt;<br />    &lt;tr&gt;<br />        &lt;th&gt;</strong>10:30<strong class="resaltado">&lt;/th&gt;<br />        &lt;td&gt;</strong>Matemáticas<strong class="resaltado">&lt;/td&gt;<br />        &lt;td&gt;</strong>Geografía<strong class="resaltado">&lt;/td&gt;<br />        &lt;td&gt;</strong>Física<strong class="resaltado">&lt;/td&gt;<br />        &lt;td&gt;</strong>Dibujo<strong class="resaltado">&lt;/td&gt;<br />        &lt;td&gt;</strong>Matemáticas<strong class="resaltado">&lt;/td&gt;<br />    &lt;/tr&gt;<br />    &lt;tr&gt;<br />        &lt;th&gt;</strong>11:30<strong class="resaltado">&lt;/th&gt;<br />        &lt;td&gt;</strong>Inglés<strong class="resaltado">&lt;/td&gt;<br />        &lt;td&gt;</strong>Lenguaje<strong class="resaltado">&lt;/td&gt;<br />        &lt;td&gt;</strong>Geografía<strong class="resaltado">&lt;/td&gt;</strong><br />       <strong class="resaltado"> &lt;td&gt;</strong>Química<strong class="resaltado">&lt;/td&gt;</strong><br />       <strong class="resaltado"> &lt;td&gt;</strong>Física<strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">    &lt;/tr&gt;<br />&lt;/table&gt;</strong>  </pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">En el resultado sólo se aprecia que el navegador colorea en negrita las celdas de cabecera. Pero con ayuda de CSS podríamos diferenciarlas más. Resultado:</p>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/2.png" alt="" /></p>
+        <h3 class="titulo3"><span class="numero3">[12.3.2]</span><a id="_idTextAnchor004"></a>títulos </h3>
+        <p class="Normal2">A las tablas se les puede poner un título con ayuda de la etiqueta <strong class="Negritta" lang="en-US">caption</strong><span lang="en-US">. Ejemplo:</span></p>
+        <table id="table004" class="tabla-codigo">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;table </strong><span class="atributo">style=</span><span class="texto">”border:1px solid black”</span><strong class="resaltado">&gt; <br />    &lt;caption&gt;</strong>Ventas<strong class="resaltado">&lt;/caption&gt;</strong><br />    <strong class="resaltado">&lt;tr&gt;<br />        &lt;th&gt;</strong>Hardware<strong class="resaltado">&lt;/th&gt;<br />        &lt;td&gt;</strong>12.190 €<strong class="resaltado">&lt;/td&gt;<br />    &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;tr&gt;<br />        &lt;th&gt;</strong>Software<strong class="resaltado">&lt;/th&gt;</strong><br /><strong class="resaltado">        &lt;td&gt;</strong>9.870 €<strong class="resaltado">&lt;/td&gt;<br />    &lt;/tr&gt;<br />&lt;/table&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2">En el código se ha utilizado al atributo prohibido <strong class="Negritta" lang="en-US">border</strong>  para que quede más claro la forma de considerar el título por parte de los navegadores. El resultado del código es:</p>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/3.png" alt="" /></p>
+        <h3 class="titulo3"><span class="numero3">[12.3.3]</span><a id="_idTextAnchor005"></a>agrupación de filas</h3>
+        <p class="Normal2">Hay tres elementos HTML que sirven para diferenciar las tres partes principales de una tabla, son:</p>
+        <ul>
+            <li class="punto"><strong class="Negritta">thead</strong>. Sirve para indicar las filas que forman la cabecera de la tabla</li>
+            <li class="punto"><strong class="Negritta">tfoot</strong>. Indica el pie de la tabla</li>
+            <li class="punto"><strong class="Negritta">tbody</strong>. Indica el cuerpo de la tabla</li>
+        </ul>
+        <p class="Normal2">De esa forma se podrá más adelante dar formato diferencial a cada parte. </p>
+        <p class="Normal2">Ejemplo de uso:</p>
+        <table id="table005" class="tabla-codigo">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"> <strong class="resaltado">&lt;table</strong><span class="atributo"> border=</span><span class="texto">”1”</span><span class="texto"> </span><span class="atributo">rules=</span><span class="texto">”groups”</span><strong class="resaltado">&gt;</strong><br />     <strong class="resaltado">&lt;caption&gt;</strong>Ventas por secciones<strong class="resaltado">&lt;/caption&gt;<br />     &lt;thead&gt;<br />         &lt;tr&gt;<br />             &lt;td&gt;</strong>&amp;nbsp<strong class="resaltado">;&lt;/td&gt;<br />             &lt;td&gt;</strong>Hardware<strong class="resaltado">&lt;/td&gt;<br />             &lt;td&gt;</strong>Software<strong class="resaltado">&lt;/td&gt;<br />         &lt;/tr&gt;<br />     &lt;/thead&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">     &lt;tfoot&gt;<br />         &lt;tr&gt;<br />             &lt;th&gt;</strong>Total<strong class="resaltado">&lt;/th&gt;</strong><br />             <strong class="resaltado">&lt;th&gt;</strong>25000<strong class="resaltado">&lt;/th&gt;</strong><br />             <strong class="resaltado">&lt;th&gt;</strong>22000<strong class="resaltado">&lt;/th&gt;</strong><br /><strong class="resaltado">         &lt;/tr&gt;<br />     &lt;/tfoot&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">     &lt;tbody&gt;</strong><br /><strong class="resaltado">         &lt;tr&gt;<br />             &lt;th&gt;</strong>Enero<strong class="resaltado">&lt;/th&gt;</strong><br />  <strong class="resaltado">           &lt;td&gt;</strong>12000<strong class="resaltado">&lt;/td&gt;</strong><br />  <strong class="resaltado">           &lt;td&gt;</strong>15000<strong class="resaltado">&lt;/td&gt;</strong><br />  <strong class="resaltado">       &lt;/tr&gt;</strong><br />  <strong class="resaltado">       &lt;tr&gt;</strong><br />  <strong class="resaltado">           &lt;th&gt;</strong>Febrero<strong class="resaltado">&lt;/th&gt;</strong><br />  <strong class="resaltado">           &lt;td&gt;</strong>13000<strong class="resaltado">&lt;/td&gt;<br /></strong>  <strong class="resaltado">           &lt;td&gt;</strong>9000<strong class="resaltado">&lt;/td&gt;<br /></strong>  <strong class="resaltado">       &lt;/tr&gt;</strong><br /><strong class="resaltado">     &lt;/tbody&gt;<br /> &lt;/table&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Resultado (se ha utilizado <strong class="Negritta" lang="en-US">border</strong><span lang="en-US"> c</span>omo atributo para visualizar el borde, y un atributo prohibido llamado <strong class="Negritta">rules</strong> con el valor <strong class="Negritta">groups</strong>, que nos permite distinguir mejor la agrupación realizada):</p>
+        <h3 class="titulo3"><span class="numero3">[12.3.4]</span><a id="_idTextAnchor006"></a>agrupación de columnas</h3>
+        <h4 class="titulo4"><span class="numeroOculto">50</span>elemento <strong class="Negritta">colgroup</strong></h4>
+        <p class="Normal2">Permite realizar agrupaciones de columnas de una tabla con la finalidad de dar un formato homogéneo a cada grupo de columnas indicado. El único atributo permitido en HTML 5 es <strong class="Negritta" lang="en-US">span</strong> que sirve para indicar el número de columnas que agrupamos. </p>
+        <p class="Normal2">Otra posibilidad, más recomendable, es usar dentro de <strong class="Negritta">colgroup</strong> elementos <strong class="Negritta">col</strong> los cuales dan un mayor sentido y son más versátiles. </p>
+        <p class="Normal">Esta etiqueta debe de ser la primera de una tabla excepto si se usa título en la tabla (etiqueta <strong class="Negritta" lang="en-US">caption</strong><span lang="en-US">) en</span> cuyo caso será la segunda.</p>
+        <h4 class="titulo4"><span class="numeroOculto">51</span>elemento <strong class="Negritta">col</strong></h4>
+        <p class="Normal2">Se usa dentro de la anterior para dar propiedades a cada grupo de columnas realizado. Permite el uso del atributo col para indicar cuántas columnas se incluyen en el grupo. </p>
+        <p class="Normal">Ejemplo (usa CSS, para ver mejor la forma de agrupar las columnas y para diferenciar, coloreando en negro, la primera fila):</p>
+        <table id="table006" class="tabla-codigo">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;table</strong><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;colgroup&gt;</strong></pre>
+                    <table id="table007" class="tablaRemarcada">
+                        <colgroup>
+                            <col />
+                        </colgroup>
+                        <tbody>
+                        <tr class="tablaRemarcada">
+                            <td class="tablaRemarcada celda-remarcada celda-remarcada">
+                                <pre class="remarcado"><strong class="resaltado">        &lt;col</strong> <span class="atributo">style=</span><span class="texto">”background-color: gray”</span><strong class="resaltado">&gt;</strong></pre>
+                                <pre class="remarcado"><strong class="resaltado">        &lt;col</strong> <span class="atributo">span=</span><span class="texto">”2”</span> <span class="atributo">style=</span><span class="texto">”background-color:yellow;”</span><strong class="resaltado">&gt;</strong></pre>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/colgroup&gt;    &lt;thead&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;tr</strong> <span class="atributo">style=</span><span class="texto">”background-color: black; color:white”</span><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo">            <strong class="resaltado">&lt;th&gt;</strong>País<strong class="resaltado">&lt;/th&gt;</strong></pre>
+                    <pre class="codigo">            <strong class="resaltado">&lt;th&gt;</strong>Capital<strong class="resaltado">&lt;/th&gt;</strong></pre>
+                    <pre class="codigo">            <strong class="resaltado">&lt;th&gt;</strong>Otras ciudades<strong class="resaltado">&lt;/th&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">     &lt;/thead&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;tbody&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;tr&gt;</strong></pre>
+                    <pre class="codigo">          <strong class="resaltado">  &lt;th&gt;</strong>España<strong class="resaltado">&lt;/th&gt;</strong></pre>
+                    <pre class="codigo">          <strong class="resaltado">  &lt;td&gt;</strong>Madrid<strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo">          <strong class="resaltado">  &lt;td&gt;</strong>Barcelona, Zaragoza, Sevilla, Valencia, <br />                Bilbao<strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;tr&gt;</strong></pre>
+                    <pre class="codigo">        <strong class="resaltado">    &lt;th&gt;</strong>Francia<strong class="resaltado">&lt;/th&gt;</strong></pre>
+                    <pre class="codigo">        <strong class="resaltado">    &lt;td&gt;</strong>París<strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo">        <strong class="resaltado">    &lt;td&gt;</strong>Lyon, Marsella, Nantes, Toulouse<strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            &lt;th&gt;</strong>Portugal<strong class="resaltado">&lt;/th&gt;</strong></pre>
+                    <pre class="codigo">           <strong class="resaltado"> &lt;td&gt;</strong>Lisboa<strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo">           <strong class="resaltado"> &lt;td&gt;</strong>Oporto, Coimbra<strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/tbody&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/table&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Resultado:</p>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/4.png" alt="" /></p>
+        <h2 class="titulo2"><span class="numero2">[12.4] </span><a id="_idTextAnchor007"></a>combinar celdas </h2>
+        <p class="Normal2">Es posible unir celdas y de esta forma conseguir tablas de formas caprichosas que permiten una maquetación más poderosa.</p>
+        <p class="Normal">Las etiquetas de columna (<strong class="Negritta">td</strong> y <strong class="Negritta">th</strong>) son las que poseen los atributos que permiten esta operación. En concreto son los atributos:</p>
+        <table id="table008" class="tabla-manual">
+            <colgroup>
+                <col />
+                <col />
+            </colgroup>
+            <thead>
+            <tr class="tabla-manual">
+                <td class="tabla-manual cabecera-tabla">
+                    <p class="cabeceraTabla">atributo</p>
+                </td>
+                <td class="tabla-manual cabecera-tabla">
+                    <p class="cabeceraTabla">significado</p>
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta">colspan</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Combina la celda actual con el número de celdas a la derecha que se indique. Por ejemplo<strong class="resaltado"> </strong><em class="cursiva">colspan=”3”</em> une esta celda con las dos que tiene a su derecha, formando una combinación de tres celdas en horizontal.</p>
+                </td>
+            </tr>
+            <tr class="tabla-manual">
+                <td class="tabla-manual primera-celda-tabla">
+                    <p class="Normal"><strong class="Negritta">rowspan</strong></p>
+                </td>
+                <td class="tabla-manual celda-normal">
+                    <p class="Normal">Combina la celda actual con el número de celdas hacia abajo que se indique. Por ejemplo <em class="cursiva">rowspan=”3” </em>une esta celda con las dos que tiene hacia abajo, formando una combinación de tres celdas en vertical.</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Hay que tener en cuenta que se pueden usar ambos atributos a la vez, lo que permite obtener celdas combinadas de otras columnas y filas a la vez.</p>
+        <p class="Normal">Ejemplo de uso:</p>
+        <table id="table009" class="tabla-codigo">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><span class="atributo">&lt;!doctype html&gt;</span></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;html </strong><span class="atributo">lang=</span><span class="atributo">”es”</span><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;meta </strong><span class="atributo">charset</span><span class="atributo">=”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;title&gt;</strong>Tabla combinada<strong class="resaltado">&lt;/title&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        table{</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            </strong><span class="atributo">width</span><span class="atributo">:50%;</span></pre>
+                    <pre class="codigo"><strong class="resaltado">        }</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        td{</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            </strong><span class="atributo">border:</span><span class="atributo">2px solid black;</span></pre>
+                    <pre class="codigo"><strong class="resaltado">        }</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+                </td>
+            </tr>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;table&gt;<br />    &lt;tr&gt;<br /></strong>  <strong class="resaltado">      &lt;td&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong><br />  <strong class="resaltado">      &lt;td&gt;</strong><span class="texto">&amp;nbsp</span>;<strong class="resaltado">&lt;/td&gt;</strong><br />  <strong class="resaltado">      &lt;td </strong><span class="atributo">colspan=</span><span class="texto">”2”</span><strong class="resaltado">&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong><br />  <strong class="resaltado">  &lt;/tr&gt;</strong><br />  <strong class="resaltado">  &lt;tr&gt;</strong><br />  <strong class="resaltado">      &lt;td&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong><br />  <strong class="resaltado">      &lt;td </strong><span class="atributo">colspan=</span><span class="texto">”2”</span><strong class="resaltado">&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong><br />  <strong class="resaltado">      &lt;td </strong><span class="atributo">rowspan=</span><span class="texto">”2”</span><strong class="resaltado">&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong><br />  <strong class="resaltado">  &lt;/tr&gt;</strong><br />  <strong class="resaltado">  &lt;tr&gt;</strong><br />  <strong class="resaltado">      &lt;td </strong><span class="atributo">rowspan=</span><span class="texto">”3”</span><strong class="resaltado">&gt;</strong><span class="texto">&amp;nbsp</span>;<strong class="resaltado">&lt;/td&gt;</strong><br />       <strong class="resaltado"> &lt;td&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;<br /></strong>       <strong class="resaltado"> &lt;td&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">    &lt;/tr&gt;<br />    &lt;tr&gt;<br />        &lt;td</strong><span class="atributo"> colspan=</span><span class="texto">”3”</span><strong class="resaltado">&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">    &lt;/tr&gt;</strong><br /><strong class="resaltado">    &lt;tr&gt;</strong><br /><strong class="resaltado">        &lt;td </strong><span class="atributo">colspan=</span><span class="texto">”3”</span><strong class="resaltado">&gt;</strong><span class="texto">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">    &lt;/tr&gt;</strong><br /><strong class="resaltado">&lt;/table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal2">Resultado:</p>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/5.png" alt="" /></p>
+        <h2 class="titulo2"><span class="numero2">[12.5] </span><a id="_idTextAnchor008"></a>tablas dentro de tablas</h2>
+        <p class="Normal2">Para generar tablas aún más complejas, se pueden meter elementos <strong class="Negritta">table</strong>, dentro de otras tablas. Lo que se hace es meter una etiqueta <strong class="Negritta" lang="en-US">table</strong><span lang="en-US"> (con</span> todos sus elementos de fila y columna)<span lang="en-US"> </span>dentro de un elemento  <strong class="Negritta" lang="en-US">td</strong><span lang="en-US"> o </span><strong class="Negritta" lang="en-US">th</strong><span lang="en-US">. </span></p>
+        <p class="Normal">Esta combinación permite realizar formatos de tabla a capricho y de esa forma conseguir disposiciones de páginas extremadamente complejas. Hasta la aparición de CSS2 (y especialmente CSS3), esta era la forma de conseguir maquetaciones de páginas web avanzadas.</p>
+        <table id="table010" class="tabla-codigo">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><span class="atributo">&lt;!doctype html&gt;</span></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;html </strong><span class="atributo">lang=</span><span class="atributo">”es”&gt;</span></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+                    <pre class="codigo">    <strong class="resaltado">&lt;meta charset=</strong><span class="atributo">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;title&gt;</strong>Subtablas<strong class="resaltado">&lt;/title&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;style&gt;</strong></pre>
+                    <pre class="codigo">        <strong class="resaltado">table</strong>{</pre>
+                    <pre class="codigo">            <span class="atributo">width</span>:<span class="atributo">50%</span>;</pre>
+                    <pre class="codigo">        }</pre>
+                    <pre class="codigo">        <strong class="resaltado">table table</strong>{</pre>
+                    <pre class="codigo">            <span class="atributo">width</span>:<span class="atributo">100%</span>;</pre>
+                    <pre class="codigo">        }</pre>
+                    <pre class="codigo">        <strong class="resaltado">td</strong>{</pre>
+                    <pre class="codigo">            <span class="atributo">border</span><span class="atributo">:2px solid black;</span></pre>
+                    <pre class="codigo">        }</pre>
+                    <pre class="codigo">        <strong class="resaltado">table table td</strong>{</pre>
+                    <pre class="codigo"><span class="atributo">            background-color</span><span class="atributo">:yellow;</span></pre>
+                    <pre class="codigo">        }</pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            &lt;table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">               &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            &lt;/table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/tr&gt;</strong></pre>
+                </td>
+            </tr>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo"><strong class="resaltado">    &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            &lt;table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            &lt;/table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;&amp;nbsp;&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;&amp;nbsp;&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            &lt;table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                    &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">                &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">            &lt;/table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">        &lt;td&gt;</strong><span class="atributo">&amp;nbsp;</span><strong class="resaltado">&lt;/td&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">    &lt;/tr&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/table&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+                    <pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="Normal">Resultado:</p>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/6.png" alt="" /></p>
+        <h2 class="titulo2"><span class="numero2">[12.6] </span><a id="_idTextAnchor009"></a>formato CSS para tablas</h2>
+        <h3 class="titulo3"><span class="numero3">[12.6.1]</span><a id="_idTextAnchor010"></a>las tablas y el CSS</h3>
+        <p class="Normal2">La mayoría de propiedades de uso habitual en CSS (bordes, colores, tipos de letra, alineaciones,...) son perfectamente aplicables a las tablas. Sin embargo hay propiedades CSS que, explícitamente, sirven para modificar la forma de visualizar los elementos de una tabla.</p>
+        <p class="Normal">No son muchas propiedades, pero sí son extremadamente útiles e importantes</p>
+        <h3 class="titulo3"><span class="numero3">[12.6.2]</span><a id="_idTextAnchor011"></a>espaciado y borde en las tablas</h3>
+        <p class="Normal">Las propiedades CSS específicas para tablas son:</p>
+        <ul>
+            <li class="punto"><strong class="Negritta" lang="en-US">border-collapse</strong>. Permite indicar cómo manejar los bordes adyacentes entre elementos. Posibles valores:<ul><li class="Punto2"><strong class="Negritta" lang="en-US">collapse</strong>. Se unen los bordes adyacentes para formar un único borde. Es decir no hay espacio entre bordes adyacentes.</li><li class="Punto2"><strong class="Negritta" lang="en-US">separate</strong>. Los bordes adyacentes se mantienen separados. Es el valor por defecto.</li></ul><p class="sinpunto">Ejemplo:</p><table id="table011" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo">table{</pre><pre class="codigo">&#9;<strong class="resaltado">width</strong>:<span class="atributo">100%</span>; </pre><pre class="codigo">}</pre><pre class="codigo">td{</pre><pre class="codigo">&#9;<strong class="resaltado">border</strong>:<span class="atributo">2px solid black</span>;</pre><pre class="codigo">}</pre></td></tr></tbody></table></li>
+        </ul>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/7.png" alt="" /></p>
+        <p class="sinpunto">La tabla se muestra en modo <em class="cursiva">separate</em>. Sin embargo indicando modo <em class="cursiva">collapse</em> en la etiqueta <strong class="Negritta" lang="en-US">table</strong>:</p>
+        <table id="table012" class="tabla-codigo _idGenTablePara-1">
+            <colgroup>
+                <col />
+            </colgroup>
+            <tbody>
+            <tr class="tabla-codigo">
+                <td class="tabla-codigo celda-codigo">
+                    <pre class="codigo">table{</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">width</strong>:<span class="atributo">100%</span>; </pre>
+                    <pre class="codigo"><strong class="resaltado">&#9;border-collapse</strong>:<span class="atributo">collapse</span>;</pre>
+                    <pre class="codigo">}</pre>
+                    <pre class="codigo">td{</pre>
+                    <pre class="codigo">&#9;<strong class="resaltado">border</strong>:<span class="atributo">2px solid black</span>;</pre>
+                    <pre class="codigo">}</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="sinpunto">Resultado:</p>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/8.png" alt="" /></p>
+        <p class="sinpunto">Hay que fijarse en que es en el elemento <strong class="Negritta" lang="en-US">table</strong> (el contenedor general de la tabla) en el que se indica esta propiedad.</p>
+        <ul>
+            <li class="punto"><strong class="Negritta" lang="en-US">border-spacing</strong>. Indica el espacio entre bordes. Admite dos medidas, la primera se utiliza para la distancia horizontal y la segunda para la vertical. Si se utiliza una medida se referirá a ambas distancias. <p class="sinpunto">Ejemplo:</p><table id="table013" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">border-spacing</strong>:<span class="atributo">10px 5px</span>;</pre></td></tr></tbody></table></li>
+            <li class="punto"><strong class="Negritta">caption-side</strong>. Posición del título de la tabla (elemento <strong class="Negritta">caption</strong>). Posibilidades: <strong class="Negritta">top </strong>(arriba, valor por defecto), <strong class="Negritta">bottom </strong>(abajo).</li>
+            <li class="punto"><strong class="Negritta">empty-cells</strong>. Indica si deseamos mostrar las celdas vacías de la tabla. Valores: <strong class="Negritta">show </strong>(mostrar, valor por defecto) y <strong class="Negritta">hide </strong>(ocultar). No funciona (<em class="cursiva">hide</em>) con los bordes colapsados.</li>
+            <li class="punto"><strong class="Negritta">table-layout</strong>. Propiedad presente en los últimos navegadores (no en <strong class="Negritta">Internet Explorer</strong>) permite indicar la forma en la que se calcula la anchura de las celdas. Por defecto toma el valor <strong class="Negritta">auto</strong>, en el que, aunque hayamos indicado una anchura fija para una celda, el tamaño de la misma depende del contenido. <strong class="Negritta">fixed</strong>, sin embargo deja la tabla con el tamaño fijado por las propiedades de anchura de columna (<strong class="Negritta">width</strong>).<p class="sinpunto">El problema es cuando un contenido sobrepasa el tamaño de una celda (una imagen por ejemplo). En el primer caso la celda se amplía parta dar cabida al contenido. Eso significa que el navegador no puede renderizar la tabla hasta no haber cargado todo su contenido.</p><p class="sinpunto">En el segundo caso la tabla se dibuja al instante aunque los contenidos no hayan llegado. Aunque en ese caso esos contenidos sobresalgan de la tabla. Solo es interesante <strong class="Negritta">fixed </strong>si sabemos seguro el tamaño de la tabla por adelantado.</p><p class="sinpunto">Ejemplo:</p><table id="table014" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;<br />&lt;html</strong> <span class="atributo">lang</span><span class="texto">=”es”</span>&gt;<br /><strong class="resaltado">    &lt;head&gt;<br />        &lt;meta</strong> <span class="atributo">charset</span><span class="texto">=”UTF-8”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">        &lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong><br /><strong class="resaltado">        &lt;style&gt;</strong><br />&#9;&#9;table{<br />&#9;&#9;&#9;<strong class="resaltado">width</strong>:<span class="atributo">100</span>%;<br />&#9;&#9;&#9;<strong class="resaltado">border-spacing</strong>: <span class="atributo">10px 25px</span>;<br />&#9;&#9;&#9;<strong class="resaltado">border</strong>:<span class="atributo">2px solid black</span>;<br />&#9;&#9;}<br />&#9;&#9;td{<br />&#9;&#9;&#9;<strong class="resaltado">border</strong>:<span class="atributo">2px solid black</span>;<br />&#9;&#9;}<br /><strong class="resaltado">&#9;    &lt;/style&gt;<br />    &lt;/head&gt;</strong></pre><pre class="codigo"><strong class="resaltado">    &lt;body&gt;<br />        &lt;table&gt;<br />            &lt;tr&gt;<br />                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">            &lt;/tr&gt;</strong><br /><strong class="resaltado">            &lt;tr&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">            &lt;/tr&gt;</strong></pre><pre class="codigo"><strong class="resaltado">            &lt;tr&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">                &lt;td&gt;</strong><strong class="Negritta">&amp;nbsp;</strong><strong class="resaltado">&lt;/td&gt;</strong><br /><strong class="resaltado">            &lt;/tr&gt;</strong><br /><strong class="resaltado">        &lt;/table&gt;</strong><br /><strong class="resaltado">&lt;/html&gt;</strong></pre></td></tr></tbody></table></li>
+        </ul>
+        <p class="Normal"><img src="tablas-html5-web-resources/image/9.png" alt="" /></p>
+        <ul>
+            <li class="punto"><strong class="Negritta" lang="en-US">caption-side</strong>. Propiedad utilizada para la etiqueta <strong class="Negritta" lang="en-US">caption</strong> que contiene el título de una tabla. Permite indicar si queremos que el título esté por encima de la tabla (valor <strong class="Negritta" lang="en-US">top</strong>, valor por defecto) o por debajo (valor <strong class="Negritta" lang="en-US">bottom</strong>)</li>
+            <li class="punto"><strong class="Negritta" lang="en-US">empty-cells</strong>. Permite especificar si los bordes y sombreados de la tabla se aplican a las celdas vacías. Valores:<ul><li class="Punto2"><strong class="Negritta" lang="en-US">show</strong>. Se aplican bordes y sombreados a esas celdas (valor por defecto)</li><li class="Punto2"><strong class="Negritta" lang="en-US">hide</strong>. No se aplican los bordes y sombreados a las celdas vacías.</li></ul></li>
+            <li class="punto"><strong class="Negritta">table-layout</strong>. Indica la forma en la que se determina la anchura de la tabla y las celdas. Posibles valores:<ul><li class="Punto2"><strong class="Negritta">auto</strong>. Valor por defecto. Aunque hayamos indicado anchura para tabla y/o celdas, su tamaño se determina por el contenido de las mismas (si el contenido requiere mayor anchura, así se hará.</li><li class="Punto2"><strong class="Negritta">fixed</strong>. Predomina la anchura establecida por las propiedades y no por el contenido</li></ul></li>
+        </ul>
+    </div>
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/tablas-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:30:56 GMT -->
+</html>
+

@@ -1,0 +1,21 @@
+Vocabulario: dam, modulo, titulo, contenido, unidad
+
+Reglas: dam contiene varios modulos, donde cada uno tiene un titulo y un contenido. Dentro de cada contenido hay varias unidades. Las unidades son simple texto, detrás de cada unidad solo puede ir otra unidad o el final del contenido. Detras de cada contenido solo puede ir otro modulo o el fin de dam.
+
+<dam>
+ <modulo>
+  <titulo>Programacion</titulo>
+  <contenido>
+   <unidad>Java</unidad>
+   <unidad>C++</unidad>
+  </contenido>
+ </modulo>
+ <modulo>
+  <titulo>Lenguajes de marca</titulo>
+  <contenido>
+   <unidad>HTML</unidad>
+   <unidad>CSS</unidad>
+  </contenido>
+ </modulo>
+ ...
+</dam>

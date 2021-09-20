@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dam1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="patrones.xsd">
+    <asignatura>
+        <nombre>Programación</nombre>
+        <iniciales>PR</iniciales>
+        <profesor>Sergio</profesor>
+        <horas>8h</horas>
+        <nota>10</nota>
+    </asignatura>
+    <asignatura>
+        <nombre>Lenguajes de Marca</nombre>
+        <iniciales>LM</iniciales>
+        <profesor>Valentín</profesor>
+        <horas>5h</horas>
+        <nota>8</nota>
+    </asignatura>
+    <asignatura>
+        <nombre>Entornos de desarrollo</nombre>
+        <iniciales>ED</iniciales>
+        <profesor>Alberto</profesor>
+        <horas>3h</horas>
+        <nota>0.12</nota>
+    </asignatura>
+    <asignatura>
+        <nombre>Sistemas Informáticos</nombre>
+        <iniciales>SI</iniciales>
+        <profesor>Santiago</profesor>
+        <horas>6h</horas>
+        <nota>7.34</nota>
+    </asignatura>
+</dam1>

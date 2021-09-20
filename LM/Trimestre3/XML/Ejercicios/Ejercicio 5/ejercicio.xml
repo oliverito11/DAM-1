@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instituto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ejercicio.xsd">
+    <alumno>
+        <nombre>Oli</nombre>
+        <edad>18</edad>
+        <curso>DAM1</curso>
+        <matricula>55222</matricula>
+    </alumno>
+    <alumno>
+        <nombre>Pablo</nombre>
+        <edad>20</edad>
+        <curso>DAM2</curso>
+        <matricula>66222</matricula>
+    </alumno>
+</instituto>

@@ -1,0 +1,77 @@
+﻿<España>
+	<CCAA>
+		<nombreCCAA>Castilla y León</nombreCCAA>
+			<provincia>
+				<nombreProvincia>Burgos</nombreProvincia>
+				<nombreMontaña>San Millán</nombreMontaña>
+				<altitudMontaña>2131</altitudMontaña>
+				<situacion>42.2319°, -3.206303°</situacion>
+			</provincia>
+			<provincia>
+				<nombreProvincia>Zamora</nombreProvincia>
+				<nombreMontaña>Peña Trevinca</nombreMontaña>
+				<altitudMontaña>2129</altitudMontaña>
+				<situacion>41.788056°, -1.838333°</situacion>
+			</provincia>
+	</CCAA>
+	<CCAA>
+		<nombreCCAA>Andalucía</nombreCCAA>
+			<provincia>
+				<nombreProvincia>Cádiz</nombreProvincia>
+				<nombreMontaña>El Torreón</nombreMontaña>
+				<altitudMontaña>1654</altitudMontaña>
+				<situacion>36.765833°, -5.423333°</situacion>
+			</provincia>
+			<provincia>
+				<nombreProvincia>Almería</nombreProvincia>
+				<nombreMontaña>Chullo</nombreMontaña>
+				<altitudMontaña>2611</altitudMontaña>
+				<situacion>37.096111°, -2.998611°</situacion>
+			</provincia>
+	</CCAA>
+	<CCAA>
+		<nombreCCAA>Aragón</nombreCCAA>
+			<provincia>
+				<nombreProvincia>Teruel</nombreProvincia>
+				<nombreMontaña>Peñarroya</nombreMontaña>
+				<altitudMontaña>2028</altitudMontaña>
+				<situacion>40.39°, -0.665278°</situacion>
+			</provincia>
+			<provincia>
+				<nombreProvincia>Huesca</nombreProvincia>
+				<nombreMontaña>Aneto</nombreMontaña>
+				<altitudMontaña>3408</altitudMontaña>
+				<situacion>42.632222°, 0.657778°</situacion>
+			</provincia>
+	</CCAA>
+	<CCAA>
+		<nombreCCAA>Extremadura</nombreCCAA>
+			<provincia>
+				<nombreProvincia>Cáceres</nombreProvincia>
+				<nombreMontaña>Calvitero</nombreMontaña>
+				<altitudMontaña>2399</altitudMontaña>
+				<situacion>40.292169°, -5.740836°</situacion>
+			</provincia>
+			<provincia>
+				<nombreProvincia>Badajoz</nombreProvincia>
+				<nombreMontaña>Cerro de Tentudia</nombreMontaña>
+				<altitudMontaña>1112</altitudMontaña>
+				<situacion>38.05425°, -6.338436°</situacion>
+			</provincia>
+	</CCAA>
+	<CCAA>
+		<nombreCCAA>Cataluña</nombreCCAA>
+			<provincia>
+				<nombreProvincia>Barcelona</nombreProvincia>
+				<nombreMontaña>Costa Cabirolera</nombreMontaña>
+				<altitudMontaña>2604</altitudMontaña>
+				<situacion>42.281442°, 1.670419°</situacion>
+			</provincia>
+			<provincia>
+				<nombreProvincia>Gerona</nombreProvincia>
+				<nombreMontaña>Puig Pedrós</nombreMontaña>
+				<altitudMontaña>2914</altitudMontaña>
+				<situacion>42.487564°, 1.761808°</situacion>
+			</provincia>
+	</CCAA>
+</España>

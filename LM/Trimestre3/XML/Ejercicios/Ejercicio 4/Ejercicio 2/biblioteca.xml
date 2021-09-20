@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "definicion.dtd">
+<biblioteca>
+    <recursos tipo="libro" cod_recurso="DQ">
+        <titulo>Don Quijote de La Mancha</titulo>
+        <autor>Desconocido</autor>
+    </recursos>
+    <recursos tipo="libro" cod_recurso="HI">
+        <titulo>La Historia Interminable</titulo>
+        <autor>Autor 1</autor>
+        <autor>Autor 2</autor>
+        <anyoPublicacion>1983</anyoPublicacion>
+    </recursos>
+    <recursos tipo="dvd" cod_recurso="SOAD">
+        <titulo>Toxicity</titulo>
+        <autor>System of a Down</autor>
+        <anyoPublicacion>2000</anyoPublicacion>
+    </recursos>
+    <recursos tipo="dvd" cod_recurso="A7X">
+        <titulo>Waking the fallen</titulo>
+        <autor>Avenged Sevenfold</autor>
+        <anyoPublicacion>2002</anyoPublicacion>
+    </recursos>
+    <recursos tipo="revista" cod_recurso="MC">
+        <titulo>El Marca</titulo>
+        <autor>El Marca</autor>
+    </recursos>
+    <recursos tipo="revista" cod_recurso="RV">
+        <titulo>Revista</titulo>
+        <autor>Pepe</autor>
+        <autor>Pablo</autor>
+        <autor>Juan</autor>
+    </recursos>
+    <recursos tipo="cd" cod_recurso="RL">
+        <titulo>El Rey León</titulo>
+        <autor>Disney</autor>
+        <anyoPublicacion></anyoPublicacion>
+    </recursos>
+    <recursos tipo="cd" cod_recurso="ML">
+        <titulo>Mulán</titulo>
+        <autor>Disney</autor>
+        <anyoPublicacion></anyoPublicacion>
+    </recursos>
+</biblioteca>

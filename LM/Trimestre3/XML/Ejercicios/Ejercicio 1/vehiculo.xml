@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concesionario [
+    <!ELEMENT concesionario (vehiculo+)>
+    <!ELEMENT vehiculo (marca, modelo, matricula, longitud, anchura, peso)>
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT matricula (#PCDATA)>
+    <!ELEMENT longitud (#PCDATA)>
+    <!ELEMENT anchura (#PCDATA)>
+    <!ELEMENT peso (#PCDATA)>
+]>
+
+<concesionario>
+    <vehiculo>
+        <marca>BMW</marca>
+        <modelo>2</modelo>
+        <matricula>1234 IBM</matricula>
+        <longitud>5</longitud>
+        <anchura>3</anchura>
+        <peso>1047</peso>
+    </vehiculo>
+    <vehiculo>
+        <marca>Peugot</marca>
+        <modelo>207</modelo>
+        <matricula>8794 ABC</matricula>
+        <longitud>4</longitud>
+        <anchura>3</anchura>
+        <peso>842</peso>
+    </vehiculo>
+</concesionario>

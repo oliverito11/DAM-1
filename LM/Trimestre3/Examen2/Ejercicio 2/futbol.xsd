@@ -1,0 +1,117 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="liga">
+        <xs:complexType>
+            <xs:sequence>
+
+                <!-- Máximo 20 equipos-->
+                <xs:element name="equipo" maxOccurs="20">
+                <!-- <xs:element name="equipo" maxOccurs="4"> Con esto probamos el funcionamiento con menos valores -->
+                    <xs:complexType>
+                        <xs:sequence>
+
+                        <!-- Jugadores con un máximo de 25 por cada equipo y un mínimo de 20-->
+                            <xs:element name="jugador" minOccurs="20" maxOccurs="25">
+                        <!-- <xs:element name="jugador" minOccurs="3" maxOccurs="5"> Con esto probamos la funcionalidad con menos jugadores -->
+                                <xs:complexType>
+
+                                    <!-- Elementos del jugador-->
+                                    <xs:sequence>
+                                        <xs:element name="nombreJugador" type="nombre" />
+                                        <xs:element name="apellidosJugador" type="apellidos" />
+                                        <xs:element name="dniJugador" type="dni" />
+                                        <xs:element name="emailJugador" type="correo" minOccurs="0" />
+                                        <xs:element name="telefonoJugador" type="telefono" maxOccurs="3" />
+                                        <xs:element name="provinciaJugador" type="provincia" />
+                                    </xs:sequence>
+
+                                    <!-- Atributos del jugador -->
+                                    <xs:attribute name="codigoJugador" type="codigoJ" />
+                                    <xs:attribute name="codigoEquipo" type="xs:IDREF" />
+                                    <xs:attribute name="posicionJugador" type="posicion" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+
+                        <!-- Atributos del equipo -->
+                        <xs:attribute name="codigoEquipo" type="codigoEq" />
+                        <xs:attribute name="nombreEquipo" type="nombreEq" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+            <!-- Restricciones -->
+    <!-- Restriccion nombre jugador -->
+    <xs:simpleType name="nombre">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[aA-zZ ]{1,35}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriccion apellidos jugador -->
+    <xs:simpleType name="apellidos">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[aA-zZ ]{1,50}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriccion posicion jugador -->
+    <xs:simpleType name="posicion">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PORTERO" />
+            <xs:enumeration value="DEFENSA" />
+            <xs:enumeration value="MEDIO" />
+            <xs:enumeration value="DELANTERO" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriccion email jugador -->
+    <xs:simpleType name="correo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]{1,20}@[a-z]{1,15}\.[a-z]{2,4}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriccion telefono jugador -->
+    <xs:simpleType name="telefono">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Restriccion provincia jugador -->
+    <xs:simpleType name="provincia">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[aA-zZ ]{1,30}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriccion codigoEquipo jugador -->
+    <xs:simpleType name="codigoEq">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="[aA-zZ ]{3}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriccion nombreEquipo jugador -->
+    <xs:simpleType name="nombreEq">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[aA-zZ 0-9]{1,20}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriccion codigoJugador jugador -->
+    <xs:simpleType name="codigoJ">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="J_[0-9]{5}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Restriccion dni jugador -->
+    <xs:simpleType name="dni">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="DNI_[0-9]{8}-[TtRrWwAaGgMmYyFfPpDdXxBbNnJjZzSsQqVvHhLlCcKkEe]" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

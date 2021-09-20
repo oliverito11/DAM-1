@@ -1,0 +1,1669 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/formularios-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:30:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Formularios</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[13] </span><br>Formularios</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+<div id="_idContainer023" class="Marco-de-texto-b-sico">
+			<h2 class="titulo2"><span class="numero2">[13.1] </span><a id="_idTextAnchor000"></a><a id="_idTextAnchor001"></a>introducción</h2>
+			<p class="Normal">Los formularios son un elemento presente en muchas páginas web cuya labor es la de recabar información del usuario. La función habitual de un formulario es enviar esa información a un servicio en la red para que la procese adecuadamente.</p>
+			<p class="Normal">Por ejemplo podemos pedir al usuario su nombre y contraseña y enviar esa información a una página <strong class="Negritta">PHP</strong>, lenguaje que se interpreta directamente por el servidor que almacena esas páginas, el cual puede validar o no esos datos.</p>
+			<p class="Normal">No siempre hay una tecnología del lado del servidor detrás, podemos también, a través de un formulario, indicar que el usuario elija el color de fondo de la página. La labor de recoger el color y modificar el fondo de la página lña puede hacer el propio navegador a través del lenguaje <strong class="Negritta">JavaScript</strong>.</p>
+			<p class="Normal">Los formularios son fundamentales para las páginas web actuales, ya que es casi imprescindible obtener información del usuario para adaptar los contenidos a sus necesidades e intereses.</p>
+			<p class="Normal">En HTML 5 se han mejorado muchísimo las posibilidades de los formularios. Una vez más, el problema es que hay características que no todos los navegadores soportan, solo los más modernos. </p>
+			<p class="Normal">La página <a href="#"><span class="hyperlink">http://www.wufoo.com.mx/html5/</span></a> presenta una tabla (en inglés) muy interesante para saber, sobre cada nueva característica de los formularios HTML 5 qué navegadores la soportan (e incluso desde qué versión).</p>
+			<h2 class="titulo2"><span class="numero2">[13.2] </span><a id="_idTextAnchor002"></a>funcionamiento de los formularios. métodos GET y POST</h2>
+			<p class="Normal2"><img src="formularios-html5-web-resources/image/1.png" alt="" /></p>
+			<h3 class="titulo"><span class="numero">[13.2.1]</span><a id="_idTextAnchor003"></a>funcionamiento de los formularios</h3>
+			<p class="Normal2">Un formulario es un contenedor de controles que sirven para que el usuario introduzca datos. Un ejemplo de formulario se puede ver en la <a href="#">Ilustración 88</a>. </p>
+			<p class="Normal">Cada control posee un <strong class="Negritta">nombre </strong>al cual se le asigna un valor, el cual se corresponde con lo que el usuario introduce en el usuario. </p>
+			<p class="Normal">Cuando se envían los datos del formulario (normalmente a través de un botón), se envían todos los nombres y valores de los controles del formulario. En el caso típico, un servicio de Internet recoge esta información y hace algo con ella.</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/2.png" alt="" /></p>
+			<p class="Normal">Como se observa en la <a href="#">Ilustración 89</a>, al enviar los datos del formulario, el servidor recibe pares de datos con cada valor asociado a cada nombre de control.</p>
+			<p class="Normal">El servidor procesa estos datos, pero de forma opaca para el usuario. No se transmite el código que hace posible el proceso, sino el resultado del mismo. </p>
+			<p class="Normal">Este manual no explica como procesar los datos en el lado del servidor, para ello habría que aprender lenguajes como <strong class="Negritta">PHP</strong>, <strong class="Negritta">ASP</strong>, <strong class="Negritta">JSP</strong>,…. todos ellos relacionados con tecnologías del lado del servidor. </p>
+			<p class="Normal">Al usuario le llegará una respuesta, relacionada con los datos que se han procesado, normalmente en forma de página web.</p>
+			<p class="Normal">Supongamos que tenemos este formulario:</p>
+			<table id="table001" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form </strong><span class="atributo">action=</span><span class="texto">”servicio.php”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;label </strong><span class="atributo">for=</span><span class="texto">”nombre”</span><strong class="resaltado">&gt;</strong>Escriba su nombre<strong class="resaltado">&lt;/label&gt;&lt;br&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;input </strong><span class="atributo">type</span><span class="texto">=”text”</span><strong class="resaltado"> </strong><span class="atributo">id=</span><span class="texto">”nombre”</span><strong class="resaltado"> </strong><span class="atributo">name=</span><span class="texto">”nombre”</span><strong class="resaltado">&gt;&lt;br&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;label </strong><span class="atributo">for=</span><span class="texto">”apellidos”</span><strong class="resaltado">&gt;</strong>Escriba sus apellidos<strong class="resaltado">&lt;/label&gt;&lt;br&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;input </strong><span class="atributo">type</span><span class="texto">=”text”</span><strong class="resaltado"> </strong><span class="atributo">id=</span><span class="texto">”apellidos”</span><strong class="resaltado"> </strong><span class="atributo">name=</span><span class="texto">”apellidos”</span><strong class="resaltado">&gt;&lt;br&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;label </strong><span class="atributo">for=</span><span class="texto">”sexo”&gt;</span>Escriba su sexo: <strong class="resaltado">&lt;/label&gt;&lt;br&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;input </strong><span class="atributo">type</span><span class="texto">=”radio</span><strong class="resaltado">” </strong><span class="atributo">id=</span><span class="texto">”hombre”</span><strong class="resaltado"> </strong><span class="atributo">name=</span><span class="texto">”sexo” </span><span class="atributo">value=</span><span class="texto">”hombre”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;label </strong><span class="atributo">for=</span><span class="texto">”hombre</span><strong class="resaltado">”&gt;</strong>Hombre<strong class="resaltado">&lt;/label&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;input </strong><span class="atributo">type</span><span class="texto">=”radio</span><strong class="resaltado">” </strong><span class="atributo">id=</span><span class="texto">”mujer”</span><strong class="resaltado"> </strong><span class="atributo">name=</span><span class="texto">”sexo” </span><span class="atributo">value=</span><span class="texto">”mujer”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;label </strong><span class="atributo">for=</span><span class="texto">”mujer”</span><strong class="resaltado">&gt;</strong>Mujer<strong class="resaltado">&lt;/label&gt;&lt;br&gt;&lt;br&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;button&gt;</strong>Enviar<strong class="resaltado">&lt;/button&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Como veremos, la etiqueta <strong class="Negritta">form </strong>es la encarga de indicar el destino de los datos. En este caso es la página PHP: <em class="cursiva">servicio.php</em>, que deberá estar alojada en el mismo directorio que la página del formulario.</p>
+			<p class="Normal">Hay cuatro controles (distinguibles por su atributo <strong class="Negritta">name</strong>): <em class="cursiva">nombre</em>, <em class="cursiva">apellidos </em>y <em class="cursiva">sexo</em>. </p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/3.png" alt="" /></p>
+			<p class="Normal">Al pulsar enviar se envía el valor <em class="cursiva">Jorge </em>para el control llamado <em class="cursiva">nombre</em>, <em class="cursiva">Sánchez </em>para <em class="cursiva">apellidos </em>y <em class="cursiva">Hombre </em>para <em class="cursiva">sexo</em>.</p>
+			<h3 class="titulo"><span class="numero">[13.2.2]</span><a id="_idTextAnchor004"></a>métodos de paso de datos</h3>
+			<h4 class="titulo4"><span class="numeroOculto">52</span>paso de datos mediante GET</h4>
+			<p class="Normal2">En el ejemplo anterior, los datos se pasan mediante <strong class="Negritta">GET</strong>. GET es un comando del protocolo http que realiza una petición a un URL. </p>
+			<p class="Normal">En este método los datos se pasan en la propia URL. Si el formulario se aloja en la dirección: <a href="http://jorgesanchez.net/practicas/formulario/"><span class="hyperlink">http://jorgesanchez.net/practicas/formulario/</span> </a> entonces cuando escribamos los datos de la <a href="#">Ilustración 90</a>, se generará esta dirección en el navegador:</p>
+			<p class="Normal"></p>
+			<table id="table002" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">http://jorgesanchez.net/practicas/formulario/servicio.php<br />?nombre=Jorge&amp;apellidos=S%C3%A1nchez&amp;sexo=hombre</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="normalespacio">El apellido <em class="cursiva">Sánchez</em> se convierte en <strong class="Negritta">S%C3%A1nchez</strong> (debido a que las URL no pueden tener el carácter <em class="cursiva">á</em>). Dejando de lado la cuestión de la codificación, la forma de una URL que contiene datos procedentes de un formulario vía GET es:</p>
+			<pre class="sintaxis"></pre>
+			<table id="table003" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis">http://urlpágina?var1=valor1&amp;var2=valor2&amp;.....</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Es decir, se envían pares entre el nombre de la variable (en el formulario asignada a través del atributo <strong class="Negritta" lang="en-US">name</strong><span lang="en-US">) y el valor</span> que se le dio en el formulario. Cuando un control del formulario se queda sin valor, entonces el nombre del control se queda sin definir (el servidor no recibiría ningún dato con ese nombre).</p>
+			<p class="Normal">La cuestión en el paso por GET es que los datos que se pasan aparecen en la propia URL; por lo que el paso de datos de un formulario mediante GET tiene estas connotaciones:</p>
+			<ul>
+				<li class="punto">La URL es visible, por lo que todo lo que el usuario ha escrito está a la vista en la URL. Y eso incluye las contraseñas y nombres de usuario que haya utilizado. </li>
+				<li class="punto">Las páginas generadas con GET pueden añadirse como marcador o favorito a los navegadores y páginas de marcadores. </li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">53</span>paso de parámetros mediante POST</h4>
+			<p class="Normal2">El paso por POST funciona exactamente igual, se siguen pasando los pares nombre, valor. Pero los datos se envían dentro del paquete de datos y no por la URL. </p>
+			<p class="Normal">Parece más seguro el paso de parámetros por POST, pero lo cierto es que los datos que viajan mediante el método POST, lo hacen en la cabecera del paquete y esta cabecera es visible por cualquier persona que esté <em class="cursiva">“escuchando”</em> en la misma red que el cliente que está enviando datos. </p>
+			<p class="Normal">Aunque es más difícil obtener los datos enviados vía POST, es posible hacerlo.</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/4.png" alt="" /></p>
+			<p class="Normal">resumen final</p>
+			<p class="Normal2">GET tiene más mala prensa de POST, por decirlo de esta manera. Pero lo cierto es que el paso por POST no garantiza en absoluto la confidencialidad. GET tiene sus ventajas (podemos dejar guardada la página tras enviar los datos en los marcadores). </p>
+			<p class="Normal">Al final, para el diseñador de la página web la realidad es que si creamos simplemente el formulario, deberemos saber qué exige el servicio que recibe los datos, si método GET o método POST. Hay que tener en cuenta que en un sitio web grande el <strong class="Negritta" lang="en-US">front-end</strong><span lang="en-US"> d</span>e la página (la parte visible para el usuario) lo puede realizar una persona distinta respecto a la que crea el <strong class="Negritta">back-end</strong> (la programación en el lado del servidor, invisible para el usuario).</p>
+			<h2 class="titulo2"><span class="numero2">[13.3] </span><a id="_idTextAnchor005"></a>elemento form</h2>
+			<h3 class="titulo"><span class="numero">[13.3.1]</span><a id="_idTextAnchor006"></a>funcionamiento</h3>
+			<p class="Normal">Todo formulario HTML comienza con una etiqueta <strong class="Negritta" lang="en-US">form</strong><span lang="en-US">, </span>dentro de ella se colocan todos los controles del formulario. Un formulario por lo tanto es un elemento <strong class="Negritta">form</strong>, desde el punto de vista HTML, y dentro habrá diversos elementos que representarán a cada uno de los controles encargados de recabar y presentar los datos del usuario. La idea es por lo tanto esta:</p>
+			<p class="Normal"><strong class="resaltado"></strong></p>
+			<table id="table004" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”página/servicio”</span><span class="atributo"> method=</span><span class="texto">”GET o POST”</span><strong class="resaltado">&gt;</strong><br />     …<br /><strong class="resaltado"> &lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Como se observa, hay dos atributos que se encargan de indicar a dónde y de qué forma enviar los datos recogidos del formulario. Eso se hace a través de los atributos <strong class="Negritta">action</strong> y <strong class="Negritta">method</strong>, se explican a continuación:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">action</strong>. Se trata de la URL de la página o servicio al que se enviarán los datos para su procesamiento. Si no queremos que el formulario envíe datos a otra página (por ejemplo, porque simplemente los queremos manejar internamente con JavaScript), se suele poner <em class="cursiva">action=”#”</em><em class="cursiva"> .</em></li>
+				<li class="punto"><strong class="Negritta">method.</strong> Puede ser GET o POST. Se relacionan con las dos formas de enviar datos del protocolo http. Se explica la diferencia al final de este capítulo.<h3 class="titulo"><span class="numero">[13.3.2]</span><a id="_idTextAnchor007"></a>otros atributos de <strong class="Negritta">form</strong></h3></li>
+			</ul>
+			<p class="Normal"></p>
+			<table id="table005" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">accept-charset</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Codificación de caracteres que se utilizará para pasar los contenidos del formulario, por ejemplo <em class="cursiva">ISO-8859-1</em>. Por defecto se usa la codificación de la propia página web.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">autocomplete</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Puede tomar los valores <strong class="Negritta" lang="en-US">on</strong><strong class="Negritta"> </strong>u <strong class="Negritta" lang="en-US">off</strong>. Si se activa esta opción (con valor <strong class="Negritta" lang="en-US">on</strong>), el navegador automáticamente completará los datos del formulario basándose en los valores para esos mismos controles que el usuario haya rellenado en otros formularios.</p>
+							<p class="Normal">Este atributo está disponible también para cada control (así podremos indicar el auto completado en unos controles y en otros no).</p>
+							<p class="Normal">No funciona en el navegador <strong class="Negritta">Opera</strong>.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">enctype</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Solo es válido para el método POST. Indica el formato en el que los datos del formulario son enviados. Nunca se suele usar. Posibles valores:</p>
+							<ul>
+								<li class="punto"><strong class="Negritta">aplication/x-www-form-urlencoded</strong>. Formato predeterminado para el envío de los datos.</li>
+								<li class="punto"><strong class="Negritta">multipart/form-data.</strong> Formato de dato binario, solo se usa si con el formulario se envía un archivo.</li>
+								<li class="punto"><strong class="Negritta">text/plain.</strong> Texto plano, compatible con antiguos programas de recepción de datos de formulario (por ejemplo viejos programas CGI en el servidor).</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">novalidate</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Los navegadores compatibles con HTML 5 tienen la capacidad de validar algunos datos (por ejemplo en los cuadros numéricos se valida que el usuario realmente ha escrito un número). Si usamos este atributo (que no tiene valor asociado), esas validaciones no se harán</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">target</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Es el mismo atributo que en la etiqueta <em class="cursiva">a</em>. Si se usa con valor <strong class="Negritta">_blank</strong>, entonces la respuesta al formulario se da en otra ventana.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[13.4] </span><a id="_idTextAnchor008"></a>controles de tipo input</h2>
+			<h3 class="titulo"><span class="numero">[13.4.1]</span><a id="_idTextAnchor009"></a>elemento input</h3>
+			<p class="Normal2">La mayoría de controles de un formulario se inserta mediante la etiqueta input. Posee un atributo llamado <strong class="Negritta">type</strong> para indicar el tipo de control deseado, por ejemplo <em class="cursiva">input type=</em><em class="cursiva">”text”</em> se usa para añadir un cuadro de entrada de texto.</p>
+			<h3 class="titulo"><span class="numero">[13.4.2]</span><a id="_idTextAnchor010"></a>atributos comunes del elemento input</h3>
+			<p class="Normal">Los atributos comunes de esta etiqueta (independientemente del tipo elegido) se explican a continuación:</p>
+			<p class="Normal"></p>
+			<table id="table006" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">type</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Indica el tipo de control. Sus posibles valores se explican en las siguientes secciones del manual</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">name</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Atributo fundamental que da un nombre al control. Este nombre es el que se le pasa al servicio receptor de los datos del formulario; realmente se le pasa el nombre y el valor que el usuario ha introducido en el control.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">size</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Tamaño, en caracteres, que tendrá el cuadro (especialmente útil en los cuadros de texto y numéricos)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">value</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Permite dar un valor al elemento. Antes de que el usuario rellene datos en él, aparecerá el valor indicado con este atributo.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">disabled</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El control aparecerá deshabilitado para su edición.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">autocomplete</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Permite que el navegador rellene automáticamente el contenido del control en base a la información que posee del usuario. Los valores posibles son <span lang="en-US">on</span> u <span lang="en-US">off</span>.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">autofocus</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Hace que elemento obtenga el foco (el foco hace que el control del formulario que lo tenga sea el que recibe las pulsaciones de teclado del usuario) en cuanto cargue la página. </p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">disabled</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El control estará deshabilitado</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">form</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Recibe el identificador del formulario al que pertenece el control. Se usa cuando el elemento está fuera de la etiqueta <span lang="en-US">form</span> . Internet Explorer no es compatible con este atributo. Es un atributo de HTML 5</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formnovalidated</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Hace que el control no sea validado cuando se envíen los datos</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">maxlength</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Permite indicar el máximo número de caracteres que se admitirán al rellenar el control</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">id</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Este atributo es el común a todos los elementos HTML. En el caso de los formularios su uso no era habitual ya que necesitan del uso de name que ya se puede entender que identifica a cada control.</p>
+							<p class="Normal">Sin embargo se aconseja usar siempre id en los controles por estas razones:</p>
+							<ul>
+								<li class="punto">El atributo <strong class="Negritta" lang="en-US">name</strong> ya hace bastantes años que se quería eliminar. Aunque esta no es razón para ello ya que, por ahora, el atributo name es la forma de pasar los datos de un control de formulario al servicio que los recibe</li>
+								<li class="punto">La nueva etiqueta <strong class="Negritta" lang="en-US">label</strong> (introducida en HTML 5) que sirve como texto de acompañamiento de los controles de un formulario, requiere que el control al que etiqueta esté identificado.</li>
+								<li class="punto">La manera más habitual para acceder desde JavaScript a un control del formulario es a través de su identificador. Como es habitual usar JavaScript cuando se usan los formularios, es un excelente hábito indicar siempre valor para el atributo <strong class="Negritta">id</strong>.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">readonly</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Indica que el control es de <em class="cursiva">solo lectura</em>; es decir, no se podrá escribir en él.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">required</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Atributo de HTML 5 que hace que el elemento sea de obligado rellenado; es decir que no se puede dejar vacío, el usuario tendrá que darle algún valor.</p>
+							<p class="Normal">No funciona en Safari no en versiones de Internet Explorer anteriores a la 9</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">pattern</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Permite colocar una expresión regular en un cuadro de texto. De esa forma no se admitirán los valores que no cumplan esa expresión (salvo que indiquemos <strong class="Negritta" lang="en-US">novalidate</strong>) </p>
+							<p class="normalespacio">Ejemplo (cuadro de texto que solo acepta introducir 5 letras mayúsculas y tres números):</p>
+							<table id="table007" class="tabla-codigo">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tabla-codigo">
+										<td class="tabla-codigo celda-codigo">
+											<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”servicio.php”</span><span class="atributo"> </span></pre>
+											<pre class="codigo"><span class="atributo">      method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br />   <strong class="resaltado">&lt;label</strong><span class="atributo"> for=</span><span class="texto">”texto”</span><strong class="resaltado">&gt;</strong><br />Escribe el nº de serie (5 letras y tres números)<br />   <strong class="resaltado">&lt;/label&gt;</strong><br />   <strong class="resaltado">&lt;input</strong><span class="atributo"> type=</span><span class="texto">”text”</span><span class="atributo"> </span></pre>
+											<pre class="codigo"><span class="atributo">pattern=</span><span class="texto">”[A-Z]{5}[0-9]{3}”</span><span class="atributo"> id=</span><span class="texto">”gustos” </span><span class="atributo">name=</span><span class="texto">”texto”</span><strong class="resaltado">/&gt;</strong><br />   <strong class="resaltado">&lt;input</strong><span class="atributo"> type=</span><span class="texto">”submit”</span><span class="atributo"> value=</span><span class="texto">”enviar”</span><strong class="resaltado">&gt;&lt;br&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">placeholder</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Un <strong class="Negritta">placeholder</strong> es un texto que ayuda a rellenar un cuadro de un formulario (está especialmente pensado para los cuadros de texto) colocando un texto inicial en el cuadro que se va en  cuanto el cuadro obtiene el foco del usuario (el foco se obtiene, por ejemplo, haciendo clic en el control de texto). Ejemplo:</p>
+							<table id="table008" class="tabla-codigo">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tabla-codigo">
+										<td class="tabla-codigo celda-codigo">
+											<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”servicio.php”</span><span class="atributo"> </span></pre>
+											<pre class="codigo"><span class="atributo">      method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br />    <strong class="resaltado">&lt;label</strong><span class="atributo"> for=</span><span class="texto">”texto”</span><strong class="resaltado">&gt;</strong><br />        Escribe el nº de serie <br />    <strong class="resaltado">&lt;/label&gt;</strong><br />    <strong class="resaltado">&lt;input</strong><span class="atributo"> type=</span><span class="texto">”text”</span><span class="atributo"> pattern=</span><span class="texto">”[A-Z]{5}[0-9]{3}” </span><span class="atributo">id=</span><span class="texto">”texto”</span><span class="atributo"> name=</span><span class="texto">”texto” </span></pre>
+											<pre class="codigo"><span class="atributo">        placeholder=</span><span class="texto">”5 letras y tres números”</span><strong class="resaltado">&gt;</strong></pre>
+											<pre class="codigo">    <strong class="resaltado">&lt;input</strong><span class="atributo"> type=</span><span class="texto">”submit”</span><span class="atributo"> value=</span><span class="texto">”enviar”</span><strong class="resaltado">&gt;&lt;br&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="Normal2">El resultado es:</p>
+							<p class="Normal"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkUAAAA3CAYAAAACCz4iAAAACXBIWXMAABbqAAAW6gHljkMQAAAOxklEQVR4Xu2d+69VxRXHb0pS6I9e26SJVpr0L8Ck6b/Qh49qpTYxGPoLSQM+eMhbaBuwxFbbiogVTRv1UkGTCl6oXFRslWotIuC9oE0BuQ/ui7eiTWuZnjVnz7mz58xjzeyz4Zxzv59kMpw5s2dmrbv3rO+ZPXvTIQAAAAAAgOgIVQAAAAAAmAxAFAEAAAAACIgiAAAAAAAJRBEAAAAAgIAoAgAAAACQQBQBAAAAAAiIIgAAAAAACUQRAAAAAICAKAKgdLZs2YKEhNRkKZaenh4xb948sWLFCrF8+XLkjnzOnDnSV60KRBEAJZMyAQMAyiP2mrx48aJYvHix+Oyzz8Snn36KPJCTQCKftSIQRQCUTOwEDAAol5RrklZBKOAjhRP5qlWBKAKgZFImYABAeaRck8uWLZOrH0jhRL5qVSCKACiZlAkYAFAeKdckBfpPPvlEBn3k/hyiCADgJGUCBgCUR8o1uXTpUvHxxx8jMRL5qlVpL1F0aUT8fuaXRUdHh1j/989rxce77pRl33rwTc/BV45Ll94Rqzqmiilfmim2j1wKVb/yOPzcklwGW1ImYABAeaRckxToL1y4IIM+cn/etqJoz9rpMlhw07SvrBEHfA1eBtSYKcApsaHG14yiSAk2SqWJIi3wF+3n33t/lfublyUkLif6OVMGKRMwAKA8Uq7JJUuWyKB//vx55IG8bUWRQgUNn6igYNkMosiGCuTNKIokmWgpIlacZG3XbG9EX5dhdaWdSJmAAQDlkXJNkiiigI8UTuSrVoUliriiYs8Dd6QH2hLhjv+K0Qih4oBsN9v979Dz4paOKYX8UfbqSjthm4AH9253vlTu9SP/s7SicWlMvLFtq9iytUf8y1/Ty+joaKhKS9NO9qnz5YVX+kJVAYNUUXTu3LnmT2f/KTZ8v1NMvXqleDNUt6QEUZRxfPODDQ/qjYA7/itGiaJI3Z7TxYu6rVjEHxBFfGwT8KGerVdMFH0+8rZ4sY0DbNvZV/DvDepJEUX08sazZ882fzrzoXiURFHnCvFGqG5JiXzVqjRUFDUrTT/+EkWRsv0nWwcnCrP+cmWRQBTxqZuAsyC3dfteccp+iJ+CQbLtRINBu9mn7AmKZcAmVRSdOXMGiZEmvSiilYfntgxZv9M3EtOeo38MbRUPbakPxuamaFvAVbd9vnHHs2JcTARm9dn1FJc5fn0DuTrWhrmpOEUEsNqIFEWqTTV25RflY31fl80nsfu/9PZVv0+v/ZrTHyybPXDPGU4/qedMTB8h6kXRB2JXkaANUeSl3e0DxUkVRadPn5ZBH7k/v++++0LubFoaIoooiNlWHahcFx0qQJl1Vfu1YKNt5JV1jaenqM2/ds3KBc7t2meXKPrmui7ZjupHBV+bQKDgmbPXHBMDdhtcUeTwgymO6oSe5TiXEDRRPtLHq4tKUyCwbXbAPWeC/RQ8Z1h9MDEnYBW0d7w17DgigEcUmbflzD7+0/eq83ad3LdCbWaire52nlFeTdvEvrH6c9YcB3dVTO2dsa2KcMROIftE2H+uelz79FXC0cwea1+uv3E29lx/Rl19bDVfqTpmuQHH/hQ/cvtj+7Eg1FcsFOgp6J86dSo6377i2twPqx8/9X6+3qkj4pGbO8XXZz4uenufEt/r+MJE3ScPVeuN7xaLOr5YqbNRfGjpZ1ulj6mdy8Xr44fF+ps75b//otfLjtfHMWXazeLZw+O5dvY/fnvWTk+u/rqesaCdKp80osiX6oKE+dRThimgXEFPBWNbgHQGJYe4UOO3BT7bO4yovk0Aqv45qyxRbXBFUYbTD5HthHD9bfRVPV0URdlsg3nOxPRT5Jzh9hHCnIBV4N5z+HAuqLADgi1gWgVLfbsc0bBbC1TqWNtxtjYI534pxsqWT/j4BJMi1T6u/4gi9pnixEw1EZIoinZbxrbnyIi1z7wI49uf6kfTlkJ+LAj1EwsFegr4UckiRFQicfNBrd5hKYpc8ZWEEdUj4aOEjK2f61fvrLUlhU32/dDOn3njNwke1ZYSRStXfNU+VkaaNKIoaqXI8di2eauNfo1bg3h2vC6KVDB2rnQERBEryBkrDK7kvYUS20akmPH5wenPBHxt1e0pirXZBueciewn6ZyJ7COEOQH7njxjBQRLwFQBxvxlbyt3CY+JcRmrP7VAXr8qpNqfWJGwBG2tHmdfTLWuYwwM/0TbJyL8V9Q+TRTpbaixTYiLBFFknD+6QLQJY72Mbb/g+dE1vkaeJ0VIEUWLFi0S4+PjYmxsjJ2/uLy6QjS7Imq85WN94rc3XSXLpt/2mDiS1Xu3IlCqZRvFkcrnwR0/tbanyn+xa1SMjfaJRyptTe1cJvbQ99nnKdNuEs/2jVnHcf2qHbXydzf+UJbZ6nNz8lWr0hBR5NpTFHwxYRZ8uL+6kwKcCIzfOKYRT2ZFt9FgURQTsF2oPlx/G7OfaJsdhM6Z2H5SzpnYPkLkJmAtQLhubQX3wpgB07dHybKpOyQaYm7rmWNWbXPEiwvVpk3IccYWbV+E/wrb5xKYpkhIFEU5MRHoK/X8CfnR6hvju8J+LEiqKKKAz06ju+TqzYxV3ZbvqiJICiDtMwmRZ/pG69qYqGd81o4lEfSa7bMnDXRXxZQ+RiWKZm86GLbRkSa9KPJh3nrTg2wo8JqkBDgiRhQ14h0+0W00oSgK3SYy+4m22YPvnIntJ+Wcie0jBHsC5q6GGPVqAcaXtDZDooHzK928TeXau1K3asDBEvirY7PvXzKJtS/Kf0Xt44odbj29Lnd1reD5E/Kjf/9QNsaifiwI9RfLwoUL5buvuOnkwSfFd7W9QbY0tXOpeI3qj/SK30ghk31WaWSXWEgi6AcbxOGs7E/LrpXi6enekVw/M+7vzo5xtKWl/u7VuXHUjq2kfY9VRdEDLw8HbXQl8lWrUrooUugrALUA5bhd4iIlwBG+8ZvCLFao2Yhuow1EUbTNDGznTGw/KedMbB8hYiZgGTgiRVFov48Z1GJFg8S3V8Rsy7lvhidqCFsA5QbNWPti/VfIPq7Y4dbz1uWVx9rfEFFEFPFjQaifWCjQj4xUhQgnN4WHTxSNDL+fEzK1doZfzokivd3ZTxyQn3URI48jUXRjta1XjXZc45hx/0u1cde1x7RXzyGKjLoyUFaCzR+f+1vuO9vjz+Yj0s72tONjApxqwzX+ulUBTaj59lBx98aw2mhCUeTaTK3w7Sli2WyDc85E9pN0zkT2EYI9ARdcKQredsuIFQ1m8LLtT3H1bQbcWGFDt2hibp0RsfbF+k8n2j6u2OHW89bllcfan+pH616xjGg/FoR9TWosWLBABv3h4WFWPvjeJvEdWsFZuT1cvyKKfp0JmVdy5S+LBZko6lXlJ/9cFUq3bhB9tuNOHspE0RIpitRnJYDkcVn7J15aXRNFajzvbJgpy9buHAqP25FDFGVQAPr5HV0Tq0C3/8j6tJcegPRbJWbgovZWX7227nZbVIAT/vGb41FlrjGZj4y7iGqjCUUR4ROstn6ibLbBPGdi+kk9Z2L6CJGbgB0bTIPf5eoZwc63l8NCI0UD+7+f4Ao+hbY61Btx64yItS/Wf1a49nHFjqOesq2RoijW/iQ/cvvg+rEgqaKIAj47VcQLCRoSJ68E6x7KxI1RN2uDhEyvVk7CZcq0G8Wmlx6vCS9XW7o4M/tVAkj/ThdFQRsdiXzVqrBEUWg1h6h7fNvzC9wWZFQAMpP+VFvwtkZAFLmCuG8lxExc4UKw24gURc73EYnGiiJ9tUgXlObfS/97sG22EXHOcPtJPWcIbh8hzAnY9YQNe6OzJXBYn/oR9ieNrIFVhEWRGahs78Ox9ae3ERR8GvpTekHRpRFrH8H1X2H7uKJI2J58m1ixa6goEnz7iWg/auMu4zxJIUUUzZ8/X5w8eVIMDQ2x8xeWXiPnjOm3PioOaeXHt63Klw8dFA/fUBUyPXo7QzvFfCmK8scP7H9CfFvbr7R2x+BEv4MHxMMkiq5aLHZXPvfv/50UReqzqvf8kmtqx89Yua1W/vajt8myNd0DQftceduKIldQcCUzmD2zbrPo3/vLXB3XapO5udYMPLax6G2Zb1229WW2Efq1b44pVN9GqA3buH392AQkCUfbu6RCK3tcTL9Rf6rM9u6fkM1OCp4zHOEUe86E+uBgTsC+ja2sYGALdt49P46nj7Kkgi739pl33IG6nE3cCt1PMcdF22c5xum/ovZFiCLbXp8Xdu+traA1UhSx7RcF/Jjrr6AfC0J9xEKiiAJ+VBrcIUWNOQ9RmjLtBvGHA4NZvQNVUVQRLj2W46+7pSqKJsqr9akd13e1trS6rqS3oYuioH2ORL5qVVgrRQCAdKwTsCUoBFeIFKFgp7XpElm2VRh/sHO07bgtUv9iPv7tLx3WxnML0fYREf5Lti9CFBG6HVV/T9xWbKgo0ssD9gf9KNLfaM32Y0Gor1go0A8ODsangffEQ4Youe6W9eKgpY4UMrlyJYqM+pX01vqqeLlz4z5rf7m2XGMY6Jbt63VVu2u6+8O2ORJEEQDAScoEDMIbdwFIJeWapEA/MDAggz5yf37vvfeG3Nm0QBQBUDIpEzC4fG83BpOPlGuSAj0F/f7+fuSBHKIIAOAkZQKetBi3cFh7rACIJOWapEB/4sQJGfSR+/N77rkn5M6mBaIIgJJJmYAnLbooSthLBACHlGuSAj0F/Y8++gh5IIcoAgA4SZmAAQDlkXJNUqCngI8UThBFAAAnKRMwAKA8Uq7Ju+++Wxw/fhyJkchXrQpEEQAlkzIBAwDKI+WapEB/7NgxGfSR+3OIIgCAk5QJGABQHrHX5MWLF8W8efPE0aNHkRhp7ty50metCEQRACWTfzkdEhJSM6RYurq6xKxZs8Rdd92F5Enko82bN4fc2bRAFAEAAAAACIgiAAAAAAAJRBEAAAAAgIAoAgAAAACQQBQBAAAAAAiIIgAAAAAACUQRAAAAAICAKAIAAAAAkEAUAQAAAAAIiCIAAAAAAAlEEQAAAACAgCgCAAAAAJBAFAEAAAAAVPg/P1GG7s+cZWMAAAAASUVORK5CYII=" alt="" /></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo"><span class="numero">[13.4.3]</span><a id="_idTextAnchor011"></a>cuadros de texto</h3>
+			<p class="Normal">Los cuadros de texto usan el atributo <strong class="Negritta">type </strong>con valor <strong class="Negritta">text</strong>. Permiten recoger información escrita por el usuario. Su sintaxis básica es:</p>
+			<table id="table009" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">&lt;input </strong><span class="atributo">type=</span><strong class="resaltado">”text” </strong><span class="atributo">name=</span><span class="texto">”nombre”</span><strong class="resaltado"> </strong><span class="atributo">id=</span><span class="texto">”identificador”</span><strong class="resaltado">&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Además podemos usar los atributos comunes a los elementos <strong class="Negritta">input </strong>comentados anteriormente. </p>
+			<p class="Normal2">El resultado de un código tipo <em class="cursiva">input type=”text”</em> es un cuadro en el que el usuario puede introducir texto. Ejemplo:</p>
+			<table id="table010" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”servicio.php”</span><span class="atributo"> method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;<br /></strong>   <strong class="resaltado">&lt;label </strong><span class="atributo">for=</span><span class="texto">”nombre”</span><strong class="resaltado">&gt;</strong>Escriba su nombre<strong class="resaltado">&lt;/label&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   &lt;input</strong><span class="atributo"> type=</span><span class="texto">”text”</span><span class="atributo"> name=</span><span class="texto">”nombre”</span><span class="atributo"> id=</span><span class="texto">”nombre” </span></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;</strong><span class="atributo">size=</span><span class="texto">”8” </span><span class="atributo">maxlength=</span><span class="texto">”20”</span><strong class="resaltado">&gt;<br />&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Ese código da como resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/5.png" alt="" /></p>
+			<h3 class="titulo"><span class="numero">[13.4.4]</span><a id="_idTextAnchor012"></a>cuadro de contraseñas </h3>
+			<p class="Normal2">Funcionan como los cuadros de texto, solo que el texto que se introduce se oculta, mostrando solo puntos o asteriscos. Se usan, lógicamente, para introducir contraseñas. La sintaxis es:</p>
+			<pre class="sintaxis"><strong class="resaltado"></strong></pre>
+			<table id="table011" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">&lt;input </strong><span class="atributo">type=</span><strong class="resaltado">”password” </strong><span class="atributo">name=</span><span class="texto">”nombre”</span><strong class="resaltado"> </strong><span class="atributo">id=</span><span class="texto">”identificador”</span><strong class="resaltado">&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Usa los mismos atributos que los cuadros de texto. Si usamos método GET, la contraseña es visible en la parte superior del navegador. Con POST esto no ocurre, pero aun así podríamos averiguarla. Por ello lo ideal es pasar cifrada la contraseña  a través, por ejemplo, del protocolo <strong class="Negritta">https</strong>.</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/6.png" alt="" /></p>
+			<h3 class="titulo"><span class="numero">[13.4.5]</span><a id="_idTextAnchor013"></a>botones</h3>
+			<p class="Normal2">Los botones son controles del formulario en los que no se puede escribir, sino que, simplemente, reciben un click de ratón o un golpe de dedo en un dispositivo táctil. Esa pulsación puede dar lugar a diversos efectos (la mayoría con ayuda de JavaScript). El más común de ellos: enviar los datos del formulario.</p>
+			<p class="Normal">Hoy en día los botones se aconsejan utilizarles mediante el elemento <strong class="Negritta" lang="en-US">button</strong><span lang="en-US">,</span> que se explica más adelante. No obstante muchos diseñadores siguen utilizando esta forma (que por otro lado es más compatible con navegadores antiguos), por ello se explica en este manual</p>
+			<h4 class="titulo4"><span class="numeroOculto">54</span>botón de envío</h4>
+			<p class="normalespacio">Sirve para llevar a cabo la comunicación entre el formulario y la página que recoge sus datos. La sintaxis básica es:</p>
+			<pre class="sintaxis"><strong class="resaltado"></strong></pre>
+			<table id="table012" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">&lt;input </strong><span class="atributo">type=</span><strong class="resaltado">”submit” </strong><span class="atributo">value=</span><span class="texto">”texto del botón”</span> <span class="atributo">id=</span><span class="texto">”identificador”</span><strong class="resaltado">&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">En cuanto se pulsa este botón, los datos del resto de controles se envían a la página receptora del formulario (que se corresponde a la URL indicada en el apartado <strong class="Negritta" lang="en-US">action</strong><span lang="en-US"> de la etiqueta </span><strong class="Negritta" lang="en-US">form</strong><span lang="en-US">).</span></p>
+			<h5 class="titulo5"><span class="numeroOculto">1</span>botón alternativo de tipo submit</h5>
+			<p class="Normal2">Siempre ha sido posible colocar dos botones de tipo submit en el mismo formulario. Pero la cuestión es ¿para qué? ya que ambos harían lo mismo: enviar los datos al servicio indicado en el atributo <strong class="Negritta" lang="en-US">action</strong><span lang="en-US"> del elemento </span><strong class="Negritta" lang="en-US">form</strong><span lang="en-US">. </span></p>
+			<p class="Normal">Con la aparición de HTML 5 se ha dado un sentido más lógico a esto ya que podemos indicar servicios de destino distintos para cada botón <strong class="Negritta" lang="en-US">submit</strong><span lang="en-US">. E</span>so se consigue con ayuda de estos nuevos atributos:</p>
+			<p class="Normal"></p>
+			<table id="table013" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formaction</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Atributo incorporado en HTML 5 (las versiones de Internet Explorer inferiores a la 10 no le soportan), que asignado a un botón de tipo <strong class="Negritta" lang="en-US">submit</strong> o <strong class="Negritta" lang="en-US">image</strong>, permite indicar el servicio al que se enviarán los datos del formulario.</p>
+							<p class="Normal">Normalmente un botón <em class="cursiva" lang="en-US">submit</em> envía los datos al servicio indicado por el atributo <strong class="Negritta" lang="en-US">action</strong> del elemento <strong class="Negritta" lang="en-US">form</strong>, esto permite un destino alternativo, de modo que podríamos tener dos botones cada uno de ellos indicando un destino distinto para los datos.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formethod</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Con las mismas características que el anterior, en este caso permite indicar el método de paso (<strong class="Negritta">GET</strong> o <strong class="Negritta">POST</strong>) de los datos</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formenctype</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Con las mismas premisas que los dos atributos anteriores, indica la forma de codificación de los datos (como el atributo <strong class="Negritta" lang="en-US">type</strong> del elemento <strong class="Negritta" lang="en-US">form</strong>), puede ser: </p>
+							<ul>
+								<li class="punto"><strong class="Negritta">application/x-www-form-urlencoded</strong></li>
+								<li class="punto"><strong class="Negritta">multipart/form-data</strong></li>
+								<li class="punto"><strong class="Negritta">text/plain</strong></li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formnovalidate</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Los datos que se envían no se validarán (como el atributo <strong class="Negritta" lang="en-US">validate</strong> del elemento <strong class="Negritta" lang="en-US">form</strong>). No funciona en Safari (además de en las versiones anteriores a la 10 de Internet Explorer).</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formtarget</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El destino de los datos se mostrarán en una ventana aparte si se le da el valor <strong class="Negritta">_blank</strong> a este atributo.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="titulo4"><span class="numeroOculto">55</span>botón de restablecer</h4>
+			<p class="Normal2">La sintaxis de este botón es:</p>
+			<table id="table014" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">&lt;input </strong><span class="atributo">type=</span><strong class="resaltado">”reset” </strong><span class="atributo">value=</span><span class="texto">”texto del botón”</span> <span class="atributo">id=</span><span class="texto">”identificador”</span><strong class="resaltado">&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Este tipo de botones lo que hacen es anular los datos que se han introducidos en los controles del formulario. Deja todos los controles en su estado inicial.</p>
+			<h4 class="titulo4"><span class="numeroOculto">56</span>botón genérico</h4>
+			<p class="Normal2">Un botón genérico se marca indicando <span class="atributo">type=</span><span class="texto">”button”</span> en la etiqueta <strong class="Negritta">type</strong>. En los formularios no se usa para enviar o configurar la información, sino que se utiliza normalmente para capturar su pulsación y lanzar una acción desde el lenguaje JavaScript.</p>
+			<h4 class="titulo4"><span class="numeroOculto">57</span>botón de imagen</h4>
+			<p class="Normal2">Es equivalente al anterior, pero permite colocar un botón con una imagen en lugar de un texto. Este tipo de botón permite usar atributos que controlan las propiedades de la imagen en el botón:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">alt</strong>. Texto alternativo para la imagen</li>
+				<li class="punto"><strong class="Negritta">src</strong>. URL de la imagen</li>
+				<li class="punto"><strong class="Negritta">width</strong>. Anchura de la imagen</li>
+				<li class="punto"><strong class="Negritta">height</strong>. Altura de la imagen</li>
+			</ul>
+			<p class="Normal">Hoy en día, prácticamente, no se usan estos botones.</p>
+			<h3 class="titulo"><span class="numero">[13.4.6]</span><a id="_idTextAnchor014"></a>controles ocultos</h3>
+			<p class="Normal2">Son controles que no se muestran al usuario y que se usan con la finalidad de hacer trucos. Por ejemplo para poder enviar datos de forma invisible a los servicios y páginas receptoras de los datos del formulario y así el usuario no vea esos datos. Otro es para poder enviar datos entre diferentes páginas web de forma que no se muestren dichos datos por pantalla, ya que sería muy poco estético.</p>
+			<p class="Normal">Los controles de este tipo usan el valor <strong class="Negritta">hidden </strong>en el atributo <strong class="Negritta">type</strong>.</p>
+			<h3 class="titulo"><span class="numero">[13.4.7]</span><a id="_idTextAnchor015"></a>botones de radio</h3>
+			<p class="Normal2">Se trata de un control fácil de usar que permite elegir una de entre varias opciones. Todas las opciones deben de tener el mismo nombre y solo cambia el valor (y el identificador) de las mismas. </p>
+			<p class="Normal">La razón de tener todos los controles el mismo valor es porque el servicio que recibe los datos, los debe recibir con el mismo nombre (debe almacenar los valores en el mismo, digamos <em class="cursiva">sitio</em>) ya que se refieren a la misma cosa. Cambian sus valores en función de la selección que hagamos.</p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table015" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”servicio.php” </span><span class="atributo">method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">    &lt;p&gt;</strong>Sexo:<strong class="resaltado">&lt;/p&gt;</strong><br /><strong class="resaltado">    &lt;input</strong><span class="atributo"> type=</span><span class="texto">”radio” </span><span class="atributo">name=</span><span class="texto">”sexo”</span><span class="atributo"> id=</span><span class="texto">”hombre” </span></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&#9;</strong><span class="atributo">value=</span><span class="texto">”h”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><span class="atributo">&#9;&#9;</span><strong class="resaltado">&lt;label </strong><span class="atributo">for=</span><span class="texto">”hombre”</span><strong class="resaltado">&gt;</strong>Hombre<strong class="resaltado">&lt;/label&gt;&lt;br&gt;</strong><br /><strong class="resaltado">    &lt;input</strong><span class="atributo"> type=</span><span class="texto">”radio”</span><span class="atributo"> name=</span><span class="texto">”sexo”</span><span class="atributo"> id=</span><span class="texto">”mujer”</span></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;</strong><span class="atributo">value=</span><span class="texto">”m”</span> <span class="atributo">checked </span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><span class="atributo">&#9;&#9;</span><strong class="resaltado">&lt;label </strong><span class="atributo">for=</span><span class="texto">”mujer”</span><strong class="resaltado">&gt;</strong>Mujer<strong class="resaltado">&lt;/label&gt; &lt;br&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El resultado es:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/7.png" alt="" /></p>
+			<p class="Normal2">En el ejemplo, los botones de radio tienen el mismo nombre (<em class="cursiva">sexo)</em>, bajo ese nombre se enviarán los datos a la página <em class="cursiva">servicio.php</em> (indicada en el apartado <em class="cursiva">action</em>), los valores que se enviarán serán <em class="cursiva">m</em> si se elige <em class="cursiva">mujer</em> y <em class="cursiva">h </em>si se elige <em class="cursiva">hombre</em>. El atributo <strong class="Negritta" lang="en-US">checked</strong> hace que el botón en el que se usa (el de la mujer), aparezca chequeado por defecto. Además los dos elementos<span lang="en-US"> </span><em class="cursiva" lang="en-US">label</em><span lang="en-US"> s</span>e relacionan con el botón correspondiente, de ese modo haciendo clic en el texto se activa el botón relacionado (prueba de que hemos asociado bien la etiqueta <em class="cursiva">label</em> al <em class="cursiva">input</em> correspondiente).</p>
+			<h3 class="titulo"><span class="numero">[13.4.8]</span><a id="_idTextAnchor016"></a>casillas de verificación</h3>
+			<p class="Normal2">Se usan igual que los botones de radio, pero en este caso están pensadas para ser independientes unas de otras. Es decir, no se pone el mismo nombre, como ocurría con los botones de radio, a dos casillas diferentes. Son por tanto valores del tipo activar/desactivar</p>
+			<p class="Normal">La diferencia es que el tipo (<strong class="Negritta" lang="en-US">type</strong><span lang="en-US">) usa el valor </span><strong class="Negritta" lang="en-US">checkbox</strong><span lang="en-US"> en </span>lugar de <strong class="Negritta">radio</strong>. El atributo <strong class="Negritta">checked</strong> de los botones de radio se puede usar en las casillas de verificación con la misma finalidad: para que inicialmente la casilla aparezca pulsada.  Ejemplo:</p>
+			<table id="table016" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”servicio.php”</span><span class="atributo"> method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">    &lt;p&gt;</strong>Descuentos:<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><span class="atributo">    </span><strong class="resaltado">&lt;label </strong><span class="atributo">for=</span><span class="texto">”numerosa”</span><strong class="resaltado">&gt;</strong>Familia Numerosa<strong class="resaltado">&lt;/label&gt;</strong><strong class="resaltado">       </strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;input</strong><span class="atributo"> type=</span><span class="texto">”checkbox” </span><span class="atributo">name=</span><span class="texto">”numerosa”</span><span class="atributo"> id=</span><span class="texto">”numerosa” </span></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&#9;</strong><span class="atributo">value=</span><span class="texto">”numerosa”</span><strong class="resaltado">&gt;</strong><strong class="resaltado">&lt;br&gt;</strong><br /><span class="atributo">    </span><strong class="resaltado">&lt;label </strong><span class="atributo">for=</span><span class="texto">”pension”</span><strong class="resaltado">&gt;</strong>Pensionista<strong class="resaltado">&lt;/label&gt;</strong><strong class="resaltado">       </strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;input</strong><span class="atributo"> type=</span><span class="texto">”checkbox” </span><span class="atributo">name=</span><span class="texto">”pension”</span><span class="atributo"> id=</span><span class="texto">”pension” </span></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&#9;</strong><span class="atributo">value=</span><span class="texto">”pension”</span><strong class="resaltado">&gt;</strong><strong class="resaltado">&lt;br&gt;</strong><br /><span class="atributo">    </span><strong class="resaltado">&lt;label </strong><span class="atributo">for=</span><span class="texto">”ne”</span><strong class="resaltado">&gt;</strong>Necesidades especiales<strong class="resaltado">&lt;/label&gt;</strong><strong class="resaltado">       </strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;input</strong><span class="atributo"> type=</span><span class="texto">”checkbox” </span><span class="atributo">name=</span><span class="texto">”ne”</span><span class="atributo"> id=</span><span class="texto">”ne” </span></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;&#9;</strong><span class="atributo">value=</span><span class="texto">”ne”</span><strong class="resaltado">&gt;</strong><strong class="resaltado">&lt;br&gt;</strong><br /><strong class="resaltado">&#9;&lt;input</strong><span class="atributo"> type=</span>”submit”<span class="atributo"> value=</span>”Enviar”<span class="atributo"> </span><strong class="resaltado">&gt;</strong><br /> <strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/8.png" alt="" /></p>
+			<p class="Normal2">En este caso se ha diseñado un formulario completo, incluido el botón de enviar.</p>
+			<h3 class="titulo"><span class="numero">[13.4.9]</span><a id="_idTextAnchor017"></a>cuadro de selección de archivo</h3>
+			<p class="Normal">Cuando se usa <em class="cursiva">type=”file”</em> en una etiqueta <strong class="Negritta" lang="en-US">input</strong><span lang="en-US">, </span>entonces aparece un botón que al pulsarle hace aparecer un cuadro de selección de archivos mediante el cual podremos elegir un archivo. La ruta local a dicho archivo es lo que se guarda para ser enviado al sitio o página que recibe los valores del formulario. </p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table017" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong> <span class="atributo">action=</span><span class="texto">”servicio.php”</span> <span class="atributo">method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br />        Elija el archivo<br /><strong class="resaltado">    &lt;input </strong><span class="atributo">type=</span><span class="texto">”file” </span><span class="atributo">name=</span><span class="texto">”archivo”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">    &lt;input </strong><span class="atributo">type=</span><span class="texto">”submit”</span> <span class="atributo">value=</span><span class="texto">”enviar”</span><strong class="resaltado">&gt;&lt;br&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/9.png" alt="" /></p>
+			<p class="Normal2">Al pulsar <em class="cursiva">seleccionar archivo</em> aparece un cuadro de selección de archivos, cuando elijamos el archivo su ruta será lo que se envíe con el formulario.</p>
+			<h4 class="titulo4"><span class="numeroOculto">58</span>atributos relacionados con los cuadros de archivo</h4>
+			<p class="Normal"></p>
+			<table id="table018" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">accept</strong>  </p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Permite indicar el tipo MIME de archivos que aceptará el servidor. Por ejemplo <strong class="Negritta">image/*</strong> indicará que se acepta cualquier formato de imagen. Otras posibilidades son <strong class="Negritta">audio/*</strong> y <strong class="Negritta">video/* </strong>o indicar un tipo MIME completo como <strong class="Negritta">image/jpeg</strong>. </p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">multiple</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Si aparece, permite especificar más de un archivo</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo"><span class="numero">[13.4.10]</span><a id="_idTextAnchor018"></a>cuadros numéricos</h3>
+			<p class="Normal2">Aparecen con <em class="cursiva">type=”number”</em>. Sirven para introducir números (decimales o no). Los navegadores que reconocen este tipo de control presentan un cuadro de texto con botones para subir y bajar el valor del número (el incremento o decremento que hacen depende del atributo <strong class="Negritta">step</strong>) y además no permiten enviar los datos (salvo que se use el atributo <strong class="Negritta">novalidate</strong>) si se intentan introducir datos no numéricos.</p>
+			<p class="Normal">Hay una serie de atributos reservados a este tipo de cuadros:</p>
+			<table id="table019" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">max</strong>  </p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Establece el máximo valor que se puede escribir en el cuadro</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">min</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Establece el mínimo valor que se puede escribir en el cuadro</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta" lang="en-US">step</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Valor en el que se puede incrementar el número. Por defecto vale<strong class="resaltado"> </strong><strong class="Negritta">1</strong>, lo que impediría introducir valores decimales. Para decimales por ejemplo habría que indicar un step de <strong class="Negritta">0.01 </strong></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/10.png" alt="" /></p>
+			<h3 class="titulo"><span class="numero">[13.4.11]</span><a id="_idTextAnchor019"></a>cuadros de fecha</h3>
+			<p class="Normal2">Se usa con <em class="cursiva">type=”date”</em>. Permite seleccionar una fecha. Los navegadores que reconocen este tipo de control permiten pulsar en un botón que invoca a un calendario para elegir cómodamente la fecha. Ejemplo:</p>
+			<table id="table020" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form </strong><span class="atributo">action=</span><span class="texto">”recogida1.php”</span> <span class="atributo">method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">   <strong class="resaltado">  &lt;label</strong> <span class="atributo">for=</span><span class="texto">”fecha_nac”</span>&gt;Fecha de nacimiento<strong class="resaltado">&lt;/label&gt;</strong></pre>
+							<pre class="codigo">   <strong class="resaltado">  &lt;input</strong> <span class="atributo">type</span><span class="texto">=”date” </span><span class="atributo">name=</span><span class="texto">”fecha_nac” </span><span class="atributo">id=</span><span class="texto">”fecha_nac”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El resultado en el navegador <strong class="Negritta">Chrome</strong> del cuadro de calendario, es este:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/11.png" alt="" /></p>
+			<p class="Normal2">Es pues, un control muy visual y práctico.</p>
+			<p class="Normal">Los cuadros de tipo date tienen los atributos <strong class="Negritta" lang="en-US">min</strong><span lang="en-US">, </span><strong class="Negritta" lang="en-US">max</strong><span lang="en-US"> y </span><strong class="Negritta" lang="en-US">step</strong><span lang="en-US"> </span>vistos en los cuadros numéricos. </p>
+			<h3 class="titulo"><span class="numero">[13.4.12]</span><a id="_idTextAnchor020"></a>cuadro de selección de hora</h3>
+			<p class="Normal">Se usa con <strong class="Negritta">input type=”time”.</strong> Permite seleccionar una hora, minutos y segundos</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/12.png" alt="" /></p>
+			<h3 class="titulo"><span class="numero">[13.4.13]</span><a id="_idTextAnchor021"></a>otros cuadros de selección de fechas</h3>
+			<p class="Normal2">Aunque no funcionan en la mayoría de navegadores, son parte ya de html</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">input type=”datetime”</strong>. Permite seleccionar fechas con hora</li>
+				<li class="punto"><strong class="Negritta">input type=”month”</strong>. Selecciona meses y años</li>
+				<li class="punto"><strong class="Negritta">input type=”week”</strong>. Selecciona el número de semana y el año de la misma.<h3 class="titulo"><span class="numero">[13.4.14]</span><a id="_idTextAnchor022"></a>cuadros deslizantes</h3></li>
+			</ul>
+			<p class="Normal2">Es el control llamado en inglés <em class="cursiva">slider</em>, aunque se usa con el atributo <em class="cursiva">type=”range”</em>. Presenta un control para elegir datos entre un rango. Los atributos <strong class="Negritta">max</strong> y <strong class="Negritta" lang="en-US">min</strong><span lang="en-US"> </span>establecen el rango máximo y mínimo del control. El atributo <strong class="Negritta">step</strong> indica cuánto se mueve el control (si de uno en uno, de dos en dos,…). Ejemplo:</p>
+			<table id="table021" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form </strong><span class="atributo">action=</span><span class="texto">”recogida3.php”</span> <span class="atributo">method=</span><span class="texto">”get”</span>&gt;</pre>
+							<pre class="codigo">     <strong class="resaltado">&lt;label</strong> <span class="atributo">for=</span><span class="texto">”rango”</span><strong class="resaltado">&gt;</strong>Seleccione su edad<strong class="resaltado">&lt;/label&gt;</strong></pre>
+							<pre class="codigo">     <strong class="resaltado">&lt;input</strong> <span class="atributo">type=</span><span class="texto">”range”</span> <span class="atributo">name=</span><span class="texto">”range”</span> <span class="atributo">id=</span><span class="texto">”range” </span></pre>
+							<pre class="codigo">     <span class="atributo">value=</span><span class="texto">”25”</span> <span class="atributo">min=</span><span class="texto">”18”</span> <span class="atributo">max=</span><span class="texto">”65”</span> <span class="atributo">step=</span><span class="texto">”1”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/13.png" alt="" /></p>
+			<h3 class="titulo"><span class="numero">[13.4.15]</span><a id="_idTextAnchor023"></a>otros controles</h3>
+			<ul>
+				<li class="punto"><strong class="Negritta">input type=”email”</strong>. Permite indicar direcciones de correo electrónico</li>
+				<li class="punto"><strong class="Negritta">input type=”url”</strong>. Permite indicar direcciones URL.</li>
+				<li class="punto"><strong class="Negritta">input type=</strong><strong class="Negritta">”search”</strong>. Presenta un cuadro de texto pensado para hacer búsquedas.</li>
+				<li class="punto"><strong class="Negritta">input type=”tel”</strong>. Permite introducir números de teléfono.</li>
+				<li class="punto"><strong class="Negritta">input type=”color”.</strong> Presenta un control de selección de colores. El color se toma en formato <strong class="Negritta">#xxxxxx</strong> donde cada <em class="cursiva">x </em>es una cifra hexadecimal. Es decir, el color se obtiene en el formato habitual de colores de HTML.<h2 class="titulo2"><span class="numero2">[13.5] </span><a id="_idTextAnchor024"></a>botones modernos</h2></li>
+			</ul>
+			<p class="normalespacio">La recomendación de HTML 5 para los botones es utilizar el elemento <strong class="Negritta" lang="en-US">button</strong>. La diferencia práctica está en el funcionamiento, esta etiqueta tiene apertura y cierre y el texto que aparece en el botón está contenido por elemento <strong class="Negritta">button</strong>; de esta forma se permite colocar código HTML en el texto del botón. Ejemplo:</p>
+			<table id="table022" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;button&gt;</strong>Hazme <strong class="resaltado">&lt;strong&gt;</strong>clic<strong class="resaltado">&lt;/strong&gt;&lt;/button&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Mostraría el  botón:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/14.png" alt="" /></p>
+			<p class="Normal2">Con la palabra <em class="cursiva">clic</em> en negrita. Podriamos perfectamente colocar imágenes metiendo un elemento <strong class="Negritta">img</strong> dentro del botón.</p>
+			<p class="Normal">La única pega es que es una etiqueta más moderna y que no es soportada por algunos navegadores antiguos.</p>
+			<h3 class="titulo"><span class="numero">[13.5.1]</span><a id="_idTextAnchor025"></a>atributos de la etiqueta button</h3>
+			<p class="Normal2">Son los mismos que los de los botones de tipo input, salvo por algunos detalles (se recomienda ver los atributos del elemento input y de los botones de tipo submit):</p>
+			<p class="Normal"></p>
+			<table id="table023" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">name</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Nombre del botón</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">id</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Identificador del botón</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">value</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Permite dar un valor al botón</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">type</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Indica el tipo de botón, puede ser:</p>
+							<ul>
+								<li class="punto"><strong class="Negritta" lang="en-US">submit</strong>. Envío de datos (valor por defecto)</li>
+								<li class="punto"><strong class="Negritta" lang="en-US">reset</strong>. Borrado de la información introducida en el formulario</li>
+								<li class="punto"><strong class="Negritta" lang="en-US">button</strong>. Botón genérico.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">disabled</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Deshabilita el botón</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">form</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Recibe el identificador del formulario al que pertenece el botón</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formaction</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">HTML 5. Destino de los datos del formulario cuando se pulsa este botón (suponiendo que sea de tipo <strong class="Negritta">submit</strong>)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formethod</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">HTML 5. Método de paso (<strong class="Negritta">GET</strong> o <strong class="Negritta">POST</strong>) de los datos (si el botón es de tipo submit)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formenctype</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">HTML 5. Tipo de codificación (si el botón es de tipo submit)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formnovalidate</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Los datos que se envían no se validarán</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">formtarget</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El destino de los datos se mostrarán en una ventana aparte si se le da el valor <strong class="Negritta">_blank</strong> a este atributo.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[13.6] </span><a id="_idTextAnchor026"></a>cuadros combinados</h2>
+			<p class="Normal2">Un cuadro combinado permite el uso de una lista de opciones en la que se puede elegir la deseada. Todo cuadro comienza con una etiqueta <strong class="Negritta">select</strong> que es la encargada de dar nombre (<strong class="Negritta" lang="en-US">name</strong><span lang="en-US">) al control. </span>Dentro cada opción del cuadro se indica con una etiqueta <strong class="Negritta">option</strong> a la que se da valor mediante el atributo <strong class="Negritta">value</strong>. Dentro de la etiqueta <strong class="Negritta">option</strong> se coloca el texto que verá el usuario.  Ejemplo:</p>
+			<table id="table024" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”servicio.php”</span><span class="atributo"> method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">    &lt;label </strong><span class="atributo">for=</span><span class="texto">”provincia”</span><strong class="resaltado"> </strong><span class="atributo">id=</span><span class="texto">”provincia”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        </strong>Seleccione su provincia</pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;/label&gt;&lt;br&gt; </strong><br /><strong class="resaltado">   &lt;select</strong><span class="atributo"> name=</span><span class="texto">”provincia”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”av”</span><strong class="resaltado">&gt;</strong>Ávila<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”bu”</span><strong class="resaltado">&gt;</strong>Burgos<strong class="resaltado">&lt;/option&gt;<br />       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”l”</span><strong class="resaltado">&gt;</strong>León<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”p”</span><strong class="resaltado">&gt;</strong>Palencia<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”sg”</span><strong class="resaltado">&gt;</strong>Segovia<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”so”</span><strong class="resaltado">&gt;</strong>Soria<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”sa”</span><strong class="resaltado">&gt;</strong>Salamanza<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”va”</span><strong class="resaltado">&gt;</strong>Valladolid<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">       &lt;option</strong><span class="atributo"> value=</span><span class="texto">”za”</span><strong class="resaltado">&gt;</strong>Zamora<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">   &lt;/select&gt;</strong></pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">   &lt;input</strong><span class="atributo"> type=</span><span class="texto">”submit”</span><span class="atributo"> value=</span><span class="texto">”enviar”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/15.png" alt="" /></p>
+			<p class="Normal2">Se pueden agrupar opciones dentro del cuadro usando el elemento <strong class="Negritta">optgroup</strong>. Ejemplo:</p>
+			<table id="table025" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”servicio.php”</span><span class="atributo"> method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">    &lt;label </strong><span class="atributo">for=</span><span class="texto">”provincia”</span><strong class="resaltado"> </strong><span class="atributo">id=</span><span class="texto">”provincia”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        </strong>Seleccione su provincia</pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;/label&gt;&lt;br&gt; </strong></pre>
+							<pre class="codigo"><strong class="resaltado">   &lt;select</strong><span class="atributo"> name=</span><span class="texto">”provincia”</span><strong class="resaltado">&gt;</strong><br />        <strong class="resaltado">&lt;optgroup</strong><span class="atributo"> label=</span><span class="texto">”Cantabria”</span><strong class="resaltado">&gt;</strong><br />            <strong class="resaltado">&lt;option</strong><span class="atributo"> value=</span><span class="texto">”s”</span><strong class="resaltado">&gt;</strong>Santander<strong class="resaltado">&lt;/option&gt;<br />        &lt;/optgroup&gt;<br />        &lt;optgroup</strong><span class="atributo"> label=</span><span class="texto">”Castilla y León”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">&#9;     &lt;option</strong><span class="atributo"> value=</span><span class="texto">”av”</span><strong class="resaltado">&gt;</strong>Ávila<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">&#9;     &lt;option</strong><span class="atributo"> value=</span><span class="texto">”bu”</span><strong class="resaltado">&gt;</strong>Burgos<strong class="resaltado">&lt;/option&gt;<br />           &lt;option</strong><span class="atributo"> value=</span><span class="texto">”l”</span><strong class="resaltado">&gt;</strong>León<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">           &lt;option</strong><span class="atributo"> value=</span><span class="texto">”p”</span><strong class="resaltado">&gt;</strong>Palencia<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">           &lt;option</strong><span class="atributo"> value=</span><span class="texto">”sg”</span><strong class="resaltado">&gt;</strong>Segovia<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">           &lt;option</strong><span class="atributo"> value=</span><span class="texto">”so”</span><strong class="resaltado">&gt;</strong>Soria<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">           &lt;option</strong><span class="atributo"> value=</span><span class="texto">”sa”</span><strong class="resaltado">&gt;</strong>Salamanza<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">           &lt;option</strong><span class="atributo"> value=</span><span class="texto">”va”</span><strong class="resaltado">&gt;</strong>Valladolid<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">           &lt;option</strong><span class="atributo"> value=</span><span class="texto">”za”</span><strong class="resaltado">&gt;</strong>Zamora<strong class="resaltado">&lt;/option&gt;</strong><br /><strong class="resaltado">       &lt;/optgroup&gt;<br />    &lt;/select&gt;    </strong></pre>
+							<pre class="codigo"><strong class="resaltado">   &lt;input</strong><span class="atributo"> type=</span><span class="texto">”submit”</span><span class="atributo"> value=</span><span class="texto">”enviar”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Da como resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/16.png" alt="" /></p>
+			<h3 class="titulo"><span class="numero">[13.6.1]</span><a id="_idTextAnchor027"></a>atributos del elemento <strong class="Negritta">select</strong></h3>
+			<table id="table026" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">name</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Nombre del cuadro combinado</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">id</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Identificador del cuadro combinado</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">autofocus</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">HTML5. El control adquiere el foco en cuanto carga la página</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">disabled</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El cuadro aparece deshabilitado</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">form</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Recibe el identificador del formulario al que pertenece el botón</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">multiple</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El cuadro se convierte en un cuadro de selección de múltiples valores. Es una opción muy importante ya que este tipo de controles a veces es imprescindible</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">required</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">HTML 5.EEs obligatorio al menos elegir una opción del cuadro.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">size</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Número de opciones visibles a la vez. Si elegimos 5, para ver la sexta habrá que usar la barra de desplazamiento del contro..</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo"><span class="numero">[13.6.2]</span><a id="_idTextAnchor028"></a>atributos del elemento <strong class="Negritta">option</strong></h3>
+			<p class="Normal2"><strong class="resaltado"></strong></p>
+			<table id="table027" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">disabled</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">La opción aparece deshabilitada en el vuadro combinado</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">label</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Versión de texto de la opción más corta. No funciona en Firefox ni en Internet Explorer anterior a la versión 7</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">selected</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Opción seleccionada por defecto</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">value</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Valor que se envía al servicio que recibe los datos del formulario cuando se elige esta opción</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[13.7] </span><a id="_idTextAnchor029"></a>cuadro de texto multilínea</h2>
+			<p class="Normal2">La etiqueta <strong class="Negritta">textarea</strong> permite coloca un cuadro de texto de varias líneas para que el usuario puede introducir un texto largo. El atributo <strong class="Negritta">rows</strong> permite indicar la altura en líneas de texto del cuadro y el atributo <strong class="Negritta">cols</strong>, la anchura en caracteres (los demás atributos son como los de la etiqueta input <em class="cursiva">type=”text”</em>. </p>
+			<p class="normalespacio">Ejemplo:</p>
+			<table id="table028" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form </strong><span class="atributo">action=</span><span class="texto">”servicio.php”</span><span class="atributo"> method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;<br /></strong>    Escribe un texto descriptivo: <strong class="resaltado">&lt;br&gt;<br />    &lt;textarea</strong><span class="atributo"> rows=</span><span class="texto">”10”</span><span class="atributo"> cols=</span><span class="texto">”40” </span><span class="atributo">name=</span><span class="texto">”texto”</span><strong class="resaltado">&gt;&lt;/textarea&gt;&lt;br&gt;</strong><br /><strong class="resaltado">    &lt;input </strong><span class="atributo">type=</span><span class="texto">”submit” </span><span class="atributo">value=</span><span class="texto">”enviar”</span><strong class="resaltado">&gt;&lt;br&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/17.png" alt="" /></p>
+			<p class="Normal2">Entre la etiqueta <strong class="Negritta">textarea</strong> se puede colocar texto que aparecerá inicialmente dentro del cuadro.</p>
+			<h3 class="titulo"><span class="numero">[13.7.1]</span><a id="_idTextAnchor030"></a>atributos del elemento <strong class="Negritta">textarea</strong></h3>
+			<p class="Normal"><strong class="resaltado"></strong></p>
+			<table id="table029" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">name</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Nombre del control</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">id</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Identificador del control</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">value</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Especifica un contenido para el control</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">autofocus</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">HTML5. El control adquiere el foco en cuanto carga la página</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">cols</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Anchura del cuadro en caracteres</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">disabled</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El cuadro aparece deshabilitado</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">form</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Recibe el identificador del formulario al que pertenece el botón</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">maxlength</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Máximo número de caracteres permitidos en el cuadro</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">placeholder</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">HTML 5. Coloca un texto inicial en el cuadro que se va en  cuanto el cuadro obtiene el foco del usuario (el foco se obtiene, por ejemplo, haciendo clic en el control de texto). Se usa como texto de ayuda.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">readonly</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">El cuadro de texto es de solo lectura (no se puede cambiar su contenido)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">required</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">HTML 5.EEs obligatorio al menos elegir una opción del cuadro.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">rows</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Número de filas visibles en el cuadro (si se rellenan más, se accederá a ellas con una barra de desplazamiento).</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">wrap</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Forma de encapsular el texto cuando se envían los datos al servicio de destino. Puede ser <strong class="Negritta" lang="en-US">soft</strong> o <strong class="Negritta" lang="en-US">hard</strong>.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[13.8] </span><a id="_idTextAnchor031"></a>agrupación de controles, <strong class="Negritta">fieldset</strong></h2>
+			<p class="Normal">La etiqueta <strong class="Negritta">fieldset</strong> permite agrupar controles para que visualmente sea más cómodo el relleno de los controles. Visualmente los controles aparecerán recuadrados y se suele utilizar una etiqueta inmediatamente interior a <strong class="Negritta">fieldset</strong> que es <strong class="Negritta" lang="en-US">legend</strong><span lang="en-US"> </span>que contiene el texto que encabezará al grupo de controles. </p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table030" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form </strong><span class="atributo">action=</span><span class="texto">”control_form.php” </span><span class="atributo">method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="remarcado"><strong class="resaltado">   &lt;fieldset &gt;<br />       &lt;legend&gt;</strong>Datos personales<strong class="resaltado">&lt;/legend&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">       &lt;input </strong><span class="atributo">type=</span><span class="texto">”radio”</span><span class="atributo"> name=</span><span class="texto">”sexo”</span><span class="atributo"> value=</span><span class="texto">”hombre” </span></pre>
+							<pre class="codigo"><span class="texto">&#9;&#9;&#9;&#9;</span><span class="atributo">id=</span><span class="texto">”hombre”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9; &lt;label </strong><span class="atributo">for=</span><span class="texto">”hombre”</span><strong class="resaltado">&gt; </strong>Hombre<strong class="resaltado">&lt;/label&gt;&lt;br&gt;</strong><br />       <strong class="resaltado">&lt;input</strong><span class="atributo"> type=</span><span class="texto">”radio”</span><span class="atributo"> name=</span><span class="texto">”sexo”</span><span class="atributo"> value=</span><span class="texto">”mujer”</span><span class="atributo">  </span></pre>
+							<pre class="codigo"><span class="atributo">&#9;&#9;&#9;&#9;id=</span><span class="texto">”mujer” </span><span class="atributo">checked=</span><span class="texto">”checked”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9; &lt;label </strong><span class="atributo">for=</span><span class="texto">”mujer”</span><strong class="resaltado">&gt; </strong>Mujer<strong class="resaltado">&lt;/label&gt;&lt;br&gt;</strong></pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">       <strong class="resaltado">&lt;label </strong><span class="atributo">for=</span><span class="texto">”estadocivil”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&#9;</strong>Estado civil: Casado<strong class="resaltado">&lt;/label&gt;</strong> </pre>
+							<pre class="codigo"><strong class="resaltado">&#9; &lt;input</strong><span class="atributo"> type=</span><span class="texto">”checkbox”</span><span class="atributo"> name=</span><span class="texto">”estadocivil” </span></pre>
+							<pre class="codigo"><span class="texto">&#9;&#9;&#9;&#9;</span><span class="atributo">id=</span><span class="texto">”estadocivil” </span><span class="atributo">value=</span><span class="texto">”casado”</span><span class="atributo"> </span></pre>
+							<pre class="codigo"><span class="atributo">&#9;&#9;&#9;&#9;checked=</span><span class="texto">”checked”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">       &lt;br&gt;</strong></pre>
+							<pre class="remarcado"><strong class="resaltado">   &lt;/fieldset&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   &lt;input </strong><span class="atributo">type=</span><span class="texto">”submit”</span><span class="atributo"> value=</span><span class="texto">”Enviar”</span><span class="atributo"> </span><strong class="resaltado">&gt;<br />&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">El resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/18.png" alt="" /></p>
+			<h2 class="titulo2"><span class="numero2">[13.9] </span><a id="_idTextAnchor032"></a>etiquetado de controles</h2>
+			<p class="Normal2">En todos los ejemplos de código de este capítulo ya se ha usado el elemento de etiquetado <strong class="Negritta">label.</strong> Su labor es colocar una etiqueta explicativa a cada control.</p>
+			<p class="Normal">Los elementos <strong class="Negritta">label </strong> utilizan un atributo <strong class="Negritta" lang="en-US">for</strong><span lang="en-US"> </span>que sirve para asociar la etiqueta (que es el texto que aparece en pantalla acompañando al control) al control concreto. El valor de <strong class="Negritta">for</strong> se corresponde con el valor indicado en el atributo <strong class="Negritta">id</strong> del control.</p>
+			<p class="Normal">Esto permite una mejor usabilidad (los navegadores reconocen <strong class="Negritta">label</strong> y, por ejemplo, al hacer clic en el texto de la etiqueta, el control asociado recibe el foco) y una mejor semántica del código. </p>
+			<p class="normalespacio">Ejemplo para etiquetar un control de tipo <strong class="Negritta">textarea</strong>:</p>
+			<table id="table031" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form </strong><span class="atributo">action=</span><span class="texto">”control_form.php” </span><span class="atributo">method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="remarcado"><strong class="resaltado">   &lt;label for=”texto”&gt;</strong>Escribe un texto descriptivo<strong class="resaltado">:&lt;/label&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   &lt;textarea </strong><span class="atributo">rows=</span><span class="texto">”10”</span><strong class="resaltado"> </strong><span class="atributo">cols=</span><span class="texto">”40” </span><span class="atributo">name=</span><span class="texto">”texto”</span><strong class="resaltado"> &gt;&lt;/textarea&gt;&lt;br&gt;<br />   &lt;input </strong><span class="atributo">type=</span><span class="texto">”submit” </span><span class="atributo">value=</span><span class="texto">”enviar”</span><strong class="resaltado">&gt;&lt;br&gt;<br />&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[13.10] </span><a id="_idTextAnchor033"></a>datalist</h2>
+			<p class="Normal2">Se trata de un elemento HTML 5 muy potente. Permite añadir entradas a un control de cuadro de texto (y también a cuadros especializados como los de email, url,….). La forma de utilizarlo consiste en usar el atributo HTML5 <strong class="Negritta" lang="en-US">list</strong><span lang="en-US"> existente en la</span> etiqueta <strong class="Negritta">input</strong>.<strong class="Negritta"> </strong>Ese atributo<strong class="Negritta"> </strong>asociará el cuadro de texto a la lista de valores a través del identificador del <strong class="Negritta">datalist</strong>. Luego dentro de <strong class="Negritta">datalist</strong> se colocan etiquetas <strong class="Negritta">option</strong> para cada opción en la lista (al estilo de los cuadros de tipo select). </p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table032" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”recogida.php”</span><span class="atributo"> method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br /><strong class="resaltado">   &lt;label</strong><span class="atributo"> for=</span><span class="texto">”gustos”</span><strong class="resaltado">&gt;</strong><br />       Escribe en qué te gusta pasar tu tiempo de ocio<br /><strong class="resaltado">   &lt;/label&gt;<br />   &lt;input </strong><span class="atributo">type=</span><span class="texto">”text” </span><span class="atributo">id=</span><span class="texto">”gustos”</span><strong class="resaltado"> </strong><span class="atributo">name</span><span class="texto">=”gustos”</span><span class="atributo"> </span></pre>
+							<pre class="remarcado"><strong class="resaltado">&#9;&#9;&#9;</strong><span class="atributo">list</span><span class="texto">=”listaGustos”</span><span class="atributo"> </span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="remarcado"><strong class="resaltado">   &lt;datalist</strong><span class="atributo"> id=</span><span class="texto">”listaGustos”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">       <strong class="resaltado">&lt;option</strong><span class="atributo"> label=</span><span class="texto">”deportes”</span><span class="atributo"> value=</span><span class="texto">”Deportes</span>”<span class="atributo"> </span><strong class="resaltado">&gt;</strong><br />       <strong class="resaltado">&lt;option</strong><span class="atributo"> label=</span><span class="texto">”teatro”</span><span class="atributo"> value=</span><span class="texto">”Teatro”</span><strong class="resaltado">&gt;</strong><br />       <strong class="resaltado">&lt;option</strong><span class="atributo"> label=</span><span class="texto">”cine” </span><span class="atributo">value=</span><span class="texto">”Cine”</span><strong class="resaltado">&gt;</strong><br />       <strong class="resaltado">&lt;option</strong><span class="atributo"> label=</span><span class="texto">”leer” </span><span class="atributo">value=</span><span class="texto">”Leer”</span><strong class="resaltado">&gt;</strong><br />   <strong class="resaltado">&lt;/datalist&gt;</strong><br />   <strong class="resaltado">&lt;input</strong><span class="atributo"> type=</span><span class="texto">”submit”</span><span class="atributo"> value=</span><span class="texto">”enviar”</span><strong class="resaltado">&gt;&lt;br&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">No aparece un cuadro combinado, será un cuadro de texto en el que al arrimar el ratón aparecen las entradas indicadas (como sugerencias de escritura), pero podremos escribir lo que queramos (sin elegir ninguna opción de la lista). </p>
+			<p class="Normal">El código anterior permitiría esta situación:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/19.png" alt="" /></p>
+			<p class="Normal">El usuario puede elegir cualquiera de las opciones de la lista de sugerencias, pero también puede escribir lo que quiera en el cuadro.</p>
+			<p class="Normal">Sin embargo esta forma no funciona en algunos navegadores (solo en los modernos y Safari no ha incorporado esta etiqueta), por ello se suele usar un truco que consiste en meter un elemento <strong class="Negritta" lang="en-US">select</strong><span lang="en-US"> </span>dentro del elemento <span lang="en-US"><br /></span><strong class="Negritta" lang="en-US">datalist</strong><span lang="en-US">. </span>Los navegadores modernos ignorarán la etiqueta <strong class="Negritta">select</strong> y los viejos el <strong class="Negritta">datalist</strong>.</p>
+			<pre class="codigo"><strong class="resaltado"></strong></pre>
+			<table id="table033" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong><span class="atributo"> action=</span><span class="texto">”recogida.php” </span><span class="atributo">method=</span><span class="texto">”get”</span><strong class="resaltado">&gt;</strong><br />   <strong class="resaltado">&lt;label</strong><span class="atributo"> for=</span><span class="texto">”gustos”</span><strong class="resaltado">&gt;</strong><br />       Escribe en qué te gusta pasar tu tiempo de ocio<br />   <strong class="resaltado">&lt;/label&gt;</strong><br />   <strong class="resaltado">&lt;datalist</strong><span class="atributo"> id=</span><span class="texto">”listaGustos”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">       <strong class="resaltado">&lt;select</strong><span class="atributo"> name=</span><span class="texto">”listaGustos”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">           <strong class="resaltado">&lt;option</strong><span class="atributo"> value=</span><span class="texto">”deportes”</span><strong class="resaltado">&gt;</strong>Deportes<strong class="resaltado">&lt;/option&gt;</strong><br />           <strong class="resaltado">&lt;option</strong><span class="atributo"> value=</span><span class="texto">”teatro”</span><strong class="resaltado">&gt;</strong>Teatro<strong class="resaltado">&lt;/option&gt;</strong><br />           <strong class="resaltado">&lt;option</strong><span class="atributo"> value=</span><span class="texto">”cine”</span><strong class="resaltado">&gt;</strong>Cine<strong class="resaltado">&lt;/option&gt;</strong><br />           <strong class="resaltado">&lt;option</strong><span class="atributo"> value=</span><span class="texto">”leer”</span><strong class="resaltado">&gt;</strong>Leer<strong class="resaltado">&lt;/option&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;&lt;/select&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">   &lt;/datalist&gt;</strong><br />   </pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;input</strong><span class="atributo"> id=</span>”gustos”<span class="atributo"> name=</span>”gustos”<span class="atributo"> list=</span>”listaGustos”<strong class="resaltado">&gt;</strong><br />   <strong class="resaltado">&lt;input</strong><span class="atributo"> type=</span>”submit”<span class="atributo"> value=</span>”enviar”<strong class="resaltado">&gt;&lt;br&gt;</strong><br /><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[13.11] </span><a id="_idTextAnchor034"></a>controles avanzados</h2>
+			<h3 class="titulo"><span class="numero">[13.11.1]</span><a id="_idTextAnchor035"></a>cuadro de tipo <strong class="Negritta">keygen</strong></h3>
+			<p class="Normal2">Es una nueva etiqueta de formulario nacida en HTML 5 que permite enviar claves de cifrado de datos. El elemento genera una lista en la que podemos elegir el tipo de cifrado. Al enviar los datos se generan las dos claves: la pública y la privada, el ordenador local guarda la clave privada y el remoto la pública.</p>
+			<p class="Normal">Es una opción para poder cifrar los datos del formulario a fin de autentificar la autenticidad del cliente. Ni Internet Explorer ni Safari son compatibles con este elemento, lo que limita su uso. Hoy en día es más fiable enviar los datos de los formularios usando el protocolo <strong class="Negritta">https</strong>.</p>
+			<p class="Normal">La lista de atributos de keygen es:<a id="_idTextAnchor036"></a></p>
+			<p class="Normal2"></p>
+			<table id="table034" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">uso</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal2"><strong class="Negritta">autofocus</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">El control obtendrá el foco cuando el formulario se cargue</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal2"><strong class="Negritta">challenge</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Es una cadena de desafío que se presentará junto con la clave pública</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal2"><strong class="Negritta">disable</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Deshabilita el control</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal2"><strong class="Negritta">form</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Permite especificar el identificar del formulario al que se asociará esté control (de uso obligado en caso de estar fuera de una etiqueta <strong class="Negritta" lang="en-US">form</strong>)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal2"><strong class="Negritta">keytype</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Indica el tipo de cifrado. Puede ser: <strong class="Negritta">rsa</strong>, <strong class="Negritta">dsa</strong> o <strong class="Negritta">ec</strong>. Por defecto cifra mediante RSA.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal2"><strong class="Negritta">name</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal2">Nombre del control</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo"><span class="numero">[13.11.2]</span><a id="_idTextAnchor037"></a>control de tipo <strong class="Negritta">output</strong></h3>
+			<p class="Normal2">La etiqueta output (no disponible en Internet Explorer ni en Safari) se utiliza para mostrar resultados procedentes de cálculos sobre otros controles del formulario. El ejemplo siguiente consigue mostrar la suma de los dos números que el usuario indique en sendos cuadros numéricos, esta suma se muestra rápidamente gracias al lenguaje JavaScript:</p>
+			<table id="table035" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;form</strong> <span class="atributo">oninput=</span><span class="texto">”res.value=parseInt(n1.value)+parseInt(n1.value)”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;input</strong> <span class="atributo">type=</span><span class="texto">”number”</span> <span class="atributo">id=</span><span class="texto">”n1” </span><span class="atributo">name=</span><span class="texto">”n1”</span> <span class="atributo">value=</span><span class="texto">”0”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">    +<strong class="resaltado">&lt;input</strong> <span class="atributo">type=</span><span class="texto">”number”</span> <span class="atributo">id=</span><span class="texto">”n2”</span> <span class="atributo">name=</span><span class="texto">”n2” </span><span class="atributo">value=</span><span class="texto">”0”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">    =<strong class="resaltado">&lt;output</strong> <span class="atributo">name=</span><span class="texto">”total”</span> <span class="atributo">for=</span><span class="texto">”n1 n2” </span><span class="atributo">id=</span><span class="texto">”total”</span><strong class="resaltado">&gt;&lt;/output&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/form&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado del código:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/20.png" alt="" /></p>
+			<p class="Normal2">El atributo <strong class="Negritta" lang="en-US">for</strong><span lang="en-US">, especifica el nombre de los controles que afectan al resultado de </span><strong class="Negritta" lang="en-US">output; </strong><span lang="en-US">en ese atributo cada identificador se separa con espacios. </span></p>
+			<p class="Normal">El valor y el nombre de los elementos <em class="cursiva">output</em> no se envían como los demás datos del formulario, solo sirve para ver el resultado en el página. No es obligatorio su uso, pero da un sentido claro a la función del contenido.</p>
+			<h3 class="titulo"><span class="numero">[13.11.3]</span><a id="_idTextAnchor038"></a>barras de resultados</h3>
+			<h4 class="titulo4"><span class="numeroOculto">59</span>barras de medida, elemento <strong class="Negritta">meter</strong></h4>
+			<p class="Normal2">Se trata de un tipo de barra que sirven para indicar de forma gráfica un determinado valor fracción o parte de algo. El elemento <strong class="Negritta">meter</strong>, que no funciona en Internet Explorer, es el que permite este uso. </p>
+			<p class="Normal2">Atributos:</p>
+			<p class="Normal2"></p>
+			<table id="table036" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">max</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Máximo valor del rango, ese será el valor relacionado con el final de la barra</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">min</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Mínimo valor del rango, es el valor relacionado con el valor de la barra.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">high</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Valor más alto a alcanzar (meta). Por debajo de este valor, el color de la barra se muestra de color amarillo (aún no hemos alcanzado el valor a alcanzar)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">low</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Valor más bajo en el rango de la barra de progreso. Por debajo de este valor, la barra se muestra roja (puesto que no hemos alcanzado el mínimo)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">value</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Valor actual de la barra. La barra se colorea desde el inicio hasta llegar a la posición que le correspondería a este valor en la barra.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">optimum</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Valor marcado como óptimo en la barra de progreso. No provoca ningún efecto visual en la actualidad.</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">form</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Identificador del formulario al que pertenece este control (salvo que el control esté dentro de una etiqueta <strong class="Negritta" lang="en-US">form</strong>)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="normalespacio">Ejemplo:</p>
+			<table id="table037" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;meter</strong> <span class="atributo">value=</span><span class="texto">”138”</span> <span class="atributo">min=</span><span class="texto">”1”</span> <span class="atributo">max=</span><span class="texto">”200”</span> </pre>
+							<pre class="codigo"><span class="atributo">high=</span><span class="texto">”150”</span> <span class="atributo">low=</span><span class="texto">”60” </span><strong class="resaltado">&gt;</strong>138<strong class="resaltado">&lt;/meter&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/21.png" alt="" /></p>
+			<p class="Normal2">Solo mediante JavaScript se obtiene realmente partido de este control (al poder variar y capturar sus valores de forma dinámica). En todo caso, es una forma muy gráfica de presentar ciertos datos.</p>
+			<h4 class="titulo4"><span class="numeroOculto">60</span>barra de progreso, elemento <strong class="Negritta">progress</strong></h4>
+			<p class="Normal2">La idea es la misma que en el caso anterior, pero ahora se usa para mostrar información sobre el grado de cumplimiento de una determinada tarea. Esta barra es más sencilla de configurar. Usa estos atributos:</p>
+			<p class="Normal2"></p>
+			<table id="table038" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">atributo</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla">
+							<p class="cabeceraTabla">significado</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">max</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Máximo valor. Se toma este valor como la meta a alcanzar</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><strong class="Negritta">value</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">Valor actual. Desde el inicio hasta el valor se pintará en la barra de progreso</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="normalespacio">Ejemplo de barra tipo progress:</p>
+			<pre class="codigo"><strong class="resaltado"></strong></pre>
+			<table id="table039" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;progress</strong> <span class="atributo">max=</span><span class="texto">”200”</span> <span class="atributo">value</span>=<span class="texto">”35”</span><strong class="resaltado">&gt;</strong>35%<strong class="resaltado">&lt;/progress&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Resultado:</p>
+			<p class="Normal"><img src="formularios-html5-web-resources/image/22.png" alt="" /></p>
+		</div>
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/formularios-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:31:29 GMT -->
+</html>
+

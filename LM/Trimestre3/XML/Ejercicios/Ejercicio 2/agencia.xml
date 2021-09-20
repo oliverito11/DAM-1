@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pais nombre = "España">
+    <!-- Para cada comunidad autónoma de españa -->
+    <CCAA comunidad = "CyL">
+        <!-- Cada provincia tiene un nombre-->
+        <provincia nombre = "Zamora">
+            <!-- Dentro de la provincia puede haber varias localidades-->
+            <localidad nombre = "Zamora">
+                <!-- La estación contiene diversa información-->
+                <dia>
+                    <tiempo>
+                        <hora>13</hora>
+                        <minutos>57</minutos>
+                        <segundos>12</segundos>
+                    </tiempo>
+                    <fecha>
+                        <dia>13</dia>
+                        <mes>Febrero</mes>
+                        <anyo>2020</anyo>
+                    </fecha>
+                    <temperatura>8ºC</temperatura>
+                    <humedad>45%</humedad>
+                    <viento>11km/h</viento>
+                </dia>
+            </localidad>
+            <localidad nombre = "Roales del Pan">
+                <!-- La estación contiene diversa información-->
+                <dia>
+                    <tiempo>
+                        <hora>13</hora>
+                        <minutos>57</minutos>
+                        <segundos>12</segundos>
+                    </tiempo>
+                    <fecha>
+                        <dia>13</dia>
+                        <mes>Febrero</mes>
+                        <anyo>2020</anyo>
+                    </fecha>
+                    <temperatura>8ºC</temperatura>
+                    <humedad>45%</humedad>
+                    <viento>11km/h</viento>
+                </dia>
+            </localidad>
+            <!-- Esta estructura se repetirá-->
+        </provincia>
+        <!-- Esta estructura se repetirá-->
+    </CCAA>
+    <!-- Esta estructura se repetirá-->
+</pais>

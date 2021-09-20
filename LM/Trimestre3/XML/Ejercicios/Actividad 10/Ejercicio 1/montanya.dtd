@@ -1,0 +1,19 @@
+<!-- Etiqueta global -->
+<!ELEMENT espanya (ccaa+)>
+
+<!-- Pueden haber más de una CCAA y cada una de ellas con más de una provincia-->
+<!ELEMENT ccaa (provincia+)>
+
+<!-- Atributo único para cada nombre de CCAA-->
+<!ATTLIST ccaa nombreCCAA ID #REQUIRED>
+
+<!-- Cada provincia contendrá la información siguiente -->
+<!ELEMENT provincia (nombrePico, altitud, coordenadas)>
+
+<!-- Atributo único para cada nombre de las provincias-->
+<!ATTLIST provincia nombreProvincia ID #REQUIRED>
+
+<!-- Etiquetas que contendrán datos en formato de texto-->
+<!ELEMENT nombrePico (#PCDATA)>
+<!ELEMENT altitud (#PCDATA)>
+<!ELEMENT coordenadas (#PCDATA)>

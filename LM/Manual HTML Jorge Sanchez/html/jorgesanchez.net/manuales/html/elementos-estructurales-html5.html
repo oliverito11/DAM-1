@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/elementos-estructurales-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:30:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Elementos estructurales</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[11] </span><br>Elementos estructurales</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+<div id="_idContainer006" class="Marco-de-texto-b-sico">
+			<h2 class="titulo2"><span class="numero2">[11.1] </span><a id="_idTextAnchor000"></a>elemento <strong class="Negritta">div</strong></h2>
+			<p class="Normal2">Se trata de un elemento clásico (presente en las primeras versiones de HTML) que permite agrupar contenido. Inicialmente se usaba para usar su atributo <strong class="Negritta">align</strong> para que todo un bloque de párrafos tuviera la misma alineación. </p>
+			<p class="Normal2">Desde hace años se ha convertido en el elemento utilizado, combinado con CSS, para crear <strong class="Negritta">capas</strong>. Las capas son elementos contenidos en otro elemento, el cual podemos colocar libremente en cualquier parte de la página. Dentro de <strong class="Negritta">div</strong> se pueden colocar todo tipo de etiquetas (tablas, párrafos, imágenes,…)</p>
+			<p class="Normal">Por defecto, los navegadores no dan formato al contenido de un elemento  <em class="cursiva">div</em>, con lo que visualmente no se diferencia del resto de elementos.</p>
+			<p class="normalespacio">En el ejemplo siguiente se destaca el elemento div con  de rojo gracias a CSS. Código:</p>
+			<table id="table001" class="tabla-h2">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-h2">
+						<td class="tabla-h2 celda-h2">
+							<pre class="codigo"><strong class="resaltado">&lt;h1&gt;</strong>Título principal<strong class="resaltado">&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing </pre>
+							<pre class="codigo">   elit. Quos, architecto, sapiente corporis debitis </pre>
+							<pre class="codigo">   placeat libero ipsa labore molestias omnis facere  </pre>
+							<pre class="codigo">   odit fugiat. Dolore, quam, tempore molestias </pre>
+							<pre class="codigo">   architecto veritatis magnam atque?</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="remarcado"><strong class="resaltado">&lt;div</strong> <span class="atributo">style=</span><span class="texto">”background-color:red”</span>;<strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">    <strong class="resaltado">&lt;h2&gt;</strong>Título secundario<strong class="resaltado">&lt;/h2&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;p&gt;</strong>Lorem ipsum dolor sit amet, consectetur </pre>
+							<pre class="codigo">       adipisicing elit. Odio, fugit, sint maxime unde </pre>
+							<pre class="codigo">       laudantium architecto asperiores libero sit </pre>
+							<pre class="codigo">       accusamus itaque doloribus quae error aliquam in </pre>
+							<pre class="codigo">       soluta commodi porro mollitia excepturi!</pre>
+							<pre class="codigo">    <strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;p&gt;</strong>Commodi, eaque, voluptate a culpa explicabo </pre>
+							<pre class="codigo">       deserunt sequi molestias nemo quibusdam   </pre>
+							<pre class="codigo">       consequuntur architecto cum iste et nobis </pre>
+							<pre class="codigo">       praesentium minima illum. Ex laborum consectetur </pre>
+							<pre class="codigo">       voluptatem deleniti magnam iste tenetur est </pre>
+							<pre class="codigo">       facilis.</pre>
+							<pre class="codigo">    <strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Velit, ex tenetur architecto culpa officia </pre>
+							<pre class="codigo">   soluta exercitationem recusandae aut ea </pre>
+							<pre class="codigo">   praesentium. Recusandae, qui, repudiandae, eaque </pre>
+							<pre class="codigo">   amet doloribus quod ad illum nihil pariatur iste </pre>
+							<pre class="codigo">   natus velit nostrum voluptatum nemo dicta.</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/p&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El resultado en el navegador sería:</p>
+			<p class="Normal"><img src="elementos-estructurales-html5-web-resources/image/div.png" alt="Elemento div" /></p>
+			<h3 class="titulo3"><span class="numero3">[11.1.1]</span><a id="_idTextAnchor001"></a>elemento <strong class="Negritta">span</strong></h3>
+			<p class="Normal2">Es muy similar al anterior, pero como los navegadores no agregan nada (ni siquiera espacios) a esta etiqueta cuando se muestra por pantalla, en lugar de para definir capas (aunque se podría) se usa para marcar contenido dentro de un párrafo, a fin de que a ese contenido se le pueda dar un formato especial mediante CSS. Es decir, con <strong class="Negritta">div</strong> marcamos capas (contenedores grandes) y con <strong class="Negritta">span</strong> marcamos bloques pequeños de texto. </p>
+			<p class="Normal"><img src="elementos-estructurales-html5-web-resources/image/1.png" alt="" /></p>
+			<p class="Normal2">Ejemplo:</p>
+			<table id="table002" class="tabla-h2">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-h2">
+						<td class="tabla-h2 celda-h2">
+							<pre class="codigo"><strong class="resaltado">&lt;p&gt;</strong>Dentro de este texto <strong class="resaltado">&lt;span</strong> <span class="atributo">style=</span><span class="texto">”color:red”</span><span class="atributo">&gt;</span>esta frase sale de color rojo<strong class="resaltado">&lt;/span&gt;</strong>. Esto vuelve a salir normal<strong class="resaltado">&lt;/p&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[11.2] </span><a id="_idTextAnchor002"></a>elementos estructurales de HTML5</h2>
+			<p class="Normal2">La idea en los nuevos estándares de HTML (especialmente en HTML5) es que los elementos HTML aporten valor semántico al contenido. Es decir, se trata de que el código HTML indique qué tipo de contenido tenemos en las páginas. Eso vale para casi todos los elementos ya conocidos como <strong class="Negritta">p</strong> (párrafo), <strong class="Negritta">abbr</strong> (abreviatura), <strong class="Negritta">strong</strong> (remarcado fuerte), etc.</p>
+			<p class="Normal">La idea es marcar la semántica con HTML y el formato con las hojas de estilo. A este respecto hay una serie de elementos incluidos en HTML 5 que no dan ningún formato al texto, pero permiten darle un significado. Posteriormente, podemos hacer que ese contenido tenga un formato diferente mediante CSS. </p>
+			<p class="Normal">Como el elemento clásico para crear capas es <strong class="Negritta">div</strong>, nos encontramos con el problema de que este elemento no indica un valor semántico, sino funcional. La idea actual es que estos elementos sustituyan el sobreuso que se hace de la etiqueta <strong class="Negritta">div</strong>. </p>
+			<p class="Normal">No es fácil esta idea, puesto que existen numerosas plantillas y patrones de trabajo profesionales (como por ejemplo <strong class="Negritta">bootstrap</strong>) exigen el uso de <em class="cursiva">div</em>. </p>
+			<p class="Normal">Las nuevas etiquetas semánticas no son soportadas por navegadores incompatibles con HTML 5. Ha sido especialmente problemático Internet Explorer, aunque ahora ya soporta sin reservas estos contenidos. Todos los navegadores actuales trabajan perfectamente con estos elementos.</p>
+			<h3 class="titulo3"><span class="numero3">[11.2.1]</span><a id="_idTextAnchor003"></a>elemento <strong class="Negritta" lang="en-US">header</strong></h3>
+			<p class="Normal2">Permite marcar una cabecera. Esto no tiene que ver con el elemento <strong class="Negritta" lang="en-US">head</strong><span lang="en-US">, </span>se trata de una serie párrafos que se marcan de esta forma para indicar que pertenecen a la cabecera de la página.</p>
+			<p class="Normal">Realmente una página puede tener varios elementos <strong class="Negritta">header</strong>, al nivel de la etiqueta <strong class="Negritta">body</strong> indica que su contenido es la cabecera de la página completa (por ejemplo donde se muestra el título general, logotipo,…). Pero dentro de una etiqueta, por ejemplo, <strong class="Negritta">article</strong> indicaría que su contenido es la cabecera del artículo.</p>
+			<p class="Normal">No se puede meter un header dentro de otro header ni dentro de un elemento <strong class="Negritta" lang="en-US">foot</strong><span lang="en-US"> o </span><strong class="Negritta" lang="en-US">address</strong><span lang="en-US">.</span></p>
+			<h3 class="titulo3"><span class="numero3">[11.2.2]</span><a id="_idTextAnchor004"></a>elemento <strong class="Negritta" lang="en-US">footer</strong></h3>
+			<p class="Normal2">Similar al anterior, sirve para marcar el pie de una página, sección, artículo etc. Dependiendo del contexto en el que se coloque servirá para unas cosas u otras. En el caso de un elemento <span lang="en-US">footer </span>que se coloque al nivel del elemento <strong class="Negritta" lang="en-US">body</strong><span lang="en-US">, </span>servirá para agrupar los elementos de pie de página, que suelen ser información sobre el autor, copyright, términos de uso de la página, etc<span lang="en-US">.</span></p>
+			<h3 class="titulo3"><span class="numero3">[11.2.3]</span><a id="_idTextAnchor005"></a>elemento <strong class="Negritta" lang="en-US">section</strong></h3>
+			<p class="Normal2">Es un elemento que permite dividir en diferentes partes o secciones un documento. Ejemplo de página dividida en secciones:</p>
+			<table id="table003" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><span class="atributo">&lt;!DOCTYPE html&gt;</span><br /><strong class="resaltado">&lt;html</strong><span class="atributo"> lang=</span><span class="texto">”es-ES”</span><strong class="resaltado">&gt;</strong><br />    <strong class="resaltado">&lt;head&gt;</strong><br />        <strong class="resaltado">&lt;meta</strong><span class="atributo"> charset=</span><span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong><br />            <strong class="resaltado">&lt;title&gt;&lt;/title&gt;</strong><br />    <strong class="resaltado">&lt;/head&gt;</strong><br />    <strong class="resaltado">&lt;body&gt;</strong><br />        <strong class="resaltado">&lt;header&gt;</strong><br />            <strong class="resaltado">&lt;h1&gt;</strong>Historia de HTML<strong class="resaltado">&lt;/h1&gt;</strong><br />            <strong class="resaltado">&lt;p&gt;</strong>Desde 1989 hasta nuestros días<strong class="resaltado">&lt;/p&gt;</strong><br />        <strong class="resaltado">&lt;/header&gt;</strong><br />        <strong class="resaltado">&lt;section </strong><span class="atributo">id=</span><span class="texto">”inicio”</span><strong class="resaltado">&gt;</strong><br />            <strong class="resaltado">&lt;h2&gt;</strong>Inicios en HTML. Tim Bernes Lee<strong class="resaltado">&lt;/h2&gt;</strong><br />            <strong class="resaltado">&lt;p&gt;</strong>.....<strong class="resaltado">&lt;/p&gt;</strong><br />        <strong class="resaltado">&lt;/section&gt;</strong><br />        <strong class="resaltado">&lt;section </strong><span class="atributo">id=</span><span class="texto">”creacion”</span><strong class="resaltado">&gt;</strong><br />          <strong class="resaltado">&lt;h2&gt;</strong>Creación de la web. Primeros navegadores<br />          <strong class="resaltado">&lt;/h2&gt;</strong><br />            <strong class="resaltado">&lt;p&gt;</strong>.....<strong class="resaltado">&lt;/p&gt;</strong><br />        <strong class="resaltado">&lt;/section&gt;</strong><br />        <strong class="resaltado">&lt;section </strong><span class="atributo">id=</span><span class="texto">”guerra”</span><strong class="resaltado">&gt;</strong><br />            <strong class="resaltado">&lt;h2&gt;</strong>La guerra de los navegadores<strong class="resaltado">&lt;/h2&gt;</strong><br />            <strong class="resaltado">&lt;p&gt;</strong>.....<strong class="resaltado">&lt;/p&gt;</strong><br />        <strong class="resaltado">&lt;/section&gt;</strong><br />        <strong class="resaltado">&lt;section </strong><span class="atributo">id=</span><span class="texto">”versiones”</span><strong class="resaltado">&gt;</strong><br />            <strong class="resaltado">&lt;h2&gt;</strong>De HTML 4 a HTML 5 pasando por XHTML<strong class="resaltado">&lt;/h2&gt;</strong><br />            <strong class="resaltado">&lt;p&gt;</strong>...<strong class="resaltado">&lt;/p&gt;</strong><br />        <strong class="resaltado">&lt;/section&gt;</strong><br />        <strong class="resaltado">&lt;footer&gt;</strong><br />            <strong class="resaltado">&lt;p&gt;</strong>Realizado por Jorge Sánchez<strong class="resaltado">&lt;/p&gt;</strong><br />        <strong class="resaltado">&lt;/footer&gt;</strong><br />    <strong class="resaltado">&lt;/body&gt;</strong><br /><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<pre class="codigo">El atributo <strong class="Negritta">id</strong> no es obligatorio, pero a veces se usa con la finalidad de identificar de modo único a cada sección (por ejemplo para darle un formato especial a una sección concreta)</pre>
+			<h3 class="titulo3"><span class="numero3">[11.2.4]</span><a id="_idTextAnchor006"></a>elemento <strong class="Negritta">nav</strong></h3>
+			<p class="Normal2">Se trata de un elemento que marca a su contenido como una sección de enlaces, es decir una barra de navegación. Más adelante con CSS se puede dar un formato especial a dichos enlaces. <strong class="Negritta">nav</strong> se puede escribir dentro de cualquier elemento HTML de sección (como <strong class="Negritta" lang="en-US">section, article, header, footer</strong><span lang="en-US">,..).</span></p>
+			<p class="Normal">Los elementos marcados por <strong class="Negritta">nav</strong> pueden ser omitidos por los lectores digitales de páginas web que utilizan, por ejemplo, las personas invidentes. Lo cual facilita la comprensión del texto) y así que dicho contenido quede marcado solo para utilizar los enlaces interiores a <strong class="Negritta">nav</strong>.</p>
+			<p class="Normal">Lógicamente dentro de <strong class="Negritta">nav</strong> encontramos numerosos elementos de tipo <strong class="Negritta">a</strong>.</p>
+			<h3 class="titulo3"><span class="numero3">[11.2.5]</span><a id="_idTextAnchor007"></a>elemento <strong class="Negritta" lang="en-US">article</strong></h3>
+			<p class="Normal2">Si se observan los elementos descritos anteriormente parece claro que HTML 5 utiliza como metáfora la forma de distribuir contenidos de un periódico. Así hay cabeceras, pies, secciones y, con este elemento, artículos.</p>
+			<p class="Normal">La idea es colocar dentro de este elemento (que tiene sentido dentro del elemento <strong class="Negritta" lang="en-US">section</strong><span lang="en-US">, o in</span>cluso aparecer de forma independiente) contenido que pueda ser entendido como un <em class="cursiva">todo</em> que describa un tema de forma íntegra.</p>
+			<p class="Normal">Nuevamente el formato mediante CSS permitiría que apareciera con el estilo que deseemos.</p>
+			<h3 class="titulo3"><span class="numero3">[11.2.6]</span><a id="_idTextAnchor008"></a>elemento <strong class="Negritta">hgroup</strong></h3>
+			<p class="Normal2">Permite agrupar varios títulos (elementos <strong class="Negritta">h1</strong> a <strong class="Negritta">h6</strong>) dentro de esta etiqueta para darles estilo común. Se utiliza dentro de <strong class="Negritta" lang="en-US">article</strong><span lang="en-US"> </span>para marcar la zona de títulos del artículo.</p>
+			<h3 class="titulo3"><span class="numero3">[11.2.7]</span><a id="_idTextAnchor009"></a>elemento <strong class="Negritta">figure</strong></h3>
+			<p class="Normal2">Sirve para agrupar los elementos relativos a una imagen como la propia imagen (elemento <strong class="Negritta">img</strong>), el título de la misma, el pie, los párrafos relativos, etc. </p>
+			<h3 class="titulo3"><span class="numero3">[11.2.8]</span><a id="_idTextAnchor010"></a>elemento <strong class="Negritta">figcaption</strong></h3>
+			<p class="Normal2">Permite indicar el título de una imagen, dentro de un elemento figure haciendo el efecto de un pie de imagen. Por defecto la imagen y el texto quedarán alineados de la misma forma. </p>
+			<p class="normalespacio">Ejemplo de uso:</p>
+			<table id="table004" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;article&gt;<br />    &lt;hgroup&gt;<br />        &lt;h2&gt;</strong>Palencia<strong class="resaltado">&lt;/h2&gt;</strong><br />        <strong class="resaltado">&lt;h3&gt;</strong>Paisajes<strong class="resaltado">&lt;/h3&gt;</strong><br />    <strong class="resaltado">&lt;/hgroup&gt;</strong><br />    <strong class="resaltado">&lt;figure&gt;</strong><br />&#9;<strong class="resaltado">&#9;&lt;img </strong><span class="atributo">src=</span><span class="texto">”montanaPalentina.jpg”</span><span class="atributo"> </span></pre>
+							<pre class="codigo"><span class="atributo">&#9;&#9;&#9;alt=</span><span class="texto">”</span><span class="texto">Vista de la Montaña Palentina”</span><span class="atributo"> </span></pre>
+							<pre class="remarcado">&#9;&#9;&#9;<span class="atributo">width=</span><span class="texto">”350”</span><span class="atributo"> height=</span><span class="texto">”400”</span>/&gt;<br /><strong class="resaltado">    &lt;/figure&gt;<br /></strong></pre>
+							<table id="table005" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada celda-remarcada">
+											<pre class="remarcado"><strong class="resaltado">&#9;&#9;&lt;figcaption&gt;</strong></pre>
+											<pre class="remarcado"><span class="atributo">&#9;&#9;&#9;</span>Vista de la Montaña Palentina desde </pre>
+											<pre class="remarcado">&#9;&#9;&#9;Camporredondo</pre>
+											<pre class="remarcado"><strong class="resaltado">&#9;&#9;&lt;/figcaption&gt;</strong></pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo">    <strong class="resaltado">&lt;p&gt;</strong><br />        Los paisajes en la provincia de Palencia.......<br />    <strong class="resaltado">&lt;/p&gt;</strong><br />    ....<br />    <br /><strong class="resaltado">&lt;/article&gt;</strong> </pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[11.2.9]</span><a id="_idTextAnchor011"></a>elemento <strong class="Negritta">aside</strong></h3>
+			<p class="Normal2">Permite marcar texto dentro de un artículo para que no se tenga en cuenta como parte del texto del artículo, sino como un texto aparte que permite realizar aclaraciones al artículo, referencias, resúmenes remarcados y sobre todo cuadros de texto de estilo periodístico para destacar partes del artículo. Para que este texto aparezca de manera especial, debe dársele formato con CSS.</p>
+			<p class="Normal">La idea es simular el típico recuadro que aparece en los periódicos en los que se expresan ideas interesantes o que resumen el artículo.</p>
+			<h3 class="titulo3"><span class="numero3">[11.2.10]</span><a id="_idTextAnchor012"></a>elemento <strong class="Negritta">main</strong></h3>
+			<p class="Normal2">Es incluso más moderno que los anteriores. Permite indicar una sección (que podrá incluir artículos, cabeceras, títulos, párrafos, secciones de imagen,…) de forma que se entenderá que esta es la sección principal del documento.</p>
+			<p class="Normal">Solo puede haber un elemento main en una página web. Se usa para diferenciar de las secciones de menú, publicidad o cualquier tipo de información en la página considerada como secundaria. </p>
+			<p class="Normal"><strong class="Negritta">main </strong>no puede colocarse dentro de secciones de tipo <strong class="Negritta">article</strong>, <strong class="Negritta">footer</strong>, <strong class="Negritta">header</strong>, <strong class="Negritta">aside </strong>o <strong class="Negritta">nav. </strong>Sí se admite  dentro de <strong class="Negritta">section</strong>, para marcar elementos principales dentro de la sección.</p>
+			<p class="Normal"><img src="elementos-estructurales-html5-web-resources/image/2.png" alt="" /></p>
+			<h2 class="titulo2"><span class="numero2">[11.3] </span><a id="_idTextAnchor013"></a>elementos para acciones interactivas</h2>
+			<h3 class="titulo3"><span class="numero3">[11.3.1]</span><a id="_idTextAnchor014"></a>elementos para crear menús de contexto</h3>
+			<h4 class="titulo4"><span class="numeroOculto">46</span>introducción</h4>
+			<p class="Normal2">Los menús son un elemento que aparece en la mayoría de páginas web y facilitan la navegación por la página al usuario, ya que es un elemento muy reconocible por casi cualquier persona.</p>
+			<p class="Normal">La creación de menús implica utilizar al menos HTML y CSS, pero es habitual añadir JavaScript a los dos lenguajes anteriores. Es, por tanto, una técnica un poco compleja de realizar.</p>
+			<p class="Normal">HTML 5 ha incorporado nuevos elementos y un nuevo atributo llamado <strong class="Negritta">menucontext</strong>, presente en todos los elementos de HTML, para crear menús de contexto (tiene también otras posibilidades, pero esta es la fundamental). Un menú de contexto aparece cuando hacemos clic con el botón secundario del ratón sobre un elemento de la página web.</p>
+			<p class="Normal">Desgraciadamente, por ahora, solo funcionan estos elementos en las últimas versiones de <strong class="Negritta">Mozilla Firefox</strong>. Como es posible que poco a poco las incorporen los demás navegadores, aquí se describe su funcionamiento.</p>
+			<h4 class="titulo4"><span class="numeroOculto">47</span>funcionamiento</h4>
+			<p class="Normal2">La idea es que al habitual menú de contexto, podamos añadir las opciones deseadas Los pasos para el menú de contexto son estos:</p>
+			<p class="Numeros"><span class="numeroNumero">[1]</span>Cada menú requiere el uso de un elemento <strong class="Negritta">menu</strong> y cada opción de ese menú estará dentro de un elemento <strong class="Negritta">menuitem</strong>.</p>
+			<p class="Numeros"><span class="numeroNumero">[2]</span>Al elemento <strong class="Negritta" lang="en-US">menu</strong><span lang="en-US"> </span>le daremos un identificador (mediante el atributo <strong class="Negritta" lang="en-US">id</strong><span lang="en-US">) e </span>indicaremos en el atributo <strong class="Negritta" lang="en-US">type</strong> el valor <strong class="Negritta" lang="en-US">context</strong> (eso significa menú de contexto, también tiene disponibles los valores <strong class="Negritta">list</strong> y <strong class="Negritta">toolbar</strong>, que tienen otros fines)</p>
+			<p class="Numeros"><span class="numeroNumero">[3]</span>Cada entrada deseada dentro del menú se indica con un elemento <strong class="Negritta">menuitem</strong>, al que se le rellenarán los atributos deseados. Este elemento se deja vacío de contenido</p>
+			<p class="Numeros"><span class="numeroNumero">[4]</span>El elemento (por ejemplo una capa) en el que deseemos utilizar el menú, usará el atributo <strong class="Negritta">menucontext</strong> cuyo valor será el identificador del menú.</p>
+			<p class="Numeros"><span class="numeroNumero">[5]</span>Es posible dentro de un elemento <strong class="Negritta">menu</strong> añadir otro elemento <strong class="Negritta">menu</strong>, para diseñar menús de varios niveles.</p>
+			<h4 class="titulo4"><span class="numeroOculto">48</span>atributos de <strong class="Negritta">menuitem</strong></h4>
+			<p class="Normal2">El elemento <strong class="Negritta">menuitem</strong> dispone de los siguientes atributos:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">label</strong><span lang="en-US">. </span>El valor que se le dé al atributo es el que aparecerá en el menú</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">icon</strong><span lang="en-US">. </span>Permite indicar una URL a una imagen que aparece en  el menú en la posición de este elemento.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">disabled</strong><span lang="en-US">. </span>hace que la entrada en el menú aparezca desactivada</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">type</strong><span lang="en-US">.</span> Puede tomar los valores <strong class="Negritta">command</strong> (valor por defecto), <strong class="Negritta">checkbox</strong> (la opción de menú será del tipo activar/desactivar) o <strong class="Negritta">radio</strong> (será una opción agrupada con otras al estilo de los botones de radio).</li>
+				<li class="punto"><strong class="Negritta">radiogroup</strong>. Solo tiene sentido si se ha elegido el atributo <span class="atributo">type=</span><span class="texto">”radio”</span>, da un nombre para agrupar opciones de tipo radio. De modo que todas las opciones con el mismo nombre formarán un grupo; cuando activemos una opción del grupo, el resto quedan desactivadas.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">checked</strong><span lang="en-US">. </span>Solo tiene sentido si se ha elegido el atributo <span class="atributo">type=</span><span class="texto">”radio” </span>o <span class="atributo">type=</span><span class="texto">”checkbox”</span>. Cuando se usa este atributo, la entrada en el menú aparecerá activada<h3 class="titulo3"><span class="numero3">[11.3.2]</span><a id="_idTextAnchor015"></a>ejemplo de menú de contexto</h3></li>
+			</ul>
+			<p class="Normal">En el siguiente ejemplo se configura una página con dos párrafos. El párrafo con identificador <em class="cursiva">p1</em> se asociará al menú de contexto <em class="cursiva">pintar</em>, menú que contiene dos entradas: <em class="cursiva">Pintar de rojo </em>y <em class="cursiva">pintar de verde</em>. Para que realmente esas opciones pinten el párrafo con esos colores, hemos añadido el código JavaScript que lo permite asociado al evento de hacer clic con el ratón en la opción de menú. El código es:</p>
+			<table id="table006" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype html&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang=</span><span class="texto">”es”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;meta</strong> <span class="atributo">charset=</span><span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;title&gt;</strong>Menús<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;p</strong> <span class="atributo">contextmenu=</span><span class="texto">”pintar” </span><span class="atributo">id=</span><span class="texto">”p1”</span><strong class="resaltado">&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, sequi, fugit, numquam, rerum animi accusantium quasi necessitatibus blanditiis sint molestias sit perspiciatis cupiditate neque iste architecto fugiat ipsa deserunt tenetur.<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;p&gt;</strong>Est, asperiores, rerum, fugiat, eius at ullam fugit id odit ducimus facere in dolorem nihil ut eveniet nemo perspiciatis nam enim laborum recusandae qui a fuga sunt et sit itaque.<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;menu</strong> <span class="atributo">type=</span><span class="texto">”context”</span> <span class="atributo">id=</span><span class="texto">”pintar”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo">        <strong class="resaltado">&lt;menuitem</strong> <span class="atributo">label=</span><span class="texto">”Pintar de rojo”</span>             <span class="atributo">onclick=</span><span class="texto">”document.getElementById(‘p1’).style.backgroundColor=’red’”</span><strong class="resaltado">&gt;            </strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;/menuitem&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;menuitem </strong><span class="atributo">label=</span><span class="texto">”Pintar de verde”</span>            </pre>
+							<pre class="codigo"><span class="atributo">onclick=</span><span class="texto">”document.getElementById(‘p1’).style.backgroundColor=’green’”</span><strong class="resaltado">&gt;           </strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;/menuitem&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;/menu&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">El resultado es una página web que muestra dos párrafos con fondo blanco (y el texto de prueba <em class="cursiva">lorem ipsum</em>), hacer clic con el botón secundario en el segundo párrafo, el menú de contexto es el habitual; pero si hacemos clic encima del primer párrafo con el botón secundario, el menú es distinto y aporta las dos opciones programadas en el código mediante el lenguaje JavaScript.</p>
+			<h3 class="titulo3"><span class="numero3">[11.3.3]</span><a id="_idTextAnchor016"></a>elementos para indicar secciones de tipo mostrar/ocultar</h3>
+			<p class="Normal2">Se trata de secciones que están dentro de un elemento llamado <strong class="Negritta">details</strong>. Dentro de ese elemento se puede poner una sección de tipo <strong class="Negritta">summary </strong>la cual muestra un texto de resumen de la sección. Al hacer clic en el apartado summary, se muestra todo el contenido de la sección.</p>
+			<p class="Normal">Es decir en definitiva consigue crear en un documento HTML un apartado de tipo resumen/detalle. Ejemplo:</p>
+			<p class="Normal">Ejemplo:</p>
+			<table id="table007" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;details&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;summary&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        </strong>La ciudad de Palencia</pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;/summary&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;p&gt;</strong>Localidad de 80.000 habitantes situada entre </pre>
+							<pre class="codigo">        los Valles de Cerrato y la Tierra de Campos </pre>
+							<pre class="codigo">        en plena meseta castellana<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;p&gt;Más información en</strong></pre>
+							<pre class="codigo"><strong class="resaltado">     &lt;a href=”https://es.wikipedia.org/wiki/Palencia”&gt;</strong></pre>
+							<pre class="codigo">        Wikipedia-Ciudad de Palencia</pre>
+							<pre class="codigo"><strong class="resaltado">     &lt;/a&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/details&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Al abrir esa página, se mostraría:</p>
+			<p class="Normal"><img src="elementos-estructurales-html5-web-resources/image/3.png" alt="" /></p>
+			<p class="Normal2">Como se observa, solo se muestra el contenido del apartado <strong class="Negritta">summary</strong>. Tras hacer clic en el triángulo o en el texto, se mostraría el contenido del elemento <em class="cursiva">details</em>:</p>
+			<p class="Normal"><img src="elementos-estructurales-html5-web-resources/image/4.png" alt="" /></p>
+			<p class="Normal">Lo malo es que solo funciona solo en las últimas versiones de Chrome, Safari y Opera (no funciona en los navegadores de Microsoft).</p>
+			<h4 class="titulo4"><span class="numeroOculto">49</span><span lang="en-US">element </span><strong class="Negritta" lang="en-US">summary</strong></h4>
+			<p class="Normal2">Se coloca dentro del anterior. Es un texto que se puede poner en los elementos de tipo <strong class="Negritta">detail</strong>. Ese texto aparece en lugar del texto <em class="cursiva">Detalles</em> que aparece por defecto en una sección de tipo <em class="cursiva">detail</em>.</p>
+			<h3 class="titulo3"><span class="numero3">[11.3.4]</span><a id="_idTextAnchor017"></a>elementos de cuadro de diálogo</h3>
+			<p class="Normal2">Se suelen llamar cuadros de diálogo a las ventanas que los sistemas muestran a los usuarios para darles mensajes, o para permitirles configurar una determinada respuesta u operación.</p>
+			<p class="Normal">En HTML 5 se ha incorporado una nueva etiqueta llamada <strong class="Negritta" lang="en-US">dialog</strong><span lang="en-US">,</span> precisamente con esta finalidad. Todavía está en fase de pruebas. El contenido del elemento dialog se muestra en un recuadro. La gracia es que desde JavaScript tiene muchas opciones de manipulación. </p>
+			<p class="Normal">Hay un atributo llamado<span lang="en-US"> </span><strong class="Negritta" lang="en-US">open</strong><span lang="en-US"> </span>(no se le pone valor alguno cuando se usa) que hace que se muestre el cuadro de diálogo (sin ese atributo, el cuadro no se muestra).</p>
+			<p class="Normal">Ejemplo<span lang="en-US">:</span></p>
+			<table id="table008" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;dialog </strong><span class="atributo">id=</span><span class="atributo">”favDialog” </span><span class="atributo">open</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;form </strong><span class="atributo">method=</span><span class="atributo">”dialog”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;section&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            &lt;fieldset&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">                &lt;legend&gt;</strong>Sexo<strong class="resaltado">&lt;/legend&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">                &lt;input </strong><span class="atributo">type=</span><span class="atributo">”radio”</span> <span class="atributo">id=</span><span class="atributo">”hombre” </span><br />                   <span class="atributo">name=</span><span class="atributo">”sexo”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">                &lt;label </strong><span class="atributo">for=</span><span class="atributo">”hombre”</span><strong class="resaltado">&gt;</strong>Hombre<strong class="resaltado">&lt;/label&gt;&lt;br&gt;</strong></pre>
+							<pre class="codigo">                <strong class="resaltado">&lt;input </strong><span class="atributo">type=</span><span class="atributo">”radio” </span><span class="atributo">id=</span><span class="atributo">”mujer” <br />                   </span><span class="atributo">name=</span><span class="atributo">”sexo”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">                &lt;label </strong><span class="atributo">for=</span><span class="atributo">”mujer”</span><strong class="resaltado">&gt;</strong>Mujer<strong class="resaltado">&lt;/label&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            &lt;/fieldset&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            &lt;br&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            &lt;label </strong><span class="atributo">for=</span><span class="atributo">”nombre”</span><span class="atributo">&gt;</span>Nombre<strong class="resaltado">&lt;/label&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            &lt;input </strong><span class="atributo">type=</span><span class="atributo">”text”</span> <span class="atributo">name=</span><span class="atributo">”nombre” <br />                  </span><span class="atributo">id=</span><span class="atributo">”hombre”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;/section&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;menu&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            &lt;button </strong><span class="atributo">id=</span><span class="atributo">”cancel”</span> <span class="atributo">type=</span><span class="atributo">”reset”</span>&gt;Cancelar</pre>
+							<pre class="codigo">            <strong class="resaltado">&lt;/button&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">            &lt;button </strong><span class="atributo">type=</span><span class="atributo">”submit”</span><strong class="resaltado">&gt;</strong>Aceptar<strong class="resaltado">&lt;/button&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">        &lt;/menu&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">    &lt;/form&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/dialog&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Resultado:</p>
+			<p class="Normal"><img src="elementos-estructurales-html5-web-resources/image/5.png" alt="" /><span lang="en-US"><a id="_idTextAnchor018"></a></span></p>
+			<p class="Normal">Realmente sus principales posibilidades se consiguen combinando su uso con el lenguaje JavaScript.</p>
+		</div>
+
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/elementos-estructurales-html5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:30:28 GMT -->
+</html>
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="lista_de_notas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nota" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="para" type="xs:string"/>
+                            <xs:element name="de" type="xs:string"/>
+                            <xs:element name="titulo" type="xs:string" />
+                            <xs:element name="contenido" type="xs:string" />
+                        </xs:sequence>
+
+                        <!-- Atributos opcionales -->
+                        <!-- Como en otras ocasiones, definimos los atributos justo antes de cerrar complexType -->
+                        <!-- Tenemos que definir nuestros propios tipos de datos para día y hora. Puesto que los de tipo date y time no
+                            se ajustan al XML dado -->
+                        <xs:attribute name="dia" type="tipoFecha" /> 
+                        <xs:attribute name="hora" type="tipoHora" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición de atriubtos de las notas (opcionales) -->
+    <xs:simpleType name="tipoFecha">
+        <xs:restriction base="xs:string">
+           <!-- <xs:pattern value="[0-3][0-9]/[0-1][0-9]/\d{4}" />  Esta expresión novaldría, pues permitiría por ejemplo la 
+            siguiente fecha: 37/00/1234 -->
+           <!-- 
+            Expresión regular para la fecha:
+
+            DIA    (0[1-9]|1[0-9]|2[0-9]|3[01])
+
+            0[1-9]  >>> Un 0 seguido de un número del 1 al 9
+            1[0-9]  >>> Un 1 seguido de un número del 0 al 9
+            2[0-9]  >>> Un 2 seguido de un número del 0 al 9
+            3[01]   >>> Un 3 seguido de un 0 o un 1
+
+            Como tenemos entre medias el operador | se elige entre una de esas opciones.
+
+            En resumen:
+            El día empezará por una de esas 4 opciones. Hay que ponerlas así para no validar fechas imposibles.
+
+            MES       (0[1-9]|1[0-2])
+
+            0[1-9]   >>> Un 0 seguido de un número del 1 al 9
+            1[0-2]   >>> Un 1 seguido de un número del 0 al 2
+
+             Como tenemos entre medias el operador | se elige entre una de esas opciones.
+
+            En resumen:
+            El mes empezará por una de esas 2 opciones. Hay que ponerlas así para no validar fechas imposibles.
+
+            Finalmente el añi irá con \d{4}  Es decir, 4 números.
+
+           -->
+            <xs:pattern value="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoHora">
+        <xs:restriction base="xs:string">
+            <!-- Restricción de la hora:
+                Simplemente debemos tener en cuenta que las horas posibles son desde 00:00 hasta 23:59
+            -->
+            <xs:pattern value="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]" /> 
+            <!-- Si colocamos esta restricción no sería válido pues daría por buena la hora 29:27 
+            <xs:pattern value="[0-2][0-9]:[0-5][0-9]" />   -->
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

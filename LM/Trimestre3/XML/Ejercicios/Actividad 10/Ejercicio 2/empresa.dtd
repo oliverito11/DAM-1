@@ -1,0 +1,18 @@
+<!-- Etiqueta global -->
+<!ELEMENT red (dispositivo+)>
+
+<!-- Cada dispositivo contendrá la siguiente información -->
+<!ELEMENT dispositivo (nombreDispositivo, direccionIP, fabricante, modelo)>
+
+<!-- Atributos únicos que no se pueden repetir en ningún dispositivo -->
+<!ATTLIST dispositivo codigoDispositivo ID #REQUIRED>
+<!ATTLIST dispositivo direccionMAC ID #REQUIRED>
+
+<!-- Solo puede haber estos tipos de dispositivos -->
+<!ATTLIST dispositivo tipoDispositivo (ORDENADOR|ROUTER|IMPRESORA|TABLET) #REQUIRED>
+
+<!-- Lo demás será información normal de texto -->
+<!ELEMENT nombreDispositivo (#PCDATA)>
+<!ELEMENT direccionIP (#PCDATA)>
+<!ELEMENT fabricante (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>

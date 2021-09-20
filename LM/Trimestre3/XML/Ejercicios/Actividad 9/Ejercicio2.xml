@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    <?xml version="1.0"encoding="UTF-8"?>
+    <pelicula>
+        <titulo>Con faldas y a lo loco</titulo>
+        <director>Billy Wilder</director>
+    </pelicula>
+    <pelicula>
+        <director>Leo McCarey</director>
+        <titulo>Sopa de ganso</titulo>
+    </pelicula>
+    <autor />barto</autor>
+
+                ERRORES
+                =======
+    1 - No existe una etiqueta raíz que englobe a las demás
+    2 - La etiqueta "autor" no debería cerrarse nada más abrirla
+    y poner un valor a continuación. Se podría poner como atributo o
+    como etiqueta con datos.
+-->
+<!-- CÓDIGO CORREGIDO -->
+<cine>  <!-- Etiqueta raíz -->
+    <pelicula>
+        <titulo>Con faldas y a lo loco</titulo>
+        <director>Billy Wilder</director>
+    </pelicula>
+    <pelicula>
+        <director>Leo McCarey</director>
+        <titulo>Sopa de ganso</titulo>
+    </pelicula>
+    <autor>barto</autor> <!-- Autor sin etiqueta cerrada al inicio-->
+</cine>

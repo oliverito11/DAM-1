@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "es">
+	<head>
+		<meta charset = "UTF-8" />
+		<title>Formularios</title>
+	</head>
+	<body>
+		<!-- con action indico a dónde se quieren enviar los datos -->
+		<form action = "servicio.php" method="GET">
+			<!-- Nombre -->
+			<label for="nombre">Escriba su nombre</label>
+			<br>
+			<input type="text" name="nombre" id="nombre" size = "8" maxlength= "20">
+			<br>
+			
+			<!-- Contraseña -->
+			<label for="passwd">Escriba su contraseña</label>
+			<br>
+			<input type="password" name="passwd" id="passwd" size = "8" maxlength= "20">
+			<br>
+			
+			<!-- Botones de radio -->
+			<label for="sexo">Sexo</label>
+			<br>
+			<input type="radio" name="sexo" id="hombre" value="h">
+			<label for="hombre">Hombre</label>
+			<br>
+			<input type="radio" name="sexo" id="mujer" value="m">
+			<label for="mujer">Mujer</label>
+			<br>
+
+			<!-- Botones de control -->
+			<input type="submit" value="Enviar" id="enviar">
+			<input type="reset" value="Reset" id="reset">
+			<br>
+		</form>
+	</body>
+</html>

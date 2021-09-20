@@ -1,0 +1,49 @@
+/* Etiquetas */
+
+body{
+    font-family: "Open Sans", sans-serif;
+    
+}
+
+h1{
+    font-family: Merriweather, serif;
+    text-align: center;
+}
+
+table{
+    border: 3px solid black;
+    background-color: #f6ff7a;
+    width: 100%;
+}
+
+th{
+    border: 3px solid black;
+    background-color: #ffffff;
+}
+
+/* Clases */
+
+.creditos{
+    background-color: #f6ff7a;
+}
+
+/* Enlaces */
+
+a:link{
+    text-decoration: none;
+    color: #39e739;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #30ac30;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    color: #30ac30;
+    text-decoration: underline;
+}

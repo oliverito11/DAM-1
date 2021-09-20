@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="empresa.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<empresa>
+    <departamento atributoDepartamento="Informática">
+        <trabajador DNI="123456789-A">
+            <nombre>Pedro</nombre>
+            <apellidos>Pedrin Lugo</apellidos>
+            <direccion>C/Una</direccion>
+            <telefono>6666666666</telefono>
+        </trabajador>
+    </departamento>
+</empresa>

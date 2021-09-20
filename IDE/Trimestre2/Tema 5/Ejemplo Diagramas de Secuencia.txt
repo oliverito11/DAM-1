@@ -1,0 +1,8 @@
+1. Usuario accede a Web
+2. Se muestra el portal
+3. Pula en opción/icono de la lista de Productos
+4. Se muestra la interfaz de la búsqueda
+5. Introduce los datos de búsqueda y pulsa en buscar
+6. Se muestra lista de productos que coinciden con los datos de búsqueda.
+7. El usuario esoge un producto de la lista.
+8. Se muestra información del producto..

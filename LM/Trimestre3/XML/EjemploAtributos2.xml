@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE prueba [
+    <!ELEMENT prueba (libro|prestamo)*>
+    <!ELEMENT libro (#PCDATA)>
+    <!ATTLIST libro codigo ID #REQUIRED>
+    <!ELEMENT prestamo (#PCDATA)>
+    <!ATTLIST prestamo libro IDREF #REQUIRED>
+]>
+<prueba>
+    <libro codigo = "L1">
+
+    </libro>
+    <prestamo libro = "L1">
+
+    </prestamo>
+</prueba>

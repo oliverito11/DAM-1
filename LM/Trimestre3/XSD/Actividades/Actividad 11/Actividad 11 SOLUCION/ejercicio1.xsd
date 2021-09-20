@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="empresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="departamento" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="trabajador" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="25"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                        <xs:element name="apellidos">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="30"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    
+                                        <xs:element name="dni">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:ID">
+                                                
+                                                <!-- Al ser de tipo ID, no puede empezar por número.
+                                                    
+                                                    Por eso, el DNI el XML será del tipo el DNI_12345678-J  por ejemplo -->
+                                                <!--   <xs:pattern value="\d{8}-[TRWAGMYFPDXBNJZSQVHLCKE]"/> -->
+                                                    <xs:pattern value="DNI_\d{8}-[TRWAGMYFPDXBNJZSQVHLCKE]"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                        <xs:element name="direccion">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="35"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="telefono">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:pattern value="[0-9]{9}"/> <!-- 9 números del 0 al 9 -->
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <!-- Atributo numero normal (su valor se puede repetir) -->
+
+                        <!-- IMPORTANTE Los atributos se establecen justo antes de cerrar "complexType" en el elemento al que 
+                            pertenece. Antes definiremos las etiquetas (si las hay) -->
+                        <xs:attribute name="nombreDep">    
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">    <!-- Enumeración conlos valores posibles del nombreDep -->
+                                    <xs:enumeration value="Contabilidad"/>
+                                    <xs:enumeration value="Informática"/>
+                                    <xs:enumeration value="Electrónica"/>
+                                    <xs:enumeration value="Márketing"/>
+                                    <xs:enumeration value="Recursos Humanos"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

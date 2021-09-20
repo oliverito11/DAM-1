@@ -1,0 +1,1 @@
+Write-Host "Se han pasado $($args.count) parametros"

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<año xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="restricciones.xsd">
+    <mes>Enero</mes>
+    <dia>1</dia>
+</año>

@@ -1,0 +1,93 @@
+Paquete Entidad
+	Clase Entidad
+		- Viajes
+			-CodViaje
+			-Nombre
+			-Precio
+			-Plazas
+
+		- Clientes
+			-NumCliente
+			-Nombre
+			-Telefono
+			-Direccion
+
+		- Reservas
+			-NumReserva
+			-Estado
+
+		- Catálogo
+			-CodViaje
+			-Destino
+			-Procedencia
+			-Temporada
+
+		- Fechas_Viaje
+			-FechaComienzo
+			-FechaFin
+	RELACIONES
+		- Clientes <n--1> Reservas
+		- Reservas <1--n> Viajes
+		- Viajes <n--1> Catálogo
+		- Fechas_Viaje <n--n> Reservas
+
+Paquete Control importa Entidad
+	Clase Control
+		- Oper. Viajes
+			+Altas()
+			+Bajas()
+			+Modificaciones()
+			+Consultas()
+
+		- Oper. Clientes
+			+Altas()
+			+Bajas()
+			+Modificaciones()
+			+Consultas()
+
+		- Oper. Reservas
+			+Altas()
+			+Bajas()
+			+Modificaciones()
+			+Consultas()
+
+		- Oper. Catálogo
+			+Altas()
+			+Bajas()
+			+Modificaciones()
+			+Consultas()
+
+		- Oper. Fechas
+			+Altas()
+			+Bajas()
+			+Modificaciones()
+			+Consultas()
+
+Paquete Interface importa Control
+	Clase Interface
+		- Ventana principal
+			+OperViajes()
+				* V_Viajes
+					+FormularioInsertar()
+					+FormularioModificar()
+					+FormularioConsultar()
+					+FormularioBorrar()
+					+FormularioListado()
+
+			+OperReservas()
+				* V_Reservas
+					+FormularioInsertar()
+					+FormularioModificar()
+					+FormularioConsultar()
+					+FormularioBorrar()
+					+FormularioListado()
+
+			+OperClientes()
+				* V_Clientes
+					+FormularioInsertar()
+					+FormularioModificar()
+					+FormularioConsultar()
+					+FormularioBorrar()
+					+FormularioListado()
+
+*Crear proyecto de diagrama de clases y paquetes.

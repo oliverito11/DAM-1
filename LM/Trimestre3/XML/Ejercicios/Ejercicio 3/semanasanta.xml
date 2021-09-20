@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE semanaSanta SYSTEM "definicion.dtd">
+<semanaSanta>
+    <viernesDolores>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </viernesDolores>
+    <domingoRamos>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </domingoRamos>
+    <lunes>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </lunes>
+    <martes>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </martes>
+    <miercoles>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </miercoles>
+    <jueves>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </jueves>
+    <viernes>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </viernes>
+    <sabado>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </sabado>
+    <domingoResurrec>
+        <cofradias numeroCofrades="3" añoFundacion="212">
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+            </pasos>
+            <pasos>
+                <nombrePaso></nombrePaso>
+                <autorPaso></autorPaso>
+                <madera></madera>
+                <numFiguras></numFiguras>
+            </pasos>
+        </cofradias>
+    </domingoResurrec>
+</semanaSanta>

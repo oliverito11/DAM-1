@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="raiz">
+    <xs:complexType>
+      <xs:sequence>
+        
+            <xs:element name="persona" maxOccurs="unbounded">
+                <xs:complexType>
+
+                <xs:sequence>
+                    <xs:element name="edad" maxOccurs="unbounded" type="xs:integer"/>
+                    <xs:element name="nombre" maxOccurs="unbounded" type="xs:string"/>
+                    
+                    <xs:element name="producto" maxOccurs="unbounded" type="xs:string"/>
+
+                    <!-- En este caso codigo será un elemento de tipo ID, con la restricción de 3 caracteres de la a-z minúsculas -->
+                    <xs:element name="codigo" maxOccurs="unbounded">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:ID">
+                                <xs:pattern value="[a-z]{3}"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="dni" maxOccurs="unbounded">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:ID">
+                            
+                            <!-- Al ser de tipo ID, no puede empezar por número.
+                                
+                                Por eso, el DNI el XML será del tipo el DNI_12345678-J  por ejemplo -->
+                            <!--   <xs:pattern value="\d{8}-[TRWAGMYFPDXBNJZSQVHLCKE]"/> -->
+                                <xs:pattern value="DNI_\d{8}-[TRWAGMYFPDXBNJZSQVHLCKE]"/>
+                            </xs:restriction>
+
+                        </xs:simpleType>
+
+                    </xs:element>
+                </xs:sequence>
+                
+                <!-- Atributo numero normal (su valor se puede repetir) -->
+                <xs:attribute name="numero" type="xs:integer" use="required"/>    
+                
+                <!-- Atributo definido de tipo ID, obligatorio y con restricción.
+
+                    Como vemos, al contrario que en los DTD, un elemento de tipo ID puede ser etiqueta o atributo en los esquemas 
+                    XML -->
+                <xs:attribute name="codPersona" use="required">    
+                    <xs:simpleType>
+                        <xs:restriction base="xs:ID">
+                        
+                        <!-- Al ser de tipo ID, no puede empezar por número.
+                            
+                            Por eso, el DNI el XML será del tipo el DNI_12345678-J  por ejemplo -->
+                        <!--   <xs:pattern value="\d{8}-[TRWAGMYFPDXBNJZSQVHLCKE]"/> -->
+                            <xs:pattern value="cod_\d{3}"/>
+                        </xs:restriction>
+
+                    </xs:simpleType>
+
+                </xs:attribute>
+
+            </xs:complexType>
+                </xs:element>
+               
+              
+       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

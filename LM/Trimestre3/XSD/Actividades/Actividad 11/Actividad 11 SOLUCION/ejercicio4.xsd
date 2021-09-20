@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="instituto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="clase" minOccurs="1" maxOccurs="2"> <!-- De 0 a 200 clases -->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="alumno" minOccurs="1" maxOccurs="40"> <!-- De 1 a 40 alumnos -->
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombreAlumno"> 
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[aA-zZ ]{1,30}"/>  <!-- No incluye vocales con tilde Se podrían incluir 
+                                                        con una expresión regular como [aA-zZáéíóúÁÉÍÓÚ ]{1,40} Ojo a la Ñ -->
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="apellidosAlumno">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[aA-zZ ]{1,40}"/>  <!-- No incluye vocales con tilde Se podrían incluir 
+                                                        con una expresión regular como [aA-zZáéíóúÁÉÍÓÚ ]{1,40} Ojo a la Ñ -->
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="emailAlumno">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[a-z]{1,15}@[a-z]{1,25}\.[a-z]{2,4}"/> <!-- Para indicar que debe haber un .
+                                                        tenemos que ponerantes el carácter \.  pues si no, lo interpreta como cualquier varácter -->
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                
+                                        <xs:element name="telefonoAlumno">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:pattern value="[0-9]{9}"/> <!-- 9 números del 0 al 9 -->
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                        <xs:element name="localidadAlumno">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[aA-zZ ]{1,20}"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="provinciaAlumno">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[aA-zZ ]{1,20}"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <!-- Atributos de alumno (definidos antes de cerrar complexType de alumno)
+
+                                        codigoAlumno está definido de tipo ID >>> Valor único
+                                        codigoClase está definido de tpo IDREF >>> Debe existir en alguno de los valores 
+                                        de tipo ID del documento XML. 
+                                        Esto es similar al concepto de clave primaria / clave foránea o extranjera de las 
+                                        Bases de Datos -->
+                                    <xs:attribute name="codigoAlumno" type="xs:ID" use="required"/> 
+                                    <xs:attribute name="codigoClase" type="xs:IDREF" use="required"/> 
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <!-- Atributos de clase (definidos antes de cerrar complexType de clase) -->
+                        <xs:attribute name="codigoClase" type="xs:ID" use="required"/> 
+                        <xs:attribute name="nombreClase" type="xs:string" use="required"/> 
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

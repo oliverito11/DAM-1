@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="futbol.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<liga>
+    <!-- Equipo 1-->
+    <equipo codigoEquipo="EQA" nombreEquipo="Equipo 1">
+
+        <!-- Jugador normal-->
+        <jugador codigoEquipo="EQA" codigoJugador="J_12345" posicionJugador="PORTERO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71478875-T</dniJugador>
+            <emailJugador>pepe@gmail.com</emailJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+
+        <!-- Jugador sin correo-->
+        <jugador codigoEquipo="sEQA" codigoJugador="J_19283" posicionJugador="DELANTERO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71478823-T</dniJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+
+        <!-- Jugador con varios telefonos -->
+        <jugador codigoEquipo="EQA" codigoJugador="J_98765" posicionJugador="MEDIO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71474521-w</dniJugador>
+            <emailJugador>pepe@gmail.com</emailJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <telefonoJugador>777888444</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+    </equipo>
+
+    <!-- Equipo 2-->
+    <equipo codigoEquipo="AQE" nombreEquipo="Equipo 2">
+
+        <!-- Jugador normal-->
+        <jugador codigoEquipo="AQE" codigoJugador="J_98754" posicionJugador="DEFENSA">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71788875-T</dniJugador>
+            <emailJugador>pepe@gmail.com</emailJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+
+        <!-- Jugador sin correo-->
+        <jugador codigoEquipo="AQE" codigoJugador="J_87541" posicionJugador="PORTERO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71741823-T</dniJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <provinciaJugador>Leon</provinciaJugador>
+        </jugador>
+
+        <!-- Jugador con varios telefonos -->
+        <jugador codigoEquipo="AQE" codigoJugador="J_87412" posicionJugador="MEDIO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_58412521-z</dniJugador>
+            <emailJugador>pepe@gmail.com</emailJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <telefonoJugador>777888444</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+    </equipo>
+
+    <!-- Equipo 3-->
+    <equipo codigoEquipo="TRE" nombreEquipo="Equipo 3">
+
+        <!-- Jugador normal-->
+        <jugador codigoEquipo="TRE" codigoJugador="J_65428" posicionJugador="PORTERO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71875475-h</dniJugador>
+            <emailJugador>pepe@gmail.com</emailJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+
+        <!-- Jugador sin correo-->
+        <jugador codigoEquipo="TRE" codigoJugador="J_19983" posicionJugador="DEFENSA">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71848823-c</dniJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+
+        <!-- Jugador con varios telefonos -->
+        <jugador codigoEquipo="TRE" codigoJugador="J_98855" posicionJugador="MEDIO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71474584-C</dniJugador>
+            <emailJugador>pepe@gmail.com</emailJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <telefonoJugador>777888444</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+    </equipo>
+
+    <!-- Equipo 4 -->
+    <equipo codigoEquipo="CUA" nombreEquipo="Equipo 4">
+
+        <!-- Jugador normal-->
+        <jugador codigoEquipo="CUA" codigoJugador="J_84712" posicionJugador="DELANTERO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71873475-h</dniJugador>
+            <emailJugador>pepe@gmail.com</emailJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+
+        <!-- Jugador sin correo-->
+        <jugador codigoEquipo="CUA" codigoJugador="J_19993" posicionJugador="DEFENSA">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_71845823-c</dniJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+
+        <!-- Jugador con varios telefonos -->
+        <jugador codigoEquipo="CUA" codigoJugador="J_98745" posicionJugador="MEDIO">
+            <nombreJugador>Pepe</nombreJugador>
+            <apellidosJugador>Perez Martin</apellidosJugador>
+            <dniJugador>DNI_61474584-C</dniJugador>
+            <emailJugador>pepe@gmail.com</emailJugador>
+            <telefonoJugador>666666555</telefonoJugador>
+            <telefonoJugador>777888444</telefonoJugador>
+            <provinciaJugador>Zamora</provinciaJugador>
+        </jugador>
+    </equipo>
+</liga>

@@ -1,0 +1,2684 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/unidades-colores-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:29:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Unidades y Colores en CSS</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[8] </span><br>Unidades y Colores en CSS</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+
+<div id="_idContainer004" class="Marco-de-texto-b-sico">
+			<h2 class="titulo2"><span class="numero2">[8.1] </span><a id="_idTextAnchor000"></a>unidades relativas y absolutas</h2>
+			<p class="Normal2">CSS proporciona en realidad dos tipos de medidas: <strong class="Negritta">absolutas</strong> y <strong class="Negritta">relativas</strong>. Las absolutas utilizan magnitudes que se indican de forma independientes. El caso más claro es usar como unidad de medida el píxel. </p>
+			<p class="Normal">Si por ejemplo indicamos que el texto tenga un tamaño de 12px, ocupará 12 píxeles, independientemente del medio, o de las características de la letra base. </p>
+			<p class="Normal">Las unidades absolutas producen efectos no deseados: 12 píxeles puede ser un tamaño suficiente para un dispositivo de poca resolución, como un móvil de 480x320 píxeles de pantalla; pero en un dispositivo de alta calidad, como por ejemplo un <em class="cursiva">iPad retina </em>por ejemplo, sería un tamaño apenas legible en esa pantalla que tiene más de 300 píxeles por pulgada (12 píxeles ocupan muy poco tamaño).</p>
+			<p class="Normal">Por contra, las unidades relativas hacen que el tamaño de la letra no dependa de la resolución sino de un tamaño base. Ese tamaño base depende en cada dispositivo (se supone que se adapta de forma apropiada al dispositivo) con la finalidad de que los elementos de la página se adapten a dicho dispositivo.</p>
+			<p class="Normal">La desventaja de las unidades relativas es que ya no disponemos de la posibilidad de saber con exactitud el tamaño de un elemento; medirá más o menos según el tamaño base que se esté utilizando en cada dispositivo de usuario. En realidad hoy en día es una gran ventaja, ya que estamos obligados a diseñar de forma adaptativa (<em class="cursiva">responsive design</em>), pero es difícil de utilizar.</p>
+			<h3 class="titulo3"><span class="numero3">[8.1.1]</span><a id="_idTextAnchor001"></a>unidades absolutas de medida</h3>
+			<p class="Normal2">Esta es la lista de las unidades de medida utilizables en CSS:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">in</strong>. Pulgadas. Medida muy habitual en el mundo anglosajón, equivale a 25,4 milímetros.</li>
+				<li class="punto"><strong class="Negritta">cm</strong>. Centímetros. No son muy útiles en la pantalla, pero sí en medios de impresión</li>
+				<li class="punto"><strong class="Negritta">mm</strong>. Milímetros.</li>
+				<li class="punto"><strong class="Negritta">pt</strong>. Puntos. Muy utilizada en tipografía. Un punto tipográfico equivale a 1/72 pulgadas. Debido a la popularidad de los procesadores de texto (que usan esta unidad de medida por defecto), es una medida que, referida a la letra, la mayoría de las personas conocen.</li>
+				<li class="punto"><strong class="Negritta">pc</strong>. Pica. Una pica la forman doce puntos. Seis picas es una pulgada.</li>
+				<li class="punto"><strong class="Negritta">px</strong>. Píxeles. Esta medida es relativa respecto al dispositivo de salida. Ya que en cada dispositivo el tamaño del píxel varía. Se usa mucho en elementos grandes (capas, tablas, ….)</li>
+			</ul>
+			<p class="Normal">Para tener una percepción más directa de la relación entre unidades absolutas y relativas, podemos acudir a la dirección:</p>
+			<p class="Normal"><a href="#"><span class="hyperlink">http://www.w3schools.com/cssref/css_pxtoemconversion.asp</span></a> </p>
+			<h3 class="titulo3"><span class="numero3">[8.1.2]</span><a id="_idTextAnchor002"></a>unidades relativas de medida</h3>
+			<ul>
+				<li class="punto"><strong class="Negritta">em</strong>. Tamaño relativo de letra. Toma el tamaño de la M mayúscula como base. Así por ejemplo si indicamos <em class="cursiva">2em</em>, nuestro tamaño de letra será el doble de lo que ocupa la letra M mayúscula del tamaño base. Hoy en día es la forma recomendada para indicar medidas en el diseño de páginas web. Esta unidad toma como tamaño base, el del elemento padre del actual.  <p class="sinpunto">Por ejemplo, si indicamos:</p><table id="table001" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">    &lt;style&gt;</strong></pre><pre class="codigo">         small<strong class="resaltado">{</strong></pre><pre class="codigo">             <strong class="resaltado">font-size</strong>:<span class="atributo">2em</span>;</pre><pre class="codigo">       <strong class="resaltado">  }</strong></pre><pre class="codigo"><strong class="resaltado">        </strong></pre><pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre><pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre><pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre><pre class="codigo"><strong class="resaltado">    &lt;h1&gt;</strong>Título <strong class="resaltado">&lt;small&gt;</strong>Letra pequeña&lt;<strong class="resaltado">/small&gt;&lt;/h1&gt;</strong></pre><pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre></td></tr></tbody></table><p class="sinpunto">Como tamaño base de small, se tomará el tamaño por defecto de la letra de h1 y por lo tanto, se obtiene:</p><p class="sinpunto"><img src="css-unidades-colores-html-2016-web-resources/image/1.png" alt="" /></p><p class="sinpunto">La letra pequeña es el doble de grande que la normal del título, ya que se toma como base el tamaño de letra del elemento <strong class="Negritta">h1.</strong> </p></li>
+				<li class="punto"><strong class="Negritta">ex</strong>. Tamaño relativo respecto a la letra equis minúscula (<strong class="Negritta">x</strong>). Así <em class="cursiva">2x</em> indica que el tipo de letra aumenta hasta ocupar el doble la letra x mayúscula. Con <em class="cursiva">0.5x</em> ocuparía la mitad</li>
+				<li class="punto"><strong class="Negritta">ch</strong>. Altura relativa al número cero (0) en la tipografía actual. No se debe utilizar, ya que la mayoría de navegadores no le reconoce y no aporta ninguna ventaja sobre las dos medidas anteriores.</li>
+				<li class="punto"><strong class="Negritta">%. </strong>Porcentaje. Es relativo respecto del tamaño del elemento padre del elemento al que le ponemos esta medida. Así 50% para una tabla dentro del elemento <strong class="Negritta">body</strong> ocuparía la mitad de la pantalla, pero dentro de una capa ocuparía la mitad del tamaño de la capa. Para una letra, si indicamos un 50%, la letra será la mitad de alta respecto al tamaño base del elemento en el que nos encontramos.</li>
+				<li class="punto"><strong class="Negritta">rem. </strong>Es muy exitosa actualmente, ya que elimina algunos problemas que tienen los diseñadores al utilizar <strong class="Negritta">em</strong> como unidad de medida. Lo malo es que no funciona en navegadores antiguos (requiere Internet Explorer 8 o superior y en los demás navegadores una versión bastante actualizada). Se basa en un tamaño relativo respecto de la raíz del documento (<em class="cursiva">root em</em>). Es decir funciona como la unidad <em class="cursiva">em</em>, pero tomando como base de la fuente la letra asignada por defecto a la raíz (al elemento <em class="cursiva">html</em>). <p class="sinpunto">Ejemplo:</p><table id="table002" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">    &lt;style&gt;</strong></pre><pre class="codigo">         small<strong class="resaltado">{</strong></pre><pre class="codigo">             <strong class="resaltado">font-size</strong>:<span class="atributo">2rem</span>;</pre><pre class="codigo">       <strong class="resaltado">  }</strong></pre><pre class="codigo"><strong class="resaltado">        </strong></pre><pre class="codigo"><strong class="resaltado">    &lt;/style&gt;</strong></pre><pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre><pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre><pre class="codigo"><strong class="resaltado">    &lt;h1&gt;</strong>Título <strong class="resaltado">&lt;small&gt;</strong>Letra pequeña&lt;<strong class="resaltado">/small&gt;&lt;/h1&gt;</strong></pre><pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre></td></tr></tbody></table><p class="sinpunto">Se obtiene:</p><p class="sinpunto"><img src="css-unidades-colores-html-2016-web-resources/image/2.png" alt="" /></p><p class="sinpunto">Ahora la letra pequeña es del mismo tamaño, ya que se utiliza como base es el de la raíz de la página (elemento <strong class="Negritta">html</strong>) y esa base será la misma para todos los elementos. Como el elemento <em class="cursiva">h1</em> tiene por defecto una letra de tamaño <em class="cursiva">2em</em>, el tamaño de small y de h1 es el mismo.</p></li>
+				<li class="punto"><strong class="Negritta">vw</strong>. Es una medida muy moderna (sólo los navegadores más actualizados la reconocen) que equivale al 1% del tamaño del ancho del área visible de la página (el llamado <em class="cursiva">viewport</em>). Aporta como ventaja el hecho de que se tiene en cuenta lo que mide el dispositivo, lo que le hace una medida relativa de verdadera objetividad.</li>
+				<li class="punto"><strong class="Negritta">vh</strong>. Como la anterior, pero se refiere al 1% de la altura total del área visible de la página.</li>
+				<li class="punto"><strong class="Negritta">vmin. </strong>Usa la menor medida entre <strong class="Negritta">vw</strong> y <strong class="Negritta">vh</strong>.</li>
+				<li class="punto"><strong class="Negritta">vmax.</strong> Usa la mayor medida entre <strong class="Negritta">vw</strong> y <strong class="Negritta">vh</strong>.<h3 class="titulo3"><span class="numero3">[8.1.3]</span><a id="_idTextAnchor003"></a>problemas de relatividad</h3></li>
+			</ul>
+			<p class="Normal2">Como la recomendación actual es que las páginas se adapten al dispositivo que las está viendo, se recomienda usar tamaños relativos. La unidad más recomendable a usar es <strong class="Negritta">em</strong>, por la precisión que tiene. El tamaño de la letra indicado con <strong class="Negritta">em</strong> (como se ha explicado en el apartado anterior) es relativo al contenedor, es decir toma el tamaño que tiene el elemento que contiene a aquel sobre el que indicamos el tamaño y a partir de él se recalcula el nuevo tamaño. </p>
+			<p class="Normal">Esto se entiende mejor con un ejemplo:</p>
+			<table id="table003" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;body{</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;</strong><span class="atributo">font-size</span><strong class="resaltado">:</strong><span class="texto">20px</span><strong class="resaltado">;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;h1{</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;</strong><span class="atributo">font-size</span><strong class="resaltado">:</strong><span class="texto">2em</span>;</pre>
+							<pre class="codigo"><span class="atributo">&#9;</span><strong class="resaltado">}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;span{</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;</strong><span class="atributo">font-size</span><strong class="resaltado">:</strong><span class="texto">1.4em</span><strong class="resaltado">;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;}</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;h1&gt;</strong>Soy texto titular<strong class="resaltado">&lt;span&gt; y </strong>yo también<strong class="resaltado">&lt;/span&gt;&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;span&gt;</strong>Yo no<strong class="resaltado">&lt;/span&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Sorprendentemente el resultado de este código es:</p>
+			<p class="Normal"><img src="css-unidades-colores-html-2016-web-resources/image/3.png" alt="" /></p>
+			<p class="Normal2">Donde se observa que el texto <em class="cursiva">y yo también </em>aparece incluso más grande que el resto de la etiqueta <em class="cursiva">h1</em> (aunque el tamaño de <em class="cursiva">h1 </em>es <em class="cursiva">2em </em>y el de <em class="cursiva">span </em>es <em class="cursiva">1.4em</em>)</p>
+			<p class="Normal">La razón es que, como <em class="cursiva">em</em> expresa tamaños relativos al contenedor, <em class="cursiva">h1</em> tiene como contenedor a <em class="cursiva">body</em> y por ello el tamaño de la letra de <em class="cursiva">h1</em> es de <em class="cursiva">40</em> píxeles. Como <em class="cursiva">span</em> tiene como contenedor a <em class="cursiva">h1</em>, se multiplica <em class="cursiva">1,4 · 40</em> y así el texto <em class="cursiva">y yo también </em>ocupará <em class="cursiva">56</em> píxeles.</p>
+			<p class="Normal">Sin embargo el texto <em class="cursiva">yo no</em>, que está también dentro de un elemento de tipo <strong class="Negritta">span</strong>, se muestra con un tamaño de 28 píxeles al ser su contenedor la etiqueta <strong class="Negritta" lang="en-US">body</strong>.</p>
+			<p class="Normal">Debido a la complejidad de las páginas web actuales. Esa forma de funcionar de la unidad <strong class="Negritta">em</strong>, puede dar lugar a dificultades para diseñar la página web. Por ello se incorporó la unidad <strong class="Negritta">rem</strong>, que, aun siendo relativa, establece como base el tamaño por defecto de la página (lo que se fije para el documento html completo). </p>
+			<p class="Normal">Así, si modificamos el ejemplo anterior:</p>
+			<table id="table004" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;<strong class="resaltado">html</strong>{</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;font-size</strong>:<span class="atributo">20px</span><strong class="resaltado">;</strong></pre>
+							<pre class="codigo">&#9;}</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">h1</strong>{</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;font-size</strong>:<span class="atributo">2rem</span>;</pre>
+							<pre class="codigo">&#9;}</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">span</strong>{</pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">font-size</strong>:<span class="atributo">1.4rem</span>;</pre>
+							<pre class="codigo">&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;h1&gt;</strong>Soy texto titular<strong class="resaltado">&lt;span&gt; y </strong>yo también<strong class="resaltado">&lt;/span&gt;&lt;/h1&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">  &lt;span&gt;</strong>Yo no<strong class="resaltado">&lt;/span&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Con ese código se obtiene el resultado:</p>
+			<p class="Normal"><img src="css-unidades-colores-html-2016-web-resources/image/4.png" alt="" /></p>
+			<p class="Normal2">Los textos de las dos etiquetas <strong class="Negritta">span</strong> son iguales (serán de 28 píxeles) ya que la unidad <strong class="Negritta">rem</strong> toma como base el tamaño de la letra raíz (en el código de ejemplo redefinida a 20 píxeles).</p>
+			<p class="Normal">Podemos combinar ambas medidas en el mismo documento. Por otro lado hay que recordar que, mientras que la unidad <strong class="Negritta">em</strong> es aceptada casi por cualquier navegador, <strong class="Negritta">rem</strong> todavía no es reconocida por muchos navegadores.</p>
+			<h2 class="titulo2"><span class="numero2">[8.2] </span><a id="_idTextAnchor004"></a>unidades para ángulos</h2>
+			<ul>
+				<li class="punto"><strong class="Negritta">deg</strong>. Grados. Valores de grados donde 360 sería un giro completo.</li>
+				<li class="punto"><strong class="Negritta">rad</strong>. Radianes, también utilizada para ángulos. 360º son 2Π radianes.</li>
+				<li class="punto"><strong class="Negritta">grad</strong>. Gradianes. 400 gradianes son 360º.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">turn</strong>. También para ángulos. Indica vueltas, una vuelta serían 360 grados. <em class="cursiva">0.5turn </em>es media vuelta (o sea 180º). Sólo <strong class="Negritta">Firefox </strong>y <em class="cursiva">Internet Explorer </em>a partir de la versión 9, reconocen esta unidad<h2 class="titulo2"><span class="numero2">[8.3] </span><a id="_idTextAnchor005"></a>unidades para tiempo</h2></li>
+			</ul>
+			<p class="Normal2">Se usan por ejemplo en transiciones y animaciones.</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">s</strong>. Segundos. Se usa para indicar intervalos de tiempo</li>
+				<li class="punto"><strong class="Negritta">ms</strong>. Milisegundos<h2 class="titulo2"><span class="numero2">[8.4] </span><a id="_idTextAnchor006"></a>otras unidades</h2></li>
+				<li class="punto"><strong class="Negritta">Hz</strong>. Hertzios. Usada para indicar frecuencias (para indicar valores de sonido o voz)</li>
+				<li class="punto"><strong class="Negritta">KHz</strong>. Kilohertzios.</li>
+				<li class="punto"><strong class="Negritta">dpi</strong>. Puntos por pulgada. Se usa para indicar resoluciones (para especificar, por ejemplo, la resolución mínima del dispositivo que debe tener para mostrar los estilos)</li>
+				<li class="punto"><strong class="Negritta">dpcm</strong>. Tiene la misma utilidad que la anterior, pero indica puntos por centímetro.</li>
+				<li class="punto"><strong class="Negritta">dppx. </strong>Puntos por píxel<strong class="Negritta">.</strong><h2 class="titulo2"><span class="numero2">[8.5] </span><a id="_idTextAnchor007"></a>indicación de colores en CSS</h2></li>
+			</ul>
+			<p class="Normal2">Hay numerosas etiquetas con capacidad de mostrar colores. Para indicar un color, CSS dispone de estas posibilidades:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">Notación hexadecimal</strong>. Se trata de la notación más utilizada en CSS. Consiste en una cifra hexadecimal, precedida del símbolo <strong class="Negritta">#</strong>. Las dos primeras cifras hexadecimales indican el nivel de rojo, las dos siguientes el nivel de verde y las dos últimas de verde; por ejemplo <em class="cursiva">#FF0000</em> es el código del rojo puro. Ejemplo<span class="numeroPie"><span id="footnote-000-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="css-unidades-colores-html-2016.html#footnote-000">1</a></span></span>:<table id="table005" class="tabla-manual _idGenTablePara-1"><colgroup><col /><col /><col /></colgroup><thead><tr class="tabla-manual"><td class="tabla-manual cabecera-tabla"><p class="cabeceraTabla">color</p></td><td class="tabla-manual cabecera-tabla"><p class="cabeceraTabla">código hexadecimal</p></td><td class="tabla-manual cabecera-tabla"><p class="cabeceraTabla">código RGB</p></td></tr></thead><tbody><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#000000</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(0,0,0)</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#FF0000</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(255,0,0)</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#00FF00</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(0,255,0)</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#0000FF</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(0,0,255)</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#FFFF00</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(255,255,0)</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#00FFFF</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(0,255,255)</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#FF00FF</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(255,0,255)</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#C0C0C0</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(192,192,192)</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual celda-normal"><p class="Normal">#FFFFFF</p></td><td class="tabla-manual celda-normal"><p class="Normal">rgb(255,255,255)</p></td></tr></tbody></table></li>
+				<li class="punto"><strong class="Negritta">Mediante función RGB</strong>. Consiste en usar el la función <strong class="Negritta">rgb(</strong>r,g,b<strong class="Negritta">)</strong> donde <em class="cursiva">r </em>es el nivel de rojo (entre 0 y 255), <em class="cursiva">r</em> es el nivel de rojo y <em class="cursiva">b</em> el de azul. Ejemplo:<table id="table006" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><span class="atributo">font-color</span>:<span class="atributo">rgb(</span><span class="texto">255,0,0</span><span class="atributo">)</span>; </pre><pre class="codigo"><span class="comentario">/* Color de fuente rojo */</span></pre></td></tr></tbody></table></li>
+				<li class="punto"><strong class="Negritta">Mediante RGB con porcentaje</strong>. Funciona  como la anterior, pero el nivel re rojo, verde y azul se indican con tanto por ciento. Ejemplo: <table id="table007" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><span class="atributo">font-color</span>:<span class="atributo">rgb(</span><span class="texto">50%,25%,12%</span><span class="atributo">)</span>;<em class="cursiva"> </em></pre><pre class="codigo"><span class="comentario">/*el color es un rojo anaranjado*/</span> </pre></td></tr></tbody></table></li>
+				<li class="punto"><strong class="Negritta">Mediante función RGB y transparencia</strong>. Permite utilizar una función llamada <strong class="Negritta">rgba</strong> que funciona como la función <strong class="Negritta">rgb</strong>, pero que añade un cuarto parámetro que es un valor de transparencia (conocido como parámetro <strong class="Negritta" lang="en-US">alpha</strong>). Este parámetro puede tener un valor entre 0 (transparencia total y 1.0 opacidad total). De modo que el color se funde con el fondo. Es parte de CSS3 y sólo está disponible en las últimas versiones de los navegadores. Ejemplo:<table id="table008" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><span class="atributo">font-color</span>:<span class="atributo">rgba(</span><span class="texto">50%,25%,12%,.5</span><span class="atributo">)</span>;<em class="cursiva"> </em></pre><pre class="codigo"><span class="comentario">/*el color es un rojo anaranjado con 50% de transparencia*/</span> </pre></td></tr></tbody></table></li>
+				<li class="punto"><strong class="Negritta">Mediante función hsl</strong>. Permite seleccionar colores utilizando tres valores:<ul><li class="Punto2"><strong class="Negritta">Tono (Hue)</strong>. Un valor de 0 a 360 que indica el giro en la rueda de colores. Por ejemplo el cero es el rojo, el 120 el verde y el 240 el azul. </li><li class="Punto2"><strong class="Negritta">Saturación</strong>. Un número del 0% al 100%, que indica el nivel de saturación. Más saturación indica un color más vivo. Una saturación del 0% significa pasar el color a escala de grises.</li><li class="Punto2"><strong class="Negritta">Luminosidad</strong>. Un número del 0% al 100%. Indica el nivel de luminosidad del color: más luminoso significa más claridad para el color (0% significa negro). </li></ul></li>
+				<li class="punto">Este modo está disponible en los últimos navegadores compatibles con CS3. Es el modelo más parecido a la forma que tiene el ser humano de percibir el color, pero no se utiliza mucho dentro de las páginas web.</li>
+				<li class="punto"><strong class="Negritta">Mediante función hsla</strong>. Añade la función anterior un cuarto valor (un número decimal entre 0.0 y 1.0) que sirve para indicar transparencia.</li>
+				<li class="punto"><strong class="Negritta">Por el nombre</strong>. Permite indicar el color por su nombre estándar Hay diecisiete colores estándares para especificar colores son:<table id="table009" class="tabla-manual _idGenTablePara-1"><colgroup><col /><col /><col /></colgroup><thead><tr class="tabla-manual"><td class="tabla-manual cabecera-tabla"><p class="cabeceraTabla">Color</p></td><td class="tabla-manual cabecera-tabla"><p class="cabeceraTabla">Nombre</p></td><td class="tabla-manual cabecera-tabla"><p class="cabeceraTabla">Código Hexadecimal</p></td></tr></thead><tbody><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">White</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#FFFFFF</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Silver</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#C0C0C0</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Gray</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#808080</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Black</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#000000</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Red</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#FF0000</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Maroon</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#800000</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Yellow</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#FFFF00</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Olive</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#808000</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Lime</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#00FF00</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Green</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#008000</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Aqua</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#00FFFF</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Teal</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#008080</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Blue</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#0000FF</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Navy</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#000080</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Fuchsia</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#FF00FF</p></td></tr><tr class="tabla-manual"><td class="tabla-manual primera-celda-tabla"><p class="Normal"><span lang="ar-SA">&#160;</span></p></td><td class="tabla-manual segunda-columna-tabla celda-normal"><p class="Normal"><a href="#"><strong class="Negritta">Purple</strong></a></p></td><td class="tabla-manual celda-normal"><p class="Normal">#800080</p></td></tr></tbody></table><p class="sinpunto">Estos colores se reconocen por cualquier navegador web. Además la especificación CSS 3 referente a los colores (<em class="cursiva">CSS3 color module</em>), reconoce los colores <strong class="Negritta">X11</strong>. Esta lista de colores se creó para el sistema X Windows de Unix y se fue adoptando por los navegadores y por diversos lenguajes gráficos (como SVG). En la actualidad son reconocidos por las mayoría de navegadores.</p></li>
+				<li class="punto">Hay diferencias entre el original X11 y la recomendación de nombres estándar de la W3C (que es la adoptada en CSS3). <p class="sinpunto">La lista completas de nombres de colores es:</p></li>
+			</ul>
+			<table id="table010" class="tabla-manual">
+				<colgroup>
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr class="tabla-manual">
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Color</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Name</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Hexadecimal</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Modo RGB</p>
+						</td>
+						<td class="tabla-manual cabecera-tabla cabecera-tabla">
+							<p class="cabeceraTabla">Modo HSL</p>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Alice Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F0F8FF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(94%,97%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(208,100%,97%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Antique White</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FAEBD7</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(98%,92%,84%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(34,78%,91%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Aqua</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#00FFFF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,100%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(180,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Aquamarine</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#7FFFD4</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(50%,100%,83%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(160,100%,75%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Azure</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F0FFFF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(94%,100%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(180,100%,97%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Beige</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F5F5DC</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(96%,96%,86%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(60,56%,91%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Bisque</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFE4C4</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,89%,77%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(33,100%,88%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Black</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#000000</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,0%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,0%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Blanched Almond</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFEBCD</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,92%,80%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(36,100%,90%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#0000FF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,0%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(240,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Blue Violet</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#8A2BE2</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(54%,17%,89%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(271,76%,53%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Brown</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#A52A2A</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(65%,16%,16%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,59%,41%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Burlywood</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#DEB887</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(87%,72%,53%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(34,57%,70%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Cadet Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#5F9EA0</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(37%,62%,63%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(182,26%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Chartreuse</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#7FFF00</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(50%,100%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(90,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Chocolate</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#D2691E</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(82%,41%,12%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(25,75%,47%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Coral</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF7F50</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,50%,31%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(16,100%,66%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Cornflower</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#6495ED</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(39%,58%,93%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(219,79%,66%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Cornsilk</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFF8DC</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,97%,86%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(48,100%,93%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Crimson</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#DC143C</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(86%,8%,24%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(348,83%,47%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Cyan</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#00FFFF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,100%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(180,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#00008B</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,0%,55%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(240,100%,27%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Cyan</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#008B8B</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,55%,55%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(180,100%,27%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Goldenrod</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#B8860B</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(72%,53%,4%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(43,89%,38%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Gray</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#A9A9A9</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(66%,66%,66%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,66%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#006400</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,39%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,100%,20%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Khaki</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#BDB76B</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(74%,72%,42%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(56,38%,58%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Magenta</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#8B008B</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(55%,0%,55%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(300,100%,27%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Olive Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#556B2F</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(33%,42%,18%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(82,39%,30%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Orange</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF8C00</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,55%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(33,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Orchid</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#9932CC</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(60%,20%,80%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(280,61%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Red</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#8B0000</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(55%,0%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,100%,27%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Salmon</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#E9967A</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(91%,59%,48%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(15,72%,70%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Sea Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#8FBC8F</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(56%,74%,56%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,25%,65%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Slate Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#483D8B</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(28%,24%,55%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(248,39%,39%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Slate Gray</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#2F4F4F</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(18%,31%,31%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(180,25%,25%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dark Turquoise</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#00CED1</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,81%,82%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(181,100%,41%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Dark Violet</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#9400D3</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(58%,0%,83%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(282,100%,41%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Deep Pink</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF1493</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,8%,58%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(328,100%,54%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Deep Sky Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#00BFFF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,75%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(195,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Dim Gray</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#696969</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(41%,41%,41%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,41%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Dodger Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#1E90FF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(12%,56%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(210,100%,56%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Firebrick</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#B22222</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(70%,13%,13%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,68%,42%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Floral White</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFFAF0</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,98%,94%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(40,100%,97%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Forest Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#228B22</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(13%,55%,13%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,61%,34%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Fuchsia</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF00FF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,0%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(300,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Gainsboro</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#DCDCDC</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(86%,86%,86%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,86%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Ghost White</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F8F8FF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(97%,97%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(240,100%,99%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Gold</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFD700</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,84%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(51,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Goldenrod</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#DAA520</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(85%,65%,13%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(43,74%,49%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Gray</strong></a><strong class="Negritta">&#160;</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#808080</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(50%,50%,50%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Green (W3C)</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#008000</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,50%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,100%,25%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Green Yellow</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#ADFF2F</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(68%,100%,18%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(84,100%,59%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Honeydew</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F0FFF0</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(94%,100%,94%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,100%,97%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Hot Pink</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF69B4</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,41%,71%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(330,100%,71%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Indian Red</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#CD5C5C</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(80%,36%,36%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,53%,58%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Indigo</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#4B0082</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(29%,0%,51%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(275,100%,26%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Ivory</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFFFF0</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,100%,94%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(60,100%,97%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Khaki</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F0E68C</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(94%,90%,55%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(54,77%,75%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Lavender</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#E6E6FA</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(90%,90%,98%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(240,67%,94%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Lavender Blush</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFF0F5</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,94%,96%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(340,100%,97%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Lawn Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#7CFC00</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(49%,99%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(90,100%,49%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Lemon Chiffon</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFFACD</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,98%,80%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(54,100%,90%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#ADD8E6</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(68%,85%,90%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(195,53%,79%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Coral</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F08080</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(94%,50%,50%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,79%,72%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Cyan</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#E0FFFF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(88%,100%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(180,100%,94%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Goldenrod</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FAFAD2</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(98%,98%,82%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(60,80%,90%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Gray</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#D3D3D3</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(83%,83%,83%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,83%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#90EE90</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(56%,93%,56%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,73%,75%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Pink</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFB6C1</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,71%,76%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(351,100%,86%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Salmon</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFA07A</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,63%,48%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(17,100%,74%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Sea Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#20B2AA</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(13%,70%,67%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(177,70%,41%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Sky Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#87CEFA</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(53%,81%,98%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(203,92%,76%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Slate Gray</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#778899</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(47%,53%,60%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(210,14%,53%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Steel Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#B0C4DE</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(69%,77%,87%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(214,41%,78%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Light Yellow</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFFFE0</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,100%,88%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(60,100%,94%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Lime (W3C)</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#00FF00</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,100%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Lime Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#32CD32</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(20%,80%,20%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,61%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Linen</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FAF0E6</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(98%,94%,90%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(30,67%,94%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Magenta</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF00FF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,0%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(300,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Maroon</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#7F0000</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(50%,0%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,100%,25%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Medium Aquamarine</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#66CDAA</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(40%,80%,67%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(160,51%,60%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Medium Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#0000CD</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,0%,80%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(240,100%,40%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Medium Orchid</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#BA55D3</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(73%,33%,83%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(288,59%,58%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Medium Purple</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#9370DB</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(58%,44%,86%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(260,60%,65%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Medium Sea Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#3CB371</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(24%,70%,44%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(147,50%,47%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Medium Slate Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#7B68EE</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(48%,41%,93%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(249,80%,67%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Medium Spring Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#00FA9A</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,98%,60%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(157,100%,49%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Medium Turquoise</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#48D1CC</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(28%,82%,80%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(178,60%,55%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Medium Violet Red</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#C71585</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(78%,8%,52%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(322,81%,43%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Midnight Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#191970</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(10%,10%,44%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(240,64%,27%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Mint Cream</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F5FFFA</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(96%,100%,98%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(150,100%,98%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Misty Rose</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFE4E1</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,89%,88%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(6,100%,94%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Moccasin</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFE4B5</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,89%,71%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(38,100%,86%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Navajo White</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFDEAD</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,87%,68%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(36,100%,84%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Navy</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#000080</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,0%,50%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(240,100%,25%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Old Lace</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FDF5E6</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(99%,96%,90%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(39,85%,95%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Olive</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#808000</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(50%,50%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(60,100%,25%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Olive Drab</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#6B8E23</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(42%,56%,14%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(80,61%,35%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Orange</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFA500</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,65%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(39,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Orange Red</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF4500</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,27%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(16,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Orchid</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#DA70D6</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(85%,44%,84%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(302,59%,65%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Pale Goldenrod</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#EEE8AA</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(93%,91%,67%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(55,67%,80%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Pale Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#98FB98</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(60%,98%,60%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(120,93%,79%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Pale Turquoise</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#AFEEEE</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(69%,93%,93%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(180,65%,81%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Pale Violet Red</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#DB7093</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(86%,44%,58%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(340,60%,65%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Papaya Whip</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFEFD5</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,94%,84%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(37,100%,92%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Peach Puff</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFDAB9</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,85%,73%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(28,100%,86%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Peru</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#CD853F</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(80%,52%,25%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(30,59%,53%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Pink</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFC0CB</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,75%,80%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(350,100%,88%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Plum</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#DDA0DD</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(87%,63%,87%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(300,47%,75%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Powder Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#B0E0E6</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(69%,88%,90%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(187,52%,80%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Purple</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#7F007F</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(50%,0%,50%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(300,100%,25%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Red</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF0000</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,0%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Rosy Brown</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#BC8F8F</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(74%,56%,56%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,25%,65%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Royal Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#4169E1</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(25%,41%,88%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(225,73%,57%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Saddle Brown</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#8B4513</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(55%,27%,7%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(25,76%,31%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Salmon</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FA8072</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(98%,50%,45%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(6,93%,71%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Sandy Brown</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F4A460</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(96%,64%,38%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(28,87%,67%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Sea Green</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#2E8B57</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(18%,55%,34%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(146,50%,36%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Seashell</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFF5EE</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,96%,93%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(25,100%,97%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Sienna</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#A0522D</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(63%,32%,18%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(19,56%,40%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Silver</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#C0C0C0</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(75%,75%,75%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,75%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Sky Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#87CEEB</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(53%,81%,92%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(197,71%,73%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Slate Blue</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#6A5ACD</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(42%,35%,80%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(248,54%,58%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Slate Gray</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#708090</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(44%,50%,56%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(210,13%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Snow</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFFAFA</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,98%,98%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,100%,99%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Spring Green</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#00FF7F</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,100%,50%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(150,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Steel Blue</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#4682B4</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(27%,51%,71%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(207,44%,49%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Tan</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#D2B48C</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(82%,71%,55%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(34,44%,69%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Teal</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#008080</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(0%,50%,50%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(180,100%,25%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Thistle</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#D8BFD8</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(85%,75%,85%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(300,24%,80%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Tomato</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FF6347</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,39%,28%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(9,100%,64%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Turquoise</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#40E0D0</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(25%,88%,82%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(174,72%,57%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Violet</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#EE82EE</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(93%,51%,93%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(300,76%,72%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Wheat</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F5DEB3</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(96%,87%,70%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(39,77%,83%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">White</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFFFFF</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,100%,100%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,100%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">White Smoke</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#F5F5F5</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(96%,96%,96%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(0,0%,96%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><a href="#"><strong class="Negritta">Yellow</strong></a></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#FFFF00</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(100%,100%,0%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(60,100%,50%)</p>
+						</td>
+					</tr>
+					<tr class="tabla-manual">
+						<td class="tabla-manual primera-celda-tabla">
+							<p class="Normal"><span lang="ar-SA">&#160;</span></p>
+						</td>
+						<td class="tabla-manual primera-celda-tabla celda-normal">
+							<p class="Normal"><strong class="Negritta">Yellow Green</strong></p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">#9ACD32</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">rgb(60%,80%,20%)</p>
+						</td>
+						<td class="tabla-manual celda-normal">
+							<p class="Normal">hsl(80,61%,50%)</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal"><a id="_idTextAnchor008"></a></p>
+			<hr class="HorizontalRule-1" />
+			<div class="_idFootnotes">
+				<div id="footnote-000" class="_idFootnote">
+					<p class="pie"><a class="_idFootnoteAnchor _idGenColorInherit" href="css-unidades-colores-html-2016.html#footnote-000-backlink">1</a>&#9; Extraído de <a href="#"><span class="hyperlink">http://www.w3schools.com/cssref/css_colors.asp</span></a><span class="hyperlink"> </span></p>
+				</div>
+			</div>
+		</div>
+
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/unidades-colores-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:29:06 GMT -->
+</html>
+

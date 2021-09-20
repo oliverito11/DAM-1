@@ -1,0 +1,2 @@
+Sistema que permite la gestión de una empresa. El director puede acceder al programa para consultar y modificar los datos de los empleados. Necesita localizar los detalles de los empleados para realizar esas acciones, es decirm una búsqueda, mediante un nº de empleado, nombre y apellidos o DNI. ¿Qué casos de uso se pueden dar?
+Papyrus - http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/master/

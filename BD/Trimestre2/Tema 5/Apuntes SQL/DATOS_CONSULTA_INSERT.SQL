@@ -1,0 +1,9 @@
+CREATE TABLE PROZA
+    AS SELECT *
+        FROM PRO
+        WHERE CIUDADP = 'ZAMORA';
+
+INSERT INTO PROZA
+        SELECT *
+        FROM PRO
+        WHERE CIUDADP = 'TORO';

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    <?xml version="1.0"encoding="UTF-8"?>
+    <deportistas>
+        <deportista>
+            <deporte Atletismo />
+            <nombre>Jesse Owens</nombre>
+        <deportista>
+            <deporte Natación />
+            <nombre>Mark Spitz</nombre>
+        </deportista>
+    </deportistas>
+
+                ERRORES
+                =======
+     En este código hay varios fallos:
+    1 - El primero de ellos es que la primera etiqueta "deportista"
+    no está cerrada.
+    2 - El otro fallo se encunetra en la etiqueta "deporte" pues se intenta
+    poner un atributo pero de manera incorrecta, requiere de un 
+    identificador para ello
+-->
+<!-- CÓDIGO CORREGIDO -->
+<deportistas>
+    <deportista>
+        <deporte tipo = "Atletismo" /> <!-- Sintaxis de atributos correcta -->
+        <nombre>Jesse Owens</nombre>
+    </deportista>   <!-- Etiqueta cerrada -->
+    <deportista>
+        <deporte tipo = "Natación" />
+        <nombre>Mark Spitz</nombre>
+    </deportista>
+</deportistas>

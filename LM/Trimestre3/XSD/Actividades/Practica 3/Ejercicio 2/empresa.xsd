@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="empresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <!-- Nombre -->
+                            <xs:element name="nombre" type="nombres" />
+                            
+                            <!-- Apellidos -->
+                            <xs:element name="apellidos">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[aA-zZ ]{1,40}" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <!-- DNI -->
+                            <xs:element name="DNI">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d[0-9]{8}-[A-Z]" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <!-- Teléfono -->
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{8}" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Email -->
+                            <xs:element name="email">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[a-z]{1,15}@[a-z]{1,25}[.][a-z]{2,4}" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Provincia -->
+                            <xs:element name="provincia" type="nombres" />
+                        </xs:sequence>
+                        
+                        <!-- Código único de cada persona -->
+                        <xs:attribute name="codigoPersona" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[a-z]{2}[0-9]" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Restricciones -->
+    <xs:simpleType name="nombres">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[aA-zZ ]{1,20}" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

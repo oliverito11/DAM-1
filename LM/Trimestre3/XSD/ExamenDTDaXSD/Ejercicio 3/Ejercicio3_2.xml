@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lista_de_notas [
+    <!-- Elemento raíz -->
+    <!ELEMENT lista_de_notas (nota+)>
+
+    <!-- Todas las notas tienen los siugientes elementos-->
+    <!ELEMENT nota (para, de, titulo, contenido)>
+    <!-- También, las notas pueden o no estar marcadas por un día y/o una hora-->
+    <!ATTLIST nota dia CDATA #IMPLIED>
+    <!ATTLIST nota hora CDATA #IMPLIED>
+
+    <!-- Definición de los elementos de las notas -->
+    <!ELEMENT para (#PCDATA)>
+    <!ELEMENT de (#PCDATA)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT contenido (#PCDATA)>
+]>
+
+<!-- Prueba del código de un DTD interno -->
+<lista_de_notas>
+    <!-- Nota 1 -->
+    <nota>
+        <para>Pedro</para>
+        <de>Laura</de>
+        <titulo>Recordatorio</titulo>
+        <contenido>A las 7:00 pm en la puerta del teatro</contenido>
+    </nota>
+    
+    <!-- Nota 2 con hora y día -->
+    <nota dia="23/01/2010" hora="13:15">
+        <para>Miguel</para>
+        <de>Juan</de>
+        <titulo>Informes</titulo>
+        <contenido>Te he dejado los informes en el casillero</contenido>
+    </nota>
+</lista_de_notas>

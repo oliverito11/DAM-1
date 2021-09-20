@@ -1,0 +1,21 @@
+HTTrack3.48-22+htsswf+htsjava launched on Sun, 21 Oct 2018 23:27:10 at http://jorgesanchez.net/manuales/html/introduccion-html.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "es, en, *" http://jorgesanchez.net/manuales/html/introduccion-html.html -O1 "D:\MIS WEBS DESCARGADAS\html" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+23:27:56	Error: 	"Not Found" (404) at link jorgesanchez.net/manuales/html/intro-html.html (from jorgesanchez.net/manuales/html/introduccion-html.html)
+23:33:58	Error: 	"Not Found" (404) at link jorgesanchez.net/manuales/html/edicion-basica-html-2016.html (from jorgesanchez.net/manuales/html/edicion-basica-html5.html)
+23:33:58	Error: 	"Not Found" (404) at link jorgesanchez.net/manuales/html/css-unidades-colores-html-2016.html (from jorgesanchez.net/manuales/html/unidades-colores-css.html)
+23:33:58	Warning: 	Retry after error -4 (Incorrect length (494820 Bytes, 1165738 expected)) at link jorgesanchez.net/manuales/html/css-formato-caja-lista-html-2016-web-resources/image/Imagen40475.png (from jorgesanchez.net/manuales/html/formato-caja-lista-css.html)
+23:34:17	Error: 	"Not Found" (404) at link jorgesanchez.net/manuales/html/css-formato-caja-lista-html-2016.html (from jorgesanchez.net/manuales/html/formato-caja-lista-css.html)
+23:34:17	Error: 	"Not Found" (404) at link jorgesanchez.net/manuales/html/css-formato-caja-lista-html-2016-web-resources/image/box-shadow.jpg (from jorgesanchez.net/manuales/html/formato-caja-lista-css.html)
+23:34:17	Warning: 	Retry after error -4 (Incorrect length (237390 Bytes, 317755 expected)) at link jorgesanchez.net/manuales/html/css-visualizacion-web-resources/image/1.png (from jorgesanchez.net/manuales/html/css-visualizacion.html)
+23:34:17	Error: 	"Not Found" (404) at link jorgesanchez.net/manuales/html/css-visualizacion.njk (from jorgesanchez.net/manuales/html/css-visualizacion.html)
+23:34:17	Error: 	"Not Found" (404) at link css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js (from jorgesanchez.net/manuales/html/css-visualizacion.html)
+23:34:36	Warning: 	Retry after error -4 (Incorrect length (938556 Bytes, 1165738 expected)) at link jorgesanchez.net/manuales/html/css-formato-caja-lista-html-2016-web-resources/image/Imagen40475.png (from jorgesanchez.net/manuales/html/formato-caja-lista-css.html)
+
+HTTrack Website Copier/3.48-22 mirror complete in 7 minutes 36 seconds : 166 links scanned, 155 files written (12417131 bytes overall) [11200447 bytes received at 24562 bytes/sec], 1606627 bytes transferred using HTTP compression in 25 files, ratio 17%
+(7 errors, 3 warnings, 0 messages)

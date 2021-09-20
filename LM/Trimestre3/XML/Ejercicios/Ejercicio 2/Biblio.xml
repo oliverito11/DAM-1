@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <!-- Inicio de libro -->
+    <libro>
+        <titulo>Titulo1</titulo>
+        <autor>Pepe</autor>
+        <editorial>SM</editorial>
+        <!-- Cada fecha contiene día, mes y año -->
+        <fecha>
+            <dia>1</dia>
+            <mes>Enero</mes>
+            <anyo>2007</anyo>
+        </fecha>
+        <genero>Terror</genero>
+    </libro>
+    <!-- Fin de la estructura principal-->
+
+    <libro>
+        <titulo>Titulo2</titulo>
+        <autor>Pepe</autor>
+        <editorial>SM</editorial>
+        <fecha>
+            <dia>10</dia>
+            <mes>Marzo</mes>
+            <anyo>2009</anyo>
+        </fecha>
+        <genero>Comedia</genero>
+    </libro>
+</biblioteca>

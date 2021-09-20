@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aves>
+    <ave>
+        <nombreComun>Lugano de los pinos</nombreComun>
+        <nombreCientifico>Garduelis pinus</nombreCientifico>
+        <longitud>13cm</longitud>
+        <migracion>Migratoria parcial</migracion>
+        <web>https://es.wikipedia.org/wiki/Spinus_spinus</web>
+    </ave>
+    <ave>
+        <nombreComun>Verdecillo</nombreComun>
+        <nombreCientifico>Serinus serinus</nombreCientifico>
+        <longitud>12cm</longitud>
+        <migracion>Migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Serinus_serinus</web>
+    </ave>
+    <ave>
+        <nombreComun>Pardillo norteño</nombreComun>
+        <nombreCientifico>Acanthis flammea</nombreCientifico>
+        <longitud>12cm</longitud>
+        <migracion>Migratoria parcial</migracion>
+        <web>https://es.wikipedia.org/wiki/Acanthis_flammea</web>
+    </ave>
+    <ave>
+        <nombreComun>Pardillo comun</nombreComun>
+        <nombreCientifico>Linaria cannabina</nombreCientifico>
+        <longitud>14cm</longitud>
+        <migracion>Migratoria parcial</migracion>
+        <web>https://es.wikipedia.org/wiki/Linaria_cannabina</web>
+    </ave>
+    <ave>
+        <nombreComun>Rhodopechys opsoleta</nombreComun>
+        <nombreCientifico>Rhodopechys obsoleta</nombreCientifico>
+        <longitud>14cm</longitud>
+        <migracion>Migratoria parcial</migracion>
+        <web>https://en.wikipedia.org/wiki/Rhodopechys</web>
+    </ave>
+    <ave>
+        <nombreComun>Piquituerto franjeado</nombreComun>
+        <nombreCientifico>Loxia leucoptera</nombreCientifico>
+        <longitud>17cm</longitud>
+        <migracion>Migratoria/nómada</migracion>
+        <web>https://www.ecured.cu/Piquituerto_franjeado</web>
+    </ave>
+    <ave>
+        <nombreComun>Camachuelo comun</nombreComun>
+        <nombreCientifico>Pyrrhula pyrrhula</nombreCientifico>
+        <longitud>17cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Pyrrhula_pyrrhula</web>
+    </ave>
+    <ave>
+        <nombreComun>Picogordo</nombreComun>
+        <nombreCientifico>Cocothraustes cocothraustes</nombreCientifico>
+        <longitud>17cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Coccothraustes_coccothraustes</web>
+    </ave>
+    <ave>
+        <nombreComun>Estrilda ondulada</nombreComun>
+        <nombreCientifico>Estrilda astrild</nombreCientifico>
+        <longitud>12cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://pajaros-exoticos.es.tl/Estrilda-ondulada.htm</web>
+    </ave>
+    <ave>
+        <nombreComun>Amandina de pecho dorado</nombreComun>
+        <nombreCientifico>Amandava subflava</nombreCientifico>
+        <longitud>9cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Amandava_subflava</web>
+    </ave>
+    <ave>
+        <nombreComun>Neochmia temporalis</nombreComun>
+        <nombreCientifico>Neochmia temporalis</nombreCientifico>
+        <longitud>12cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Neochmia_temporalis</web>
+    </ave>
+    <ave>
+        <nombreComun>Lonchura griseicapilla</nombreComun>
+        <nombreCientifico>Lonchura griseicapilla</nombreCientifico>
+        <longitud>12cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://www.webanimales.com/mascotas/aves/amadina-perlada</web>
+    </ave>
+    <ave>
+        <nombreComun>Gorrión de Java o Padda</nombreComun>
+        <nombreCientifico>Padda orysivora</nombreCientifico>
+        <longitud>16cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Lonchura_oryzivora</web>
+    </ave>
+    <ave>
+        <nombreComun>Pinzón degollado</nombreComun>
+        <nombreCientifico>Amadina fasciata</nombreCientifico>
+        <longitud>12cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://www.ecured.cu/index.php/Pinz%C3%B3n_degollado</web>
+    </ave>
+    <ave>
+        <nombreComun>Gorrión común</nombreComun>
+        <nombreCientifico>Passer domesticus</nombreCientifico>
+        <longitud>15cm</longitud>
+        <migracion>Migratoria parcial</migracion>
+        <web>https://es.wikipedia.org/wiki/Passeridae</web>
+    </ave>
+    <ave>
+        <nombreComun>Gorrión alpino</nombreComun>
+        <nombreCientifico>Montigringilla nivalis</nombreCientifico>
+        <longitud>17cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Montifringilla_nivalis</web>
+    </ave>
+    <ave>
+        <nombreComun>Tejedorcito frontal</nombreComun>
+        <nombreCientifico>Sporopipes frontalis</nombreCientifico>
+        <longitud>11cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Sporopipes_frontalis</web>
+    </ave>
+    <ave>
+        <nombreComun>Tejedor rojo o Tejedor de fuego</nombreComun>
+        <nombreCientifico>Euplectes orix</nombreCientifico>
+        <longitud>12cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Euplectes_orix</web>
+    </ave>
+    <ave>
+        <nombreComun>Viuda de cuello rojo</nombreComun>
+        <nombreCientifico>Euplectes ardens</nombreCientifico>
+        <longitud>28cm/13cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Euplectes_ardens</web>
+    </ave>
+    <ave>
+        <nombreComun>Aplonis magna</nombreComun>
+        <nombreCientifico>Aplonis magna</nombreCientifico>
+        <longitud>35cm</longitud>
+        <migracion>No migratoria</migracion>
+        <web>https://es.wikipedia.org/wiki/Aplonis_magna</web>
+    </ave>
+</aves>

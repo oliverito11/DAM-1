@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Ejercicio2.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<empresa>
+    <!-- Persona con varios teléfonos pero sin e-mail -->
+    <persona codigoPersona="ab1">
+        <nombre>Juan</nombre>
+        <apellidos>López Martín</apellidos>
+        <telefono>123456789</telefono>
+        <telefono>123789456</telefono>
+        <provincia>León</provincia>
+    </persona>
+
+    <!-- Persona con e-mail -->
+    <persona codigoPersona="ab2">
+        <nombre>Sandra</nombre>
+        <apellidos>Rodrigo Rodrigo</apellidos>
+        <telefono>919999999</telefono>
+        <email>sandra@gmail.com</email>
+        <provincia>León</provincia>
+    </persona>
+</empresa>

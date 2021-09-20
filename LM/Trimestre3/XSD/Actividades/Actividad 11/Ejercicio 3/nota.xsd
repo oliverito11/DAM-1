@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="lista_de_notas">
+        <xs:complexType>
+            <xs:sequence>
+            
+            <!-- Notas -->
+                <xs:element name="nota" maxOccurs="unbounded">
+                    <xs:complexType>
+                        
+                        <!-- Elementos de las notas-->
+                        <xs:sequence>
+                            <xs:element name="para" />
+                            <xs:element name="de" />
+                            <xs:element name="titulo" />
+                            <xs:element name="contenido" />
+                        </xs:sequence>
+
+                        <!-- Atributos opcionales de las notas -->
+                        <xs:attribute name="dia" type="atrDia" />
+                        <xs:attribute name="hora" type="atrHora" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición de atriubtos de las notas (opcionales) -->
+    <xs:simpleType name="atrDia">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d([1-9]|0[1-9]|1[0-9]|2[0-9]|3[0-1])/\d([1-9]|0[1-9]|1[0-2])/\d{4}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="atrHora">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

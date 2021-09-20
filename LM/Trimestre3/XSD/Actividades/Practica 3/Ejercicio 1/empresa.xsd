@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="empresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="departamento">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="trabajador">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <!-- Nombre -->
+                                        <xs:element name="nombre">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="25" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        
+                                        <!-- Apellidos -->
+                                        <xs:element name="apellidos">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="30" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        
+                                        <!-- Dirección -->
+                                        <xs:element name="direccion">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="35" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                        <!-- Teléfono -->
+                                        <xs:element name="telefono">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:positiveInteger">
+                                                    <xs:pattern value="\d{9}[0-9]" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+
+                                    <!-- Atributo DNI del trabajador-->
+                                    <xs:attribute ref="DNI" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+
+                        <!-- Atributo con los distintos departamentos posibles dentro de la empresa -->
+                        <xs:attribute ref="atributoDepartamento" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Atributos -->
+    <xs:attribute name="atributoDepartamento">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Contabilidad" />
+                <xs:enumeration value="Informática" />
+                <xs:enumeration value="Electrónica" />
+                <xs:enumeration value="Márketing" />
+                <xs:enumeration value="Recursos Humanos" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="DNI">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="\d{8}[0-9]-[A-Z]" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+</xs:schema>

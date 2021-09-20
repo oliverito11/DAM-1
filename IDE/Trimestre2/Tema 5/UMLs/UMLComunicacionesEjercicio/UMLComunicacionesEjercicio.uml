@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ">
+  <uml:Model xmi:id="_cwpWAGVIEeutUqSQ2y-7aA" name="UMLComunicacionesEjercicio">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_cyOqYGVIEeutUqSQ2y-7aA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_cw-GIGVIEeutUqSQ2y-7aA" name="Interaction1">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JZNKwGVJEeutUqSQ2y-7aA" name="" type="_cw-GIGVIEeutUqSQ2y-7aA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_o2PO0GVIEeutUqSQ2y-7aA" name="Arduino" coveredBy="_O5h_wWVJEeutUqSQ2y-7aA _VXoroGVJEeutUqSQ2y-7aA _pEkwUGVJEeutUqSQ2y-7aA _rxjT8GVJEeutUqSQ2y-7aA _tvg1cGVJEeutUqSQ2y-7aA _vl7kgGVJEeutUqSQ2y-7aA _xT3tAGVJEeutUqSQ2y-7aA _zOF-AGVJEeutUqSQ2y-7aA _070rIGVJEeutUqSQ2y-7aA _-M2KkGVJEeutUqSQ2y-7aA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_qL1IwGVIEeutUqSQ2y-7aA" name="Servidor Web" coveredBy="_Cdze4WVJEeutUqSQ2y-7aA _O5h_wGVJEeutUqSQ2y-7aA _VXoEkGVJEeutUqSQ2y-7aA _-M2xoGVJEeutUqSQ2y-7aA _By6SUGVKEeutUqSQ2y-7aA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_sGXi0GVIEeutUqSQ2y-7aA" name="Navegador Web" coveredBy="_Cdze4GVJEeutUqSQ2y-7aA _By6SUWVKEeutUqSQ2y-7aA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_t_rN0GVIEeutUqSQ2y-7aA" name="Sensor temperatura" coveredBy="_pElXYGVJEeutUqSQ2y-7aA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_xOCnQGVIEeutUqSQ2y-7aA" name="Sensor humedad" coveredBy="_rxj7AGVJEeutUqSQ2y-7aA _tvhcgGVJEeutUqSQ2y-7aA _vl8LkGVJEeutUqSQ2y-7aA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_zKQcUGVIEeutUqSQ2y-7aA" name="Sensor presión" coveredBy="_xT3tAWVJEeutUqSQ2y-7aA _zOGlEGVJEeutUqSQ2y-7aA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_0KfxUGVIEeutUqSQ2y-7aA" name="Sensor velcoidad de aire" coveredBy="_071SMGVJEeutUqSQ2y-7aA"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_JZMjsGVJEeutUqSQ2y-7aA" name="" represents="_JZNKwGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Cdze4GVJEeutUqSQ2y-7aA" name="Message8SendEvent" covered="_sGXi0GVIEeutUqSQ2y-7aA" message="_CdlccGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Cdze4WVJEeutUqSQ2y-7aA" name="Message8ReceiveEvent" covered="_qL1IwGVIEeutUqSQ2y-7aA" message="_CdlccGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_O5h_wGVJEeutUqSQ2y-7aA" name="Message13SendEvent" covered="_qL1IwGVIEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_O5h_wWVJEeutUqSQ2y-7aA" name="Message13ReceiveEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VXoEkGVJEeutUqSQ2y-7aA" name="Message15SendEvent" covered="_qL1IwGVIEeutUqSQ2y-7aA" message="_VXmPYGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_VXoroGVJEeutUqSQ2y-7aA" name="Message15ReceiveEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA" message="_VXmPYGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pEkwUGVJEeutUqSQ2y-7aA" name="Message18SendEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA" message="_pEhF8GVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pElXYGVJEeutUqSQ2y-7aA" name="Message18ReceiveEvent" covered="_t_rN0GVIEeutUqSQ2y-7aA" message="_pEhF8GVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rxjT8GVJEeutUqSQ2y-7aA" name="Message21SendEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rxj7AGVJEeutUqSQ2y-7aA" name="Message21ReceiveEvent" covered="_xOCnQGVIEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_tvg1cGVJEeutUqSQ2y-7aA" name="Message23SendEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_tvhcgGVJEeutUqSQ2y-7aA" name="Message23ReceiveEvent" covered="_xOCnQGVIEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vl7kgGVJEeutUqSQ2y-7aA" name="Message25SendEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA" message="_vl69cGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vl8LkGVJEeutUqSQ2y-7aA" name="Message25ReceiveEvent" covered="_xOCnQGVIEeutUqSQ2y-7aA" message="_vl69cGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xT3tAGVJEeutUqSQ2y-7aA" name="Message28SendEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xT3tAWVJEeutUqSQ2y-7aA" name="Message28ReceiveEvent" covered="_zKQcUGVIEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zOF-AGVJEeutUqSQ2y-7aA" name="Message30SendEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA" message="_zOEv4GVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zOGlEGVJEeutUqSQ2y-7aA" name="Message30ReceiveEvent" covered="_zKQcUGVIEeutUqSQ2y-7aA" message="_zOEv4GVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_070rIGVJEeutUqSQ2y-7aA" name="Message33SendEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA" message="_07yO4GVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_071SMGVJEeutUqSQ2y-7aA" name="Message33ReceiveEvent" covered="_0KfxUGVIEeutUqSQ2y-7aA" message="_07yO4GVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_-M2KkGVJEeutUqSQ2y-7aA" name="Message36SendEvent" covered="_o2PO0GVIEeutUqSQ2y-7aA" message="_-MzuUGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_-M2xoGVJEeutUqSQ2y-7aA" name="Message36ReceiveEvent" covered="_qL1IwGVIEeutUqSQ2y-7aA" message="_-MzuUGVJEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_By6SUGVKEeutUqSQ2y-7aA" name="Message39SendEvent" covered="_qL1IwGVIEeutUqSQ2y-7aA" message="_By5rQGVKEeutUqSQ2y-7aA"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_By6SUWVKEeutUqSQ2y-7aA" name="Message39ReceiveEvent" covered="_sGXi0GVIEeutUqSQ2y-7aA" message="_By5rQGVKEeutUqSQ2y-7aA"/>
+      <message xmi:type="uml:Message" xmi:id="_CdlccGVJEeutUqSQ2y-7aA" name="1:Iniciar visualización de datos" messageSort="asynchCall" receiveEvent="_Cdze4WVJEeutUqSQ2y-7aA" sendEvent="_Cdze4GVJEeutUqSQ2y-7aA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Dqk0AGVJEeutUqSQ2y-7aA">
+          <body>Iniciar visualización de datos</body>
+        </ownedComment>
+      </message>
+      <message xmi:type="uml:Message" xmi:id="_VXmPYGVJEeutUqSQ2y-7aA" name="2:Se solicitan los datos" messageSort="asynchCall" receiveEvent="_VXoroGVJEeutUqSQ2y-7aA" sendEvent="_VXoEkGVJEeutUqSQ2y-7aA"/>
+      <message xmi:type="uml:Message" xmi:id="_pEhF8GVJEeutUqSQ2y-7aA" name="3:Recuperar temperatura" messageSort="asynchCall" receiveEvent="_pElXYGVJEeutUqSQ2y-7aA" sendEvent="_pEkwUGVJEeutUqSQ2y-7aA"/>
+      <message xmi:type="uml:Message" xmi:id="_vl69cGVJEeutUqSQ2y-7aA" name="4:Recuperar humedad" messageSort="asynchCall" receiveEvent="_vl8LkGVJEeutUqSQ2y-7aA" sendEvent="_vl7kgGVJEeutUqSQ2y-7aA"/>
+      <message xmi:type="uml:Message" xmi:id="_zOEv4GVJEeutUqSQ2y-7aA" name="5:Recuperar presión" messageSort="asynchCall" receiveEvent="_zOGlEGVJEeutUqSQ2y-7aA" sendEvent="_zOF-AGVJEeutUqSQ2y-7aA"/>
+      <message xmi:type="uml:Message" xmi:id="_07yO4GVJEeutUqSQ2y-7aA" name="6:Recuperar velocidad de aire" messageSort="asynchCall" receiveEvent="_071SMGVJEeutUqSQ2y-7aA" sendEvent="_070rIGVJEeutUqSQ2y-7aA"/>
+      <message xmi:type="uml:Message" xmi:id="_-MzuUGVJEeutUqSQ2y-7aA" name="7:Se devuelven los datos" messageSort="asynchCall" receiveEvent="_-M2xoGVJEeutUqSQ2y-7aA" sendEvent="_-M2KkGVJEeutUqSQ2y-7aA"/>
+      <message xmi:type="uml:Message" xmi:id="_By5rQGVKEeutUqSQ2y-7aA" name="8:Se muestran los datos" messageSort="asynchCall" receiveEvent="_By6SUWVKEeutUqSQ2y-7aA" sendEvent="_By6SUGVKEeutUqSQ2y-7aA"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Dqt98GVJEeutUqSQ2y-7aA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DqvMEGVJEeutUqSQ2y-7aA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <ActionLanguage:TextualRepresentation xmi:id="_DuYV8GVJEeutUqSQ2y-7aA" base_Comment="_Dqk0AGVJEeutUqSQ2y-7aA" language="org.eclipse.papyrus.uml.textedit.message.xtext.UmlMessage"/>
+</xmi:XMI>

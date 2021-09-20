@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio1.xsd">
+  
+    <departamento nombreDep="Informática">
+        <trabajador>
+            <nombre>Laura</nombre>
+            <apellidos>Martin Lopez</apellidos>
+            <dni>DNI_12345678-L</dni>
+            <direccion>Calle Mayor 1 Zamora</direccion>
+            <telefono>123456789</telefono>
+        </trabajador>
+
+        <trabajador>
+            <nombre>Juan</nombre>
+            <apellidos>Sánchez Rodrigo</apellidos>
+            <dni>DNI_12395638-L</dni>
+            <direccion>Calle Sol 1 Zamora</direccion>
+            <telefono>123456789</telefono>
+        </trabajador>
+
+        <trabajador>
+            <nombre>María</nombre>
+            <apellidos>Martín Rodríguez</apellidos>
+            <dni>DNI_22345678-L</dni>
+            <direccion>Calle Luna 1 Zamora</direccion>
+            <telefono>913456789</telefono>
+        </trabajador>
+
+      
+        
+    </departamento>
+
+    <departamento nombreDep="Electrónica">
+        <trabajador>
+            <nombre>Juan</nombre>
+            <apellidos>Martin Lopez</apellidos>
+            <dni>DNI_91112211-M</dni>
+            <direccion>Calle Mayor 1 Zamora</direccion>
+            <telefono>123456789</telefono>
+        </trabajador>
+
+        <trabajador>
+            <nombre>Sonia</nombre>
+            <apellidos>Ruiz Ruiz</apellidos>
+            <dni>DNI_99345638-L</dni>
+            <direccion>Calle Mayor 1 Zamora</direccion>
+            <telefono>123456789</telefono>
+        </trabajador>
+
+        <trabajador>
+            <nombre>Juan</nombre>
+            <apellidos>Martin Lopez</apellidos>
+            <dni>DNI_32345678-L</dni>
+            <direccion>Calle Mayor 1 Zamora</direccion>
+            <telefono>913456789</telefono>
+        </trabajador>
+
+      
+        
+    </departamento>
+
+
+    <departamento nombreDep="Recursos Humanos">
+        <trabajador>
+            <nombre>Alberto</nombre>
+            <apellidos>Sanz Sanz</apellidos>
+            <dni>DNI_99887766-L</dni>
+            <direccion>Calle Mayor 1 Toro</direccion>
+            <telefono>198456789</telefono>
+        </trabajador>
+
+        <trabajador>
+            <nombre>Laura</nombre>
+            <apellidos>Martin Lopez</apellidos>
+            <dni>DNI_12945638-L</dni>
+            <direccion>Calle Mayor 1 Zamora</direccion>
+            <telefono>123456789</telefono>
+        </trabajador>
+
+        <trabajador>
+            <nombre>Marta</nombre>
+            <apellidos>Rodrigo Sánchez</apellidos>
+            <dni>DNI_22345678-X</dni>
+            <direccion>Calle Mayor 1 Sanabria</direccion>
+            <telefono>913456789</telefono>
+        </trabajador>
+
+    </departamento>
+          
+</empresa>

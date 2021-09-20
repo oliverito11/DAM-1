@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="instituto">
+        <xs:complexType>
+            <xs:sequence>
+
+            <!-- Clase -->
+                <xs:element name="clase" maxOccurs="200">
+                    <xs:complexType>
+                        <xs:sequence>
+                        <!-- Alumno -->
+                            <xs:element name="alumno" maxOccurs="40">
+                                <xs:complexType>
+
+                                <!-- Elementos del alumno -->
+                                    <xs:sequence>
+                                    
+                                        <!-- Nombre -->
+                                        <xs:element name="nombreAlumno">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[aA-zZ ]{1,30}" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        
+                                        <!-- Apellidos -->
+                                        <xs:element name="apellidosAlumno" >
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[aA-zZ ]{1,40}" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        
+                                        <!-- Email -->
+                                        <xs:element name="emailAlumno" minOccurs="0" >
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[a-z]{1,15}@[a-z]{1,25}[.][a-z]{2,4}" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                        <!-- Teléfono -->
+                                        <xs:element name="telefonoAlumno" maxOccurs="unbounded" >
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:pattern value="\d[0-9]{9}" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        
+                                        <!-- Localidad -->
+                                        <xs:element name="localidadAlumno" type="eleAlum"/>
+                                        
+                                        <!-- Provincia -->
+                                        <xs:element name="provinciaAlumno" type="eleAlum" />
+                                    </xs:sequence>
+
+                                    <!-- Atributos del alumno -->
+                                    <xs:attribute name="codigoAlumno" type="xs:ID" use="required" />
+                                    <xs:attribute name="codigoClase" type="xs:IDREF" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+
+                        <!-- Atributos de la clase -->
+                        <xs:attribute name="codigoClase" type="xs:ID" use="required"/>
+                        <xs:attribute name="nombreClase" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Localidad y provincia del alumno -->
+    <xs:simpleType name="eleAlum">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[aA-zZ ]{1,20}" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,63 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+    font-size: 1.5vw;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5vw;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.514);
+    text-transform: uppercase;
+}
+
+p{
+    color: crimson;
+    font-size: 1.5vw;
+    word-spacing: 1.2vw;
+    line-height: 2.5vw;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+.izda, .izdaCentro, .centro, .drchaCentro, .drcha{
+    float: left;
+    width: 15%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: bisque;
+    
+}
+
+@media screen and (max-width: 800px){
+    .izda, .izdaCentro, .centro, .drchaCentro, .drcha{
+        width: 100%;
+    }
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+a:visited{
+    text-decoration: none;
+    color: brown;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    color: gray;
+}

@@ -1,0 +1,15 @@
+<!-- Existe un componente pade, galicia, que contendrá a las distintas provincias -->
+<!ELEMENT galicia (provincia)+>
+
+<!-- Cada una de estas provincias tiene un nombre, una capital, una superficie (en km2), una población y un número de municipios -->
+<!ELEMENT provincia (nombre, capital, superficie, poblacion, num_municipios)>
+
+<!-- Cada provincia tiene un código único -->
+<!ATTLIST provincia cod_provincia ID #REQUIRED>
+
+<!-- Todos los elementos de cada provincia contienen información de tipo texto -->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT capital (#PCDATA)>
+<!ELEMENT superficie (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ELEMENT num_municipios (#PCDATA)>

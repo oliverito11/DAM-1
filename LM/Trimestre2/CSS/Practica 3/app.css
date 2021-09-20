@@ -1,0 +1,43 @@
+table{
+    width: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+a{
+    color: #5378af;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3b567e;
+    text-decoration: underline;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1{
+    border: 3px solid black;
+    border-collapse: collapse;
+    background-color: #ebffa1;
+    letter-spacing: 6px;
+}
+
+h2{
+    background-color: #bed9f385;
+}
+
+p{
+    line-height: 25px;
+    word-spacing: 5px;
+}
+
+ol{
+    line-height: 40px;
+    font-size: 1.3vw;
+}

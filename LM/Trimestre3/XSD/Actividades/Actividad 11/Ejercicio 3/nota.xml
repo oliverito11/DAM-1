@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="nota.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<lista_de_notas>
+
+    <!-- Nota 1 -->
+    <nota>
+        <para>Pedro</para>
+        <de>Laura</de>
+        <titulo>Recordatorio</titulo>
+        <contenido>A las 7:00 pm en la puerta del teatro</contenido>
+    </nota>
+    
+    <!-- Nota 2 con hora y día -->
+    <nota dia="23/01/2010" hora="23:59">
+        <para>Miguel</para>
+        <de>Juan</de>
+        <titulo>Informes</titulo>
+        <contenido>Te he dejado los informes en el casillero</contenido>
+    </nota>
+</lista_de_notas>

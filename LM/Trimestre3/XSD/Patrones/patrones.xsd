@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dam1">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="asignatura" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" />
+                            <xs:element name="iniciales" type="iniciales" />
+                            <xs:element name="profesor" type="profesores" />
+                            <xs:element name="horas" type="horas" />
+                            <xs:element name="nota" type="notas" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+                <!-- RESTRICCIONES -->
+        <!-- Restricción de iniciales -->
+    <xs:simpleType name="iniciales">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{2}" />
+        </xs:restriction>
+    </xs:simpleType>
+        <!-- Restricción de profesores -->
+    <xs:simpleType name="profesores">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Sergio" />
+            <xs:enumeration value="Valentín" />
+            <xs:enumeration value="Santiago" />
+            <xs:enumeration value="Pedro" />
+            <xs:enumeration value="Avelino" />
+            <xs:enumeration value="Alberto" />
+        </xs:restriction>
+    </xs:simpleType>
+            <!-- Restricción de horas -->
+    <xs:simpleType name="horas">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9][h]" />
+        </xs:restriction>
+    </xs:simpleType>
+            <!-- Restricción de notas-->
+    <xs:simpleType name="notas">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0" />
+            <xs:maxInclusive value="10.0" />
+            <xs:totalDigits value="3" />
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

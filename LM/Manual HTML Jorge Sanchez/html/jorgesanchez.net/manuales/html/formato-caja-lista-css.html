@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/formato-caja-lista-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:29:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Jorge Sánchez. Manual de HTML5 y CSS3. Formato de caja y lista</title>
+    <script src="../../../use.typekit.net/cgm1lsq.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="../../lib/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="../../css/manual2c0d.css?f=20170221">
+</head>
+<body>
+<div id="mail">
+    <div id="formularioMail">
+        <p><a href="#"><img src="../../img/cerrar.png" alt="Cerrar" id="cerrarMail"></a></p>
+        <h1>Enviar mensaje</h1>
+        <form action="#" id="formMail" method="POST">
+            <input type="nombre" name="nombre" id="nombre" placeholder="nombre y apellidos" required>
+            <input type="email" name="email" id="email" placeholder="tu email" required>
+            <input type="asunto" placeholder="asunto" name="asunto" id="asunto" required>
+            <textarea name="contenido" id="contenido" cols="30" rows="5" placeholder="texto del mensaje" required></textarea>
+            <button>ENVIAR</button>
+        </form>
+    </div>
+</div>
+<div id="btMenu">
+    <div id="franja1" class="franja"></div>
+    <div id="franja2" class="franja"></div>
+    <div id="franja3" class="franja"></div>
+</div>
+
+<div id="barraSocial">
+    <a href="https://twitter.com/jorgesancheznet">
+        <img src="../../img/twitter.png" alt="twitter" class="btSocial" title="jorgesancheznet en twitter">
+    </a>
+    <a href="https://facebook.com/jorgesancheznet">
+        <img src="../../img/facebook.png" alt="FaceBook" class="btSocial" title="jorgesancheznet en facebook">
+    </a>
+    <a href="https://youtube.com/jorgesancheznet">
+        <img src="../../img/youtube.png" alt="You Tube" class="btSocial" title="jorgesancheznet en YouTube">
+    </a>
+    <a href="https://github.com/jorgesancheznet">
+        <img src="../../img/github.png" alt="Git Hub" class="btSocial" title="jorgesancheznet en GitHub">
+    </a>
+    <a href="https://docs.com/jorgesancheznet">
+        <img src="../../img/docs.png" alt="Docs.com" class="btSocial" title="jorgesancheznet en Docs.com">
+    </a>
+    <a href="#" id="btMail" class="enlaceMail">
+        <img src="../../img/mail.png" alt="Enviar email" class="btSocial" title="Enviar email">
+    </a>
+</div>
+
+
+<header>
+    <div id="logo">
+        <a href="http://jorgesanchez.net/">
+        <img src="../../img/logo.png" alt="JorgeSanchez.net logo" id="iLogo1">
+        <img src="../../img/logoMini.png" alt="JorgeSanchez.net logo" id="iLogo2">
+        </a>
+    </div>
+</header>
+
+<section id="cuerpo">
+    <h1 class="superPrincipal">Manual de HTML5 y CSS3</h1>
+    <h1 class="titulo1"><span class="numero0">[10] </span><br>Formato de caja y lista</h1>
+    <div class="publicidadManual">
+        <h6>Publicidad</h6>
+        <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+        <!-- Manual -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5327277099095933"
+             data-ad-slot="9139418007"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+
+<div id="_idContainer015" class="Marco-de-texto-b-sico">
+			<h2 class="titulo2"><span class="numero2">[10.1] </span><a id="_idTextAnchor000"></a>propiedades CSS para listas</h2>
+			<h3 class="titulo3"><span class="numero3">[10.1.1]</span><a id="_idTextAnchor001"></a>list-style-type</h3>
+			<p class="Normal2">La propiedad <em class="cursiva">list-style-type</em> permite especificar el tipo de elemento de numeración de la lista. Normalmente los navegadores muestran un círculo relleno en las listas no numeradas (las que se realizan mediante la etiqueta <strong class="Negritta">ul</strong>) y números arábigos en las listas numeradas (etiqueta <strong class="Negritta">ol</strong>).</p>
+			<p class="Normal">Esta propiedad permite cambiar esos símbolos para elegir el que deseemos. La cuestión es que (aunque se podría) no es recomendable hacer que la etiqueta <strong class="Negritta">ol</strong> muestre símbolos no numéricos y tampoco que la etiqueta <strong class="Negritta">ul</strong> muestre símbolos numéricos, para mantener la coherencia semántica en el lenguaje HTML.</p>
+			<p class="Normal">En todo caso los posibles valores de esta propiedad son:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">armenian</strong>. La lista quedará encabezada por números del alfabeto armenio.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">circle. </strong>La lista quedará encabezada por círculos.</li>
+				<li class="punto"><strong class="Negritta">cjk</strong><strong class="Negritta" lang="en-US">-ideographic</strong>. Se usan símbolos numéricos ideográficos chinos.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">decimal</strong>. Números decimales.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">decimal-leading-zero</strong>. Números decimales empezando por cero.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">disc</strong>. La lista quedará encabezada por círculos sin rellenar.</li>
+				<li class="punto"><strong class="Negritta">georgian</strong>. Números<strong class="Negritta" lang="en-US"> </strong>del alfabeto georgiano.</li>
+				<li class="punto"><strong class="Negritta">hebrew</strong>. Números del alfabeto hebreo.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">hiragana. </strong>Números del alfabeto Hiragana japonés en uso actual (<em class="cursiva">gojūon</em>).</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">hiragana-</strong><strong class="Negritta">iroha</strong><strong class="Negritta" lang="en-US">.  </strong>Números del alfabeto japonés Hiragana clásico (<em class="cursiva">iroha</em>)</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">katakana. </strong>Números del alfabeto Katakana japonés en uso (<em class="cursiva">gojūon</em>).</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">katakana-</strong><strong class="Negritta">iroha. </strong>Números del alfabeto Katakana japonés clásico (<em class="cursiva">gojūon</em>).</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">lower-alpha</strong>. Letras minúsculas del alfabeto actual.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">lower-</strong><strong class="Negritta">greek. </strong><span class="Números-Car1">Letras griegas minúsculas</span></li>
+				<li class="punto"><strong class="Negritta" lang="en-US">lower-</strong><strong class="Negritta">latin</strong><strong class="Negritta" lang="en-US">. </strong>Letras minúsculas latinas.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">lower-roman. </strong>Números romanos en minúsculas.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">none. </strong>Sin números.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">square. </strong>Cuadrados rellenos.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">upper-alpha. </strong>Letras mayúsculas del alfabeto actual.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">upper-</strong><strong class="Negritta">latin</strong><strong class="Negritta" lang="en-US">. </strong>Letras mayúsculas latinas.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">upper-roman. </strong>Números romanos en mayúsculas.<h3 class="titulo3"><span class="numero3">[10.1.2]</span><a id="_idTextAnchor002"></a>list-style-image</h3></li>
+			</ul>
+			<p class="Normal2">En lugar de utilizar uno de los símbolos anteriores, se puede indicar una imagen con la que se rellenará la lista. La imagen puede tener cualquiera de los formatos habituales en las páginas web (<em class="cursiva">gif, jpg, png</em>). Lógicamente el tamaño debe de ser apropiado; si es muy grande la lista quedará totalmente descuadrada. </p>
+			<p class="Normal">Ejemplo de uso:</p>
+			<table id="table001" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">list-style-image</strong>:url(<span class="texto">‘cuadrado.gif’</span>);</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[10.1.3]</span><a id="_idTextAnchor003"></a>list-style-position</h3>
+			<p class="Normal2">Solo tiene dos posibles valores referidos a la posición del texto respecto de la imagen.</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">inside</strong>. El símbolo de numeración es interior a los márgenes del elemento en el que se coloca. Es la opción por defecto.</li>
+				<li class="punto"><strong class="Negritta">outside</strong>. El símbolo de numeración es exterior.<h3 class="titulo3"><span class="numero3">[10.1.4]</span><span lang="en-US"><a id="_idTextAnchor004"></a>list-style</span></h3></li>
+			</ul>
+			<p class="normalespacio">La propiedad <strong class="Negritta" lang="en-US">list-style</strong> permite en un solo golpe configurar las propiedades anteriores. Su sintaxis es:</p>
+			<table id="table002" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">list-style</strong>:&#9;list-Style-Type, list-style-position, </pre>
+							<pre class="sintaxis">&#9;&#9;&#9;&#9;list-style-image;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Ejemplo:</p>
+			<table id="table003" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">list–style</strong>:<span class="atributo">square </span>url(<span class="texto">“cuadrado.gif”</span>);</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 class="titulo2"><span class="numero2">[10.2] </span><a id="_idTextAnchor005"></a>formato de fondo</h2>
+			<p class="Normal2">Se denomina fondo al espacio que queda “por debajo” del texto e imágenes de un elemento. Normalmente el fondo es transparente, pero podemos colorearlo o usar imágenes como fondo.</p>
+			<h3 class="titulo3"><span class="numero3">[10.2.1]</span><a id="_idTextAnchor006"></a>color de fondo</h3>
+			<p class="Normal2">La propiedad <strong class="Negritta">background-color</strong> permite establecer un color de fondo al elemento al que se aplique la propiedad. Si se aplica al elemento <strong class="Negritta" lang="en-US">body</strong>, toda la página tendrá ese color de fondo; aplicado a otro elemento (como <strong class="Negritta">div </strong>o <strong class="Negritta">p </strong>por ejemplo), dicho elemento tendrá como fondo el color aplicado.</p>
+			<h3 class="titulo3"><span class="numero3">[10.2.2]</span><a id="_idTextAnchor007"></a><a id="_idTextAnchor008"></a>imagen de fondo</h3>
+			<h4 class="titulo4"><span class="numeroOculto">38</span><em class="cursiva"><a id="_idTextAnchor009"></a>background-image</em></h4>
+			<p class="Normal2">La propiedad <strong class="Negritta">background-image</strong> permite establecer una imagen de fondo. Esta imagen se superpone al color de fondo (si lo hay, de modo que si la imagen no se puede cargar (porque la ruta a ella no se ha indicado), entonces aparece el color de fondo. </p>
+			<p class="normalespacio">Por defecto, la imagen de fondo se repite las veces necesarias (creando un mosaico), tanto en horizontal como en vertical, hasta que se rellena el elemento. Ejemplo de código completo:</p>
+			<table id="table004" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype html&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong>&#160;<span class="atributo">lang</span>=<span class="texto">”es”&gt;</span></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#160; &#160; &#160; &#160;&#160;&lt;meta&#160;</strong><span class="atributo">charset</span>=<span class="texto">”UTF-8”</span>&gt;</pre>
+							<pre class="codigo"><strong class="resaltado">&#160; &#160; &#160; &#160;&#160;&lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#160; &#160; &#160; &#160;&#160;&lt;style&gt;</strong></pre>
+							<table id="table005" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="codigo">&#9;.fondo{</pre>
+											<pre class="codigo"><span lang="ar-SA">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><strong class="resaltado" lang="ar-SA"> </strong><strong class="resaltado">background-color:</strong> <span class="atributo">maroon</span>;</pre>
+											<pre class="remarcado">&#160; &#160; &#160; &#160;<strong class="resaltado">  background-image</strong><strong class="resaltado">:</strong> url(<span class="texto">granito.png</span>);</pre>
+											<pre class="codigo"><span lang="ar-SA">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;</span><strong class="resaltado" lang="ar-SA">color</strong>:<span class="atributo">white</span>;</pre>
+											<pre class="codigo"><strong class="resaltado">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </strong>}</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo"><strong class="resaltado">&#160; &#160; &#160; &#160;&#160;&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#160; &#160; &#160; &#160;&#160;</strong><strong class="resaltado">&lt;p</strong><span lang="ar-SA">&#160;</span><span class="atributo" lang="ar-SA">class</span>=<span class="texto">”fondo”</span><strong class="resaltado">&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quo nam dignissimos eum ex perferendis dolorem dolor fuga quasi. Praesentium provident necessitatibus beatae id tempora ab eligendi omnis quitium natus temporibus repellendus deleniti repellat&#160;<strong class="resaltado">&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#160;       &lt;p&gt;</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum excepturi ut quaerat magnam error percumque reprehenderit necessitatibus perferendis minus laudantium neque molestias quo<strong class="resaltado">.&lt;/p&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen40467.png" alt="" /></p>
+			<h4 class="titulo4"><span class="numeroOculto">39</span><a id="_idTextAnchor010"></a>repetición del fondo. <em class="cursiva">background-repeat</em></h4>
+			<p class="Normal2">En principio, el fondo se repite en todas las direcciones hasta rellenar el elemento al que se aplica la imagen de fondo. Pero podemos hacer que la imagen se repita en una sola dirección (horizontal o vertical), e incluso hacer que no se repita.</p>
+			<p class="Normal">Posibles valores de la propiedad:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">repeat</strong>. Es el valor por defecto. la imagen se repite en todas las direcciones (efecto mosaico), hasta rellenar completamente el elemento.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">repeat</strong><strong class="Negritta">-x</strong>. La repetición de la imagen se hace solo en horizontal.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">repeat</strong><strong class="Negritta">-y</strong>. La repetición de la imagen se hace solo en vertical.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">no-repeat</strong>. La imagen no se repite aparecerá solo una vez<h3 class="titulo3"><span class="numero3">[10.2.3]</span><a id="_idTextAnchor011"></a>posición de la imagen. <em class="cursiva">background-position</em></h3></li>
+			</ul>
+			<p class="Normal2">Por defecto la imagen se coloca desde la esquina superior izquierda de la página (posición 0,0) y desde ahí se repite (si se ha indicado repetición de la imagen con la propiedad anterior) o no.</p>
+			<p class="Normal">La posición desde la que la imagen se coloca inicialmente se puede modificar. La forma de hacerlo es así:</p>
+			<table id="table006" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">background-position:</strong> posicionHorizontal posicionVertical</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Podemos indicar ambos valores de esta forma:</p>
+			<ul>
+				<li class="punto"><em class="cursiva">posicionHorizontal</em>. Se puede especificar las palabras: <strong class="Negritta" lang="en-US">left</strong> (izquierda), <strong class="Negritta" lang="en-US">right </strong>(derecha) o <strong class="Negritta" lang="en-US">middle </strong>(centro). También se puede indicar una coordenada horizontal concreta (por ejemplo <em class="cursiva">12px</em>) o relativa (<em class="cursiva">5%</em>).</li>
+				<li class="punto"><em class="cursiva">posicionHorizontal</em>. Se puede especificar las palabras: <strong class="Negritta" lang="en-US">top</strong> (arriba), <strong class="Negritta" lang="en-US">bottom </strong>(abajo) o <strong class="Negritta" lang="en-US">center </strong>(centro). También se puede indicar una coordenada vertical concreta (por ejemplo <em class="cursiva">20px</em>) o relativa (1<em class="cursiva">5%</em>).</li>
+			</ul>
+			<p class="Normal2">Así por ejemplo el código:</p>
+			<table id="table007" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">background-position:</strong> <span class="atributo">right bottom</span>;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">La imagen de fondo (si no hay repetición de la misma) se mostrará en la esquina inferior derecha del elemento en el que se ponga.</p>
+			<h4 class="titulo4"><span class="numeroOculto">40</span><a id="_idTextAnchor012"></a>desplazamiento del fondo. <em class="cursiva">background-attachment</em></h4>
+			<p class="Normal2">Cuando se desplaza el contenido de una página web, el fondo se mueve con el resto de la página. Mediante esta propiedad podremos hacer que el fondo quede fijo mientras que solo el resto de elementos se mueven. Los posibles valores para la propiedad son:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">scroll</strong>. Valor por defecto. El fondo y el texto se mueven juntos cuando el usuario se desplaza por la página</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">fixed</strong>. El fondo es fijo y solo se mueve el texto.</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">41</span><a id="_idTextAnchor013"></a>tamaño del fondo. <em class="cursiva">background-size</em></h4>
+			<p class="Normal">Permite indicar el tamaño de la imagen de fondo indicando su tamaño en horizontal y en vertical. Es una propiedad de CSS3 que solo funciona en los navegadores más modernos. </p>
+			<p class="Normal">Ejemplo (Hace que la imagen de fondo mida 320px por 240px):</p>
+			<table id="table008" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">background-size</strong>: <span class="atributo">320px 240px</span>;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Otra posibilidad es:</p>
+			<table id="table009" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">background-size</strong>: <span class="atributo">50% auto</span>;</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">La palabra auto hace que la dimensión en la que aparece esa palabra (en el ejemplo se refiere a la altura) se calcule automáticamente.</p>
+			<p class="Normal">Más recientemente (y por lo tanto no reconocido por navegadores que no sean bastante modernos) a esta propiedad le podemos dar los valores:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">cover.</strong> Hace que la imagen llene el contenedor en el que se encuentra de forma <em class="cursiva">responsive</em>,<em class="cursiva"> </em>es decir, sin perder su proporción de altura y altura. Hace que la imagen sea lo más grande posible sin perder la proporción de altura por altura.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">contain</strong>. Escala la imagen haciendo que cubra el 100% de la anchura o de la altura dependiendo del tamaño de la ventana de modo que quedarán huecos en el contenedor de la imagen ya que la otra proporción no se escala. </li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">42</span><a id="_idTextAnchor014"></a>área de dibujo del fondo. <em class="cursiva" lang="en-US">background-clip</em></h4>
+			<p class="Normal2">Es una propiedad de CSS3 que define desde qué zona se dibuja el fondo. Sus posibilidades son:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-box</strong>. Opción por defecto, el fondo se dibuja desde donde normalmente está el borde de elemento al que le estamos dibujando un fondo.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">padding</strong><strong class="Negritta">-box</strong>. El fondo se dibuja en el área de relleno (<strong class="Negritta" lang="en-US">padding</strong>) que es una zona interior al borde.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">content-box</strong>. El fondo se dibuja en la zona de contenido que es en la que se coloca el texto en el elemento.</li>
+			</ul>
+			<h4 class="titulo4"><span class="numeroOculto">43</span><a id="_idTextAnchor015"></a>origen del fondo. <em class="cursiva" lang="en-US">background-origin</em></h4>
+			<p class="Normal2">Es una propiedad CSS3 que todavía no es muy compatible con los navegadores. Tiene las mismas posibilidades que la anterior; pero, en este caso, se refiere a desde tomamos el origen de coordenadas que nos servirá como referencia para posicionar las imágenes de fondo.</p>
+			<h4 class="titulo4"><span class="numeroOculto">44</span>propiedad <em class="cursiva"><a id="_idTextAnchor016"></a>background</em></h4>
+			<p class="Normal2">Fija en una sola propiedad todas las propiedades de fondo. Sintaxis:</p>
+			<table id="table010" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">background</strong>: background-color background-image </pre>
+							<pre class="sintaxis">&#9;&#9;&#9;&#9;background-repeat background-attachment </pre>
+							<pre class="sintaxis">&#9;&#9;&#9;&#9;background-position</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Ejemplo:</p>
+			<table id="table011" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">background</strong>: <span class="atributo">maroon url(</span><span class="texto">‘fondo1.gif’</span><span class="atributo">) no-repeat fixed left bottom;</span></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Coloca color marrón de fondo, la imagen <em class="cursiva">fondo1.gif, </em>que solo aparece una vez, en la parte inferior izquierda y que se queda fijo en el fondo cuando el usuario se desplaza por la pantalla.</p>
+			<h4 class="titulo4"><span class="numeroOculto">45</span><a id="_idTextAnchor017"></a>poner varias imágenes de fondo</h4>
+			<p class="Normal">CSS3 incorporó una importante mejora a las imágenes de fondo y es el hecho de poder colocar varias imágenes de fondo en un elemento. Para ello basta poner comas en las imágenes en sí. Ejemplo:</p>
+			<table id="table012" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;body{</pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">background-image</strong>:url(<span class="texto">luna.png</span>),</pre>
+							<pre class="codigo">&#9;&#9;&#9;&#9;&#9;url(<span class="texto">saturno.png</span>),url(<span class="texto">lactea.jpg</span>);</pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&#9;background-position</strong>:<span class="atributo"> left top, right top, 0 0</span>;</pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">background-repeat</strong>: <span class="atributo">no-repeat,no-repeat,repeat</span>;</pre>
+							<pre class="codigo">&#9;}</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/style&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El resultado es:</p>
+			<p class="Normal"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen40475.png" alt="" /></p>
+			<p class="Normal">Como se ha visto, aplicar varias imágenes de fondo se hace simplemente separando cada imagen por comas en cada propiedad. </p>
+			<p class="Normal">Podemos usar directamente la propiedad <strong class="Negritta" lang="en-US">background</strong> para producir el mismo resultado:</p>
+			<table id="table013" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">body{</pre>
+							<pre class="codigo">&#9;<strong class="resaltado">background</strong>: </pre>
+							<pre class="codigo">&#9;&#9;url(<span class="texto">luna.png</span>) <span class="atributo">no-repeat left top</span>,</pre>
+							<pre class="codigo">&#9;&#9;url(<span class="texto">saturno.png</span>) <span class="atributo">no-repeat right top</span>,</pre>
+							<pre class="codigo">&#9;&#9;<span class="atributo">black</span> url(<span class="texto">lactea.jpg</span>) <span class="atributo">repeat</span>;</pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Una vez más, lo malo es que no todos los navegadores son capaces de aplicar esta posibilidad, por lo que muchos diseñadores optan por construir capas  y en cada de una ellas manejar el fondo, para hacer este tipo de efectos.</p>
+			<h2 class="titulo2"><span class="numero2">[10.3] </span><a id="_idTextAnchor018"></a>elementos del formato de caja</h2>
+			<p class="Normal2">Se suele denominar <strong class="Negritta">formato de caja </strong>(o<strong class="Negritta"> formato de cuadro</strong>) a la parte de CSS encargada del formato referente al rectángulo imaginario que envuelve a un elemento de una página HTML. Este rectángulo imaginario contiene completamente al elemento, así como al borde (si lo hay) y al espacio que se deja fuera del margen (<strong class="Negritta" lang="en-US">margin</strong>) y el espacio que se deja por dentro del borde (<strong class="Negritta" lang="en-US">padding</strong>).</p>
+			<p class="Normal2"><img src="css-formato-caja-lista-html-2016-web-resources/image/1.png" alt="" /></p>
+			<p class="Normal2">En la <a href="#">Ilustración 14</a> se describen los elementos del formato de cuadro en CSS. La configuración del fondo de un elemento (que realmente también es parte del formato de caja), se explicó en el apartado <a href="css-formato-caja-lista-html-2016.html#_idTextAnchor007">“[11.3] imagen de fondo” en la página 190</a>.</p>
+			<p class="Normal">El espacio que va desde el contenido del elemento (en la ilustración sería el texto de color negro) hasta el borde es lo que se denomina espacio de relleno o <em class="cursiva">padding</em>. Ese espacio queda coloreado o  rellenado con el fondo que se haya configurado.</p>
+			<p class="Normal">El margen es un espacio exterior al borde. En dicho espacio no se ve el borde, es un espacio transparente veremos en él, el fondo configurado en el contenedor del elemento. Es decir si el elemento es una etiqueta <strong class="Negritta">p</strong> que cuelga directamente de <strong class="Negritta" lang="en-US">body</strong>, en el espacio de margen veremos el fondo del elemento <strong class="Negritta" lang="en-US">body</strong>.</p>
+			<h2 class="titulo2"><span class="numero2">[10.4] </span><a id="_idTextAnchor019"></a>configuración del borde</h2>
+			<h3 class="titulo3"><span class="numero3">[10.4.1]</span><a id="_idTextAnchor020"></a>propiedades para el borde </h3>
+			<p class="Normal2">El borde posee tres propiedades fundamentales: color, estilo y grosor. Además podremos configurar independientemente cada borde (izquierdo, derecho, superior e inferior). Por lo que disponemos de todas posibilidades:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-width</strong>. Anchura del borde, indicada en la unidad deseada. Por ejemplo <em class="cursiva">12px</em> indicaría un borde de doce píxeles. También podemos indicar estos valores:<ul><li class="Punto2"><strong class="Negritta" lang="en-US">thin</strong>. Borde fino</li><li class="Punto2"><strong class="Negritta" lang="en-US">medium</strong>. Borde de grosor medio</li><li class="Punto2"><strong class="Negritta" lang="en-US">thick</strong>. Borde grueso</li></ul><p class="sinpunto">Podemos indicar a la vez diferentes grosores. Para ello podemos especificar cuadro valores a la vez en lugar de uno. El orden para indicarlos es arriba, derecha, abajo e izquierda (siguiendo las agujas del reloj desde las doce). Ejemplo:</p><table id="table014" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">border-width</strong>: <span class="atributo">thick thin thick 0px</span>;</pre></td></tr></tbody></table><p class="sinpunto">Ese código aplica bordes superior e inferior gruesos, a la derecha fino y a la izquierda no dibujará ningún borde. No es necesario indicar todos los bordes. Por ejemplo:</p><table id="table015" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">border-width</strong>:<span class="atributo">thick thin</span>; </pre><pre class="codigo"><span class="comentario">/* superior e inferior grueso, izquierdo y derecho fino */</span></pre><pre class="codigo"><strong class="resaltado">border-width</strong>: <span class="atributo">thick thin 0px</span>; </pre><pre class="codigo"><span class="comentario">/* superior grueso, izquierdo y derecho fino e inferior sin borde */</span></pre></td></tr></tbody></table></li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-style</strong>. Modifica el estilo del borde. Esta propiedad afecta a todos los bordes (superior, derecho, inferior e izquierdo). Posibilidades:<ul><li class="Punto2"><strong class="Negritta" lang="en-US">solid</strong>. Borde sólido</li><li class="Punto2"><strong class="Negritta" lang="en-US">dashed</strong>. Borde rallado</li><li class="Punto2"><strong class="Negritta" lang="en-US">dotted</strong>. Punteado</li><li class="Punto2"><strong class="Negritta" lang="en-US">double</strong>. Doble</li><li class="Punto2"><strong class="Negritta" lang="en-US">groove</strong>. Borde 3D con efecto de hundimiento</li><li class="Punto2"><strong class="Negritta" lang="en-US">ridge</strong>. Borde 3D con efecto de elevación</li><li class="Punto2"><strong class="Negritta">inset</strong>. <img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen41040.png" alt="" />El efecto depende del color elegido</li><li class="Punto2"><strong class="Negritta">outset</strong>. <img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen41048.png" alt="" /> El efecto depende del color elegido</li><li class="Punto2"><strong class="Negritta">none</strong></li></ul><p class="sinpunto">Como ocurre con <strong class="Negritta">border-width</strong>, podemos indicar varios estilos a la vez. Ejemplos:</p><table id="table016" class="tabla-codigo _idGenTablePara-2"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">border-style</strong>:<span class="atributo">solid dashed dotted dotted</span>; </pre><pre class="codigo"><span class="comentario">/* superior sólido, derecho rallado, inferior e izquierdo punteado*/</span></pre><pre class="codigo"><strong class="resaltado">border-style</strong>: <span class="atributo">solid dashed dotted</span>; </pre><pre class="codigo"><span class="comentario">/* superior sólido, izquierdo y derecho rallado e inferior punteado */</span></pre></td></tr></tbody></table></li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border</strong><strong class="Negritta">-color</strong>. Color del borde. Al igual que en las dos propiedades anteriores podemos asignar colores distintos a cada borde (siguiendo lo ya comentado).</li>
+				<li class="punto"><strong class="Negritta">border-top-width, border-top-color, border-top-style</strong>. Permite indicar respectivamente la anchura, el color y el estilo del borde superior.</li>
+				<li class="punto"><strong class="Negritta">border-left-width, border-left-color, border-left-style</strong>. Permite indicar respectivamente la anchura, el color y el estilo del borde izquierdo.</li>
+				<li class="punto"><strong class="Negritta">border-bottom-width, border-bottom-color, border-bottom-style</strong>. Permite indicar respectivamente la anchura, el color y el estilo del borde inferior.</li>
+				<li class="punto"><strong class="Negritta">border-right-width, border-right-color, border-right-style</strong>. Permite indicar respectivamente la anchura, el color y el estilo del borde derecho.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-top</strong>. Permite indicar a la vez las tres propiedades para el borde izquierdo. El orden es: grosor, estilo y color. Ejemplo:<table id="table017" class="tabla-codigo _idGenTablePara-2"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo"><strong class="resaltado">border-top</strong>: <span class="atributo">2px solid red</span>;</pre></td></tr></tbody></table><p class="sinpunto">No estamos obligados a rellenar las tres propiedades podemos rellenar solo una o dos.</p></li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-right</strong>. Permite indicar, a la vez, las tres propiedades del borde derecho.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-bottom</strong>. Permite indicar, a la vez, las tres propiedades del borde inferior</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-left</strong>. Permite indicar, a la vez, las tres propiedades del borde izquierdo</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border</strong>. Permite indicar el grosor, estilo y color de los cuatro bordes a la vez. Se usa igual que las anteriores pero en este caso lo que configuremos implica a todos los bordes.<h3 class="titulo3"><span class="numero3">[10.4.2]</span><a id="_idTextAnchor021"></a>bordes redondeados</h3></li>
+			</ul>
+			<p class="Normal2">En CSS3 ha aparecido la posibilidad de crear bordes redondeados así las esquinas de los bordes pueden formar un radio de un círculo cuyo tamaño podremos especificar. Es posible incluso indicar diferentes redondeados para las distintas esquinas. </p>
+			<p class="Normal">La pega es que es un formato CSS3 por lo que algunos navegadores no lo reconocen. Propiedades relacionadas:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta">border-radius</strong>. Permite indicar bordes redondeados (también afecta al sombreado que saldrá con los bordes redondeados. Ejemplo de uso:<table id="table018" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo">p{</pre><pre class="codigo"><strong class="resaltado">&#9;</strong><strong class="resaltado">background-color</strong>: <span class="atributo">lightgray</span>;</pre><pre class="codigo">&#9;<strong class="resaltado">border</strong>:<span class="atributo">thick double black</span>;</pre><pre class="codigo"><strong class="resaltado">&#9;</strong><strong class="resaltado">border-radius</strong>:<span class="atributo">10px</span>;</pre><pre class="codigo">}</pre></td></tr></tbody></table><p class="sinpunto">Resultado:</p><p class="sinpunto"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen41057.png" alt="" /></p></li>
+				<li class="punto">Permite indicar a la vez varios tamaños de redondeo en el orden de izquierda a derecha y de arriba abajo. <p class="sinpunto">Ejemplo:</p><table id="table019" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo">p{</pre><pre class="codigo"><strong class="resaltado">&#9;</strong><strong class="resaltado">background-color</strong>: <span class="atributo">lightgray</span>;</pre><pre class="codigo">&#9;<strong class="resaltado">border</strong>:<span class="atributo">thick double black</span>;</pre><pre class="codigo"><strong class="resaltado">&#9;</strong><strong class="resaltado">border-radius</strong>:<span class="atributo">10px 5px 0px 20px</span>;</pre><pre class="codigo">}</pre></td></tr></tbody></table><p class="sinpunto">Resultado:</p><p class="sinpunto"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen41069.png" alt="" /></p></li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-bottom-left-radius</strong>. Permite indicar un tamaño de radio para redondear el borde inferior izquierdo.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-bottom-right-radius</strong>. Permite indicar un tamaño de radio para redondear el borde inferior derecho.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-top-left-radius</strong>. Permite indicar un tamaño de radio para redondear el borde superior izquierdo.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">border-top-right-radius</strong>. Permite indicar un tamaño de radio para redondear el borde superior derecho.<p class="sinpunto">El borde admite dos radios, uno en vertical y otro en horizontal. Ejemplo:</p><table id="table020" class="tabla-codigo _idGenTablePara-1"><colgroup><col /></colgroup><tbody><tr class="tabla-codigo"><td class="tabla-codigo celda-codigo"><pre class="codigo">p{</pre><pre class="codigo">&#9;<strong class="resaltado">background-color</strong>: <span class="atributo">red</span>;</pre><pre class="codigo">&#9;<strong class="resaltado">border-radius</strong>: <span class="atributo">80px / 20px</span>;</pre><pre class="codigo">}</pre></td></tr></tbody></table><p class="sinpunto">Resultado:</p></li>
+			</ul>
+			<p class="Normal"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen41079.png" alt="" /></p>
+			<p class="Normal">El borde redondeado queda muy extraño ya que se ha puesto un radio muy grande en horizontal y otro mucho más pequeño para la vertical.</p>
+			<h3 class="titulo3"><span class="numero3">[10.4.3]</span><a id="_idTextAnchor022"></a>bordes usando imágenes (CSS3)</h3>
+			<p class="Normal2">También en CSS3 ha aparecido la posibilidad de indicar una imagen para que cubra el borde. La idea es crear una imagen (el formato idóneo es PNG) en la que se pinten los bordes. Se estirará la imagen en la zona que no son las esquinas (el tamaño de las esquinas se puede indicar) para cubrir todo el tamaño del elemento que se está bordeando con la imagen.</p>
+			<p class="Normal">Normalmente la imagen tiene solamente coloreado los bordes y el resto de la imagen son píxeles que se considerarán transparentes (por eso el formato más habitual para utilizar con este tipo de imagen es el PNG.</p>
+			<p class="Normal">Un ejemplo de imagen preparada para pintarse como borde es esta:</p>
+			<p class="Normal"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAA0CAYAAAAqunDVAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAFpElEQVRoQ62Zf0yUdRzHvzeq6WxFZ6aSiQ6kC0niQOSCZMJFYyyVrOUqUSRqgvZH+Zu0Qq0RhlxiwKWbMtNqaeXWzExoc3g4DERCWkA/1vqxpcdzl//QP58+3+/dc3vueO55nrvnw/bmeA7uvfeL7/f53r33YWmPVEH52jao3f5xzKrZehI2bD4B+MUitfDCeJG9c7x91cWbI5suSxOvfy9NNA5IIy1Dvnb38L/Faq+hysLmznfCgsz1MZtxkzW1R8H5lCsMKvfU7zb7mb+7Hv7WC4s6x2Fplxcqur2wuVeCPf0+cA36AKHg8PCtrrbrfpvytVRZWNL9eRCrmdLEXvxOCOrRoz8VLj75iz/n9B+QefYfwNUCe6cEDgR75qIXNl6WYHefBPuv+aB1yM/lbxqUCuXXU2URRrGYRZrIRqnN/bactiEJwcDxya+Q/eVfkPH1DeArxuH4quF2FHB81fZeDcA1DPikN/skmwxFkSVkZMRMzYRrWv0ly91v93iSD/SDo30IHMfHYMmnvwFuxZD46uG2hAwEzO30QpVnHLZdkQDvNf7oqenxWSiyTILSMotmwsVePe207PwGpu3rgTTXVcj/8Do4jo0I8ZXLR4kVDMLyrcm3JR4iUO2RhJ7v9jopsqhCqZlpmQioqlY32/gRJNRdgFnv9kLWB4NQcGRYiAPK4tcCFrcnB+Nbkt9vxd/d5AeKmyJLVCil2cqKVk0TAbXqjdHbKppxxU7BnXs9YHt/AAoUMJFgeR2jge147kbofkONUmTRhOJ6YF4RpKQ/C6l5dVFNBFTRSxOsvA7Yy0eA7eqC+c2Be0sNSgi3Ip6SsPiLP8VhknneyzVBkUUTanZSLtw3Mwsfl8C81DJIs9dENUrMKfezZdXAVjcAe+1zmNN4BfAk1Fwtfn/lfRY8QBAOAaNCxZIlKpRsYp1ug0TrApg5y65plpiW/2NiVhmwkleAVbthyp5LkH5wQKxWJJh8HTo4TvwshCs3RpFFFSrSRJaWmTXV0YGCRPtyYCt2iHsrCVdr0aFrITBZ/DrPjce+fB0Url4HRZZJUNFM9MwQ6AkOJcCyVwB7uh7YljMwo6FXHPH8NMxu/UE88hXEN2qY09QHcxGcb9XZ7/XxvyuhyBIGpWeiZYYwFpRHBrsnszSwYhuOAdtxDhLqu8V72B37PDD1rW5I2NUpnmfbzwKrO8+f8+A/wEKRJQRl1CSaGTdCGBtKksG4phSsCcA9tx8s6w4CqzwElsoWYGtdgccX24HVHpcsW796SP6YRJGFxWqiZgbBD6QIUojyK8GsDz4Gd+WshKn5L0BC4Xp+/AN7fBOwsi18m/pZZUuh/HqqLOzeGQtjNlGaJaeUhqAUK+YJA1NoevoyAXn70nUe9uS2sOpBlWVSUeOKp+BFgPF7rATlRo2h/kPdQg2L5zKcJQhl0fOJN0vYhZmCRy0zWUI/mC14lDKbRXyjKHhUosjCqAqeXlgjosrCqAqeXmAjosrCqAqeXmAjosrCqAqeXmAjosrCqAqeXmAjosrCqAqeXmAjosrCqAqeXmAjosrCP9KQFDy9wEZElYUbkRQ8vcBGRJVF/vBpuuDpBTYiqiyymemCRyWKLEozUwWPUmazqP2X4ip41DKTRc2MpODFU+6ospCNJGWZKXdUWchGklxmyx1VFrKRJEW5o8pCMpKkKncUWcKgjJhFG3hRlTuKLJOgtMw0x6NE5Y4iiyqUmpneSJKq3FFkiQqlNDMykqQqdxRZNKG4jI4kqcodRRZNqFhGklTljiJLVKhYR5JWonJHkUUVKp6RpJWo3FFkmQSlNx/SGI+SlDuKLGFQeiZaZgA05Y4qC9lIMghmqtxRZSEbSSrA4i53VFn4SNKFJi78ZcxCM1dySqlLGSwIZgnCrUbtRjWhGlE7xXMZTptauaPK8j8qkb3FsTKITAAAAABJRU5ErkJggg==" alt="borde2" /></p>
+			<p class="Normal2">Todo lo que aparece de blanco en la imagen, en realidad tiene color transparente y así a través de ellos se observará el fondo.</p>
+			<p class="Normal">La idea es indicar la parte de la imagen dedicada a las esquinas usando su tamaño (en la imagen cada cuadrado de las esquinas mide 18 píxeles). De esa forma la imagen quedará troceada en nueve partes (las cuatro esquinas y la parte superior, inferior, izquierda, derecha y central de la imagen).</p>
+			<p class="Normal">Para la zona que no es la esquina, indicaremos como haremos para rellenar completamente el elemento. Es decir, en la imagen anterior, los círculos azules no valen para rellenar el elemento completo al que estemos dando borde con la imagen. Por ello indicaremos al navegador que repita cada círculo (<strong class="Negritta" lang="en-US">round</strong>), o bien que le estire (<strong class="Negritta" lang="en-US">stretch</strong>).</p>
+			<p class="Normal">Sintaxis de la propiedad <strong class="Negritta" lang="en-US">border-image</strong>:</p>
+			<table id="table021" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="Negritta">border-image: </strong>origenDeLaImagen<strong class="Negritta"> </strong>tamañoEsquinas modoEstirar<strong class="Negritta">;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal"><em class="cursiva">origenDeLaImagen</em>. Es la ruta a la imagen</p>
+			<ul>
+				<li class="punto"><em class="cursiva">tamañoEsquinas</em>. Es lo que mide cada esquina empezando por la superior izquierda y luego yendo hacia la derecha y hacia abajo. Si miden lo mismo, solo se indica un número (normalmente no se indica la unidad porque siempre se entiende en píxeles)</li>
+				<li class="punto"><em class="cursiva">modoEstirar</em>. Puede ser <strong class="Negritta">repeat </strong>(repetir hasta llenar),  <strong class="Negritta">round</strong> (igual que al anterior pero consiguiendo que los dos extremos no queden partidos) o <strong class="Negritta" lang="en-US">stretch</strong> (estirar la imagen). Podemos indicar dos valores, el primero se referirá a la forma de rellenar en horizontal y el segundo será en vertical.</li>
+			</ul>
+			<p class="Normal">Ejemplos (suponiendo que la imagen anterior es <em class="cursiva">borde2.png</em> y que los cuadraditos de la imagen miden <em class="cursiva">18 píxeles x 19 píxeles</em>):</p>
+			<table id="table022" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p{</pre>
+							<pre class="codigo">   <strong class="resaltado">background-color</strong>: <span class="atributo">lightgray</span>;</pre>
+							<pre class="codigo">   <strong class="resaltado">border</strong>:<span class="atributo">15px solid transparent</span>;</pre>
+							<pre class="codigo"><strong class="resaltado">   -webkit-border-image</strong>: url(<span class="texto">borde2.png</span>)<span class="atributo"> </span><span class="atributo">18 19 round</span>; &#9;</pre>
+							<pre class="codigo"><span class="comentario">   /*para Safari*/</span></pre>
+							<pre class="codigo">   <strong class="resaltado">-o-border-image</strong>: url(<span class="texto">borde2.png</span>) <span class="atributo">18 19 round</span>; </pre>
+							<pre class="codigo">   <span class="comentario">/* para Opera*/</span></pre>
+							<pre class="remarcado">   <strong class="resaltado">border-image</strong>: url(<span class="texto">borde2.png</span>)<span class="atributo"> </span><span class="atributo">18 19 round</span>;</pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">La propiedad <strong class="Negritta">border</strong> debe indicar como tipo de borde el valor <strong class="Negritta">transparent</strong>. con el fin de usar imágenes Resultado:</p>
+			<p class="Normal"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen41096.png" alt="" /></p>
+			<p class="normalespacio">Otro:</p>
+			<table id="table023" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p{</pre>
+							<pre class="codigo"><strong class="resaltado">   </strong><strong class="resaltado">background-color</strong>:<span class="atributo">lightgray</span>;</pre>
+							<pre class="codigo">   <strong class="resaltado">border-width</strong>:<span class="atributo">15px</span>;</pre>
+							<pre class="codigo">   <strong class="resaltado">-webkit-border-image</strong>: url(<span class="texto">borde2.png</span>) <span class="atributo">18 19 </span><span class="atributo">stretch</span>; </pre>
+							<pre class="codigo">   <span class="comentario">/*para Safari*/</span></pre>
+							<pre class="codigo"><strong class="resaltado">   -o-border-image</strong>: url(<span class="texto">borde2.png</span>) <span class="atributo">18 19 stretch</span>; </pre>
+							<pre class="codigo">   <span class="comentario">/* para Opera*/</span></pre>
+							<pre class="remarcado">   <strong class="resaltado">border-image</strong>: url(<span class="texto">borde2.png</span>)  <span class="atributo">18 19 stretch</span>;</pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen41104.png" alt="" /></p>
+			<p class="normalespacio">Y otro:</p>
+			<table id="table024" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p{</pre>
+							<pre class="codigo">   <strong class="resaltado">background-color</strong>: <span class="atributo">lightgray</span>;</pre>
+							<pre class="codigo">   <strong class="resaltado">border-width</strong>:<span class="atributo">15px</span>;</pre>
+							<pre class="codigo"><span class="comentario">  /*para Safari*/</span></pre>
+							<pre class="codigo"><strong class="resaltado">   -webkit-border-image</strong>: url(<span class="texto">borde2.png</span>)<span class="atributo"> </span><span class="atributo">18 19 </span></pre>
+							<pre class="codigo"><span class="atributo">&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;stretch round</span>; &#9;</pre>
+						</td>
+					</tr>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">  <span class="comentario">/* para Opera*/</span></pre>
+							<pre class="codigo">   <strong class="resaltado">-o-border-image</strong>: url(<span class="texto">borde2.png</span>) <span class="atributo">18 19 </span></pre>
+							<pre class="remarcado"><span class="atributo">&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;stretch round</span>;   <strong class="resaltado">border-image</strong>: url(<span class="texto">borde2.png</span>)<span class="atributo"> </span><span class="atributo">18 19 stretch round</span>;</pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen41112.png" alt="" /></p>
+			<h2 class="titulo2"><span class="numero2">[10.5] </span><a id="_idTextAnchor023"></a>sombreado de la caja.<br />box-shadow</h2>
+			<p class="Normal2">Se puede aplicar una sombra a un elemento mediante la propiedad <strong class="Negritta">box-shadow</strong>. La sintaxis es:</p>
+			<table id="table025" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<p class="Normal"><strong class="Negritta">box-shadow</strong>:distanciaH distanciaV desenfocado propagación color inset;</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Donde:</p>
+			<ul>
+				<li class="punto"><em class="cursiva">distanciaH</em>. Es la distancia horizontal del borde del elemento al borde de la sombra aplicada.</li>
+				<li class="punto"><em class="cursiva">distanciaV</em>. Es la distancia vertical del borde del elemento al borde de la sombra aplicada.</li>
+				<li class="punto"><em class="cursiva">desenfocado</em>. Es la cantidad de desenfocado de la imagen. Si no se indica, no se aplica desenfoque alguno a la sombra.</li>
+				<li class="punto"><em class="cursiva">propagación</em>. Fuerza de la sombra, a mayor fuerza, más contraste tendrá y sus bordes invadirán más al resto de elementos. Por defecto vale 0. </li>
+				<li class="punto"><em class="cursiva">color</em>.  Color que aplicamos a la sombra (por defecto es el negro)</li>
+				<li class="punto"><strong class="Negritta">inset. </strong>Si aparece hace que la sombra se muestre hacia el interior de la caja, haciendo un efecto de “hundimiento”. De otro modo, la sombra se dibuja hacia el exterior, haciendo un efecto de “elevación”</li>
+			</ul>
+			<p class="normalespacio">Ejemplo:</p>
+			<table id="table026" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo">p{</pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">background-color</strong>:<span class="atributo">yellow</span>;</pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">box-shadow</strong>: <span class="atributo">20px 20px 15px black</span>;</pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">-webkit-box-shadow</strong>:<span class="atributo">20px 20px 15px black</span>; </pre>
+							<pre class="codigo">&#9;&#9;<span class="comentario">/* para Chrome anterior a la versión 10 */</span></pre>
+							<pre class="codigo">&#9;&#9;<strong class="resaltado">-moz-box-shadow</strong>:<span class="atributo">20px 20px 15px black</span>;</pre>
+							<pre class="codigo">&#9;&#9;<span class="comentario">/* Para mozilla anterior a la versión 15*/</span></pre>
+							<pre class="codigo">}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Resultado:</p>
+			<p class="Normal"><img src="css-formato-caja-lista-html-2016-web-resources/image/box-shadow.html" alt="" /></p>
+			<p class="Normal">Esta propiedad ha sido recogida desde hace poco tiempo en todos los navegadores, Internet Explorer a partir de la versión 9 y Chrome y Firefox desde las versiones 10 y 15 (antes permitían su uso mediante prefijo -webkit- y -moz- respectivamente)</p>
+			<h2 class="titulo2"><span class="numero2">[10.6] </span>relleno co<a id="_idTextAnchor024"></a>n gradientes</h2>
+			<h3 class="titulo3"><span class="numero3">[10.6.1]</span><a id="_idTextAnchor025"></a>gradientes lineales</h3>
+			<p class="Normal2">Un gradiente es un degradado que permite colorear en lugar de con un color único, con una variación que va de un color a otro. CSS3 permite el uso de una función llamada <strong class="Negritta" lang="en-US">linear-gradient</strong> que permite usarse por ejemplo en la propiedad <strong class="Negritta" lang="en-US">background</strong> para establecer un gradiente. </p>
+			<p class="Normal">Sintaxis de la función (estándar):</p>
+			<table id="table027" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="Negritta">linear-gradient( </strong>direccion,primerColor posicion1,segundoColor posicion2,…<strong class="Negritta">)</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El significado de los parámetros es el siguiente:</p>
+			<ul>
+				<li class="punto"><em class="cursiva">dirección</em>. Es opcional y sirve para decir en qué dirección se dibujará el gradiente. Posibilidades: indicar un ángulo (por ejemplo <em class="cursiva">45deg</em>) o una dirección a una esquina o lado de la pantalla usando la palabra <strong class="Negritta">to</strong>. Ejemplos:<ul><li class="Punto2"><em class="cursiva">45deg</em>. 45 grados de inclinación</li><li class="Punto2"><em class="cursiva">to top. </em>Degrado vertical</li><li class="Punto2"><em class="cursiva">to left</em>. Degradado horizontal</li><li class="Punto2"><em class="cursiva">to top left.</em> Degradado en dirección a la esquina superior izquierda</li></ul></li>
+				<li class="punto"><em class="cursiva">colores (primero, segundo,..)</em>. Son los diferentes colores del degradado, cuantos más pongamos, más bandas tendrá.</li>
+				<li class="punto"><em class="cursiva">posiciones</em>. Para cada color podemos indicar su posición, normalmente un porcentaje. Si no se usa, los colores se reparten uniformemente en el área del degradado.</li>
+			</ul>
+			<p class="Normal2">Ejemplo:</p>
+			<table id="table028" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span>&gt;</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;div{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">width</strong>:<span class="atributo">100px</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">height</strong>:<span class="atributo">100px</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">float</strong>:<span class="atributo">left</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">margin</strong>:<span class="atributo">5px</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="table029" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<table id="table030" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="codigo">#d1{</pre>
+											<pre class="codigo"><strong class="resaltado">   background</strong>: linear-gradient(<span class="atributo">to top,red,blue</span>);</pre>
+											<pre class="codigo">}</pre>
+											<pre class="codigo">#d2{</pre>
+											<pre class="codigo">    <strong class="resaltado">background</strong>: </pre>
+											<pre class="codigo">&#9;linear-gradient(<span class="atributo">to right top,red,blue,yellow</span>);</pre>
+											<pre class="codigo">}</pre>
+											<pre class="codigo">#d3{</pre>
+											<pre class="codigo">   <strong class="resaltado">background</strong>: </pre>
+											<pre class="codigo">&#9;linear-gradient(<span class="atributo">45deg,red,blue,yellow</span>);  </pre>
+											<pre class="codigo">}</pre>
+											<pre class="codigo">#d4{</pre>
+											<pre class="codigo">   <strong class="resaltado">background</strong>: </pre>
+											<pre class="codigo">&#9;linear-gradient(<span class="atributo">to top,red,blue 80%</span>);</pre>
+											<pre class="codigo">}</pre>
+											<pre class="codigo">#d5{</pre>
+											<pre class="codigo">   <strong class="resaltado">background</strong>: </pre>
+											<pre class="codigo">&#9;linear-gradient(<span class="atributo">to top,red,blue 20%, yellow 80%</span>)&#9;</pre>
+											<pre class="codigo">}</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo"><strong class="resaltado">&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d1”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d2”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d3”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d4”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d5”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen42085.png" alt="" /></p>
+			<p class="Normal2">Desgraciadamente el estándar no es utilizado nada más que por los últimos navegadores, por lo que para versiones antiguas hay que usar la versión que, para sí mismos, construye cada navegador.</p>
+			<p class="Normal">Por ejemplo para Firefox (aunque ya funciona la estándar en las últimas versiones), tenemos esta sintaxis:</p>
+			<table id="table031" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">-moz-linear-gradient(</strong>angulo o dirección, color1, color2<strong class="resaltado">)</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal">Que es muy similar (pero no usa la palabra <strong class="Negritta">to </strong>para las direcciones del degradado).</p>
+			<p class="Normal">Por su parte los navegadores <strong class="Negritta">webkit</strong> (como <strong class="Negritta">Chrome</strong> y <strong class="Negritta">Safari</strong>) usaban esta otra fórmula en sus versiones antiguas:</p>
+			<table id="table032" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">-webkit-gradient(linear,</strong> puntoInicial, </pre>
+							<pre class="codigo">&#9;puntoFinal, <strong class="resaltado">from(</strong>color<strong class="resaltado">), </strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;color-stop(</strong>porcentaje1,color1<strong class="resaltado">), ), &#9;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;color-stop(</strong>porcentaje2,color1<strong class="resaltado">),..,to(</strong>color<strong class="resaltado">))</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="titulo3"><span class="numero3">[10.6.2]</span><a id="_idTextAnchor026"></a>gradientes radiales</h3>
+			<p class="Normal2">La sintaxis estándar de la función que permite dibujar gradientes radiales (degradados en forma circular) es:</p>
+			<table id="table033" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-sintaxis celda-codigo">
+							<pre class="sintaxis"><strong class="resaltado">radial-gradient(</strong>forma <strong class="resaltado">at </strong>posicion, color1 posicion1, </pre>
+							<pre class="sintaxis">&#9;&#9;color2 posicion2,…<strong class="resaltado">)</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">El primer parámetro (<em class="cursiva">forma at posición</em>), es opcional. La forma puede ser <strong class="Negritta" lang="en-US">circle</strong> (circular), <strong class="Negritta" lang="en-US">ellipse</strong> (elíptica) o un porcentaje de anchura por altura (por ejemplo 30% 50%) que indica el tamaño del radio horizontal y el vertical de la elipse. Es opcional indicar la posición mediante la palabra <strong class="Negritta">at</strong>, si lo hacemos indicaremos la posición exacta del radio.</p>
+			<p class="Normal">El resto de parámetros (los colores) se manejan como en el caso del gradiente lineal.</p>
+			<p class="normalespacio">Ejemplo:</p>
+			<table id="table034" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<pre class="codigo"><strong class="resaltado">&lt;!doctype </strong><span class="atributo">html</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;html</strong> <span class="atributo">lang</span>=<span class="texto">”es”</span>&gt;</pre>
+							<pre class="codigo"><strong class="resaltado">&lt;head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;meta</strong> <span class="atributo">charset</span>=<span class="texto">”UTF-8”</span><strong class="resaltado">&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;title&gt;</strong>Document<strong class="resaltado">&lt;/title&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;style&gt;</strong></pre>
+							<pre class="codigo">&#9;&#9;div{</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">width</strong>:<span class="atributo">100px</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">height</strong>:<span class="atributo">100px</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">float</strong>:<span class="atributo">left</span>;</pre>
+							<pre class="codigo">&#9;&#9;&#9;<strong class="resaltado">margin</strong>:<span class="atributo">5px</span>;</pre>
+							<pre class="codigo">&#9;&#9;}</pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="table035" class="tabla-codigo">
+				<colgroup>
+					<col />
+				</colgroup>
+				<tbody>
+					<tr class="tabla-codigo">
+						<td class="tabla-codigo celda-codigo">
+							<table id="table036" class="tablaRemarcada">
+								<colgroup>
+									<col />
+								</colgroup>
+								<tbody>
+									<tr class="tablaRemarcada">
+										<td class="tablaRemarcada celda-remarcada">
+											<pre class="codigo">#d1{</pre>
+											<pre class="codigo"><strong class="resaltado">&#9;background</strong>: radial-gradient(<span class="atributo">red,blue</span>);</pre>
+											<pre class="codigo">}</pre>
+											<pre class="codigo">#d2{</pre>
+											<pre class="codigo"><strong class="resaltado">&#9;background</strong>: radial-gradient(<span class="atributo">red,blue,green</span>);</pre>
+											<pre class="codigo">}</pre>
+											<pre class="codigo">#d3{</pre>
+											<pre class="codigo">  <strong class="resaltado">background</strong>: </pre>
+											<pre class="codigo">&#9;radial-gradient(<span class="atributo">30% 50%,red,blue,green</span>);</pre>
+											<pre class="codigo">}</pre>
+											<pre class="codigo">#d4{</pre>
+											<pre class="codigo">   <strong class="resaltado">background</strong>: </pre>
+											<pre class="codigo">    radial-gradient(<span class="atributo">30% 50%</span> at <span class="atributo">10% 50%,red,blue,green</span>);</pre>
+											<pre class="codigo">}</pre>
+											<pre class="codigo">#d5{</pre>
+											<pre class="codigo">   <strong class="resaltado">background</strong>: </pre>
+											<pre class="codigo">&#9;radial-gradient(at <span class="atributo">10% 50%,red,blue,green</span>);</pre>
+											<pre class="codigo">}&#9;&#9;</pre>
+											<pre class="codigo">#d6{</pre>
+											<pre class="codigo">   <strong class="resaltado">background</strong>: </pre>
+											<pre class="codigo">&#9;radial-gradient(<span class="atributo">100% 100% </span>at<span class="atributo"> 10% 50%,</span></pre>
+											<pre class="codigo"><span class="atributo">&#9;&#9;&#9;&#9;&#9;&#9;red,blue 20%,green 50%</span>);</pre>
+											<pre class="codigo">}</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<pre class="codigo"><strong class="resaltado">&lt;/style&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/head&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d1”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d2”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d3”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d4”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&#9;&lt;div</strong><span class="atributo"> id</span>=<span class="texto">”d5”</span><strong class="resaltado">&gt;&lt;/div&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/body&gt;</strong></pre>
+							<pre class="codigo"><strong class="resaltado">&lt;/html&gt;</strong></pre>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="Normal2">Resultado:</p>
+			<p class="Normal2"><img src="css-formato-caja-lista-html-2016-web-resources/image/Imagen42093.png" alt="" /></p>
+			<p class="Normal2">Nuevamente la compatibilidad con esta función es reciente y muchos navegadores incorporaban su versión de esta función e incluso simplemente no manejaban este tipo de resultado.</p>
+			<h2 class="titulo2"><span class="numero2">[10.7] </span><a id="_idTextAnchor027"></a>perfiles</h2>
+			<p class="Normal2">Los perfiles son bordes que se ponen en el exterior de los elementos de tipo caja. </p>
+			<p class="Normal2">A diferencia de los bordes, propiamente dichos, explicados en los apartados anteriores, los perfiles son líneas que no comen espacio ni al relleno ni al margen. Los perfiles son bordes que se colocan en la posición en la que normalmente ocupa un borde pero no ocupan un espacio extra, como si la línea que dibujan estuviera por <em class="cursiva">debajo </em>del texto. Las propiedades de los perfiles son:</p>
+			<ul>
+				<li class="punto"><strong class="Negritta" lang="en-US">outline-</strong><strong class="Negritta">color.</strong> Color del perfil.</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">outline-width</strong>. Anchura del perfil</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">outline</strong><strong class="Negritta">-style</strong>. Estilo del perfil (admite las mismas posibilidades que border-style).</li>
+				<li class="punto"><strong class="Negritta" lang="en-US">outline</strong>. Resume las tres anteriores en una sola propiedad, admite poner primero el color, luego el estilo y luego el ancho.</li>
+			</ul>
+			<p class="Normal2">El estándar CSS añadió estas propiedades no para sustituir a los bordes, sino para ser aplicados a elementos de formulario con el fin de que quedará marcado el elemento que actualmente posee el foco; es decir, aquel elemento que recibe los datos procedentes del dispositivo de entrada del usuario, normalmente el teclado. Se usan también para depuración y para dar formato CSS a eventos de tipo <em class="cursiva">hover , </em>ya que el borde se añade sin que se muevan los elementos a su alrededor, lo que provoca un efecto más elegante.</p>
+		</div>
+
+
+</section>
+
+<nav>
+    <ul>
+        <li><a href="http://jorgesanchez.net/">&gt; Volver a JorgeSanchez.net</a></li>
+    </ul>
+    
+    
+<ul>
+    <p>Manual de HTML5 y CSS3:</p>
+    <li><a href="introduccion-lenguajes-de-marcas.html">&gt; Introducción a los lenguajes de marcas</a></li>
+    <li><a href="introduccion-html.html">&gt; Introducción a HTML5</a></li>
+    <li><a href="edicion-basica-html5.html">&gt; Edición básica de documentos HTML</a></li>
+    <li><a href="texto-y-parrafo-html5.html">&gt; Elementos de texto y párrafo</a></li>
+    <li><a href="enlaces-html5.html">&gt; Enlaces</a></li>
+    <li><a href="imagenes-html5.html">&gt; Imágenes</a></li>
+    <li><a href="introduccion-a-css.html">&gt; Introducción a CSS</a></li>
+    <li><a href="selectores-css.html">&gt; Selectores CSS</a></li>
+    <li><a href="unidades-colores-css.html">&gt; Unidades y Colores en CSS</a></li>
+    <li><a href="formato-fuente-parrafo.html">&gt; Formato de fuente y párrafo</a></li>
+    <li><a href="formato-caja-lista-css.html">&gt; Formato de caja y lista</a></li>
+    <li><a href="elementos-estructurales-html5.html">&gt; Elementos estructurales</a></li>
+    <li><a href="tablas-html5.html">&gt; Tablas</a></li>
+    <li><a href="formularios-html5.html">&gt; Formularios</a></li>
+    <li><a href="css-visualizacion.html">&gt; Display y media queries</a></li>
+    <li><a href="css-posicionamiento.html">&gt; Posicionamiento mediante CSS</a></li>
+</ul>
+
+
+
+</nav>
+
+<script src="../../lib/jquery.min.js"></script>
+<script src="../../lib/jquery.easing.min.js"></script>
+<script src="../../lib/jquery.scrollTo.min.js"></script>
+<script src="../../lib/perfect-scrollbar.jquery.min.js"></script>
+<script src="../../js/manual2c0d.js?f=20170221"></script>
+<!--Analytics-->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35972106-1']);
+    _gaq.push(['_setLocalRemoteServerMode']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+
+<!-- Mirrored from jorgesanchez.net/manuales/html/formato-caja-lista-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Oct 2018 21:30:18 GMT -->
+</html>
+
